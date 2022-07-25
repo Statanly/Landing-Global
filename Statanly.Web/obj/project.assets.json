@@ -9189,11 +9189,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\statanly-landing\\Statanly.Web\\Statanly.Web.csproj",
+      "projectUniqueName": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing\\Statanly.Web\\Statanly.Web.csproj",
       "projectName": "Statanly.Web",
-      "projectPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\statanly-landing\\Statanly.Web\\Statanly.Web.csproj",
+      "projectPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing\\Statanly.Web\\Statanly.Web.csproj",
       "packagesPath": "C:\\Users\\serge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\statanly-landing\\Statanly.Web\\obj\\",
+      "outputPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing\\Statanly.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\serge\\AppData\\Roaming\\NuGet\\NuGet.Config",

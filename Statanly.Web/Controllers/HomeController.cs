@@ -95,7 +95,7 @@ namespace Statanly.Web.Controllers
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
-            //this.GetCulture("en-US");
+            //this.GetCulture("en-US"); 
             //var c = $"CurrentCulture:{CultureInfo.CurrentCulture.Name}, CurrentUICulture:{CultureInfo.CurrentUICulture.Name}";
             return LocalRedirect(returnUrl);
         }
