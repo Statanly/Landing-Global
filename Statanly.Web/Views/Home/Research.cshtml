@@ -1,0 +1,132 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
+        </div>
+        <div class="cta d-none d-md-block">
+            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li>@Localizer["Research"]</li>
+                <li><a href="https://ctlab.ifmo.ru/" target="_blank">@Localizer["Science"]</a></li>
+            </ol>
+            <h2>@Localizer["ScientificActivity"]</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>@Localizer["R&D"]</h2>
+            </div>
+            <div class="row content">
+                <div class="col-lg-12">
+                    <p>
+                        @Localizer["R&DText"]
+                    </p>
+                    <p>
+                        Основная тематика исследований связана с разработкой алгоритмов автоматического построения моделей машинного обучения. Наши исследования ведутся в таких областях, как:
+                    </p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i> Системы на базе компьютерного зрения</li>
+                        <li><i class="ri-check-double-line"></i> Генеративные нейронные сети</li>
+                        <li><i class="ri-check-double-line"></i> Автоматическое машинное обучение</li>
+                        <li><i class="ri-check-double-line"></i> Кластеризация данных</li>
+                        <li><i class="ri-check-double-line"></i> Выявление аномалий в данных</li>
+                        <li><i class="ri-check-double-line"></i> Обработка естественных языков</li>
+                        <li><i class="ri-check-double-line"></i> Сегментация данных</li>
+                        <li><i class="ri-check-double-line"></i> Поиск скрытых закономерностей в данных</li>
+                        <li><i class="ri-check-double-line"></i> Системы информационного поиска</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-title">
+                <h2>Избранные публикации</h2>
+            </div>
+            <div class="row content">
+                <div class="col-lg-12">
+                    <p>
+                        Наши научные работы публикуются в рецензируемых журналах в России и за рубежом
+                    </p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>Zabashta A., Smetannikov I., Filchenkov A. Rank aggregation algorithm selection meets feature selection [MLDM 2016]</li>
+                        <li><i class="ri-check-double-line"></i>Efimova V., Filchenkov A., Shalyto A. Reinforcement-based Simultaneous Algorithm and its Hyperparameters Selection [AWRL@ACML 2016]</li>
+                        <li><i class="ri-check-double-line"></i>A. Filchenkov, A. Pendryak Datasets Meta-Feature Description for Recommending Feature Selection Algorithm</li>
+                        <li><i class="ri-check-double-line"></i>Filchenkov A., Khanzhina N., Tsai A., Smetannikov I. Regularization of Autoencoders for Bank Client Profiling Based on Financial Transactions. Risks. 2021. Vol. 9. No. 3. pp. 54.</li>
+                        <li><i class="ri-check-double-line"></i>Filchenkov A., Krylov D.P., Khanzhina N., Zabashta A., Поляков С. Improving Multimodal Data Labeling with Deep Active Learning for Post Classication in Social Networks. ICMR. 2021. pp. 1-14.</li>
+                        <li><i class="ri-check-double-line"></i>Yang Q., Farseev A., Filchenkov A. Two-Faced Humans on Twitter and Facebook: Harvesting Social Multimedia for Human Personality Profiling. ICDAR '21: Proceedings of the 2021 on Intelligent Cross-Data Analysis and Retrieval Workshop. 2021. pp. 8.</li>
+                        <li><i class="ri-check-double-line"></i>Farseev A., Yang Q., Filchenkov A., Lepikhin K., Chu-Farseeva Y., Loo D. SoMin.ai: Personality-Driven Content Generation Platform. 14th ACM International Conference on Web Search and Data Mining, WSDM 2021. 2021. pp. 890-893.</li>
+
+                        <li><i class="ri-check-double-line"></i>Asadulaev A., Kuznetcov I.S., Stein G., Filchenkov A. Exploring and Exploiting Conditioning of Reinforcement Learning Agents. IEEE Access. 2020. Vol. 8. pp. 211951-211960.</li>
+                        <li><i class="ri-check-double-line"></i>Asadulaev A., Stein G., Filchenkov A. Transgenerators. ACM International Conference Proceeding Series. 2020. pp. 3446417.</li>
+                        <li><i class="ri-check-double-line"></i>Efimova V., Shalamov V., Filchenkov A. Synthetic Dataset Generation for Text Recognition with Generative Adversarial Networks. Proceedings of SPIE. 2020. Vol. 11433. pp. 1143315.</li>
+                        <li><i class="ri-check-double-line"></i>Muravyov S., Filchenkov A. A Cloud-based Network of 3D Objects for Robust Grasp Planning. ACM International Conference Proceeding Series. 2020. pp. 99-105.</li>
+                        <li><i class="ri-check-double-line"></i>Khanzhina N., Slepkova N.D., Filchenkov A. Synthetic images generation for text detection and recognition in the wild. Proceedings of SPIE. 2020. Vol. 11433. pp. 1143312.</li>
+                        <li><i class="ri-check-double-line"></i>Viuginov N., Grachev P., Filchenkov A. A Machine Learning Based Plagiarism Detection In Source Code. ACM International Conference Proceeding Series. 2020. pp. 3446420.</li>
+                        <li><i class="ri-check-double-line"></i>Kochetov K., Filchenkov A. Generative Adversarial Networks for Respiratory Sound Augmentation. ACM International Conference Proceeding Series. 2020. pp. 106-111.</li>
+                        <li><i class="ri-check-double-line"></i>Muravyov S., Antipov D., Buzdalova A., Filchenkov A. Efficient Computation Of Fitness Function For Evolutionary Clustering. Mendel. 2019. Vol. 25. No. 1. pp. 87-94.</li>
+                        <li><i class="ri-check-double-line"></i>Oreshin S., Filchenkov A., Petrusha P., Krasheninnikov E., Panfilov A., Glukhov I., Kaliberda Y., Masalskiy D., Serdyukov A., Kazakovtsev V.L., Khlopotov M., Podolenchuk T., Smetannikov I., Kozlova D. Implementing a Machine Learning Approach to Predicting Students' Academic Outcomes. ACM International Conference Proceeding Series. 2020. pp. 78-83.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End About Us Section -->
+</main><!-- End #main -->

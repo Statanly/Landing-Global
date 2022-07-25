@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Company" xml:space="preserve">
+    <value>Компания</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="content1" xml:space="preserve">
+    <value>&lt;h3&gt;1. Общие положения &lt;/h3&gt;
+                    &lt;p&gt;
+                        Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые «ООО Статанли Технолоджис» (далее – Оператор).
+                        &lt;br&gt;
+                        1.1. Оператор ставит своей целью и условием осуществления своей деятельности соблюдение прав человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.
+                        &lt;br&gt;
+                        1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта &lt;a href="https://statanly.com"&gt;https://statanly.com&lt;/a&gt;, &lt;a href="https://witsart.com"&gt;https://witsart.com&lt;/a&gt;, а также всех поддоменов.
+                    &lt;/p&gt;
+                    &lt;h3&gt;2. Основные понятия, используемые в Политике &lt;/h3&gt;
+                    &lt;p&gt;
+                        2.1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;
+                        &lt;br&gt;
+                        2.2. Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);
+                        &lt;br&gt;
+                        2.3. Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по адресу &lt;a href="https://statanly.com"&gt;https://statanly.com&lt;/a&gt;;
+                        &lt;br&gt;
+                        2.4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;
+                        &lt;br&gt;
+                        2.5. Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;
+                        &lt;br&gt;
+                        2.6. Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;
+                        &lt;br&gt;
+                        2.7. Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными;
+                        &lt;br&gt;
+                        2.8. Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта &lt;a href="https://statanly.com"&gt;https://statanly.com&lt;/a&gt;;
+                        &lt;br&gt;
+                        2.9. Пользователь – любой посетитель веб-сайта &lt;a href="https://statanly.com"&gt;https://statanly.com&lt;/a&gt;;
+                        &lt;br&gt;
+                        2.10. Предоставление персональных данных – действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц;
+                        &lt;br&gt;
+                        2.11. Распространение персональных данных – любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом;
+                        &lt;br&gt;
+                        2.12. Трансграничная передача персональных данных – передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу;
+                        &lt;br&gt;
+                        2.13. Уничтожение персональных данных – любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и (или) уничтожаются материальные носители персональных данных.
+                    &lt;/p&gt;
+                    &lt;h3&gt;3. Оператор может обрабатывать следующие персональные данные Пользователя  &lt;/h3&gt;
+                    &lt;p&gt;
+                        3.1. Фамилия, имя, отчество;
+                        &lt;br&gt;
+                        3.2. Электронный адрес;
+                        &lt;br&gt;
+                        3.3. Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).
+                        &lt;br&gt;
+                        3.4. Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные данные.
+                    &lt;/p&gt;
+                    &lt;h3&gt;4. Цели обработки персональных данных  &lt;/h3&gt;
+                    &lt;p&gt;
+                        4.1. Цель обработки персональных данных Пользователя — информирование Пользователя посредством отправки электронных писем.
+                        &lt;br&gt;
+                        4.2. Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты sergey@statanly.com с пометкой «Отказ от уведомлений о новых продуктах и услугах и специальных предложениях».
+                        &lt;br&gt;
+                        4.3. Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.
+                    &lt;/p&gt;
+                    &lt;h3&gt;5. Правовые основания обработки персональных данных   &lt;/h3&gt;
+                    &lt;p&gt;
+                        5.1. Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте &lt;a href="https://statanly.com"&gt;https://statanly.com&lt;/a&gt;. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.
+                        &lt;br&gt;
+                        5.2. Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).
+                    &lt;/p&gt;
+                    &lt;h3&gt;6. Порядок сбора, хранения, передачи и других видов обработки персональных данных    &lt;/h3&gt;
+                    &lt;p&gt;
+                        Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.
+                        &lt;br&gt;
+                        6.1. Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.
+                        &lt;br&gt;
+                        6.2. Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.
+                        &lt;br&gt;
+                        6.3. В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора sergey@statanly.com с пометкой «Актуализация персональных данных».
+                        &lt;br&gt;
+                        6.4. Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператора sergey@statanly.com с пометкой «Отзыв согласия на обработку персональных данных».
+                    &lt;/p&gt;
+                    &lt;h3&gt;7. Трансграничная передача персональных данных&lt;/h3&gt;
+                    &lt;p&gt;
+                        7.1. Оператор до начала осуществления трансграничной передачи персональных данных обязан убедиться в том, что иностранным государством, на территорию которого предполагается осуществлять передачу персональных данных, обеспечивается надежная защита прав субъектов персональных данных.
+                        &lt;br&gt;
+                        7.2. Трансграничная передача персональных данных на территории иностранных государств, не отвечающих вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной форме субъекта персональных данных на трансграничную передачу его персональных данных и/или исполнения договора, стороной которого является субъект персональных данных.
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="content2" xml:space="preserve">
+    <value>&lt;h3&gt;8. Заключительные положения &lt;/h3&gt;
+                    &lt;p&gt;
+                        8.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты hello@statanly.com.
+                        &lt;br&gt;
+                        8.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.
+                        &lt;br&gt;
+                        8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу &lt;a href="https://statanly.com/home/privacy"&gt;https://statanly.com/home/privacy&lt;/a&gt;.
+                    &lt;/p&gt;</value>
+  </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Сотрудничество</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Миссия</value>
+  </data>
+  <data name="PP" xml:space="preserve">
+    <value>Политика конфиденциальности</value>
+  </data>
+  <data name="Press" xml:space="preserve">
+    <value>Пресса</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Публикации о компании</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Исследования</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Решения</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Написать</value>
+  </data>
+</root>

@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutLongText" xml:space="preserve">
+    <value>The company is based on the international laboratory of machine learning at ITMO University and develops in the field of machine learning algorithms, computer vision and data analysis for solving various business problems. In recent years, many projects have been implemented for the largest enterprises in Russia, including Yandex, Mail.ru Group, Norilsk Nickel, Megafon, NMLK, Evraz, Sinara-Transport Machines, Gazprom Neft. This allowed us to accumulate sufficient experience and become a leading company in the implementation of machine learning algorithms, computer vision and data analysis.</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>We develop and implement machine learning modules in information systems for solving applied business problems</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddressText" xml:space="preserve">
+    <value>Russia, Saint Petersburg, Birzhevaya liniya, 16</value>
+  </data>
+  <data name="Agriculture" xml:space="preserve">
+    <value>Agriculture</value>
+  </data>
+  <data name="AgricultureText" xml:space="preserve">
+    <value>The introduction of computer vision technologies together with global positioning systems allows for precision farming, which can significantly increase the yield and efficiency of agriculture.
+Monitoring agricultural fields from satellite images and unmanned aerial vehicles, determining the maturity of the crop allows you to make predictions of the amount of production.</value>
+  </data>
+  <data name="AIDevelopment" xml:space="preserve">
+    <value>Development of intelligent algorithms</value>
+  </data>
+  <data name="AIDevelopmentText" xml:space="preserve">
+    <value>Development of analytical systems based on machine learning and computer vision.</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="ApplicationSubTitle" xml:space="preserve">
+    <value>Today, machine Learning is widely used in many sectors of the digital economy, such as industry, retail, autonomous vehicles and driver assistance systems, unmanned aerial vehicles, high-tech agriculture, healthcare, and many others.</value>
+  </data>
+  <data name="Areas" xml:space="preserve">
+    <value>areas</value>
+  </data>
+  <data name="ChurnSystem" xml:space="preserve">
+    <value>Predictive churn system</value>
+  </data>
+  <data name="ChurnSystemText" xml:space="preserve">
+    <value>Determination in the database of a segment of customers prone to churn</value>
+  </data>
+  <data name="Cients" xml:space="preserve">
+    <value>Our clients</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Consulting" xml:space="preserve">
+    <value>Consulting in the field of implementation of intelligent systems</value>
+  </data>
+  <data name="ConsultingText" xml:space="preserve">
+    <value>Analysis and study of the prospects for the implementation of intelligent algorithms for solving business problems.</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="ContactsText" xml:space="preserve">
+    <value>Any other questions? Write to us.</value>
+  </data>
+  <data name="ConversionSystem" xml:space="preserve">
+    <value>Conversion forecasting system</value>
+  </data>
+  <data name="ConversionSystemText" xml:space="preserve">
+    <value>Forecasting sales conversions, optimizing product markups</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>Computer vision</value>
+  </data>
+  <data name="CVSubTitle" xml:space="preserve">
+    <value>Systems based on computer vision and video analytics</value>
+  </data>
+  <data name="CVVA" xml:space="preserve">
+    <value>Computer vision, video analytics</value>
+  </data>
+  <data name="CVVAText" xml:space="preserve">
+    <value>Solutions and systems based on machine vision, video analytics, image recognition, photo and video streams</value>
+  </data>
+  <data name="DA" xml:space="preserve">
+    <value>Data Analysis</value>
+  </data>
+  <data name="DASubTitle" xml:space="preserve">
+    <value>Data segmentation, identification of patterns, search for anomalies</value>
+  </data>
+  <data name="DAText" xml:space="preserve">
+    <value>Explore data, identify hidden patterns and anomalies in the data. Segmentation and clustering of data.</value>
+  </data>
+  <data name="DetectionSystem" xml:space="preserve">
+    <value>Object characteristics detection system</value>
+  </data>
+  <data name="DetectionSystemText" xml:space="preserve">
+    <value>Determination of type, shape, speed, color and geometry of objects</value>
+  </data>
+  <data name="Developers" xml:space="preserve">
+    <value>developers involved in various projects</value>
+  </data>
+  <data name="Development" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="DevelopmentText" xml:space="preserve">
+    <value>Control of staff work, traffic of visitors, control of access control, optimization of work schedule, safety and health systems and many other applications.</value>
+  </data>
+  <data name="DistanceSystem" xml:space="preserve">
+    <value>Distance determination system</value>
+  </data>
+  <data name="DistanceSystemText" xml:space="preserve">
+    <value>Determining the distances and sizes of objects</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download presentation</value>
+  </data>
+  <data name="DP" xml:space="preserve">
+    <value>Development process</value>
+  </data>
+  <data name="DP1" xml:space="preserve">
+    <value>Understanding the task</value>
+  </data>
+  <data name="DP2" xml:space="preserve">
+    <value>Problem statement</value>
+  </data>
+  <data name="DP3" xml:space="preserve">
+    <value>Data preparation</value>
+  </data>
+  <data name="DP4" xml:space="preserve">
+    <value>Building models</value>
+  </data>
+  <data name="DP5" xml:space="preserve">
+    <value>Testing and improving</value>
+  </data>
+  <data name="DP6" xml:space="preserve">
+    <value>Deployment and monitoring</value>
+  </data>
+  <data name="DPText1" xml:space="preserve">
+    <value>Analysis of business requirements and identification of main business goals.</value>
+  </data>
+  <data name="DPText2" xml:space="preserve">
+    <value>Business requirements analysis and problem statement.</value>
+  </data>
+  <data name="DPText3" xml:space="preserve">
+    <value>Collection, preparation and preprocessing of data on which the models will be built.</value>
+  </data>
+  <data name="DPText4" xml:space="preserve">
+    <value>Development and training of algorithms and construction of machine vision models.</value>
+  </data>
+  <data name="DPText5" xml:space="preserve">
+    <value>Testing, verification of metrics and compliance with business requirements and goals.</value>
+  </data>
+  <data name="DPText6" xml:space="preserve">
+    <value>Deployment of a full-fledged system, monitoring and support of the solution.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Forecasting" xml:space="preserve">
+    <value>Forecasting</value>
+  </data>
+  <data name="ForecastingText" xml:space="preserve">
+    <value>Development of predictive systems for customer churn, consumer behavior, equipment breakdowns and load forecasting, sales conversion, demand and insurance event forecasting, trifc prediction, road accidents, etc.</value>
+  </data>
+  <data name="GPU" xml:space="preserve">
+    <value>GPU - computing</value>
+  </data>
+  <data name="GPUText" xml:space="preserve">
+    <value>Calculations that require graphics processors.</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotel and restaurant business</value>
+  </data>
+  <data name="HotelText" xml:space="preserve">
+    <value>Monitoring the work of personnel, violations by employees of regulations and labor discipline, detection of traffic of visitors, violation of public safety and order, and many other applications.</value>
+  </data>
+  <data name="Industry" xml:space="preserve">
+    <value>Industry, energy, manufacturing</value>
+  </data>
+  <data name="IndustryText" xml:space="preserve">
+    <value>Modern high-tech production requires special approaches to quality control of manufactured products, as well as optimization of technological processes. Machine vision has made a real technological breakthrough and significantly expanded the capabilities of flaw detection in industry, and brought it to a new level. Now technologies allow monitoring quality not only after the manufacture of a product or product, but also directly during the production process. Other possibilities of using computer vision, such as, for example, the analysis of the granulometric composition of raw materials can significantly optimize the production process.</value>
+  </data>
+  <data name="LeadDevelopers" xml:space="preserve">
+    <value>leading developers with a research degree</value>
+  </data>
+  <data name="Logistics" xml:space="preserve">
+    <value>Logistics, transportation</value>
+  </data>
+  <data name="LogisticsText" xml:space="preserve">
+    <value>Inventory analysis, automated sorting and tracking systems, scanners for reading barcodes and checking product compliance with the order. Automated pass and control systems, as well as systems for forecasting demand and supply volumes based on machine learning.</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Medicine" xml:space="preserve">
+    <value>Medicine and healthcare</value>
+  </data>
+  <data name="MedicineText" xml:space="preserve">
+    <value>The use of computer vision for medical imaging is used in computer diagnostics to plan personal therapy, medical care, and improve decision making. Computer vision systems help the doctor make a diagnosis because there may be small details in the image that the doctor may not notice, but such details can be recognized by the system with a high degree of accuracy. In addition, the image can be compared with thousands of other similar images in the medical system database, and the result of the comparison is used for a more accurate diagnosis by the medical professional.</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>Machine Learning</value>
+  </data>
+  <data name="MLSubTitile" xml:space="preserve">
+    <value>Predictive and recommendation systems, natural language processing</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NLP" xml:space="preserve">
+    <value>Natural language processing</value>
+  </data>
+  <data name="NLPText" xml:space="preserve">
+    <value>Solutions and systems based on natural language synthesis and recognition, automation of call centers</value>
+  </data>
+  <data name="NumberSystem" xml:space="preserve">
+    <value>System for determining the number of objects</value>
+  </data>
+  <data name="NumberSystemText" xml:space="preserve">
+    <value>Counting transport and passenger traffic</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Our partners</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Our solutions</value>
+  </data>
+  <data name="ProductsSubtitle" xml:space="preserve">
+    <value>Typical solutions and products developed by the company</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>projects in the field of machine learning and data analysis</value>
+  </data>
+  <data name="R&amp;D" xml:space="preserve">
+    <value>R&amp;D projects and scientific research</value>
+  </data>
+  <data name="R&amp;DText" xml:space="preserve">
+    <value>Testing hypotheses, conducting scientific research, developing new algorithms.</value>
+  </data>
+  <data name="RecognitionSystem" xml:space="preserve">
+    <value>License plate recognition system</value>
+  </data>
+  <data name="RecognitionSystemText" xml:space="preserve">
+    <value>Recognition of numbers, markings, QR-codes, free-form inscriptions</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Research</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Retail</value>
+  </data>
+  <data name="RetailText" xml:space="preserve">
+    <value>Machine learning enables retailers to automate processes that previously had to be done manually.
+You can automatically receive notifications of stock out of stock or other customer requirements that are not met by creating an analytics system directly at the point of sale. Monitoring staff work, counting visitors, optimizing work schedules, analyzing the effectiveness of promotions and many other applications can be solved by machine learning technology.</value>
+  </data>
+  <data name="RS" xml:space="preserve">
+    <value>Recommendation systems</value>
+  </data>
+  <data name="RSText" xml:space="preserve">
+    <value>Personalized offers based on customer preferences, loyalty programs, recommendation systems, and decision-making assistance systems</value>
+  </data>
+  <data name="SafetySystem" xml:space="preserve">
+    <value>Control and safety system</value>
+  </data>
+  <data name="SafetySystemText" xml:space="preserve">
+    <value>Control of being in hazardous areas, violation of zone boundaries, fires and smoke</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="ServicesTitle" xml:space="preserve">
+    <value>A wide range of services for data analysis, development of intelligent systems based on machine learning and computer vision</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Solutions</value>
+  </data>
+  <data name="SomeTasks" xml:space="preserve">
+    <value>Some of the challenges that companies face:</value>
+  </data>
+  <data name="SP" xml:space="preserve">
+    <value>Suggest a project</value>
+  </data>
+  <data name="SPText" xml:space="preserve">
+    <value>For any questions and suggestions, feel free to contact us</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="T1" xml:space="preserve">
+    <value>Predictive and recommender systems</value>
+  </data>
+  <data name="T2" xml:space="preserve">
+    <value>Systems based on computer vision</value>
+  </data>
+  <data name="T3" xml:space="preserve">
+    <value>Identifying data anomalies</value>
+  </data>
+  <data name="T4" xml:space="preserve">
+    <value>Natural language processing</value>
+  </data>
+  <data name="T5" xml:space="preserve">
+    <value>Data segmentation</value>
+  </data>
+  <data name="T6" xml:space="preserve">
+    <value>Find hidden patterns in your data</value>
+  </data>
+  <data name="T7" xml:space="preserve">
+    <value>Information retrieval systems</value>
+  </data>
+  <data name="TextSystem" xml:space="preserve">
+    <value>Text analysis system</value>
+  </data>
+  <data name="TextSystemText" xml:space="preserve">
+    <value>Highlighting keywords, tags, sentiments of text, analysis of the meaning and intonation of texts</value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="TransportText" xml:space="preserve">
+    <value>On the basis of artificial intelligence, side traffic warning systems, autopilots, and autonomous vehicles are being built.</value>
+  </data>
+  <data name="TS" xml:space="preserve">
+    <value>Typical solutions based on machine learning and computer vision</value>
+  </data>
+  <data name="TSText" xml:space="preserve">
+    <value>Ready-made solutions based on computer vision algorithms that need to be retrained using customer data.</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Write a message</value>
+  </data>
+</root>

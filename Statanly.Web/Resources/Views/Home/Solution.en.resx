@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AS" xml:space="preserve">
+    <value>Search for anomalies</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>Computer vision and video analytics</value>
+  </data>
+  <data name="CV1" xml:space="preserve">
+    <value>Computer vision</value>
+  </data>
+  <data name="CVText" xml:space="preserve">
+    <value>Solutions and systems based on machine vision, video analytics, image recognition, allow you to automate various processes at industrial enterprises, factories, transport and logistics companies. Such solutions are increasingly being used and are very popular among technology, developing companies. Our many years of experience in the field of machine vision and video analytics, many completed projects allow us to guarantee the excellent quality and accuracy of the solutions created.</value>
+  </data>
+  <data name="DA" xml:space="preserve">
+    <value>Data analysis</value>
+  </data>
+  <data name="DAText" xml:space="preserve">
+    <value>Analysis and preprocessing of data, search for anomalies and hidden patterns in the data. Dividing users or site visitors into segments for similar behavior, preferences, or other characteristics based on historical data analysis is an important strategy for wisely allocating resources to advertising and marketing companies. Visual models of such segmentation allow us to identify various patterns and connections between groups, which can be used to optimize promotion channels and select the most effective marketing moves for successful product positioning in the market.</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="IS" xml:space="preserve">
+    <value>Information search</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="LP" xml:space="preserve">
+    <value>Latest publications</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>Machine learning</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="NLP" xml:space="preserve">
+    <value>Natural language processing</value>
+  </data>
+  <data name="NLPText" xml:space="preserve">
+    <value>Solutions and systems based on natural language synthesis and processing, information retrieval systems and speech recognition. This area is successfully developing together with the International Machine Learning Laboratory. Every year an international conference &lt;a href="https://ainlconf.ru/" target="_blank"&gt;Artificial Intelligence and Natural Language&lt;/a&gt; is held.</value>
+  </data>
+  <data name="NN" xml:space="preserve">
+    <value>Neural networks</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="OS" xml:space="preserve">
+    <value>Our solutions</value>
+  </data>
+  <data name="PredictiveSystems" xml:space="preserve">
+    <value>Predictive systems</value>
+  </data>
+  <data name="PredictiveSystemsText" xml:space="preserve">
+    <value>Predictive models make it possible with a high probability to assess the prospects for business development, calculate the conversion of sales in the future, predict the occurrence of an insured event, evaluate the effectiveness of marketing campaigns and the likelihood of a client paying a loan on time. Predictive systems of equipment failure allow you to diagnose and prevent breakdowns and failures of complex systems at an early stage. By assessing future results, you will be able to intelligently allocate resources, reduce costs, control product quality, improve the efficiency of decisions and automate manual labor.</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>projects</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Research</value>
+  </data>
+  <data name="RS" xml:space="preserve">
+    <value>Recommender systems</value>
+  </data>
+  <data name="RSText" xml:space="preserve">
+    <value>Analyze user behavior and generate relevant recommendations, offer related products and increase customer confidence. Personalized recommendations and service recommendations, depending on the needs of an individual client, increase sales and increase customer loyalty in various business sectors, such as retail, banks, aggregators and marketplaces, online stores, travel companies.</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Solutions</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Write a message</value>
+  </data>
+</root>

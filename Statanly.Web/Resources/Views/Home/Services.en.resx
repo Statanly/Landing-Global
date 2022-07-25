@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Churn" xml:space="preserve">
+    <value>Predictive customer churn system</value>
+  </data>
+  <data name="ChurnText1" xml:space="preserve">
+    <value>One of the main tasks of any company is to increase its customer base by attracting new and retaining existing customers. Each client generates a lot of information that can be used to understand how satisfied he is with the services or products provided and whether he is prone to churn.</value>
+  </data>
+  <data name="ChurnText2" xml:space="preserve">
+    <value>Among the factors affecting customer loyalty are the following: • Frequency of service use • Payments • Time on the network / in the application / on the site • Geography • Age • Sex • Season • Account balance • Interaction with service providers • Type of device used • Participation in bonus programs, etc.</value>
+  </data>
+  <data name="ChurnText3" xml:space="preserve">
+    <value>CusFlow algorithms allow you to divide the entire customer base into clusters and highlight the segments of customers that are most prone to churn. Our services are fine-tuned for each client base of our users, which allows us to get the highest prediction accuracy and, at an early stage, prevent customer churn.</value>
+  </data>
+  <data name="ChurnText4" xml:space="preserve">
+    <value>Intelligent churn analysis</value>
+  </data>
+  <data name="ChurnText5" xml:space="preserve">
+    <value>Identifying and preventing customer churn</value>
+  </data>
+  <data name="ChurnText6" xml:space="preserve">
+    <value>Predictive customer churn system, allows you to identify segments of users potentially prone to churn</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Creation and support of services based on AI</value>
+  </data>
+  <data name="Cooperation1" xml:space="preserve">
+    <value>We are open to discussion and cooperation with any organizations and companies in the field of creating services and applications in which machine learning plays a key role. Our competencies, deep knowledge and extensive experience allow us to attract specialists in the field of data analysis and machine learning, developers, analysts.</value>
+  </data>
+  <data name="Cooperation2" xml:space="preserve">
+    <value>Development of services based on artificial intelligence</value>
+  </data>
+  <data name="Cooperation3" xml:space="preserve">
+    <value>We are open to various cooperations and suggestions!</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>Detection and recognition systems based on computer vision</value>
+  </data>
+  <data name="CV1" xml:space="preserve">
+    <value>We create systems and services based on computer vision and video analytics algorithms. Among our solutions are systems for detecting and recognizing various characteristics of objects and processes, including dimensions and dimensions, shape, speed, color, distance. Text recognition systems allow you to accurately identify various inscriptions, numbers, QR codes of arbitrary structure in conditions of strong noisy.</value>
+  </data>
+  <data name="CV2" xml:space="preserve">
+    <value>Computer vision and video analytics for business</value>
+  </data>
+  <data name="CV3" xml:space="preserve">
+    <value>Services for text recognition, detection of sizes, dimensions, colors, speed of objects</value>
+  </data>
+  <data name="CVDiscription" xml:space="preserve">
+    <value>The solutions imply the customization of models for specific conditions to improve the quality of recognition and are offered both SaaS solutions and out-of-the-box.</value>
+  </data>
+  <data name="CVSystems1" xml:space="preserve">
+    <value>System for determining the number of objects</value>
+  </data>
+  <data name="CVSystems2" xml:space="preserve">
+    <value>Number and lettering recognition system</value>
+  </data>
+  <data name="CVSystems3" xml:space="preserve">
+    <value>Object characteristics detection system</value>
+  </data>
+  <data name="CVSystems4" xml:space="preserve">
+    <value>Distance determination system</value>
+  </data>
+  <data name="CVSystems5" xml:space="preserve">
+    <value>Control and safety system</value>
+  </data>
+  <data name="CVSystemsTitle" xml:space="preserve">
+    <value>Key features</value>
+  </data>
+  <data name="DeflamelText1" xml:space="preserve">
+    <value>The service of automatic design creation, developed by our company, based on the content of the text, sentimentality and sentimentality, allows you to quickly obtain a high-quality design for books, articles, postcards. We are constantly improving the quality of the results that our algorithms generate and bringing the created design closer to the design created by professional designers.</value>
+  </data>
+  <data name="DeflamelText2" xml:space="preserve">
+    <value>Enter an excerpt from the book, the text of the article, a description of what you want to see in the end, or just keywords. Select one or several genres of the work. Our AI-based service will automatically select relevant images and transfer styles according to the content, tone and genre of the text.</value>
+  </data>
+  <data name="DeflamelText3" xml:space="preserve">
+    <value>Create custom designs for books, articles, news notes. It's really easy now.</value>
+  </data>
+  <data name="DeflamelText4" xml:space="preserve">
+    <value>Enter text, genre or keywords</value>
+  </data>
+  <data name="DeflamelText5" xml:space="preserve">
+    <value>Get the finished design</value>
+  </data>
+  <data name="DeflamelText6" xml:space="preserve">
+    <value>Use AI-powered design for books, websites and any applications</value>
+  </data>
+  <data name="HIW" xml:space="preserve">
+    <value>How it works?</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Our products</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Research</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Solutions</value>
+  </data>
+  <data name="TextAnalysis" xml:space="preserve">
+    <value>Text analysis and keyword extraction service</value>
+  </data>
+  <data name="TextAnalysis1" xml:space="preserve">
+    <value>A service based on AI algorithms for highlighting keywords, sentiments and meaning of texts. Allows you to instantly highlight keywords from large texts, as well as to make their classification.</value>
+  </data>
+  <data name="TextAnalysis2" xml:space="preserve">
+    <value>Using an open API, you can easily implement our engine for extracting keywords from texts and use it in any projects and applications.</value>
+  </data>
+  <data name="TextAnalysis3" xml:space="preserve">
+    <value>Analyze text messages, speech, emotions</value>
+  </data>
+  <data name="TextAnalysis4" xml:space="preserve">
+    <value>Extract keywords from any text in a moment</value>
+  </data>
+  <data name="WitsArtText1" xml:space="preserve">
+    <value>Service based on the meringue of an AI search engine developed by our company for images, photos, illustrations and vector graphics based on the meaning, sentiment and keywords of texts, articles and notes. Allows you to instantly find relevant images for news articles, notes, social media posts and news aggregators. Now you do not need to highlight the key ideas of large texts in order to provide them with a beautiful and suitable image, it is enough to download the entire text and instantly get a huge selection of images that are different in meaning and content.</value>
+  </data>
+  <data name="WitsArtText2" xml:space="preserve">
+    <value>Using an open API, you can easily embed our text-based image search engine into any projects and applications.</value>
+  </data>
+  <data name="WitsArtText3" xml:space="preserve">
+    <value>It is enough to enter the text of an article, a note, a description of a site or a blog, WitsArt algorithms will analyze the entered text, highlight the meaning, genre, keywords and find all relevant images that will reflect the meaning of the text and attract the attention of users. Create unique images by description, subjects that cannot be found in photo stocks. Generation algorithms will allow you to create truly unique images that are indistinguishable from real photographs.</value>
+  </data>
+  <data name="WitsArtText4" xml:space="preserve">
+    <value>Generation of photorealistic images from texts</value>
+  </data>
+  <data name="WitsArtText5" xml:space="preserve">
+    <value>AI algorithms like an artist create unique images based on textual description</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Write a message</value>
+  </data>
+</root>

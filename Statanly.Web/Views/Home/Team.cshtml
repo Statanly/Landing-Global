@@ -1,0 +1,325 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
+        </div>
+        <div class="cta d-none d-md-block">
+            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>              
+                <li><a href="/home/company">@Localizer["History"]</a></li>
+                <li>@Localizer["Team"]</li>
+                <li><a href="/home/mission">@Localizer["Mission"]</a></li>
+                <li><a href="/home/press">@Localizer["Press"]</a></li>
+                <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+            </ol>
+            <h2>@Localizer["Team"]</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>@Localizer["OurTeam"]</h2>
+                <p>@Localizer["KeyTeam"]</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>@Localizer["SF"]</h4>
+                            <span>@Localizer["CEO"]</span>
+                            <p>
+                                Руководитель компании Statanly Technologies. Куратор основных проектов
+                            </p>
+                            <p>
+                                телефон: +7(921)-875-23-96
+                            </p>
+                            <p>
+                                почта: <a href="mailto:sergey@statanly.com">sergey@statanly.com</a>
+                            </p>
+                            @*<div class="social">
+                        <a href=""><i class="ri-twitter-fill"></i></a>
+                        <a href=""><i class="ri-facebook-fill"></i></a>
+                        <a href=""><i class="ri-instagram-fill"></i></a>
+                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>@Localizer["AF"]</h4>
+                            <span>@Localizer["CTO"]</span>
+                            <p>
+                                Руководитель международной лаборатории машинного обучения университета ИТМО, кандидат физ. мат. наук
+                            </p>
+                            <p>
+                                телефон: +7(950)-021-03-28
+                            </p>
+                            <p>
+                                почта: <a href="mailto:afilchenkov@statanly.com">afilchenkov@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-32.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Алексей Третьяков</h4>
+                            <span>Директор по развитию бизнеса</span>
+                            <p>Cпециалист по маркетингу, связям с общественностью, опытом работы в сфере финансовых технологий и обширной сетью руководителей СМИ и бизнеса</p>
+                            <p>
+                                телефон: +7(927)-705-96-64
+                            </p>
+                            <p>
+                                почта: <a href="mailto:alex@statanly.com">alex@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-7.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Евгений Ивичев</h4>
+                            <span>Операционный директор</span>
+                            <p>
+                                Заместитель генерального директора, руководитель отдела маркетинга
+                            </p>
+                            <p>
+                                телефон: +7(965)-006-10-65
+                            </p>
+                            <p>
+                                почта: <a href="mailto:eugene@statanly.com">eugene@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            <div class="row" style="margin-top: 25px">
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Иван Сметанников</h4>
+                            <span>Руководитель отдела машинного обучения</span>
+                            <p>
+                                Заместитель руководителя международной лаборатории машинного обучения университета ИТМО, кандидат тех. наук
+                            </p>
+                            <p>
+                                почта: <a href="mailto:ivan@statanly.com">ivan@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Сергей Муравьев</h4>
+                            <span>Руководитель отдела анализа данных</span>
+                            <p>Ведущий сотрудник международной лаборатории машинного обучения университета ИТМО, кандидат тех. наук</p>
+                            <p>
+                                почта: <a href="mailto:smuravyov@statanly.com">smuravyov@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6  mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-5.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Вячеслав Шаламов</h4>
+                            <span>Руководитель отдела высоконагруженных систем</span>
+                            <p>Ведущий сотрудник международной лаборатории машинного обучения университета ИТМО</p>
+                            <p>
+                                почта: <a href="mailto:ss@statanly.com">ss@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-6.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Валерия Ефимова</h4>
+                            <span>Руководитель отдела компьютерного зрения</span>
+                            <p>Ведущий сотрудник международной лаборатории машинного обучения университета ИТМО</p>
+                            <p>
+                                почта: <a href="mailto:lera@statanly.com">lera@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="section-title" style="margin-top: 25px">
+                <p>Бойцы, оказывающие неоценимый вклад</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-9.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Николай Ковтун</h4>
+                            <span>Ведущий разработчик</span>
+                            <p>Прогнозные и рекомендательные системы</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-10.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Святослав Орешин</h4>
+                            <span>ML-разработчик</span>
+                            <p>Обрабока естественных языков</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-11.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Егор Крашенинников</h4>
+                            <span>ML-разработчик</span>
+                            <p>Обрабока естественных языков, компьютерное зрение</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-8.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Алексей Забашта</h4>
+                            <span>Ведущий разработчик</span>
+                            <p>Прогнозные системы, автоматическое машинное обучение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 25px">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-12.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Мария Румянцева</h4>
+                            <span>ML-разработчик</span>
+                            <p>Компьютерное зрение</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-13.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Светлана Климкина</h4>
+                            <span>Руководитель проектов</span>
+                            <p>
+                                почта: <a href="mailto:sm.klimkina@statanly.com">sm.klimkina@statanly.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>             
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member d-flex align-items-start" style="height: 290px">
+                        <div class="pic"><img src="/assets/img/team/team-14.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Семен Орехов</h4>
+                            <span>Младший ML-разработчик</span>
+                            <p>Компьютерное зрение</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member d-flex align-items-start" style="height: 280px">
+                        <div class="pic"><img src="/assets/img/team/team-15.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Никита Новгородцев</h4>
+                            <span>Младший ML-разработчик</span>
+                            <p>Компьютерное зрение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->
+
+</main><!-- End #main -->

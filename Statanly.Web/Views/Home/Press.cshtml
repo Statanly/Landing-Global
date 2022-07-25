@@ -1,0 +1,103 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
+        </div>
+        <div class="cta d-none d-md-block">
+            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>             
+                <li><a href="/home/company">@Localizer["History"]</a></li>
+                <li><a href="/home/team">@Localizer["Team"]</a></li>
+                <li><a href="/home/mission">@Localizer["Mission"]</a></li>
+                <li>@Localizer["Press"]</li>
+                <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+            </ol>
+            <h2>@Localizer["Press"]</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-description">
+                        <h2>@Localizer["Publications"]</h2>
+                        <p>
+                            <h5 class="text-info"><a href="https://abnews.ru/2021/03/12/peterburgskaya-kompaniya-sozdaet-nejroset-kak-u-ilona-maska/" target="_blank">✔ Петербургская компания создает нейросеть, как у Илона Маска</a></h5>
+                            <h5 class="text-info"><a href="https://www.dp.ru/a/2021/03/12/Gonka_perevoploshhenij" target="_blank">✔ Гонка перевоплощений: петербургская компания научит нейросети рисовать</a></h5>
+                            <h5 class="text-info"><a href="https://habr.com/ru/company/jetinfosystems/blog/485232/" target="_blank">✔ Автоматическое машинное обучение: когда data scientist’ы будут не нужны</a></h5>
+                            <h5 class="text-info"><a href="https://habr.com/company/moikrug/blog/342258/" target="_blank">✔ Рейтинг ИТ-работодателей Санкт-Петербурга и Москвы. Statanly Technologies - единственный стартап в рейтинге</a></h5>
+                            <h5 class="text-info"><a href="https://news.itmo.ru/ru/startups_and_business/startup/news/8972/" target="_blank">✔ Резидент технопарка ИТМО, компания Statanly Technologies: «Мы не стали ждать инвестиций, а начали обеспечивать себя сами»</a></h5>
+                            <h5 class="text-info"><a href="https://news.itmo.ru/en/startups_and_business/startup/news/8972/" target="_blank">✔ ITMO Technopark Resident Statanly Technologies Shares Its Story of Success</a></h5>
+                            <h5 class="text-info"><a href="http://news.ifmo.ru/ru/startups_and_business/startup/news/6653/" target="_blank">✔ Будни стартапа</a></h5>
+                            <h5 class="text-info"><a href="http://news.ifmo.ru/ru/news/6831/" target="_blank">✔ Фестиваль стартапов *SHIP в Котке, Финляндия</a></h5>
+                            <h5 class="text-info"><a href="http://ingria-park.ru/news_technopark/aingria_a_new_direction/" target="_blank">✔ AI Day в технопарке Ингрия, Санкт-Петербург</a></h5>
+                            <h5 class="text-info"><a href="https://www.metronews.ru/novosti/peterbourg/reviews/iskusstvennye-mozgi-iz-rossii-idut-na-eksport-1350392/" target="_blank">✔ Искусственные "мозги" из России идут на экспорт, Газета Метро</a></h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->

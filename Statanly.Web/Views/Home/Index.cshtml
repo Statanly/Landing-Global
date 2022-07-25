@@ -1,0 +1,650 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+    var link = "/home/download?lang=" + lang;
+    var client0 = "assets/img/clients" + lang + "/client-0.png";
+    var client1 = "assets/img/clients" + lang + "/client-1.png";
+    var client2 = "assets/img/clients" + lang + "/client-2.png";
+    var client3 = "assets/img/clients" + lang + "/client-3.png";
+    var client4 = "assets/img/clients" + lang + "/client-4.png";
+    var client5 = "assets/img/clients" + lang + "/client-5.png";
+    var client6 = "assets/img/clients" + lang + "/client-6.png";
+    var client7 = "assets/img/clients" + lang + "/client-7.png";
+    var client8 = "assets/img/clients" + lang + "/client-8.png";
+    var client9 = "assets/img/clients" + lang + "/client-9.png";
+    var client10 = "assets/img/clients" + lang + "/client-10.png";
+    var client11 = "assets/img/clients" + lang + "/client-11.png";
+    var client12 = "assets/img/clients" + lang + "/client-12.png";
+    var client13 = "assets/img/clients" + lang + "/client-13.png";
+    var client14 = "assets/img/clients" + lang + "/client-14.png";
+    var client15 = "assets/img/clients" + lang + "/client-15.jpg";
+    var client16 = "assets/img/clients" + lang + "/client-16.png";
+
+}
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
+        </div>
+        <div class="cta d-none d-md-block">
+            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>                  
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="3500" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["ML"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["MLSubTitile"]</p>
+                <a href=@link class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["Download"]</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["CV"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["CVSubTitle"]</p>
+                <a href=@link class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["Download"]</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["DA"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["DASubTitle"]</p>
+                <a href=@link class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["Download"]</a>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Icon Boxes Section ======= -->
+    <section id="icon-boxes" class="icon-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxs-cloud-rain"></i></div>
+                        <h4 class="title"><a href="">@Localizer["Forecasting"]</a></h4>
+                        <p class="description">@Localizer["ForecastingText"]</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxs-user-check"></i></div>
+                        <h4 class="title"><a href="">@Localizer["RS"]</a></h4>
+                        <p class="description">@Localizer["RSText"]</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-cctv"></i></div>
+                        <h4 class="title"><a href="https://cv.statanly.com/" target="_blank">@Localizer["CVVA"]</a></h4>
+                        <p class="description">@Localizer["CVVAText"]</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxl-messenger"></i></div>
+                        <h4 class="title"><a href="">@Localizer["NLP"]</a></h4>
+                        <p class="description">@Localizer["NLPText"]</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Icon Boxes Section -->
+    <!-- ======= Producta Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>@Localizer["Products"]</h2>
+                <p>@Localizer["ProductsSubtitle"] </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <i class="bi bi-people"></i>
+                        <h4><a href="#">@Localizer["NumberSystem"]</a></h4>
+                        <p>@Localizer["NumberSystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <i class="bi bi-upc-scan"></i>
+                        <h4><a href="#">@Localizer["RecognitionSystem"]</a></h4>
+                        <p>@Localizer["RecognitionSystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <i class="bi bi-truck"></i>
+                        <h4><a href="#">@Localizer["DetectionSystem"]</a></h4>
+                        <p>@Localizer["DetectionSystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-box">
+                        <i class="bi bi-zoom-in"></i>
+                        <h4><a href="#">@Localizer["DistanceSystem"]</a></h4>
+                        <p>@Localizer["DistanceSystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-box">
+                        <i class="bi bi-eye"></i>
+                        <h4><a href="#">@Localizer["SafetySystem"]</a></h4>
+                        <p>@Localizer["SafetySystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box">
+                        <i class="bi bi-cart4"></i>
+                        <h4><a href="#">@Localizer["ChurnSystem"]</a></h4>
+                        <p>@Localizer["ChurnSystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box">
+                        <i class="bi bi-graph-up"></i>
+                        <h4><a href="#">@Localizer["ConversionSystem"]</a></h4>
+                        <p>@Localizer["ConversionSystemText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-box">
+                        <i class="bi bi-file-earmark-word"></i>
+                        <h4><a href="#">@Localizer["TextSystem"]</a></h4>
+                        <p>@Localizer["TextSystemText"]</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Products Section -->
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        @*<h3>Free</h3>*@
+                        <h4>15+<span>@Localizer["LeadDevelopers"]</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        @*<h3>Free</h3>*@
+                        <h4>50+<span>@Localizer["Developers"]</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        @*<h3>Free</h3>*@
+                        <h4>300+<span>@Localizer["Projects"]</span></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>@Localizer["About"]</h2>
+                <p>
+                    @Localizer["AboutText"]
+                </p>
+            </div>
+
+            <div class="row content">
+                <div class="col-lg-6">
+                    <p>
+                        @Localizer["SomeTasks"]
+                    </p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T1"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T2"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T3"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T4"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T5"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T6"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T7"]</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        @Localizer["AboutLongText"]
+                    </p>
+                    <a href="/home/company" class="btn-learn-more">@Localizer["More"]</a>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Us Section -->
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container" data-aos="zoom-in">
+            <div class="section-title">
+                <h2>@Localizer["Clients"]</h2>
+            </div>
+            <div class="clients-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><img src=@client0 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client1 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client2 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client3 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client4 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client5 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client6 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client7 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client8 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client9 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client10 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client11 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client12 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client13 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client14 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client15 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client16 class="img-fluid" alt=""></div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section><!-- End Clients Section -->
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-lg-5 align-items-stretch position-relative video-box" style='background-image: url("assets/img/why-us.jpg");' data-aos="fade-right">
+                    @*<a href="/" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>*@
+                </div>
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+
+                    <div class="content">
+                        <h3>@Localizer["Application"]  <strong> @Localizer["Areas"]</strong></h3>
+                        <p>
+                            @Localizer["ApplicationSubTitle"]
+                        </p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <ul>
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1" class="collapsed"><span>1</span>@Localizer["Retail"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["RetailText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="200">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>2</span>@Localizer["Logistics"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["LogisticsText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>3</span>@Localizer["Industry"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["IndustryText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>4</span>@Localizer["Development"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["DevelopmentText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed"><span>5</span>@Localizer["Hotel"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["HotelText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-6" class="collapsed"><span>6</span>@Localizer["Agriculture"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["AgricultureText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-7" class="collapsed"><span>7</span>@Localizer["Medicine"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-7" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["MedicineText"]
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-8" class="collapsed"><span>8</span>@Localizer["Transport"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-8" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["TransportText"]
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Why Us Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>@Localizer["Services"]</h2>
+                <p>@Localizer["ServicesTitle"]</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <i class="bi bi-hdd"></i>
+                        <h4><a href="#">@Localizer["DA"]</a></h4>
+                        <p>@Localizer["DAText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <i class="bi bi-bar-chart"></i>
+                        <h4><a href="#">@Localizer["AIDevelopment"]</a></h4>
+                        <p>@Localizer["AIDevelopmentText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <i class="bi bi-binoculars"></i>
+                        <h4><a href="#">@Localizer["R&D"]</a></h4>
+                        <p>@Localizer["R&DText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box">
+                        <i class="bi bi-brightness-high"></i>
+                        <h4><a href="#">@Localizer["Consulting"]</a></h4>
+                        <p>@Localizer["ConsultingText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box">
+                        <i class="bi bi-calendar4-week"></i>
+                        <h4><a href="#">@Localizer["TS"]</a></h4>
+                        <p>@Localizer["TSText"]</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-box">
+                        <i class="bi bi-calculator"></i>
+                        <h4><a href="#">@Localizer["GPU"]</a></h4>
+                        <p>@Localizer["GPUText"]</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>@Localizer["SP"]</h3>
+                    <p> @Localizer["SPText"]</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="#contact">@Localizer["Write"]</a>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>@Localizer["DP"]</h2>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">@Localizer["DP1"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <p>
+                                @Localizer["DPText1"]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">@Localizer["DP2"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                @Localizer["DPText2"]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">@Localizer["DP3"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                @Localizer["DPText3"]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">@Localizer["DP4"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                @Localizer["DPText4"]
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">@Localizer["DP5"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                @Localizer["DPText5"]
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="600">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">@Localizer["DP6"]   <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                @Localizer["DPText6"]
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </section><!-- End Frequently Asked Questions Section -->
+    <!-- ======= Contact Section ======= -->
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container" data-aos="zoom-in">
+            <div class="section-title">
+                <h2>@Localizer["Partners"]</h2>
+            </div>
+            <div class="clients-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><a href="https://itmo.ru" target="_blank"><img src="~/assets/img/partners/itmo.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://fasie.ru/" target="_blank"><img src="~/assets/img/partners/fasie.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://russoft.org/participant/statanly-technologies/" target="_blank"><img src="~/assets/img/partners/russoft.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://sk.ru/" target="_blank"><img src="~/assets/img/partners/skolkovo.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://jet.su/" target="_blank"><img src="~/assets/img/partners/jet.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://i.moscow/" target="_blank"><img src="~/assets/img/partners/imoscow.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://technopark.itmo.ru/" target="_blank"><img src="~/assets/img/partners/Technopark.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://ctlab.ifmo.ru/" target="_blank"><img src="~/assets/img/partners/ilct.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.reksoft.ru/" target="_blank"><img src="~/assets/img/partners/reksoft.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://somin.ai/" target="_blank"><img src="~/assets/img/partners/bbridge.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.mindgap.dev/" target="_blank"><img src="~/assets/img/partners/mindgap.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://churn.statanly.com/" target="_blank"><img src="~/assets/img/partners/cusflow.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://deflamel.com/" target="_blank"><img src="~/assets/img/partners/deflamel.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="http://icv.systems/" target="_blank"><img src="~/assets/img/partners/icv.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://ori.team/" target="_blank"><img src="~/assets/img/partners/ori.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://cv.statanly.com/" target="_blank"><img src="~/assets/img/partners/visionlab.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://witsart.com/" target="_blank"><img src="~/assets/img/partners/witsart.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section><!-- End Clients Section -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>@Localizer["Contacts"]</h2>
+                <h4>@Localizer["ContactsText"]</h4>
+            </div>
+
+            <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
+                <div class="col-lg-5">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>@Localizer["Address"]:</h4>
+                            <p>@Localizer["AddressText"]</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>@Localizer["Email"]:</h4>
+                            <p>hello@statanly.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>@Localizer["Phone"]:</h4>
+                            <p>+7(921)-875-23-96</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
+                    <form action="/message/send" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder=@Localizer["Name"] required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" placeholder=@Localizer["Email"] required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder=@Localizer["Subject"] required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="text" rows="5" placeholder=@Localizer["Message"] required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Отправляем</div>
+                            <div class="error-message">Ошибка</div>
+                            <div class="sent-message">Ваше сообщение отправлено. Спасибо!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">@Localizer["Send"]</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->

@@ -1,0 +1,159 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
+            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
+        </div>
+        <div class="cta d-none d-md-block">
+            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/home/company">@Localizer["History"]</a></li>
+                <li><a href="/home/team">@Localizer["Team"]</a></li>
+                <li>@Localizer["Mission"]</li>
+                <li><a href="/home/press">@Localizer["Press"]</a></li>
+                <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+            </ol>
+            <h2>@Localizer["Mission"]</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>@Localizer["OurMission"]</h2>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            @Localizer["MissionText"]
+                        </p>
+                    </div>
+                    <div class="section-title">
+                        <h2>Машинное обучение</h2>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            В современном мире такие понятия, как большие данные, искусственный интеллект, машинное обучение, интеллектуальный анализ данных стали научной
+                            базой для развития практических методов обработки больших массивов структурированной и неструктурированной информации с целью оптимизации бизнес-процессов.
+                        </p>
+                        <p>
+                            Эти технологии в совокупности используются для поиска неявных зависимостей, закономерностей и взаимосвязей, которые позволяют провести более глубокую оценку факторов,
+                            определяющих показатели эффективности деятельности и спрогнозировать их изменение.
+                        </p>
+                        <p>
+                            Большие Данные получили широкое распространение во многих отраслях бизнеса. Их используют в здравоохранении, телекоммуникациях, интернете, логистике,
+                            промышленности, торговле, в финансовых компаниях, а также в государственном управлении.
+                        </p>
+                        <p>
+                            На сегодняшний день эти технологии активно внедряются в крупных компаниях, во всем мире. Такие компании, как Amazon, Microsoft, Facebook, Google, IBM, Yandex,
+                            VISA, Master Card, Bank of America, HSBC, AT&T, Coca-Cola, Starbucks и Netflix уже используют ресурсы больших данных, и намеченная тенденция ведет к тому,
+                            что современный бизнес постепенно осознает конкурентное преимущество применения данных технологий.
+                        </p>
+                        <p>
+                            Эти тенденции ведут к тому, что современный бизнес осознает всю важность применения подобных технологий для поддержания конкурентоспособности.
+                        </p>
+                    </div>
+                    <div class="section-title">
+                        <h2>Проблемы с которыми сталкиваются компании</h2>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            В основе методов анализа больших данных лежат довольно сложные математические алгоритмы, с разработкой и внедрением которых связан ряд проблем:
+                            <div class="container text-left">
+                                <h5 class="text-info"><a href="#">✔ Высокая стоимость внедрения технологий Big Data</a></h5>
+                                <h5 class="text-info"><a href="#">✔ Необходимость обеспечение защиты данных и их конфиденциальности</a></h5>
+                                <h5 class="text-info"><a href="#">✔ Нехватка высококвалифицированных дорогостоящих специалистов</a></h5>
+                                <h5 class="text-info"><a href="#">✔ Недоверие компаний к данным технологиям</a></h5>
+                                <h5 class="text-info"><a href="#">✔ Недостаточный объем накопленной информации</a></h5>
+                                <h5 class="text-info"><a href="#">✔ Сложность интеграции с существующими системами</a></h5>
+                            </div>
+                        </p>
+                        <p>
+                            Эти факторы становятся барьером для большинства компаний, желающих использовать подобные решения или вести разработку в этих областях.
+                        </p>
+                    </div>
+                    <div class="section-title">
+                        <h2>Наша задача</h2>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            Нашей главной задачей является предоставление сервисов машинного обучения, анализа и визуализации данных. Простота, полная автоматизация и
+                            легкость использования наших сервисов позволяет быстро внедрить и использовать всю мощь интеллектуальных алгоритмов.
+                            Основным направлениям разработки являются задачи a поиска зависимостей, классификации, прогнозирования, визуализации больших данных.
+                        </p>
+                    </div>
+                    <div class="section-title">
+                        <h2>Наука и технологии</h2>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            Мы собрали команду специалистов в различных областях науки, анализа данных, математики, информационных технологиях.
+                            Среди наших ребят - ученые из университета ИТМО и Санкт-Петербургского государственного университета - мировых лидеров в области IT.
+                            Практически все наши разработки непрерывно связаны с научной деятельностью. Сопровождаются научными публикациями в ведущих мировых журналах в области анализа данных.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
