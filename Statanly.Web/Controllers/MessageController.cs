@@ -32,7 +32,7 @@ namespace Statanly.Web.Controllers
             }
             catch (Exception ex)
             {
-                return Ok("Error");
+                return Ok(ex.Message);
             }
         }
 
