@@ -24,11 +24,15 @@ namespace Statanly.Web.Controllers
         {
             try
             {
-
-                message.Subject = "Вопрос с сайта";
-                await this.messageService.SendAsync(message);
-                ViewBag.Message = "Ваш вопрос успешно отправлен. Мы ответим Вам в ближайшее время.";
-                return Ok("OK");
+                if (message.Check == 7)
+                {
+                    message.Subject = "Вопрос с сайта";
+                    await this.messageService.SendAsync(message);
+                    ViewBag.Message = "Ваш вопрос успешно отправлен. Мы ответим Вам в ближайшее время.";
+                    return Ok("OK");
+                }
+                else
+                    return Ok("2 + 7 = ?");
             }
             catch (Exception ex)
             {
