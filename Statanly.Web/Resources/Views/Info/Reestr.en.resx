@@ -118,67 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address" xml:space="preserve">
-    <value>Адрес</value>
+    <value>Address</value>
   </data>
   <data name="AddressText" xml:space="preserve">
-    <value>Россия, Санкт-Петербург, Биржевая линия, 16</value>
+    <value>Russia, Saint Petersburg, Birzhevaya liniya, 16</value>
   </data>
   <data name="CH" xml:space="preserve">
-    <value>История компании</value>
+    <value>Company History</value>
   </data>
   <data name="CH1" xml:space="preserve">
-    <value>История нашей компании началась несколько лет назад.
-Тогда на &lt;a href="http://ditp.ifmo.ru/ru/" target="_blank"&gt;факультете информационных технологий и программирования&lt;/a&gt; Университета &lt;a href="http://www.ifmo.ru/ru/" target="_blank"&gt;ИТМО&lt;/a&gt; появилась &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;лаборатория машинного обучения&lt;/a&gt;, а студенты университета в очередной раз стали абсолютными чемпионами самой престижной международной олимпиады по программированию &lt;a href="https://icpc.global" target="_blank"&gt;ACM/ICPC&lt;/a&gt;.</value>
+    <value>The history of our company began several years ago.
+Then on &lt;a href="http://ditp.ifmo.ru/ru/" target= "_blank"&gt;faculty of Information Technology and Programming&lt;/a&gt; University &lt;a href="http://www.ifmo.ru/ru/" target= "_blank"&gt;ITMO &lt;/a&gt; appeared &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target= "_blank" &gt;machine learning lab&lt;/a&gt;, and the university students once again became the absolute champions of the most prestigious international programming Olympiad &lt;a href="https://icpc.global" target= "_blank" &gt;ACM/ICPC&lt;/a&gt;.</value>
   </data>
   <data name="CH2" xml:space="preserve">
-    <value>С тех пор, совместно с крупными российскими и международными компаниями, среди которых &lt;strong&gt;Норильский никель&lt;/strong&gt;, &lt;strong&gt;Мегафон&lt;/strong&gt;, &lt;strong&gt;Евраз&lt;/strong&gt;, &lt;strong&gt;Газпром нефть&lt;/strong&gt;, &lt;strong&gt;Яндекс&lt;/strong&gt;, &lt;strong&gt;Mail.ru Group&lt;/strong&gt;, &lt;strong&gt;Insilico Medicine&lt;/strong&gt;, &lt;strong&gt;Сбербанк&lt;/strong&gt;, &lt;strong&gt;ВКонтакте&lt;/strong&gt;, &lt;strong&gt;СТМ-Сервис&lt;/strong&gt;, было  реализовано более 250 совместных проектов.</value>
+    <value>Since then, together with large Russian and international companies, including &lt;strong&gt;Norilsk Nickel&lt;/strong&gt;, &lt;strong&gt;Megafon&lt;/strong&gt;, &lt;strong&gt;Evraz&lt;/strong&gt;, &lt;strong&gt;Gazprom Neft&lt;/strong &gt;, &lt;strong&gt;Yandex&lt;/strong&gt;, &lt;strong&gt;Mail.ru Group&lt;/strong&gt;, &lt;strong&gt;Insilico Medicine&lt;/strong&gt;, &lt;strong&gt;Sberbank&lt;/strong&gt;, &lt;strong&gt;VKontakte&lt;/strong&gt;, &lt;strong&gt;STM-Service&lt;/strong&gt;, more than 250 joint projects have been implemented.</value>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>Компания</value>
+    <value>Company</value>
   </data>
   <data name="CompanyToday" xml:space="preserve">
-    <value>Компания сегодня</value>
+    <value>Company today</value>
   </data>
   <data name="Contacts" xml:space="preserve">
-    <value>Контакты</value>
+    <value>Contacts</value>
   </data>
   <data name="ContactsInfo" xml:space="preserve">
-    <value>Контактная информация</value>
+    <value>Contact Information</value>
   </data>
   <data name="Cooperation" xml:space="preserve">
-    <value>Сотрудничество</value>
+    <value>Cooperation</value>
   </data>
   <data name="CT1" xml:space="preserve">
-    <value>Сегодня наша компания — это молодые, амбициозные сотрудники, разработчики и программисты, специалисты в области машинного обучения, анализа и визуализации данных, высоконагруженных систем и хранения информации, ученые, ведущие свои научные исследования на передовом крае науки. Наши тесные связи с &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;международной лабораторией компьютерных технологий&lt;/a&gt; университета ИТМО позволяют нам привлекать молодых, талантливых специалистов на стажировки и постоянные позиции, поддерживать высочайший уровень и профессионализм.</value>
+    <value>Today our company consists of young, ambitious employees, developers and programmers, specialists in the field of machine learning, data analysis and visualization, high-load systems and information storage, scientists conducting their scientific research at the cutting edge of science. Our close ties with &lt;a href="http://ctlab.ifmo.ru/en/87845/structure/structure" target="_blank"&gt;International Computer Technologies Laboratory&lt;/a&gt; at ITMO University allow us to attract young, talented specialists for internships and permanent positions, to maintain the highest level and professionalism.</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+    <value>Email</value>
   </data>
   <data name="History" xml:space="preserve">
-    <value>История</value>
+    <value>History</value>
   </data>
   <data name="Main" xml:space="preserve">
-    <value>Главная</value>
+    <value>Home</value>
   </data>
   <data name="Mission" xml:space="preserve">
-    <value>Миссия</value>
+    <value>Mission</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Телефон</value>
+    <value>Phone</value>
   </data>
   <data name="Press" xml:space="preserve">
-    <value>Пресса</value>
+    <value>Press</value>
   </data>
   <data name="Research" xml:space="preserve">
-    <value>Исследования</value>
+    <value>Research</value>
   </data>
   <data name="Solutions" xml:space="preserve">
-    <value>Решения</value>
+    <value>Solutions</value>
   </data>
   <data name="Team" xml:space="preserve">
-    <value>Команда</value>
+    <value>Team</value>
   </data>
   <data name="Write" xml:space="preserve">
-    <value>Написать</value>
+    <value>Write a message</value>
   </data>
 </root>
