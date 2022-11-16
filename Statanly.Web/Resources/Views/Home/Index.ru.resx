@@ -271,6 +271,9 @@
   <data name="Email" xml:space="preserve">
     <value>Почта</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
   <data name="Forecasting" xml:space="preserve">
     <value>Предиктивная аналитика</value>
   </data>
@@ -391,6 +394,12 @@
   </data>
   <data name="Send" xml:space="preserve">
     <value>Отправить</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>Отправляем</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Ваше сообщение отправлено. Спасибо!</value>
   </data>
   <data name="Services" xml:space="preserve">
     <value>Сервисы</value>

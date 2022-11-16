@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="Accreditation" xml:space="preserve">
+    <value>Accreditation and software registry</value>
+  </data>
   <data name="Adress1" xml:space="preserve">
     <value>Birzhevaya line, 16</value>
   </data>

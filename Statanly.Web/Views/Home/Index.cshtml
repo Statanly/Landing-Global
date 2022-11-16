@@ -34,6 +34,7 @@
     var client16 = "assets/img/clients" + lang + "/client-16.png";
     var client17 = "assets/img/clients" + lang + "/client-17.png";
     var client18 = "assets/img/clients" + lang + "/client-18.png";
+    var client19 = "assets/img/clients" + lang + "/client-19.png";
 }
 <!-- ======= Top Bar ======= -->
 <div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
@@ -320,6 +321,7 @@
                     <div class="swiper-slide"><img src=@client16 class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src=@client17 class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src=@client18 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client19 class="img-fluid" alt=""></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -636,10 +638,13 @@
                         <div class="form-group mt-3">
                             <textarea class="form-control" name="text" rows="5" placeholder=@Localizer["Message"] required></textarea>
                         </div>
-                        <div class="my-3">
-                            <div class="loading">Отправляем</div>
-                            <div class="error-message">Ошибка</div>
-                            <div class="sent-message">Ваше сообщение отправлено. Спасибо!</div>
+                        <div class="my-3">    
+                            <div class="loading">@Localizer["Sending"]</div>
+                            <div class="error-message">@Localizer["Error"]</div>
+                            <div class="sent-message">@Localizer["SendMessage"]</div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="check" id="subject" placeholder="2 + 5 =" required>
                         </div>
                         <div class="text-center"><button type="submit">@Localizer["Send"]</button></div>
                     </form>

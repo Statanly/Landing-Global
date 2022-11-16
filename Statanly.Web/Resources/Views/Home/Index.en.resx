@@ -271,6 +271,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="Forecasting" xml:space="preserve">
     <value>Forecasting</value>
   </data>
@@ -391,6 +394,12 @@ You can automatically receive notifications of stock out of stock or other custo
   </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>Sending</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Your message has been sent. Thanks!</value>
   </data>
   <data name="Services" xml:space="preserve">
     <value>Services</value>
