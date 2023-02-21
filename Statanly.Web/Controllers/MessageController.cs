@@ -32,7 +32,7 @@ namespace Statanly.Web.Controllers
                     return Ok("OK");
                 }
                 else
-                    return Ok("2 + 7 = ?");
+                    return Ok("2 + 5 = ?");
             }
             catch (Exception ex)
             {

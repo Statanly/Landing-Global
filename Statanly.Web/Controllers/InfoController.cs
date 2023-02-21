@@ -16,6 +16,10 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Documentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult Installation()
+        {
+            return File("~/Content/Installation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
         public FileResult Code()
         {
             return File("~/Content/cvflow.zip", System.Net.Mime.MediaTypeNames.Application.Zip);
