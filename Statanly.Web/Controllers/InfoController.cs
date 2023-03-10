@@ -28,5 +28,9 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult Ustav()
+        {
+            return File("~/Content/Ustav.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
     }
 }

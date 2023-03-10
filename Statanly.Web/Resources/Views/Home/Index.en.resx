@@ -281,10 +281,10 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Development of predictive systems for customer churn, consumer behavior, equipment breakdowns and load forecasting, sales conversion, demand and insurance event forecasting, trifc prediction, road accidents, etc.</value>
   </data>
   <data name="GPU" xml:space="preserve">
-    <value>GPU - computing</value>
+    <value>GPU/TPU - computing</value>
   </data>
   <data name="GPUText" xml:space="preserve">
-    <value>Calculations that require graphics processors.</value>
+    <value>Calculations that require graphics and tensor processors.</value>
   </data>
   <data name="Hotel" xml:space="preserve">
     <value>Hotel and restaurant business</value>

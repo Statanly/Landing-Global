@@ -1802,3 +1802,4 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Info\Reestr.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Info.Reestr.en.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Info.Reestr.ru.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Info\Reestr1.cshtml.g.cs
