@@ -1,0 +1,182 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Portfoio Details</h2>
+                <ol>
+                    <li><a href="/#portfolio">Home</a></li>
+                    <li>Portfoio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>Hierarchical website classification system (by category)</h3>
+                        <ul>
+                            <li><strong>Category</strong>: NLP</li>
+                            <li><strong>Client</strong>: Commercial Client</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 pt-4 pt-lg-0">
+                    <p>
+                        The system assigns a website to one or more of more than 500 categories and is used for marketing and advertising campaigns.
+                    </p>
+                    <p>
+                        <strong>Approaches</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Tf-Idf + NodesLocalClassifier
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> ByteLevelBPE + HMCN
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Word-piece + RuBert
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Data specifics</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Inaccessible web pages
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Incorrect labels
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Class imbalance
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Model evaluation</strong>
+                    </p>
+                    <p>
+                        Metrics for evaluating the quality of models:
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> h-fbeta (MSE)
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> h-precision
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> h-recall
+                        </li>
+                    </ul>
+                    <p style="text-align:center"><em>Metrics</em></p>
+                    </br>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+
+                                </th>
+                                <th>
+                                    HMCN
+                                </th>
+                                <th>
+                                    NLC
+                                </th>
+                                <th>
+                                    RuBert
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>H-fbeta</td>
+                                <td> <strong>0.53</strong></td>
+                                <td> 0.39</td>
+                                <td> 0.2</td>
+                            </tr>
+                            <tr>
+                                <td>H-precision</td>
+                                <td> 0.87</td>
+                                <td> 0.48</td>
+                                <td> <strong>0.93</strong></td>
+                            </tr>
+                            <tr>
+                                <td>H-recall</td>
+                                <td> 0.38</td>
+                                <td> 0.33</td>
+                                <td> 0.11</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->

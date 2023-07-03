@@ -1,0 +1,135 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>ML systems</h2>
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Portfoio Details</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            <h3>Forecasting and recommendation systems</h3>
+            <p>
+                GlobalML specializes in the development of predictive systems for a diverse range of industrial and commercial applications. Our
+                expertise covers enhancing Mean Time Between Failures (MTBF) for oilfield equipment, predicting traction motor failures in
+                locomotives, and preempting shutdowns in petrochemical plants. Beyond these specialized areas, we also offer advanced solutions
+                in business analytics. Our proficiency extends to forecasting customer churn and sales conversions, thereby helping our clients
+                improve customer retention and boost sales performance. With our tailored approach, we can help craft custom customer offers and
+                loyalty programs designed to enhance customer engagement. Furthermore, our team is experienced in building intuitive
+                recommendation and decision-support systems to assist businesses in making data-driven decisions.
+            </p>
+        </div>
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>MTBF prediction for oilfield equipment</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Forecasting systems</li>
+                        <li><strong>Client</strong>: Major oil company</li>
+                        <li><strong>Project date</strong>: 2017</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=4">More</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Predicting failure of electric traction motors in locomotives</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Forecasting systems</li>
+                        <li><strong>Client</strong>: Industrial company</li>
+                        <li><strong>Project date</strong>: 2019</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=4#2">More</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Predicting shutdowns in peroxide-grade polypropylene production</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Forecasting systems</li>
+                        <li><strong>Client</strong>: CIS countries petrochemical company</li>
+                        <li><strong>Project date</strong>: 2019</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=4#3">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Customer churn forecasting</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Forecasting systems</li>
+                        <li><strong>Client</strong>: Commercial Client</li>
+                        <li><strong>Project date</strong>: 2019-2023</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=7">More</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Portfolio Details Section -->

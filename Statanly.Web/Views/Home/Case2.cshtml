@@ -1,0 +1,187 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Portfoio Details</h2>
+                <ol>
+                    <li><a href="/#portfolio">Home</a></li>
+                    <li>Portfoio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>1. Predictive Publication Characteristics System (Views, Likes, Clicks, Comments, etc.)</h3>
+                        <ul>
+                            <li><strong>Category</strong>: NLP</li>
+                            <li><strong>Client</strong>: Commercial Client</li>
+                            <li><strong>Project date</strong>: 2021</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            Utilizing historical data from diverse sources and the interactions associated with publications, we have developed a predictive system that analyzes article content to forecast various characteristics of publications. These characteristics include views, link clicks, likes, etc. By leveraging this system, organizations can optimize their content strategies and make data-driven decisions to maximize engagement and interaction with their publications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <p style="text-align:center"><em>Application of predictive models</em></p>
+                    <img src="~/assets/img/portfolio/Case2/1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        <strong>Used Approaches</strong>
+                    </p>
+                    <p>
+                        Header vectorization*
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> TF-IDF
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> BERT
+                        </li>
+                    </ul>
+                    <p>
+                        Regression model**
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> FFN
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Catboost
+                        </li>
+                    </ul>
+                    <p>
+                        <em>*Vectorization is the process of extracting features from data (text) that are used to build predictive models</em>
+                    </p>
+                    <p>
+                        <em>** Regression models - predictive function of the independent variable and parameters with the addition of a random variable</em>
+                    </p>
+                    <p>
+                        Metrics for assessing the quality of predictive models
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Mean Squared Error (MSE)
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> RMSE
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Mean Absolute Error (MAE) ~ 2500 views
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>2. Domain-Specific Search and Q&A Systems</h3>
+                        <ul>
+                            <li><strong>Category</strong>: NLP</li>
+                            <li><strong>Client</strong>: Commercial Clients</li>
+                            <li><strong>Project date</strong>: 2019-2023</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            Before the emergence of ChatGPT, there was a need for systems that could swiftly find answers in specific, narrow areas like technical documentation, instructions, and user guides. In such instances, ChatGPT may not provide the correct solution. Our NLP team has been instrumental in creating such systems, specifically:
+                        </p>
+                        <p>
+                            Our NLP team has been instrumental in creating such systems, including:
+                        </p>
+                        <ul>
+                            <li>Information search systems able to locate specific articles within a vast knowledge base by using text descriptions</li>
+                            <li>Voice assistants that find required answers in technical documentation based on ambiguously formed questions (as users often lack technical terminology)</li>
+                            <li>
+                                Automated systems for recognizing and classifying breakdowns and malfunctions of  industrial equipment. In the event of production equipment failure, these systems recognize specific malfunction terminology based on voice calls from production machine operators and promptly generate equipment repair requests.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+</main><!-- End #main -->

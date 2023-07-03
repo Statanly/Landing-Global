@@ -1,0 +1,328 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Portfoio Details</h2>
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li>Portfoio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="1" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>
+                            1. MTBF prediction for oilfield equipment
+                        </h3>
+                        <ul>
+                            <li><strong>Category</strong>: Forecasting systems</li>
+                            <li><strong>Client</strong>: Major oil company</li>
+                            <li><strong>Project date</strong>: 2017</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            Design a methodology to forecast the Mean Time Between Failures (MTBF) of downhole equipment and establish a maintenance schedule for well operations. Additionally, develop a system to determine the technical operating limit of equipment within a well. The overall objective is to create a predictive system that estimates the MTBF of equipment based on specific parameters for a defined group.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case4/1.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Distribution function</em></p>
+                    <img src="~/assets/img/portfolio/Case4/2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        <strong>Objective Formulation</strong>
+                    </p>
+                    <p>
+                        Elements of the input data describing <strong>oil wells</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Numerical: 'Head', 'Descent depth', 'Production', '% of water (mode)', as well as input data for Flow and Preassure parametr in oil wells.
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Categorical (full binarization): 'Reason for
+                            previous stop', 'Affiliation', 'Power supply, contractor', 'Pump type', 'Operating mode', 'ESP, manufacturer', 'Protector, manufacturer', 'Submersible electric motor, manufacturer', 'Cable, manufacturer', etc.
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Target parameter</strong>: MTBF (in days)
+                    </p>
+                    <p>
+                        <strong>Issues affecting prediction</strong>: lots of missing data
+                    </p>
+                    <p>
+                        <strong>
+                            Initial input processing
+                        </strong>
+                    </p>
+                    <p>
+                        Used features of additional tables
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Only pump data is used
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Numerical: 'Q value', 'Left zone', 'Right zone',
+                            'Rating F', 'Q', 'H', 'Power', 'Efficiency'
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Categorical (full binarization): 'VENDOR', 'TYPERU',
+                            'TYPEFGN'.
+                        </li>
+                    </ul>
+                    <p>
+                        Used classifier: <strong>Catboost</strong>
+                    </p>
+                    <p>
+                        Result after initial processing (SMAPE): <strong>0.734</strong>
+                    </p>
+                    <p>
+                        <strong>Two Parameter Weibull Distribution</strong>
+                    </p>
+                    <p>
+                        We used two-parameter Weibull distribution, which describes the time to failure and takes into account coefficient k, which characterizes the change in the failure rate over time.
+                    </p>
+                    <p>
+                        Adding features of Weibull Distribution by oilfield
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> For each oilfield's training sample
+                            for target attribute MTBF, the parameters of the Weibull distribution are automatically calculated (shape factor, expectation, variance)
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>The specified parameters are added, depending on
+                            the oilfield, into the training and test datasets
+                        </li>
+                    </ul>
+                    <p>
+                        Result with Weibull features (SMAPE): <strong>0.732</strong>
+                    </p>
+                    <p>
+                        Result after adjusting catboost parameters (SMAPE): <strong>0.726</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    <section id="2" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>
+                            2. Predicting failure of electric traction motors in locomotives
+                        </h3>
+                        <ul>
+                            <li><strong>Category</strong>: Forecasting systems</li>
+                            <li><strong>Client</strong>: Industrial company</li>
+                            <li><strong>Project date</strong>: 2019</li>
+                        </ul>
+                    </div>
+                    @*<div class="portfolio-description">
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <p style="text-align:center"><em>Using Data to Train Predictive Failure Models</em></p>
+                    <img src="~/assets/img/portfolio/Case4/3.jpg" class="img-fluid" alt="">
+
+                    <p style="text-align:center"><em>Application of predictive failure models</em></p>
+                    <img src="~/assets/img/portfolio/Case4/4.jpg" class="img-fluid" alt="">
+
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+
+                    <p>
+                        The developed models allow for making the following predictions:
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Forecast of probability of failure during an average of 36 hours of continuous locomotive operation <strong>1</strong> day from the date of the forecast using data from <strong>6</strong> days before the date of the forecast
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> The same, after <strong>7</strong> days from used data for <strong>7</strong> days
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> The same, after <strong>14</strong> days from used data for <strong>16</strong> days
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> The same, after <strong>30</strong> days from used data for <strong>30</strong> days
+                        </li>
+                    </ul>
+                    <p>
+                        In the process of analyzing the data provided, the following features were found that affect the final results of forecasts
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Data fragmentation
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Outliers in data
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Noises
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Sample bias towards failures
+                        </li>
+                    </ul>
+                    <p>
+                        Below are the roc-auc metrics for assessing the quality of forecast models:
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Forecast in 1 day: roc-auc: 0.69
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Forecast in 7 days: roc-auc: 0.65
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Forecast in 14 days: roc-auc: 0.63
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Forecast in 30 days: roc-auc: 0.59
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    <section id="3" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>
+                            3. Predicting shutdowns in peroxide-grade polypropylene production
+                        </h3>
+                        <ul>
+                            <li><strong>Category</strong>: NLP</li>
+                            <li><strong>Client</strong>: CIS countries petrochemical company</li>
+                            <li><strong>Project date</strong>: 2019</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12 pt-4 pt-lg-0">
+
+                    <p>
+                        Description: In the production of peroxide-grade polypropylene, the final stage involves cutting the granulate. However, a common issue arises when agglomerates sticks to the knives and clogs the space between the die and the knives. Consequently, the knives gradually move away from the die, leading to a degradation in the process and eventual equipment shutdown, resulting in significant production losses. The degradation process can be indirectly monitored by observing the presence of agglomerates on the vibrating screen. Fortunately, a wealth of telemetry data is available, offering the potential to predict process degradation in advance, typically within an hour. Additionally, extruder downtime data is also recorded, providing valuable insights. We possess a comprehensive set of telemetry data spanning an entire year.
+                    </p>
+
+                    <p>
+                        General task: Utilize this data to develop and deploy a predictive system capable of anticipating equipment shutdowns.
+                    </p>
+                    <p>
+                        As part of the pilot project, we successfully implemented and trained <strong>LSTM</strong> (Long Short-Term Memory) and <strong>GRU</strong> (Gated Recurrent Unit) models.
+                    </p>
+                    <p>
+                        Obtained results (<strong>LSTM</strong>):
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Training Accuracy= 0.97
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Test Accuracy= 0.89
+                        </li>
+                    </ul>
+                    <p>
+                        Obtained results (<strong>GRU</strong>):
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Accuracy= 1.000
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Test Accuracy= 0.87
+                        </li>
+                    </ul>
+                    <p>
+                        These results can be further enhanced through continued collaboration with domain specialists and by implementing more advanced data preprocessing techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->

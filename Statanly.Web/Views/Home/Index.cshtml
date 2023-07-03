@@ -36,24 +36,12 @@
     var client18 = "assets/img/clients" + lang + "/client-18.png";
     var client19 = "assets/img/clients" + lang + "/client-19.png";
 }
-<!-- ======= Top Bar ======= -->
-<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
-    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
-            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
-        </div>
-        <div class="cta d-none d-md-block">
-            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
-        </div>
-    </div>
-</div>
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
     <div class="container d-flex align-items-center justify-content-between">
         <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        @*<h1 class="logo"><a href="index.html">Statanly</a></h1>*@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -120,39 +108,38 @@
 </section><!-- End Hero -->
 
 <main id="main">
-
     <!-- ======= Icon Boxes Section ======= -->
     <section id="icon-boxes" class="icon-boxes">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bxs-cloud-rain"></i></div>
-                        <h4 class="title"><a href="">@Localizer["Forecasting"]</a></h4>
+                        <h4 class="title"><a href="/home/ml">@Localizer["Forecasting"]</a></h4>
                         <p class="description">@Localizer["ForecastingText"]</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="10">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bxs-user-check"></i></div>
-                        <h4 class="title"><a href="">@Localizer["RS"]</a></h4>
+                        <h4 class="title"><a href="/home/da">@Localizer["RS"]</a></h4>
                         <p class="description">@Localizer["RSText"]</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="10">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-cctv"></i></div>
-                        <h4 class="title"><a href="https://cv.statanly.com/" target="_blank">@Localizer["CVVA"]</a></h4>
+                        <h4 class="title"><a href="/home/cv">@Localizer["CVVA"]</a></h4>
                         <p class="description">@Localizer["CVVAText"]</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="10">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bxl-messenger"></i></div>
-                        <h4 class="title"><a href="">@Localizer["NLP"]</a></h4>
+                        <h4 class="title"><a href="/home/nlp">@Localizer["NLP"]</a></h4>
                         <p class="description">@Localizer["NLPText"]</p>
                     </div>
                 </div>
@@ -161,114 +148,15 @@
 
         </div>
     </section><!-- End Icon Boxes Section -->
-    <!-- ======= Producta Section ======= -->
-    <section id="services" class="services">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>@Localizer["Products"]</h2>
-                <p>@Localizer["ProductsSubtitle"] </p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-box">
-                        <i class="bi bi-people"></i>
-                        <h4><a href="#">@Localizer["NumberSystem"]</a></h4>
-                        <p>@Localizer["NumberSystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box">
-                        <i class="bi bi-upc-scan"></i>
-                        <h4><a href="#">@Localizer["RecognitionSystem"]</a></h4>
-                        <p>@Localizer["RecognitionSystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-box">
-                        <i class="bi bi-truck"></i>
-                        <h4><a href="#">@Localizer["DetectionSystem"]</a></h4>
-                        <p>@Localizer["DetectionSystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
-                    <div class="icon-box">
-                        <i class="bi bi-zoom-in"></i>
-                        <h4><a href="#">@Localizer["DistanceSystem"]</a></h4>
-                        <p>@Localizer["DistanceSystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
-                    <div class="icon-box">
-                        <i class="bi bi-eye"></i>
-                        <h4><a href="#">@Localizer["SafetySystem"]</a></h4>
-                        <p>@Localizer["SafetySystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon-box">
-                        <i class="bi bi-cart4"></i>
-                        <h4><a href="#">@Localizer["ChurnSystem"]</a></h4>
-                        <p>@Localizer["ChurnSystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon-box">
-                        <i class="bi bi-graph-up"></i>
-                        <h4><a href="#">@Localizer["ConversionSystem"]</a></h4>
-                        <p>@Localizer["ConversionSystemText"]</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
-                    <div class="icon-box">
-                        <i class="bi bi-file-earmark-word"></i>
-                        <h4><a href="#">@Localizer["TextSystem"]</a></h4>
-                        <p>@Localizer["TextSystemText"]</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Products Section -->
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="box">
-                        @*<h3>Free</h3>*@
-                        <h4>15+<span>@Localizer["LeadDevelopers"]</span></h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="box">
-                        @*<h3>Free</h3>*@
-                        <h4>50+<span>@Localizer["Developers"]</span></h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="box">
-                        @*<h3>Free</h3>*@
-                        <h4>300+<span>@Localizer["Projects"]</span></h4>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Pricing Section -->
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
         <div class="container" data-aos="fade-up">
-
             <div class="section-title">
                 <h2>@Localizer["About"]</h2>
                 <p>
                     @Localizer["AboutText"]
                 </p>
             </div>
-
             <div class="row content">
                 <div class="col-lg-6">
                     <p>
@@ -294,6 +182,78 @@
 
         </div>
     </section><!-- End About Us Section -->
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="row skills-content">
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">Компьютерное зрение <i class="val">45+ проектов</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">Прогнозные системы <i class="val">35+ проектов</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">Обработка естественных языков<i class="val">40+ проектов</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">Рекомендательные системы <i class="val">25+ проектов</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">Анализ данных, поиск аномалий<i class="val">35+ проектов</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">Другие задачи<i class="val">15+ проектов</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Skills Section -->
+    <!-- ======= Numbers Section ======= -->
+    <section id="numbers" class="numbers">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="10">
+                    <div class="box">
+                        <h4>15+<span>@Localizer["LeadDevelopers"]</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="10">
+                    <div class="box">
+                        <h4>50+<span>@Localizer["Developers"]</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="10">
+                    <div class="box">
+                        <h4>300+<span>@Localizer["Projects"]</span></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Numbers Section -->
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
         <div class="container" data-aos="zoom-in">
@@ -330,17 +290,15 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
         <div class="container-fluid">
-
             <div class="row">
-
-                <div class="col-lg-5 align-items-stretch position-relative video-box" style='background-image: url("assets/img/why-us.jpg");' data-aos="fade-right">
-                    @*<a href="/" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>*@
+                <div class="col-lg-5 align-items-stretch position-relative video-box" style='background-image: url("assets/img/MyCollages.jpg");' data-aos="fade-right">
+                    <a href="https://www.youtube.com/watch?v=LvaUV_sAJYE" target="_blank" class="glightbox play-btn mb-4"></a>
                 </div>
 
                 <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
 
                     <div class="content">
-                        <h3>@Localizer["Application"]  <strong> @Localizer["Areas"]</strong></h3>
+                        <h3>@Localizer["Application"] <strong> @Localizer["Areas"]</strong></h3>
                         <p>
                             @Localizer["ApplicationSubTitle"]
                         </p>
@@ -414,7 +372,9 @@
                             </li>
                         </ul>
                     </div>
+
                 </div>
+
             </div>
 
         </div>
@@ -422,52 +382,50 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
         <div class="container" data-aos="fade-up">
-
             <div class="section-title">
                 <h2>@Localizer["Services"]</h2>
                 <p>@Localizer["ServicesTitle"]</p>
             </div>
-
             <div class="row">
                 <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-box">
                         <i class="bi bi-hdd"></i>
-                        <h4><a href="#">@Localizer["DA"]</a></h4>
+                        <h4><a href="/home/service?n=1">@Localizer["DA"]</a></h4>
                         <p>@Localizer["DAText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
                     <div class="icon-box">
-                        <i class="bi bi-bar-chart"></i>
-                        <h4><a href="#">@Localizer["AIDevelopment"]</a></h4>
+                        <i class="bi bi-pc-display"></i>
+                        <h4><a href="/home/service?n=2">@Localizer["AIDevelopment"]</a></h4>
                         <p>@Localizer["AIDevelopmentText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
                     <div class="icon-box">
                         <i class="bi bi-binoculars"></i>
-                        <h4><a href="#">@Localizer["R&D"]</a></h4>
+                        <h4><a href="/home/service?n=3">@Localizer["R&D"]</a></h4>
                         <p>@Localizer["R&DText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
                     <div class="icon-box">
                         <i class="bi bi-brightness-high"></i>
-                        <h4><a href="#">@Localizer["Consulting"]</a></h4>
+                        <h4><a href="/home/service?n=4">@Localizer["Consulting"]</a></h4>
                         <p>@Localizer["ConsultingText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="500">
                     <div class="icon-box">
                         <i class="bi bi-calendar4-week"></i>
-                        <h4><a href="#">@Localizer["TS"]</a></h4>
+                        <h4><a href="/home/service?n=5">@Localizer["TS"]</a></h4>
                         <p>@Localizer["TSText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
                     <div class="icon-box">
-                        <i class="bi bi-calculator"></i>
-                        <h4><a href="#">@Localizer["GPU"]</a></h4>
+                        <i class="bi bi-gpu-card"></i>
+                        <h4><a href="/home/service?n=6">@Localizer["GPU"]</a></h4>
                         <p>@Localizer["GPUText"]</p>
                     </div>
                 </div>
@@ -487,78 +445,532 @@
                     <a class="cta-btn align-middle" href="#contact">@Localizer["Write"]</a>
                 </div>
             </div>
-
         </div>
     </section><!-- End Cta Section -->
+    <!-- ======= solutions Section ======= -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши проекты</h2>
+                <p>Примеры наших проектов</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul id="solutions-flters">
+                        <li data-filter="*" class="filter-active">Все</li>
+                        <li data-filter=".filter-app">Компьютерное зрение</li>
+                        <li data-filter=".filter-card">Прогнозные системы</li>
+                        <li data-filter=".filter-web">Обработка естественных языков</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row solutions-container">
+                <div class="col-lg-4 col-md-6 solutions-item filter-app wow fadeInUp">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-1.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-1.jpg" data-gallery="solutionsGallery" class="link-preview solutions-lightbox" title="The system for detecting the characteristics of processes and objects allows you to determine various parameters, such as type, shape, size, quantity, speed, geometric characteristics. The system finds applications in a huge number of applied tasks."><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=1" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=1">Распознавание образов</a></h4>
+                            <p>Распознавание параметров объектов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-2.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-2.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Text analysis, selection of keywords, tags, sentiments, texts. Construction of predictive and recommender systems based on the analysis of textual information"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=2" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=2">Анализ текстов</a></h4>
+                            <p>Выделение ключевых слов и смыслов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-3.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/Case3/1.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Number plate recognition system (car, train car, other objects in production or in an urban environment), free-form numbers, various fonts, markings, QR and barcodes, inscriptions in conditions of various noise levels and various alphabets"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=3" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=3">Распознавание текста</a></h4>
+                            <p>Распознавание надписей, номеров, qr-кодов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-card wow fadeInUp">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-4.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-4.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Predictive MTBF Systems"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=4" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=4">Прогнозирование отказов</a></h4>
+                            <p>Прогнозирование поломок, наработки на отказ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-5.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-5.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Website hierarchical classification system by categories"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=5" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=5">Классификация текстов</a></h4>
+                            <p>Классификация веб-сайтов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-6.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-6.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Systems for recognition of defects and other formations on the material (metal, wood, plastic, film on liquid)."><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=6" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=6">Выявление аномалий</a></h4>
+                            <p>Распознавание дефектов поверхностей</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-card wow fadeInUp">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-7.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-7.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Predictive churn system"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=7" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=7">Прогнозирование оттока</a></h4>
+                            <p>Прогнозирование оттока и удержание клиентов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-8.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-8.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Forecasting the conversion rate"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=8" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=8">Прогнозирование конверсии</a></h4>
+                            <p>Прогнозирование конверсии продаж</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-9.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-9.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Content generation by text description"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case?n=9" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case?n=9">Генерация контента</a></h4>
+                            <p>Генерация доменных имен и логотипов</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End solutions Section -->
+    <!-- ======= Product Section ======= -->
+    <section id="services" class="services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Типовые решения</h2>
+                    <p>@Localizer["ProductsSubtitle"] </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-people"></i>
+                            <h4><a href="#">@Localizer["NumberSystem"]</a></h4>
+                            <p>@Localizer["NumberSystemText"]</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-upc-scan"></i>
+                            <h4><a href="#">@Localizer["RecognitionSystem"]</a></h4>
+                            <p>@Localizer["RecognitionSystemText"]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-truck"></i>
+                            <h4><a href="#">@Localizer["DetectionSystem"]</a></h4>
+                            <p>@Localizer["DetectionSystemText"]</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-zoom-in"></i>
+                            <h4><a href="#">@Localizer["DistanceSystem"]</a></h4>
+                            <p>@Localizer["DistanceSystemText"]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-eye"></i>
+                            <h4><a href="#">@Localizer["SafetySystem"]</a></h4>
+                            <p>@Localizer["SafetySystemText"]</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-cart4"></i>
+                            <h4><a href="#">@Localizer["ChurnSystem"]</a></h4>
+                            <p>@Localizer["ChurnSystemText"]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-graph-up"></i>
+                            <h4><a href="#">@Localizer["ConversionSystem"]</a></h4>
+                            <p>@Localizer["ConversionSystemText"]</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="10">
+                        <div class="icon-box">
+                            <i class="bi bi-file-earmark-word"></i>
+                            <h4><a href="#">@Localizer["TextSystem"]</a></h4>
+                            <p>@Localizer["TextSystemText"]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End Products Section -->
+    <!-- ======= SmartCity Section ======= -->
+    <section id="smart" class="smart">
+        <div class="container">
+            <div class="section-title">
+                <h2>Умный город</h2>
+                <p>
+                    Интеллектуальная система анализа городской среды
+                    </br>
+                    <a target="_blank" href="http://grada.city/">Подробнее</a>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity?n=1"><img src="assets/img/Smart city/1.png" alt=""></a>
+                        <h4> <a tabindex="-1" href="/home/smartcity?n=1">Содержание дорог</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Износ дорожной разметки
+                            </li>
+                            <li>
+                                Выбоины
+                            </li>
+                            <li>
+                                Образование луж
+                            </li>
+                            <li>
+                                Накопление снега
+                            </li>
+                            <li>
+                                Неработающее освещение
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity?n=2"><img src="assets/img/Smart city/2.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity?n=2">Общественная безопасность</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Граффити/вандализм
+                            </li>
+                            <li>
+                                Драки/ссоры
+                            </li>
+                            <li>
+                                Мониторинг толпы
+                            </li>
+                            <li>
+                                Автомобильные аварии
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity?n=3"><img src="assets/img/Smart city/3.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity?n=3">Правоохранительная деятельность</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Розыск автомобилей
+                            </li>
+                            <li>
+                                Поиск интересующего человека
+                            </li>
+                            <li>
+                                Поиск по силуэту
+                            </li>
+                            <li>
+                                Отслеживание объектов на основе карты
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity?n=4"><img src="assets/img/Smart city/4.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity?n=4">Управление трафиком</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Расчет параметров дорожного движения
+                            </li>
+                            <li>
+                                Прогнозирование трафика
+                            </li>
+                            <li>
+                                Оптимизация сигналов трафика
+                            </li>                       
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity?n=5"><img src="assets/img/Smart city/5.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity?n=5">Контроль обращения с мусором</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Соблюдение правил обращения с отходами
+                            </li>
+                            <li>
+                                Накопление отходов
+                            </li>
+                            <li>
+                                Мониторинг состояния мусоросборников
+                            </li>
+                            <li>
+                                Мониторинг поведения в сфере утилизации отходов
+                            </li>                         
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity?n=6"><img src="assets/img/Smart city/6.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity?n=6">Диспетчеризация пассажирского транспорта</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">                           
+                            <li>
+                                Учет уникальных пассажиров
+                            </li>
+                            <li>
+                                Распознавание лиц
+                            </li>
+                            <li>
+                                Обнаружение заброшенных предметов
+                            </li>
+                            <li>
+                                Учет остановок
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End SmartCity Section -->
+    <!-- ======= Technology Section ======= -->
+    <section id="tech" class="tech">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Технологии</h2>
+                <p>Самый современный стек технологий</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="assets/img/testimonials/Pytorch.png" alt="">
+                        <img src="assets/img/testimonials/Ultralytics2.png" alt="">
+                        <img src="assets/img/testimonials/HF.png" alt="">
+                        <img src="assets/img/testimonials/OpenCV.png" alt="">
+
+                        <h4>CV</h4>
+                        <span>Компьютерное зрение</span>
+                        <p>
+                            Python, PyTorch,
+                            MMDetection, MMSegmentation,
+                            Ultralytics (YOLOv8),
+                            Transformers (Hugging Face),
+                            OpenCV
+                            SAIL (TPU - Sophon Artificial Intelligent Library)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="assets/img/testimonials/Keras1.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/GPT.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/OpenAI.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/TensorFlow_logo.svg.png" class="testimonial-img" alt="">
+
+                        <h4>NLP</h4>
+                        <span>
+                            Обработка естественных языков
+                        </span>
+                        <p>
+                            Pytorch/Tensorflow,
+                            transformers,
+                            tokenizers,
+                            datasets, nltk, spacy, pythia
+                            GPT, GPT-Neo, GPT-J,
+                            BERT, LLAMA, Reformer,
+                            Alignment-а (RLHF, ect)
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="assets/img/testimonials/sklearn.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/catboost.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/XGBoost.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/LightGBM.png" class="testimonial-img" alt="">
+                        <h4>ML/DL</h4>
+                        <span>
+                            Прогнозные и рекомендательные системы
+                        </span>
+                        <p>
+                            Scikit-learn,
+                            Keras,
+                            ARIMA,
+                            1D convolutional NN,
+                            LSTM,
+                            Attention-based,
+                            CatBoost/ Light GBM/ XGBoos
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Technology Section -->
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
         <div class="container" data-aos="fade-up">
-
             <div class="section-title">
                 <h2>@Localizer["DP"]</h2>
             </div>
+            <div class="row">
+                <div class="faq-list col-md-8">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-delay="10">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">@Localizer["DP1"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText1"]
+                                </p>
+                            </div>
+                        </li>
 
-            <div class="faq-list">
-                <ul>
-                    <li data-aos="fade-up" data-aos-delay="100">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">@Localizer["DP1"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                            <p>
-                                @Localizer["DPText1"]
-                            </p>
-                        </div>
-                    </li>
+                        <li data-aos="fade-up" data-aos-delay="10">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">@Localizer["DP2"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText2"]
+                                </p>
+                            </div>
+                        </li>
 
-                    <li data-aos="fade-up" data-aos-delay="200">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">@Localizer["DP2"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                @Localizer["DPText2"]
-                            </p>
-                        </div>
-                    </li>
+                        <li data-aos="fade-up" data-aos-delay="10">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">@Localizer["DP3"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText3"]
+                                </p>
+                            </div>
+                        </li>
 
-                    <li data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">@Localizer["DP3"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                @Localizer["DPText3"]
-                            </p>
-                        </div>
-                    </li>
+                        <li data-aos="fade-up" data-aos-delay="10">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">@Localizer["DP4"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText4"]
+                                </p>
+                            </div>
+                        </li>
 
-                    <li data-aos="fade-up" data-aos-delay="400">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">@Localizer["DP4"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                @Localizer["DPText4"]
-                            </p>
-                        </div>
-                    </li>
-
-                    <li data-aos="fade-up" data-aos-delay="500">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">@Localizer["DP5"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                @Localizer["DPText5"]
-                            </p>
-                        </div>
-                    </li>
-                    <li data-aos="fade-up" data-aos-delay="600">
-                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">@Localizer["DP6"]   <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                @Localizer["DPText6"]
-                            </p>
-                        </div>
-                    </li>
-
-                </ul>
+                        <li data-aos="fade-up" data-aos-delay="10">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">@Localizer["DP5"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText5"]
+                                </p>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="10">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">@Localizer["DP6"]   <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText6"]
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4"><img style="max-height: 80%" src="assets/img/table vertical(2).png" class="img-fluid" alt=""></div>
             </div>
-
         </div>
     </section><!-- End Frequently Asked Questions Section -->
-    <!-- ======= Contact Section ======= -->
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
         <div class="container" data-aos="zoom-in">
@@ -590,6 +1002,7 @@
             </div>
         </div>
     </section><!-- End Clients Section -->
+    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
 
@@ -598,7 +1011,7 @@
                 <h4>@Localizer["ContactsText"]</h4>
             </div>
 
-            <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
+            <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="10">
                 <div class="col-lg-5">
                     <div class="info">
                         <div class="address">
@@ -606,23 +1019,31 @@
                             <h4>@Localizer["Address"]:</h4>
                             <p>@Localizer["AddressText"]</p>
                         </div>
-
                         <div class="email">
-                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:hello@statanly.com" target="_blank"><i class="bi bi-envelope"></i></a>
                             <h4>@Localizer["Email"]:</h4>
-                            <p>hello@statanly.com</p>
+                            <p><a href="mailto:hello@statanly.com" target="_blank">hello@statanly.com</a></p>
                         </div>
-
                         <div class="phone">
-                            <i class="bi bi-phone"></i>
+                            <a href="tel:+7 (921)-875-23-96" target="_blank"><i class="bi bi-phone"></i></a>
                             <h4>@Localizer["Phone"]:</h4>
-                            <p>+7(921)-875-23-96</p>
+                            <p><a href="tel:+7 (921)-875-23-96" target="_blank">+7(921)8752396</a></p>
+                        </div>
+                        <div class="telegram">
+                            <a href="https://t.me/statanly" target="_blank"><i class="bi bi-telegram"></i></a>
+                            <h4>Telegram:</h4>
+                            <p><a href="https://t.me/statanly" target="_blank">Telegram</a></p>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://wa.me/79218752396" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <h4>Whatsapp:</h4>
+                            <p><a href="https://wa.me/79218752396" target="_blank">WhatsApp</a></p>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="10">
                     <form action="/message/send" method="post" role="form" class="php-email-form">
                         <div class="row">
                             <div class="col-md-6 form-group">
@@ -638,7 +1059,7 @@
                         <div class="form-group mt-3">
                             <textarea class="form-control" name="text" rows="5" placeholder=@Localizer["Message"] required></textarea>
                         </div>
-                        <div class="my-3">    
+                        <div class="my-3">
                             <div class="loading">@Localizer["Sending"]</div>
                             <div class="error-message">@Localizer["Error"]</div>
                             <div class="sent-message">@Localizer["SendMessage"]</div>

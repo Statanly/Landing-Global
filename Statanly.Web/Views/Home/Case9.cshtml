@@ -1,0 +1,270 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Portfoio Details</h2>
+                <ol>
+                    <li><a href="/#portfolio">Home</a></li>
+                    <li>Portfoio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>1. System for generating domain names by description</h3>
+                        <ul>
+                            <li><strong>Category</strong>: NLP</li>
+                            <li><strong>Client</strong>: Commercial EU Client</li>
+                            <li><strong>Project date</strong>: 2021-2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about1" class="about">
+        <div class="container">
+
+            <div class="row">
+                <p>
+                    A system built on the basis of generative models allows you to generate unique domain names based on a text description.
+                </p>
+                <div class="col-lg-7">
+                    <p style="text-align:center"><em>Processed data</em></p>
+                    <img src="~/assets/img/portfolio/Case9/1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-5 pt-4 pt-lg-0">
+
+                    <p>
+                        <strong>Domain sales data</strong>
+                    </p>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Price ($)
+                                </th>
+                                <th>
+                                    Date
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>pizza.com</td>
+                                <td> 2605000</td>
+                                <td> 03.04.2008</td>
+                            </tr>
+                            <tr>
+                                <td>marketing.com</td>
+                                <td> 2500000</td>
+                                <td> 15.08.2021</td>
+                            </tr>
+                            <tr>
+                                <td>gambling.com</td>
+                                <td> 2500000</td>
+                                <td> 04.05.2011</td>
+                            </tr>
+                            <tr>
+                                <td>tom.com</td>
+                                <td> 2500000</td>
+                                <td> 01.12.1999</td>
+                            </tr>
+                            <tr>
+                                <td>investing.com</td>
+                                <td> 2450000</td>
+                                <td> 19.12.2012</td>
+                            </tr>
+                            <tr>
+                                <td>youxi.com</td>
+                                <td> 2430000</td>
+                                <td> 12.0302014</td>
+                            </tr>
+                            <tr>
+                                <td>kk.com</td>
+                                <td> 2400000</td>
+                                <td> 20.11.2013</td>
+                            </tr>
+                            <tr>
+                                <td>55.com</td>
+                                <td> 2317200</td>
+                                <td> 31.07.2011</td>
+                            </tr>
+                            <tr>
+                                <td>pharmacy.com</td>
+                                <td> 2300000</td>
+                                <td> 27.11.2008</td>
+                            </tr>
+                            <tr>
+                                <td>coupons.com</td>
+                                <td> 2200000</td>
+                                <td> 01.01.2000</td>
+                            </tr>
+                            <tr>
+                                <td>autos.com</td>
+                                <td> 2200000</td>
+                                <td> 01.12.1999</td>
+                            </tr>
+                            <tr>
+                                <td>delta.com</td>
+                                <td> 2123000</td>
+                                <td> 31.07.2000</td>
+                            </tr>
+                            <tr>
+                                <td>vivo.com</td>
+                                <td> 2100000</td>
+                                <td> 02.09.2016</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <p>
+                        <strong> Evaluation of models</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> The assessment was carried out by experts
+                        </li>
+                    </ul>
+                    <p>
+                        <strong> Data features</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Inaccessible web pages
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Web pages without a description
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    </br>
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>2. Generating logos based on survey results/description</h3>
+                        <ul>
+                            <li><strong>Category</strong>: NLP</li>
+                            <li><strong>Client</strong>: Commercial EU Client</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+
+            <div class="row">
+                <p>
+                    A system built on the basis of generative models allows you to generate unique logos based on a text description.
+                </p>
+                <p style="text-align:center"><em>Examples</em></p>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case9/2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case9/3.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case9/4.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case9/6.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case9/7.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case9/8.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case9/5.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case9/9.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->

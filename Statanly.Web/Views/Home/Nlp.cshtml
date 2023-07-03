@@ -1,0 +1,156 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>NLP systems</h2>
+            <ol>
+                <li><a href="/">Главная</a></li>
+                <li>NLP</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-8">
+                <h3>Системы на базе анализа естественного языка</h3>
+                <p>
+                    Недавний подъём интереса к системам АI/ML был вызван появлением неожиданно успешных LLMs типа ChatGPT и GPT-4.  Хотя это только одна из многих областей AI/ML,
+                    это именно в этой области произошли наиболее важные и наиболее обсуждаемые изменения. Наша компания имеет большой опыт и глубокую экспертизу в области систем на базе
+                    обработки естестенного языка. За последние годы были реализованы десятки проектов, среди которых можно выделить:
+                </p>
+                <p>
+                    <strong>Доменно-специфичные поисковые вопросно-ответные системы</strong>
+                </p>
+                <p>
+                    ChatGPT был запущен в конце 2022 года и привлёк внимание своими широкими возможностями: написание кода, создание текстов, возможности перевода, демонстрируя удивительные
+                    возможности отвечать на любые человеческие вопросы, зачастую на уровне не хуже эксперта в определенной области.
+                    Получить ответы на многие вопоросы теперь стало гораздо проще и быстрее. Не нужно искать необходимую информацию среди сотен страниц, выдаваемых поисковыми системами
+                    по определенным запросам. Данная модель (Generative Pre-trained Transformer) - обучен на сотнях миллионов текстов различной тематике, специфики и языков.
+                    Тем не менее, еще задолго до появления ChatGPT возникала потребность в системах, способных быстро найти ответ в определенной узкой области, в технической документации, инструкции,
+                    руководстве пользователей. В таких случаях, к сожалению ChatGPT будет бесполезным (конечно, он просто может придумать ответ, но это будет не корректно).
+                    Наша NLP-команда принимала участие в создании таких систем, в частности:
+                </p>
+                <ul>
+                    <li>Системы информационного поиска, когда необходимо найти в большой базе знаний определенную статью по текстовому описанию</li>
+                    <li>Голосовой помощник, который находит необходимый ответ в технической документации даже на базе не четко поставленного вопроса (как правило пользователь не знает техническую терминологию)</li>
+                    <li>
+                        Автоматизированная система распознавания и классификации поломок и неисправностей на промышленном предприятии. На основании голосового звонка оператора на предприятии, в случае
+                        поломок производственных станков и устройств система распознавала специфичную терминологию оператора, касательно поломки, оперативно формировала заявку на ремонт.
+                    </li>
+                </ul>
+                <p>
+                    <strong> Системы анализа и классификации текстов</strong>
+                </p>
+                <p>
+                    Системы, позволяющие анализировать текст и отностить его к различным категориям. В частности, компанией разработана система классификации веб-сайтов, отностящая сайт к одной
+                    или нескольким из более, чем 500 категорий. Использовании данной системы актуально для проведения маркетинговых и рекламных компаний путем сужения целевой аудитории.
+                </p>
+                <p>
+                    <strong> Системы перефразирования текстов</strong>
+                </p>
+                <p>
+                    Системы перефразирования текстов (задача парафраза), когда необходимо, возможно в сжатом виде пересказать определенной статью, текст, заметку.
+                </p>
+                <p>
+                    <strong> Системы выделения ключевых слов, тегов, тональностей текстов</strong>
+                </p>
+                <p>
+                    Системы анализа текстов и выделения различных сущностей, среди которых ключевые слова и теги, тональности, стилю, типу и и т.д. В частности, такие системы используются для анализа
+                    ответов операторов колцентра (вежливо, грубо), отзывов и кометариев к статьям (положительный, отрицательный, нейтральный)
+                </p>
+                <p>
+                    <strong> Примеры проектов</strong>
+                </p>
+
+            </div>
+            <div class="col-lg-4">
+                <img src="~/assets/img/NLP.png" style="max-width: 100%" alt="">
+            </div>
+        </div>
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Predictive system of characteristics of publications</h3>
+                    <ul>
+                        <li><strong>Category</strong>: NLP</li>
+                        <li><strong>Client</strong>: CIS countries company</li>
+                        <li><strong>Project date</strong>: 2021</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=2">More</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Website classification system</h3>
+                    <ul>
+                        <li><strong>Category</strong>: NLP</li>
+                        <li><strong>Client</strong>: CIS countries company</li>
+                        <li><strong>Project date</strong>: 2022</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=5">More</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>System for generating domain names by description</h3>
+                    <ul>
+                        <li><strong>Category</strong>: NLP</li>
+                        <li><strong>Client</strong>: CIS countries company</li>
+                        <li><strong>Project date</strong>: 2019</li>
+                        <li><strong>Details</strong>: <a href="/home/case?n=9">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Portfolio Details Section -->

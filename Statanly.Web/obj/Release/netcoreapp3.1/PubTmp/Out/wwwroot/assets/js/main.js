@@ -31,7 +31,24 @@
         selectEl.addEventListener(type, listener)
       }
     }
-  }
+    }
+    /**
+ * Skills animation
+ */
+    let skilsContent = select('.skills-content');
+    if (skilsContent) {
+        new Waypoint({
+            element: skilsContent,
+            offset: '80%',
+            handler: function (direction) {
+                let progress = select('.progress .progress-bar', true);
+                progress.forEach((el) => {
+                    el.style.width = el.getAttribute('aria-valuenow') + '%'
+                });
+            }
+        })
+    }
+
 
   /**
    * Easy on scroll event listener 
@@ -265,6 +282,59 @@
       clickable: true
     }
   });
+
+    /**
+  * Porfolio isotope and filter
+  */
+    window.addEventListener('load', () => {
+        let solutionsContainer = select('.solutions-container');
+        if (solutionsContainer) {
+            let solutionsIsotope = new Isotope(solutionsContainer, {
+                itemSelector: '.solutions-item',
+                layoutMode: 'fitRows'
+            });
+
+            let solutionsFilters = select('#solutions-flters li', true);
+
+            on('click', '#solutions-flters li', function (e) {
+                e.preventDefault();
+                solutionsFilters.forEach(function (el) {
+                    el.classList.remove('filter-active');
+                });
+                this.classList.add('filter-active');
+
+                solutionsIsotope.arrange({
+                    filter: this.getAttribute('data-filter')
+                });
+            }, true);
+        }
+
+    });
+
+    /**
+     * Initiate solutions lightbox 
+     */
+    const solutionsLightbox = GLightbox({
+        selector: '.solutions-lightbox'
+    });
+
+    /**
+     * solutions details slider
+     */
+    new Swiper('.solutions-details-slider', {
+        speed: 400,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        }
+    });
+
 
   /**
    * Animation on scroll

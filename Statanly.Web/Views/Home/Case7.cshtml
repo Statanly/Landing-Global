@@ -1,0 +1,171 @@
+﻿
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Prone to churn', 22.6],
+            ['Rather yes', 25.9],
+            ['Probably not', 44.1],
+            ['Not prone to churn', 7.4]
+        ]);
+
+        var options = {
+            title: 'Customer base segmentation'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Portfoio Details</h2>
+                <ol>
+                    <li><a href="/#portfolio">Home</a></li>
+                    <li>Portfoio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>Customer churn forecasting</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Forecasting systems</li>
+                            <li><strong>Client</strong>: Commercial Client</li>
+                            <li><strong>Project date</strong>: 2019-2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="~/assets/img/portfolio/Case7/1.png" class="img-fluid" alt="">
+                    <div class="special_description_img">
+                        <div id="piechart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 pt-4 pt-lg-0">
+                    <p>
+                        One of the primary objectives for any company is to expand its customer base by attracting new customers while retaining existing ones. Each customer generates a wealth of information that can provide valuable insights into their satisfaction levels with the products or services offered, as well as their likelihood to churn. Several factors influence customer loyalty, including:
+
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Frequency of using services
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Payment patterns
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Time spent online / in app / on site
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Geographic location
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Age
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Gender
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Seasonality
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Account balance
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Interaction with service providers
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Type of device used
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Participation in loyalty programs
+                        </li>
+                    </ul>
+
+                    <p>
+                        <strong>Customer base segmentation</strong>
+                    </p>
+                    <p>
+                        Our algorithms enable the segmentation of the entire customer base into clusters, helping to identify customer segments that are most susceptible to churn. Our services are tailored specifically to the unique characteristics of each client's customer base, ensuring the highest level of prediction accuracy. By detecting potential churn at an early stage, we can take proactive measures to prevent customer attrition.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->

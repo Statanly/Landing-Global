@@ -87,7 +87,46 @@ namespace Statanly.Web.Controllers
             }
             return $"CurrentCulture:{CultureInfo.CurrentCulture.Name}, CurrentUICulture:{CultureInfo.CurrentUICulture.Name}";
         }
-
+        public IActionResult Case(int n = 1)
+        {
+            if (n < 1 || n > 9)
+            {
+                n = 1;
+            }
+            return View("Case" + n);
+        }
+        public IActionResult Service(int n=1)
+        {
+            if (n < 1 || n > 6)
+            {
+                n = 1;
+            }
+            return View("Services" + n);
+        }
+        public IActionResult ML()
+        {
+            return View();
+        }
+        public IActionResult CV()
+        {
+            return View();
+        }
+        public IActionResult NLP()
+        {
+            return View();
+        }
+        public IActionResult DA()
+        {
+            return View();
+        }
+        public IActionResult Smartcity(int n = 1)
+        {
+            if (n < 1 || n > 6)
+            {
+                n = 1;
+            }
+            return View("Smartcity" + n);
+        }
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(
@@ -97,6 +136,10 @@ namespace Statanly.Web.Controllers
             );
             //this.GetCulture("en-US"); 
             //var c = $"CurrentCulture:{CultureInfo.CurrentCulture.Name}, CurrentUICulture:{CultureInfo.CurrentUICulture.Name}";
+            if (returnUrl.ToLowerInvariant() == "/message/subscribe" || returnUrl.ToLowerInvariant() == "/message/error")
+            {
+                returnUrl = "/";
+            }
             return LocalRedirect(returnUrl);
         }
     }

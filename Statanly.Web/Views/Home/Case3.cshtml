@@ -1,0 +1,1016 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>System application examples</h2>
+                <ol>
+                    <li><a href="/#portfolio">Home</a></li>
+                    <li>Portfoio Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="1" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <div class="row gy-4">
+                            <div class="col-lg-11">
+                                <h3>1. Language recognition for Arabic, Chinese, Korean, Japanese, Latin and Russian</h3>
+                            </div>
+                            <div class="col-lg-1">
+                                <img src="~/assets/img/Partners/client-7.png" style="max-height: 50px" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: HUAWEI TECHNOLOGIES CO., LTD</li>
+                            <li><strong>Project date</strong>: 2019</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>
+                        SegLink with DenseNet results visualization
+                    </h4>
+                    <p>
+                        Pretrained on SynthText dataset
+                    </p>
+                    <img src="~/assets/img/portfolio/Case3/14.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/15.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/16.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/17.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/18.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/19.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        <strong>Goal</strong>
+                    </p>
+                    <p>
+                        Complete Task 1 and either Task 2 or Task 3
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Task 1: Improve detection for Arabic
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Task 2: Improve recognition for Arabic
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Task 3: Improve recognition for Chinese
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Results</strong>
+                    </p>
+                    <p>
+                        Goal: Complete 1st task and at least one of 2nd or 3rd tasks
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Task 1: Improve detection for Arabic <strong>(completed)</strong>
+
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Task 2: Improve recognition for Arabic
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Task 3: Improve recognition for Chinese <strong>(completed)</strong>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>
+                            Task 3 specifications
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Improve HQ solution [for Chinese and English recognition] by 3% (end-to-end)
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Model should meet NPU restrictions
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>
+                            Results for Chinese and English recognition
+                        </strong>
+                    </p>
+                    <p>
+                        Solution elements:
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Baseline architecture
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Advanced learning techniques
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Improved training data selection
+                        </li>
+                    </ul>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Solution
+                                </th>
+                                <th>
+                                    F1-score
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Baseline (NLPR)
+                                </td>
+                                <td>
+                                    0.908
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    GlobalML
+                                </td>
+                                <td> <strong>0.939</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <strong>
+                            Task 1 specification
+                        </strong>
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Provide single detection model for Arabic, Chinese, Korean, Japanese, Latin, and Russian languages</li>
+                        <li>
+                            <i class="bx bx-check-double"></i> For Arabic for Kirin 980 Precision/Recall ≥ 94/92% accordingly
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> For Arabic for Kirin 970 Precision/Recall ≥ 92/90% accordingly
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> No negative affect on detection of other scripts
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Model should meet NPU restrictions
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Model size in Cambricon format ≤ 12 Mb
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>
+                            Task 1 specification reformulated
+                        </strong>
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Provide single detection model for Arabic, Chinese, Korean, Japanese, Latin, and Russian languages</li>
+                        <li>
+                            <i class="bx bx-check-double"></i> For Arabic for Kirin 980 Precision/Recall <strong>comparable with other languages</strong>
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> For Arabic for Kirin 970 Precision/Recall  <strong>comparable with other languages</strong>
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> No negative affect on detection of other scripts
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Model should meet NPU restrictions
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Model size in Cambricon format ≤ <strong>15 Mb</strong>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>
+                            Solutions for detection
+                        </strong>
+                    </p>
+                    <p>
+                        Solution Elements:
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i> Seglink model combined with DenseNet
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> AdvancedEAST model
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Trained on Batch2+arabic dataset
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i> Both models are on Keras, .pb graphs were extracted
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>
+                            Results for all scripts
+                        </strong>
+                    </p>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Model
+                                </th>
+                                <th>
+                                    F (Metrics)
+                                </th>
+                                <th>
+                                    P (Metrics)
+                                </th>
+                                <th>
+                                    R (Metrics)
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Seglink on DenseNet
+                                </td>
+                                <td>
+                                    0.84
+                                </td>
+                                <td>
+                                    0.86
+                                </td>
+                                <td>
+                                    0.82
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    AdvancedEAST
+                                </td>
+                                <td>
+                                    <strong>0.85</strong>
+                                </td>
+                                <td>
+                                    <strong>0.97</strong>
+                                </td>
+                                <td>
+                                    <strong>0.76</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Baseline (HQ)
+                                </td>
+                                <td>
+                                    0.82
+                                </td>
+                                <td>
+                                    0.92
+                                </td>
+                                <td>
+                                    0.76
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <strong>
+                            Results for Arabic
+                        </strong>
+                    </p>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Model
+                                </th>
+                                <th>
+                                    F (Metrics)
+                                </th>
+                                <th>
+                                    P (Metrics)
+                                </th>
+                                <th>
+                                    R (Metrics)
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Seglink on DenseNet
+                                </td>
+                                <td>
+                                    0.77
+                                </td>
+                                <td>
+                                    0.71
+                                </td>
+                                <td>
+                                    0.84
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    AdvancedEAST
+                                </td>
+                                <td>
+                                    <strong>0.83</strong>
+                                </td>
+                                <td>
+                                    <strong>0.9</strong>
+                                </td>
+                                <td>
+                                    <strong>0.76</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Baseline (HQ)
+                                </td>
+                                <td>
+                                    0.67
+                                </td>
+                                <td>
+                                    0.73
+                                </td>
+                                <td>
+                                    0.61
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <strong>
+                            Results for all languages
+                        </strong>
+                    </p>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Language (Script)
+                                </th>
+                                <th>
+                                    F (Metrics)
+                                </th>
+                                <th>
+                                    P (Metrics)
+                                </th>
+                                <th>
+                                    R (Metrics)
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Arabic
+                                </td>
+                                <td>
+                                    0.83
+                                </td>
+                                <td>
+                                    0.9
+                                </td>
+                                <td>
+                                    0.76
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    English (Latin)
+                                </td>
+                                <td>
+                                    0.86
+                                </td>
+                                <td>
+                                    0.96
+                                </td>
+                                <td>
+                                    0.77
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    French (Latin)
+                                </td>
+                                <td>
+                                    0.84
+                                </td>
+                                <td>
+                                    0.98
+                                </td>
+                                <td>
+                                    0.74
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Russian
+                                </td>
+                                <td>
+                                    0.75
+                                </td>
+                                <td>
+                                    0.96
+                                </td>
+                                <td>
+                                    0.62
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Italian (Latin)
+                                </td>
+                                <td>
+                                    0.88
+                                </td>
+                                <td>
+                                    0.98
+                                </td>
+                                <td>
+                                    0.79
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Chinese
+                                </td>
+                                <td>
+                                    0.93
+                                </td>
+                                <td>
+                                    0.99
+                                </td>
+                                <td>
+                                    0.88
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Korean
+                                </td>
+                                <td>
+                                    0.84
+                                </td>
+                                <td>
+                                    0.96
+                                </td>
+                                <td>
+                                    0.75
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Portuguese (Latin)
+                                </td>
+                                <td>
+                                    0.78
+                                </td>
+                                <td>
+                                    0.98
+                                </td>
+                                <td>
+                                    0.65
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    German (Latin)
+                                </td>
+                                <td>
+                                    0.83
+                                </td>
+                                <td>
+                                    0.98
+                                </td>
+                                <td>
+                                    0.72
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Japanese
+                                </td>
+                                <td>
+                                    0.81
+                                </td>
+                                <td>
+                                    0.97
+                                </td>
+                                <td>
+                                    0.69
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Spanish (Latin)
+                                </td>
+                                <td>
+                                    0.85
+                                </td>
+                                <td>
+                                    0.97
+                                </td>
+                                <td>
+                                    0.75
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <strong>
+                            Model weights
+                        </strong>
+                    </p>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Model
+                                </th>
+                                <th>
+                                    Weights size (MB)
+                                </th>
+                                <th>
+                                    Estimated size after quantization (MB)
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Seglink on DenseNet
+                                </td>
+                                <td>
+                                    ~50
+                                </td>
+                                <td>
+                                    ~14
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    AdvancedEAST
+                                </td>
+                                <td>
+                                    ~60
+                                </td>
+                                <td>
+                                    ~15
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    </br>
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="2" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>2. License plate recognition system</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Municipal Client</li>
+                            <li><strong>Project date</strong> :2021</li>
+                            <li>
+                                <strong>Description</strong>: A system for traffic flow analysis and license plate recognition under various conditions.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case3/1.jpg" class="img-fluid" alt="">
+                    </br>
+                    <img src="~/assets/img/portfolio/Case3/2.jpg" class="img-fluid" alt="">
+                    </br>
+                    <img src="~/assets/img/portfolio/Case3/3.jpg" class="img-fluid" alt="">
+                    </br>
+                    <img src="~/assets/img/portfolio/Case3/4.jpg" class="img-fluid" alt="">
+                    </br>
+                    <p style="text-align:center"><em>Comparison of different versions of the YOLO model by mAP (50-95) metric on the COCO dataset</em></p>
+
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        License plate recognition algorithms typically consist of two components: a localization (detection) component that identifies the portion of an image containing the relevant information, and a character set generation component that extracts characters from the selected area.
+                    </p>
+                    <p>
+                        To select the detection model, a thorough analysis of literature was conducted, identifying the best models in terms of both speed and detection accuracy. The YOLOv5 model was determined to be the optimal choice at the time, offering comparable accuracy to SOTA models while delivering impressive performance.
+
+                    </p>
+
+                    <p>
+                        Similarly, an analysis of literature was conducted to explore SOTA models for text recognition from images (OCR). Although there are various solutions based on the Transformer architecture, they often exhibit slower performance. As a result, the CRNN model was identified as the most suitable model for the task.
+                    </p>
+                    <p>
+                        The existing dataset was transformed to retrain the YOLOv5 model, which involved ten epochs of training to observe the desired improvements.
+                    </p>
+                    <p>
+                        Subsequently, the retrained YOLOv5 model was utilized to construct a dataset consisting exclusively of license plate images. Annotations for the numbers were obtained from the original dataset. The CRNN model was then retrained on this modified dataset, achieving a recognition accuracy of <strong>96%</strong> on the test sample.
+                    </p>
+                    <p>
+                        The YOLOv5 (detection) and CRNN (recognition) models were integrated into a library component for license plate recognition from a video stream, seamlessly integrating with the existing library architecture. During the development of this module, ultralytics released several YOLO models. The YOLOv8n version, with comparable detection accuracy to YOLOv5s but fewer parameters and higher speed, was incorporated into the algorithm and further fine-tuned for license plate recognition.
+
+                    </p>
+
+                    <p>
+                        To ensure maximum stability of the algorithms in adverse weather conditions, image augmentation methods and projective geometry techniques were implemented. Augmentation is the process of enriching a set of data by generating their “distorted” versions. Several types of distortions were implemented:
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Shifts</li>
+                        <li><i class="bx bx-check-double"></i> Turns</li>
+                        <li><i class="bx bx-check-double"></i> Glare</li>
+                        <li><i class="bx bx-check-double"></i> Defocus</li>
+                        <li><i class="bx bx-check-double"></i> Compression and tension</li>
+                        <li><i class="bx bx-check-double"></i> Color (for simulating night filters)</li>
+                    </ul>
+                    <p>
+                        Augmentation of the available datasets made models more resistant to various weather conditions.
+                    </p>
+                    <p>
+                        To evaluate the algorithm's performance in challenging weather conditions, an additional 357 test images of cars (captured under poor lighting, snow, rain) were collected and labeled using the Roboflow service. Examples of such images:
+                    </p>
+                    <img src="~/assets/img/portfolio/Case3/5.jpg" class="img-fluid" alt="">
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    </br>
+    <section id="3" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>3. Train car number recognition</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Transportation Company</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case3/6.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/7.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        Creating training examples from natural images involves collecting real data through various means:
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Collection of images (photographing objects of interest, capturing a video stream from a camera, highlighting a part of an image on a web page).</li>
+                        <li><i class="bx bx-check-double"></i> Filtering - checking images for a number of requirements: adequate object illumination, the presence of the target object, etc.</li>
+                        <li><i class="bx bx-check-double"></i> Preparing annotation tools (developing custom annotation tools or optimizing existing ones).</li>
+                        <li><i class="bx bx-check-double"></i> Marking (selecting rectangles or regions of interest in the images).</li>
+                        <li><i class="bx bx-check-double"></i> Assigning a label to each image (letter or name of the object in the image).</li>
+                    </ul>
+                    <p>
+                        As part of the initial project phase, data collection was organized, including photographing and recording passing trains under various conditions. The collected data was then labeled using the Label Studio tool, marking the coordinates of the bounding rectangle for each car number.
+                    </p>
+                    <p>
+                        The detection (YOLOv8) and recognition (CRNN) components were subsequently retrained on the collected dataset for car number recognition. The overall recognition accuracy on the test sample was 89%, indicating that the model correctly recognizes all characters of the number in 89% of cases. This result demonstrates the model's ability to generalize well to related problems, which can be further improved with additional labeled examples.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    </br>
+    <section id="4" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>4. QR and barcode recognition system</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Commercial Client</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case3/8.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/9.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case3/10.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Results of analysis</em></p>
+
+
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0">
+                    <p>
+                        Existing solutions for QR and barcode recognition were considered. Running the OpenCV library with the zbar algorithm revealed that QR codes are generally detected more effectively than barcodes of the same size. The results of the analysis on read quality are presented in Figure and further discussed below.
+                    </p>
+                    <p>Empirical observations indicated that complex QR codes begin to be detected and read correctly when they occupy approximately 0.8% of the frame, while simpler codes require around 0.64% of the frame. Codes below approximately 0.74% for complex QR codes and 0.57% for simple ones were no longer reliably detected.</p>
+
+                    <p>
+                        Barcodes, on the other hand, face challenges due to the closely spaced bars, which often result in blurred frames. Unlike QR codes, barcodes can be partially read even if horizontally cut off to some extent, though the data might be incomplete. For instance, some frames might read an area as small as 0.04% of the frame, while detection might not work correctly below 0.74%. If over 0.91% of the area is present during the detection and not cut off, the codes are recognized with clarity and completeness.
+                    </p>
+                    <p>
+                        In experiments, the distance from which all codes were easily detected was determined (QR codes with sizes of 1.26 cm for simple ones and 1.55 cm for complex ones). When rotated at an angle of 43 degrees, the codes were no longer readable. However, when the rotation angle was reduced to 40 degrees or less, all codes were correctly read. The transition point from complex code unreadability to simple code readability could not be precisely identified, as both occurred around the same time.
+                    </p>
+                    <p>
+                        For barcodes, the distance from which all codes were easily detected was determined (barcode sizes approximately occupying 0.96% of the frame). When rotated at an angle of 43 degrees, the codes were no longer readable. At a rotation angle of 40 degrees, not all codes were read successfully, and those that were read had detection errors, resulting in incorrect readings. Starting from a rotation angle of 33 degrees, everything became readable, but occasional detection errors began to occur. When rotated at 30 degrees or less, everything was read correctly.
+                    </p>
+                    <p>
+                        Based on the satisfactory results achieved using the OpenCV library with the addition of the zbar library, the decision was made to adapt the existing solution.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    </br>
+    <section id="5" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>5. Free-Form Text Recognition System</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Industrial Client</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                            <li><strong>Description</strong>: Recognition of text of arbitrary form, various fonts, markings, inscriptions in conditions of various noise levels and for various alphabets</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case3/11.jpg" class="img-fluid" alt="">
+
+                    <img src="~/assets/img/portfolio/Case3/12.jpg" class="img-fluid" alt="">
+
+                    <img src="~/assets/img/portfolio/Case3/13.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        To compare the performance of existing character recognition libraries, namely PaddleOCR, Tesseract, Doctr, and EasyOCR, a dataset of 1210 photographs of produced objects (metal, plastic, glass, brick, paper, wood) was collected. The average Levenshtein distances between the recognized inscriptions and the ground truth were calculated for various material categories, as presented in Table:
+                    </p>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Material/Model
+                                </th>
+                                <th>
+                                    PaddleOCR
+                                </th>
+                                <th>
+                                    Tesseract
+                                </th>
+                                <th>
+                                    Doctr
+                                </th>
+                                <th>
+                                    Doctr
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Metal
+                                </td>
+                                <td>
+                                    0.057160
+                                </td>
+                                <td>
+                                    0.461613
+                                </td>
+                                <td>
+                                    0.268681
+                                </td>
+                                <td>
+                                    0.181886
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Brick
+                                </td>
+                                <td>
+                                    0.353260
+                                </td>
+                                <td>
+                                    0.041227
+                                </td>
+                                <td>
+                                    0.335991
+                                </td>
+                                <td>
+                                    0.103651
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Glass
+                                </td>
+                                <td>
+                                    0.307380
+                                </td>
+                                <td>
+                                    0.254498
+                                </td>
+                                <td>
+                                    0.270838
+                                </td>
+                                <td>
+                                    0.212571
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Plastic
+                                </td>
+                                <td>
+                                    0.947816
+                                </td>
+                                <td>
+                                    0.210128
+                                </td>
+                                <td>
+                                    0.147302
+                                </td>
+                                <td>
+                                    0.017100
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Paper
+                                </td>
+                                <td>
+                                    0.377727
+                                </td>
+                                <td>
+                                    0.223795
+                                </td>
+                                <td>
+                                    0.270136
+                                </td>
+                                <td>
+                                    0.135312
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Wood
+                                </td>
+                                <td>
+                                    0.055672
+                                </td>
+                                <td>
+                                    0.189703
+                                </td>
+                                <td>
+                                    0.188016
+                                </td>
+                                <td>
+                                    0.014465
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Miscellaneous
+                                </td>
+                                <td>
+                                    0.124016
+                                </td>
+                                <td>
+                                    0.045473
+                                </td>
+                                <td>
+                                    0.021668
+                                </td>
+                                <td>
+                                    0.031424
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        The results revealed that a significant error factor stems from incorrect text position detection within the image. To address this, an external detector, the YOLOv8 small model, was employed for text detection. However, the initial weights yielded unsatisfactory results. To further enhance its performance, a synthetic dataset comprising 10,000 photographs of industrial premises featuring text in various Latin and Cyrilic fonts was generated for additional training.
+                    </p>
+                    <p>
+                        Based on testing results with real-world data, the algorithm achieved an accuracy of 0.3, which is dependent on the conditions of photographing the numbers on objects. The photos need to be clear and captured in good lighting. The angle of text inclination should not exceed 20 degrees, and the text must occupy at least 1.5% of the frame for successful recognition. Vertically written text cannot be recognized reliably, while numbers written on plastic, glass, paper, and cardboard yield the best recognition results.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->

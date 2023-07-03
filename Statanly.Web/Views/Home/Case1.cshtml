@@ -1,0 +1,547 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="portfolio" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Приложения системы</h2>
+                <ol>
+                    <li><a href="/#portfolio">Главная</a></li>
+                    <li>Проекты</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="1" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>1. Granulometric composition analysis</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Large mining and processing company</li>
+                            <li><strong>Project date</strong>: 2020</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            The granulometric composition analysis system, developed utilizing advanced computer vision technologies, delivers high precision in gauging particle size distribution. This system is particularly applicable to numerous industrial entities, notably within the mining, processing, and metallurgical sectors. By assessing the granulometric composition of materials directly on conveyor belts, it can offer a highly relevant solution for these industries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <img src="~/assets/img/portfolio/Case1/1.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case1/2.jpg" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case1/3.jpg" class="img-fluid" alt="">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+
+                                </th>
+                                <th>
+                                    Real position (stones)
+                                </th>
+                                <th>
+                                    Real position (background)
+                                </th>
+                                <th>
+                                    Accuracy
+                                </th>
+                                <th>
+                                    Recall
+                                </th>
+                                <th>
+                                    T(1 frame)
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Stones</td>
+                                <td> TP = 936</td>
+                                <td> FP = 490</td>
+                                <td> 60%</td>
+                                <td> 84%</td>
+                                <td> 0.04s</td>
+                            </tr>
+                            <tr>
+                                <td>Background</td>
+                                <td> FN = 134</td>
+                                <td> TN = 0</td>
+                                <td> 60%</td>
+                                <td> 84%</td>
+                                <td> 0.04s</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <p style="text-align:center"><em>Table 1 (Watershed method)</em></p>
+                    </br>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+
+                                </th>
+                                <th>
+                                    Real position (stones)
+                                </th>
+                                <th>
+                                    Real position (background)
+                                </th>
+                                <th>
+                                    Accuracy
+                                </th>
+                                <th>
+                                    Recall
+                                </th>
+                                <th>
+                                    T(1 frame)
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Stones</td>
+                                <td> TP = 947</td>
+                                <td> FP = 56</td>
+                                <td> 60%</td>
+                                <td> 84%</td>
+                                <td> 0.04s</td>
+                            </tr>
+                            <tr>
+                                <td>Background</td>
+                                <td> FN = 23</td>
+                                <td> TN = 0</td>
+                                <td> 60%</td>
+                                <td> 84%</td>
+                                <td> 0.04s</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <p style="text-align:center"><em>Table 2 (Neural network)</em></p>
+                </div>
+                <div class="col-lg-5 pt-4 pt-lg-0">
+                    <em>
+                        Granulometric composition refers to the size distribution of ore particles, usually represented as a percentage yield by mass, volume, or quantity.
+                    </em>
+                    <p>
+                        Traditional evaluation methods, involving manual laboratory studies of selectively sampled materials and visual oversight by an operator, are often less desirable due to their inefficiency and potential inaccuracies. However, a computer vision-based system offers a solution, achieving up to 95% accuracy in granulometric assessment.
+                    </p>
+                    <p>
+                        Unlike conventional manual checks that focus on random sample locations, machine vision systems analyze the entire surface of raw materials, thereby providing a more comprehensive and precise assessment. This encompasses:
+                    </p>
+                    <p>
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Detection and sizing of individual granules</li>
+                        <li><i class="bx bx-check-double"></i> Identification of impurities</li>
+                        <li><i class="bx bx-check-double"></i> Classification of granules according to size</li>
+                        <li><i class="bx bx-check-double"></i> Predictive analysis of granule size distribution throughout the depth of material flow</li>
+                    </ul>
+                    <p>
+                        These capabilities become particularly crucial during the crushing and grinding stages, as well as during ore preparation. These processes are energy-intensive and any disruption, such as material blockage, can lead to significant downtime, affecting overall production. Machine vision algorithms, by recognizing potential inclusions in the ore flow that might pose a risk, enable optimization of crusher control and, in urgent scenarios, halt the conveyor system.
+                    </p>
+                    <p>
+                        The implementation of this system yields multiple benefits:
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Prevention of expedited wear and tear of production assets</li>
+                        <li><i class="bx bx-check-double"></i> Reduction in laboratory analysis costs for fractions</li>
+                        <li><i class="bx bx-check-double"></i> Minimization of operating expenses in production</li>
+                        <li><i class="bx bx-check-double"></i> Enhancement of mined mineral quality control </li>
+                        <li><i class="bx bx-check-double"></i> Improvement of operational management quality </li>
+                        <li><i class="bx bx-check-double"></i> Mitigation of human error </li>
+                    </ul>
+                    <p>
+                        System implementation involves several stages:
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> Installation and configuration of necessary equipment (if necessary)</li>
+                        <li><i class="bx bx-check-double"></i> Data collection for model development, retraining, and optimization under specific conditions</li>
+                        <li><i class="bx bx-check-double"></i> Integration with existing production systems</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    </br>
+    <section id="2" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>2. Analysis of the movement of objects (people, cars, etc.)</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Commercial client</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+                            The system delivers detailed analysis of object movements, including people, cars, trucks, bicycles, motorcycles, pedestrians, or any user-specified object.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case1/5.gif" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case1/6.gif" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case1/7.gif" class="img-fluid" alt="">
+                    <img src="~/assets/img/portfolio/Case1/8.gif" class="img-fluid" alt="">
+
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        Its key strength lies in its scalability and efficiency, allowing for rapid deployment of an industrial-grade solution capable of addressing a broad array of tasks, from traffic monitoring on public roads to object tracking in shopping centers, security checkpoints, factory workshops, and conveyor belts.
+
+                        This system's ease of use comes from its intuitive space-marking functionality, further model training capabilities, an integrated pre-trained system for object detection and tracking, and its seamless compatibility with other library components.
+                    </p>
+                    <p>
+                        Its adaptability for both indoor and outdoor environments is facilitated by a graphical interface that allows users to define areas and flows. Displaying an initial video frame or any frame from a surveillance camera, users can draw any number of lines for counting objects traversing through them or define arbitrarily-shaped areas to monitor the presence or absence of certain objects.
+                    </p>
+                    <p>
+                        Although the developed functionality is compatible with any object detection and tracking algorithm, the default configuration utilizes the YOLOv5 model for object detection and a correlation multi-tracking algorithm for object tracking. These solutions ensure high accuracy, with tracking introduced to enhance system speed by reducing hardware load, thereby lowering the costs of developing more specialized solutions without significant loss of detection accuracy.
+                    </p>
+                    <p>
+                        During the operation of the flow analysis the system displays information about various tracked objects. It exhibits object frames that aid in assessing the precision of object detection and tracking. Different object types are indicated with different frame colors. Upon crossing a predefined line, an object is registered in the system, potentially triggering an audio or text alert in the console. For more complex behaviors upon line crossing, the system can function as an API.
+                    </p>
+
+                    <img src="~/assets/img/portfolio/Case1/9.jpg" class="img-fluid" alt="">
+                    </br>
+                    <p style="text-align:center"><em>Defined area example</em></p>
+                    <img src="~/assets/img/portfolio/Case1/10.jpg" class="img-fluid" alt="">
+                    </br>
+                    <p style="text-align:center">
+                        <em>An example of determining the arrival in a given area</em>
+                    </p>
+                    </br>
+                    <p>
+                        Due to the model's adaptability to diverse lighting conditions, the object detector maintains high accuracy day or night under various light sources.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    </br>
+    <section id="3" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>3. Utilizing Computer Vision for In-Depth Analysis of Froth Flotation Enrichment Processes</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Large Industrial Company</li>
+                            <li><strong>Project date</strong>: 2021</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case1/11.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Froth Flotation</em></p>
+                    <img src="~/assets/img/portfolio/Case1/12.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Cylindrical Flotation Cell</em></p>
+                    <img src="~/assets/img/portfolio/Case1/13.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Foam Samples</em></p>
+
+
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        Detection of bubble size, number of bubbles, and rate of froth descent by computer vision methods.
+                    </p>
+                    <p>Key analyzed indicators:</p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i>Foam color</li>
+                        <li><i class="bx bx-check-double"></i>Bubble diameter (distribution)</li>
+                        <li><i class="bx bx-check-double"></i>Foam Removal Speed</li>
+                    </ul>
+
+
+                    <img src="~/assets/img/portfolio/Case1/14.jpg" class="img-fluid" alt="">
+                    </br>
+                    <p style="text-align:center"><em>Source image and calculated contours</em></p>
+                    <p>The computer vision system generates segmentation maps which are crucial for:</p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i>Building dimensions</li>
+                        <li><i class="bx bx-check-double"></i>Tracking</li>
+                        <li><i class="bx bx-check-double"></i>Evaluating specific bubble color</li>
+                    </ul>
+
+
+                    <img src="~/assets/img/portfolio/Case1/15.jpg" class="img-fluid" alt="">
+                    </br>
+                    <p style="text-align:center">
+                        <em>Creating a training sample using the watershed method</em>
+                    </p>
+                    <img src="~/assets/img/portfolio/Case1/16.jpg" class="img-fluid" alt="">
+                    </br>
+                    <p style="text-align:center">
+                        <em>Training of the U-net neural network to detect only large foam</em>
+                    </p>
+                    </br>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i>The area is calculated using a breadth-first search algorithm based on binarized segmentation maps</li>
+                        <li><i class="bx bx-check-double"></i>Bubble centers are calculated by calculating their centers of mass</li>
+                        <li><i class="bx bx-check-double"></i>The distance between the bubbles depends on their area, the coordinates of the centers and certain hyperparameters</li>
+                        <li><i class="bx bx-check-double"></i>Tracking is performed by finding the nearest bubbles from the next frame relative to the function of the distance between the bubbles</li>
+                        <li><i class="bx bx-check-double"></i>If the minimum distance for a particular bubble exceeds a preset threshold, we infer that it has collapsed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    </br>
+    <section id="4" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>4. Real-Time Analysis and Control System for Blast Furnace Brake System</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Large Industrial Company</li>
+                            <li><strong>Project date</strong>: 2021</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="~/assets/img/portfolio/Case1/17.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Original image</em></p>
+                    <img src="~/assets/img/portfolio/Case1/18.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Original image</em></p>
+                    <img src="~/assets/img/portfolio/Case1/19.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Computed contours</em></p>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        <strong>System Overview</strong>
+                    </p>
+                    <p>
+                        The system utilizes a video stream, video file, or set of photographs as input parameters and generates results by detecting various process characteristics:
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i>Monitoring the actual compression and decompression of the brake pads</li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Distance measurement
+                        </li>
+                    </ul>
+                    <p>
+                        and deviation warning from the specified value. Additionally, optimal video quality and frames per second (fps) recommendations are provided.
+                    </p>
+                    <p>
+                        <strong>Segmentation Maps:</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i>For distance calculation
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>For tracking and color assessment
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Steps:</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bx bx-check-double"></i>Object capture
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Contour extraction
+
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Calculation of distances between objects in pixels based on their area, color, center coordinates, and specific hyperparameters
+
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Conversion of pixel distances into the metric system
+                        </li>
+                        <li>
+                            <i class="bx bx-check-double"></i>Object tracking
+                        </li>
+                    </ul>
+                    <p>
+                        The system achieves an accuracy of approximately  <strong>1mm</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    </br>
+    <section id="4" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-info">
+                        <h3>5. Flat parts classification system</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Computer vision</li>
+                            <li><strong>Client</strong>: Large Industrial Company</li>
+                            <li><strong>Project date</strong>: 2022</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <!-- ======= About Section ======= -->
+    <section id="" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 pt-4 pt-lg-0">
+                    <p>
+                        <strong>System Overview</strong>
+                    </p>
+                    <p>
+                        A system for classifying flat parts has been developed.
+                        Ninety percent of the range falls in size from 20mm to 600mm, parts smaller than 200mm can vary in size by no more than 1mm.
+
+                    </p>
+                    <p>
+                        The photograph of the part is used as the input parameters of the system.
+                        The result is formed as a classification of the part (assigning the part to one of 3800 classes).
+                        The system allows you to add new types of parts for classification (introduce a new nomenclature into the system), and also has the ability to
+                        generate data for a label printer.
+                    </p>
+                    <p>
+                        The system achieves an accuracy of approximately  <strong>99,9%</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="~/assets/img/portfolio/Case1/details/1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="~/assets/img/portfolio/Case1/details/2.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="~/assets/img/portfolio/Case1/details/3.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="~/assets/img/portfolio/Case1/details/4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <p style="text-align:center"><em>Example</em></p>
+                    <div class="row">
+                        <img src="~/assets/img/portfolio/Case1/details/train_batch_0.png" class="img-fluid" alt="">
+                        <p style="text-align:center"><em>Train batch</em></p>
+                        <img src="~/assets/img/portfolio/Case1/details/valid_batch_1.png" class="img-fluid" alt="">
+                        <p style="text-align:center"><em>Valid batch</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->

@@ -18,7 +18,17 @@ namespace Statanly.Web.Controllers
         {
             this.messageService = messageService;
         }
-
+        [HttpPost]
+        public IActionResult Subscribe(SubscriberViewModel subscriber)
+        {
+            if (!String.IsNullOrWhiteSpace(subscriber.Email))
+            {
+                //subscriber.Date = DateTime.Now;
+                //this.subscriberRepository.Add(subscriber);
+                return View();
+            }
+            return View("Error");
+        }
         [HttpPost]
         public async Task<IActionResult> Send(MessageViewModel message)
         {

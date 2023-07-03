@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <ol>
+                <li><a href="/#services">Home</a></li>
+                <li>GPU/TPU computing</li>
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="portfolio-description">
+                    <h2>GPU/TPU вычисления</h2>
+                    <p>
+                        Большиство систем на базе ИИ строятся с использованием графических процессоров (GPU), адаптированных под такие
+                        задачи. Стандартом таких ускорителей являются решения от компании NVidia, которые используются во всем мире.
+                        Тем не менее, из-за дифицита и дороговизны подобных решений актуальным становиться поиск альтернатив.
+                        Одной из лучших альтернатив на сегодняшний день - являются решения на базе так называемых тензорных процессоров (TPU)
+                        которые разрабатываются специально под задачи компьютерного зрения и машинного обучения, а стоят значительно дешевле при
+                        сравнительной схожести по мощности. К сожалению, большинство современных библиотек и алгоритмов, используемых
+                        для построения систем на базе ИИ адаптированы именно под графические процессоры (GPU) и не работают под архитектуру TPU.
+                        Последние годы наша компания ведет разработки по адаптации известных алгоритмов и библиотек под аритектуру TPU и
+                        внедряет такие системы для построения интеллектуальных систем.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="portfolio-details-slider swiper">
+                    <img src="~/assets/img/Services/6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

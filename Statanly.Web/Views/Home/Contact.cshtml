@@ -15,18 +15,6 @@
         .ToList();
     var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
 }
-<!-- ======= Top Bar ======= -->
-<div id="topbar" class="fixed-top d-flex align-items-center topbar-inner-pages">
-    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope-fill"></i><a href="mailto:hello@statanly.com">hello@statanly.com</a>
-            <i class="bi bi-phone-fill phone-icon"></i> +7 (921)-875-23-96
-        </div>
-        <div class="cta d-none d-md-block">
-            <a href="/home/contact" class="scrollto">@Localizer["Write"]</a>
-        </div>
-    </div>
-</div>
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
@@ -90,20 +78,27 @@
                             <h4>@Localizer["Address"]:</h4>
                             <p>@Localizer["AddressText"]</p>
                         </div>
-
                         <div class="email">
-                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:hello@statanly.com" target="_blank"><i class="bi bi-envelope"></i></a>
                             <h4>@Localizer["Email"]:</h4>
-                            <p>hello@statanly.com</p>
+                            <p><a href="mailto:hello@statanly.com" target="_blank">hello@statanly.com</a></p>
                         </div>
-
                         <div class="phone">
-                            <i class="bi bi-phone"></i>
+                            <a href="tel:+7 (921)-875-23-96" target="_blank"><i class="bi bi-phone"></i></a>
                             <h4>@Localizer["Phone"]:</h4>
-                            <p>+7(921)-875-23-96</p>
+                            <p><a href="tel:+7 (921)-875-23-96" target="_blank">+7(921)8752396</a></p>
+                        </div>
+                        <div class="telegram">
+                            <a href="https://t.me/statanly" target="_blank"><i class="bi bi-telegram"></i></a>
+                            <h4>Telegram:</h4>
+                            <p><a href="https://t.me/statanly" target="_blank">Telegram</a></p>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://wa.me/79218752396" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <h4>Whatsapp:</h4>
+                            <p><a href="https://wa.me/79218752396" target="_blank">WhatsApp</a></p>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
