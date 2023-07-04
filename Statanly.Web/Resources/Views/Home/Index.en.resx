@@ -298,6 +298,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="IndustryText" xml:space="preserve">
     <value>Modern high-tech production requires special approaches to quality control of manufactured products, as well as optimization of technological processes. Machine vision has made a real technological breakthrough and significantly expanded the capabilities of flaw detection in industry, and brought it to a new level. Now technologies allow monitoring quality not only after the manufacture of a product or product, but also directly during the production process. Other possibilities of using computer vision, such as, for example, the analysis of the granulometric composition of raw materials can significantly optimize the production process.</value>
   </data>
+  <data name="Lawenforcement" xml:space="preserve">
+    <value>Law enforcement</value>
+  </data>
   <data name="LeadDevelopers" xml:space="preserve">
     <value>leading developers with a research degree</value>
   </data>
@@ -343,6 +346,12 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="NumberSystemText" xml:space="preserve">
     <value>Counting transport and passenger traffic</value>
   </data>
+  <data name="Ourprojects" xml:space="preserve">
+    <value>Our projects</value>
+  </data>
+  <data name="Ourprojectsex" xml:space="preserve">
+    <value>Solution Examples</value>
+  </data>
   <data name="Partners" xml:space="preserve">
     <value>Our partners</value>
   </data>
@@ -357,6 +366,12 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   </data>
   <data name="Projects" xml:space="preserve">
     <value>projects in the field of machine learning and data analysis</value>
+  </data>
+  <data name="PublicSafety" xml:space="preserve">
+    <value>Public safety</value>
+  </data>
+  <data name="PublicTransport" xml:space="preserve">
+    <value>Public transport</value>
   </data>
   <data name="R&amp;D" xml:space="preserve">
     <value>R&amp;D projects and scientific research</value>
@@ -379,6 +394,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="RetailText" xml:space="preserve">
     <value>Machine learning enables retailers to automate processes that previously had to be done manually.
 You can automatically receive notifications of stock out of stock or other customer requirements that are not met by creating an analytics system directly at the point of sale. Monitoring staff work, counting visitors, optimizing work schedules, analyzing the effectiveness of promotions and many other applications can be solved by machine learning technology.</value>
+  </data>
+  <data name="RoadMaintenance" xml:space="preserve">
+    <value>Road maintenance</value>
   </data>
   <data name="RS" xml:space="preserve">
     <value>Recommendation systems</value>
@@ -406,6 +424,12 @@ You can automatically receive notifications of stock out of stock or other custo
   </data>
   <data name="ServicesTitle" xml:space="preserve">
     <value>A wide range of services for data analysis, development of intelligent systems based on machine learning and computer vision</value>
+  </data>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Smart city</value>
+  </data>
+  <data name="SmartCityDisc" xml:space="preserve">
+    <value>Intelligent system for analyzing the urban environment</value>
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Solutions</value>
@@ -449,6 +473,9 @@ You can automatically receive notifications of stock out of stock or other custo
   <data name="TextSystemText" xml:space="preserve">
     <value>Highlighting keywords, tags, sentiments of text, analysis of the meaning and intonation of texts</value>
   </data>
+  <data name="TrafficManagement" xml:space="preserve">
+    <value>Traffic management</value>
+  </data>
   <data name="Transport" xml:space="preserve">
     <value>Transport</value>
   </data>
@@ -460,6 +487,9 @@ You can automatically receive notifications of stock out of stock or other custo
   </data>
   <data name="TSText" xml:space="preserve">
     <value>Ready-made solutions based on computer vision algorithms that need to be retrained using customer data.</value>
+  </data>
+  <data name="WasteManagement" xml:space="preserve">
+    <value>Waste management</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Write a message</value>

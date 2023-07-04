@@ -145,17 +145,17 @@ h1, h2, h3, h4, h5, h6 {
 #topbar .contact-info i {
   color: #f6b024;
   line-height: 0;
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 #topbar .contact-info .phone-icon {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 #topbar .contact-info .bi-telegram {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 #topbar .contact-info .bi-whatsapp {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 #topbar .cta {
   background: transparent;

@@ -298,6 +298,9 @@
   <data name="IndustryText" xml:space="preserve">
     <value>Современное высокотехнологичное производство требует особых подходов к контролю качества выпускаемой продукции, а также оптимизации технологических процессов. Машинное зрение совершило настоящий технологический прорыв и значительно расширило возможности дефектоскопии в промышленности, перевела ее на новый уровень.                                        Теперь технологии позволяют отслеживать качество не только после изготовления изделия или продукта, но и непосредственно во время производственного процесса. Другие возможности применения компьютерного зрения, такие как, например, анализ гранулометрического состава сырья позволяют существенно оптимизировать процесс производства.</value>
   </data>
+  <data name="Lawenforcement" xml:space="preserve">
+    <value>Правоохранительная деятельность</value>
+  </data>
   <data name="LeadDevelopers" xml:space="preserve">
     <value>ведущих разработчиков с научной степенью</value>
   </data>
@@ -343,6 +346,12 @@
   <data name="NumberSystemText" xml:space="preserve">
     <value>Подсчет транспортного и пассажиропотока</value>
   </data>
+  <data name="Ourprojects" xml:space="preserve">
+    <value>Наши проекты</value>
+  </data>
+  <data name="Ourprojectsex" xml:space="preserve">
+    <value>Примеры наших проектов</value>
+  </data>
   <data name="Partners" xml:space="preserve">
     <value>Наши партнеры</value>
   </data>
@@ -357,6 +366,12 @@
   </data>
   <data name="Projects" xml:space="preserve">
     <value>проектов в области машинного обучения и анализа данных</value>
+  </data>
+  <data name="PublicSafety" xml:space="preserve">
+    <value>Общественная безопасность</value>
+  </data>
+  <data name="PublicTransport" xml:space="preserve">
+    <value>Диспетчеризация пассажирского транспорта</value>
   </data>
   <data name="R&amp;D" xml:space="preserve">
     <value>R&amp;D проекты и научные исследования</value>
@@ -379,6 +394,9 @@
   <data name="RetailText" xml:space="preserve">
     <value>Машинное обучение позволяет ритейлерам автоматизировать процессы, которые раньше требовалось выполнять вручную.
 Уведомления о закончившихся товарах или неудовлетворении других требований покупателей можно получать автоматически, создав систему аналитики непосредственно в торговой точке. Контроль работы персонала, подсчет посетителей, оптимизация рабочего графика, анализ эффективности рекламных акций и множество других приложений позволяет решить технология машинного обучения.</value>
+  </data>
+  <data name="RoadMaintenance" xml:space="preserve">
+    <value>Содержание дорог</value>
   </data>
   <data name="RS" xml:space="preserve">
     <value>Рекомендательные системы</value>
@@ -406,6 +424,12 @@
   </data>
   <data name="ServicesTitle" xml:space="preserve">
     <value>Широкий спектр услуг по анализу данных, разработке интеллектуальных систем на базе машинного обучения и компьютерного зрения</value>
+  </data>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Умный город</value>
+  </data>
+  <data name="SmartCityDisc" xml:space="preserve">
+    <value>Интеллектуальная система анализа городской среды</value>
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Решения</value>
@@ -449,6 +473,9 @@
   <data name="TextSystemText" xml:space="preserve">
     <value>Выделение ключевых слов, тегов, тональностей текста, анализ смысла и интонаций текстов</value>
   </data>
+  <data name="TrafficManagement" xml:space="preserve">
+    <value>Управление трафиком</value>
+  </data>
   <data name="Transport" xml:space="preserve">
     <value>Транспорт</value>
   </data>
@@ -460,6 +487,9 @@
   </data>
   <data name="TSText" xml:space="preserve">
     <value>Готовые решения на базе алгоритмов компьютерного зрения, которые необходимо дообучить на данных заказчика.</value>
+  </data>
+  <data name="WasteManagement" xml:space="preserve">
+    <value>Контроль обращения с мусором</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Написать</value>

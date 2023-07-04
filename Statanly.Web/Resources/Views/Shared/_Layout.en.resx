@@ -153,6 +153,9 @@
   <data name="Links" xml:space="preserve">
     <value>Links</value>
   </data>
+  <data name="ML" xml:space="preserve">
+    <value>Machine learning</value>
+  </data>
   <data name="NLP" xml:space="preserve">
     <value>Natural language processing</value>
   </data>
@@ -171,10 +174,16 @@
   <data name="Services" xml:space="preserve">
     <value>Services</value>
   </data>
+  <data name="Smartcity" xml:space="preserve">
+    <value>Smart city</value>
+  </data>
   <data name="Subscribe" xml:space="preserve">
     <value>Subscribe</value>
   </data>
   <data name="SubscribeText" xml:space="preserve">
     <value>Be aware of our news, new projects and services</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Write</value>
   </data>
 </root>

@@ -119,12 +119,16 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult Smartcity(int n = 1)
+        public IActionResult Smartcity(int n = 0)
         {
-            if (n < 1 || n > 6)
+            if (n == 0)
+            {
+                return View("Smartcity");
+            }
+            if (n < 0 || n > 6)
             {
                 n = 1;
-            }
+            }          
             return View("Smartcity" + n);
         }
         public IActionResult SetLanguage(string culture, string returnUrl)

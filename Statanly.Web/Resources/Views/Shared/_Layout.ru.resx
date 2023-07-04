@@ -153,6 +153,9 @@
   <data name="Links" xml:space="preserve">
     <value>Ссылки</value>
   </data>
+  <data name="ML" xml:space="preserve">
+    <value>Машинное обучение</value>
+  </data>
   <data name="NLP" xml:space="preserve">
     <value>Обработка естественных языков</value>
   </data>
@@ -171,10 +174,16 @@
   <data name="Services" xml:space="preserve">
     <value>Сервисы</value>
   </data>
+  <data name="Smartcity" xml:space="preserve">
+    <value>Умный город</value>
+  </data>
   <data name="Subscribe" xml:space="preserve">
     <value>Подписаться</value>
   </data>
   <data name="SubscribeText" xml:space="preserve">
     <value>Быть в курсе наших новостей, новых проектов и сервисов</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Написать</value>
   </data>
 </root>
