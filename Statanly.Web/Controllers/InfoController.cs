@@ -28,6 +28,10 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public IActionResult Weight()
+        {
+            return Redirect("https://drive.google.com/drive/folders/1YPBDpGG3spgh7J8HKUtmDJi7KX7BwNmJ?usp=sharing");
+        }
         public FileResult Ustav()
         {
             return File("~/Content/Ustav.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
