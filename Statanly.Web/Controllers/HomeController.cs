@@ -131,7 +131,7 @@ namespace Statanly.Web.Controllers
             }          
             return View("Smartcity" + n);
         }
-        public IActionResult SetLanguage(string culture, string returnUrl)
+        public IActionResult SetLanguage(string culture, string returnUrl = "/")
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
