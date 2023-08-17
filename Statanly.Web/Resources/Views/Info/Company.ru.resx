@@ -117,73 +117,68 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
   </data>
-  <data name="Accreditation" xml:space="preserve">
-    <value>Open source and software registry</value>
+  <data name="AddressText" xml:space="preserve">
+    <value>Россия, Санкт-Петербург, Биржевая линия, 16</value>
   </data>
-  <data name="Adress1" xml:space="preserve">
-    <value>Birzhevaya line, 16</value>
+  <data name="CH" xml:space="preserve">
+    <value>История компании</value>
   </data>
-  <data name="Adress2" xml:space="preserve">
-    <value>Russia, Saint Petersburg</value>
+  <data name="CH1" xml:space="preserve">
+    <value>История нашей компании началась несколько лет назад.
+Тогда на &lt;a href="http://ditp.ifmo.ru/ru/" target="_blank"&gt;факультете информационных технологий и программирования&lt;/a&gt; Университета &lt;a href="http://www.ifmo.ru/ru/" target="_blank"&gt;ИТМО&lt;/a&gt; появилась &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;лаборатория машинного обучения&lt;/a&gt;, а студенты университета в очередной раз стали абсолютными чемпионами самой престижной международной олимпиады по программированию &lt;a href="https://icpc.global" target="_blank"&gt;ACM/ICPC&lt;/a&gt;.</value>
+  </data>
+  <data name="CH2" xml:space="preserve">
+    <value>С тех пор, совместно с крупными российскими и международными компаниями, среди которых &lt;strong&gt;Норильский никель&lt;/strong&gt;, &lt;strong&gt;Мегафон&lt;/strong&gt;, &lt;strong&gt;Евраз&lt;/strong&gt;, &lt;strong&gt;Газпром нефть&lt;/strong&gt;, &lt;strong&gt;Яндекс&lt;/strong&gt;, &lt;strong&gt;Mail.ru Group&lt;/strong&gt;, &lt;strong&gt;Insilico Medicine&lt;/strong&gt;, &lt;strong&gt;Сбербанк&lt;/strong&gt;, &lt;strong&gt;ВКонтакте&lt;/strong&gt;, &lt;strong&gt;СТМ-Сервис&lt;/strong&gt;, было  реализовано более 250 совместных проектов.</value>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>Company</value>
+    <value>Компания</value>
   </data>
-  <data name="CompanyText" xml:space="preserve">
-    <value>Development and implementation of systems and services based on machine learning algorithms, computer vision and data analysis</value>
+  <data name="CompanyToday" xml:space="preserve">
+    <value>Компания сегодня</value>
   </data>
   <data name="Contacts" xml:space="preserve">
-    <value>Contacts</value>
+    <value>Контакты</value>
   </data>
-  <data name="CV" xml:space="preserve">
-    <value>Computer vision</value>
+  <data name="ContactsInfo" xml:space="preserve">
+    <value>Контактная информация</value>
   </data>
-  <data name="DA" xml:space="preserve">
-    <value>Data Analysis</value>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Сотрудничество</value>
+  </data>
+  <data name="CT1" xml:space="preserve">
+    <value>Сегодня наша компания — это молодые, амбициозные сотрудники, разработчики и программисты, специалисты в области машинного обучения, анализа и визуализации данных, высоконагруженных систем и хранения информации, ученые, ведущие свои научные исследования на передовом крае науки. Наши тесные связи с &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;международной лабораторией компьютерных технологий&lt;/a&gt; университета ИТМО позволяют нам привлекать молодых, талантливых специалистов на стажировки и постоянные позиции, поддерживать высочайший уровень и профессионализм.</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>Почта</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
   </data>
-  <data name="Links" xml:space="preserve">
-    <value>Links</value>
+  <data name="Main" xml:space="preserve">
+    <value>Главная</value>
   </data>
-  <data name="ML" xml:space="preserve">
-    <value>Machine learning</value>
-  </data>
-  <data name="NLP" xml:space="preserve">
-    <value>Natural language processing</value>
+  <data name="Mission" xml:space="preserve">
+    <value>Миссия</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Телефон</value>
   </data>
-  <data name="PP" xml:space="preserve">
-    <value>Privacy Policy</value>
+  <data name="Press" xml:space="preserve">
+    <value>Пресса</value>
   </data>
-  <data name="PS" xml:space="preserve">
-    <value>Predictive systems</value>
+  <data name="Research" xml:space="preserve">
+    <value>Исследования</value>
   </data>
-  <data name="RS" xml:space="preserve">
-    <value>Recommendation systems</value>
+  <data name="Solutions" xml:space="preserve">
+    <value>Решения</value>
   </data>
-  <data name="Services" xml:space="preserve">
-    <value>Services</value>
-  </data>
-  <data name="Smartcity" xml:space="preserve">
-    <value>Smart city</value>
-  </data>
-  <data name="Subscribe" xml:space="preserve">
-    <value>Subscribe</value>
-  </data>
-  <data name="SubscribeText" xml:space="preserve">
-    <value>Be aware of our news, new projects and services</value>
+  <data name="Team" xml:space="preserve">
+    <value>Команда</value>
   </data>
   <data name="Write" xml:space="preserve">
-    <value>Write</value>
+    <value>Написать</value>
   </data>
 </root>

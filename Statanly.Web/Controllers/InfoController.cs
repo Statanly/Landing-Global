@@ -12,6 +12,10 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Company()
+        {
+            return View();
+        }
         public FileResult Documentation()
         {
             return File("~/Content/Documentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);

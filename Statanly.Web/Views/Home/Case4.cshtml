@@ -50,10 +50,10 @@
         <div class="container">
 
             <div class="d-flex justify-content-between align-items-center">
-                <h2>Portfoio Details</h2>
+                <h2>Проекты</h2>
                 <ol>
-                    <li><a href="/">Home</a></li>
-                    <li>Portfoio Details</li>
+                    <li><a href="/">Главная</a></li>
+                    <li>Проекты</li>
                 </ol>
             </div>
 
@@ -66,17 +66,17 @@
                 <div class="col-lg-12">
                     <div class="portfolio-info">
                         <h3>
-                            1. MTBF prediction for oilfield equipment
+                            1.  Прогнозирование наработки на отказ нефтедобывающего оборудования
                         </h3>
                         <ul>
-                            <li><strong>Category</strong>: Forecasting systems</li>
-                            <li><strong>Client</strong>: Major oil company</li>
-                            <li><strong>Project date</strong>: 2017</li>
+                            <li><strong>Категория</strong>: Прогнозные системы</li>
+                            <li><strong>Клиент</strong>: Газпром нефть</li>
+                            <li><strong>Дата</strong>: 2018</li>
                         </ul>
                     </div>
                     <div class="portfolio-description">
                         <p>
-                            Design a methodology to forecast the Mean Time Between Failures (MTBF) of downhole equipment and establish a maintenance schedule for well operations. Additionally, develop a system to determine the technical operating limit of equipment within a well. The overall objective is to create a predictive system that estimates the MTBF of equipment based on specific parameters for a defined group.
+                            Разработать методику прогнозирования средней наработки на отказ (СНО) внутрискважинного оборудования и планирования межремонтного периода (МРП) работы скважин, а также систему определения технического предела работы оборудования в скважине. Общая задача: Создание системы прогнозирования средней наработки на отказ (СНО) оборудования по группе заданных параметров.
                         </p>
                     </div>
                 </div>
@@ -90,82 +90,103 @@
             <div class="row">
                 <div class="col-lg-6">
                     <img src="~/assets/img/portfolio/Case4/1.jpg" class="img-fluid" alt="">
-                    <p style="text-align:center"><em>Distribution function</em></p>
+                    <p style="text-align:center"><em>Функция распределения</em></p>
                     <img src="~/assets/img/portfolio/Case4/2.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        <strong>Objective Formulation</strong>
+                        <strong>Постановка задачи</strong>
                     </p>
                     <p>
-                        Elements of the input data describing <strong>oil wells</strong>
+                        Используемые признаки входных данных, описывающих <strong>нефтедобывающие скважины</strong>
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Numerical: 'Head', 'Descent depth', 'Production', '% of water (mode)', as well as input data for Flow and Preassure parametr in oil wells.
+                            <i class="bx bx-check-double"></i> Численные :'Напор', 'Глубина спуска', 'Произв.', Q ж
+                            (режим)', Q н (режим)', '% воды (режим)', ' H дин (режим)',
+                            Pзаб(режим), Pпр(режим)
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Categorical (full binarization): 'Reason for
-                            previous stop', 'Affiliation', 'Power supply, contractor', 'Pump type', 'Operating mode', 'ESP, manufacturer', 'Protector, manufacturer', 'Submersible electric motor, manufacturer', 'Cable, manufacturer', etc.
+                            <i class="bx bx-check-double"></i> к атегориальные полная бинаризация ):):'Причина
+                            (предыдущая остановка)', 'Принадлежность', 'Подрядчик
+                            ЭПУ', 'Тип насоса', 'Режим работы', 'ЭЦН, завод
+                            изготовитель', 'Протектор, завод изготовитель', 'ПЭД, завод
+                            изготовитель', 'Кабель, завод изготовитель‘
                         </li>
                     </ul>
                     <p>
-                        <strong>Target parameter</strong>: MTBF (in days)
+                        <strong>Целевой признак</strong>: наработка на отказ (в днях) '
                     </p>
                     <p>
-                        <strong>Issues affecting prediction</strong>: lots of missing data
+                        <strong>Проблема</strong>: много пропущенных данных
                     </p>
                     <p>
                         <strong>
-                            Initial input processing
+                            Начальная обработка входных данных
                         </strong>
                     </p>
                     <p>
-                        Used features of additional tables
+                        Используемые признаки дополнительных таблиц:
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Only pump data is used
+                            <i class="bx bx-check-double"></i> используются только данные по насосам (файл
+                            ЭЦН_характеристики из МФ.xlsx
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i>Numerical: 'Q value', 'Left zone', 'Right zone',
-                            'Rating F', 'Q', 'H', 'Power', 'Efficiency'
+                            <i class="bx bx-check-double"></i>Численные ::'Номинал Q', ' Левая зона', 'Правая зона',
+                            'Номинал F', 'Q', ' Н', ' Мощн ', 'КПД
+                            
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i>Categorical (full binarization): 'VENDOR', 'TYPERU',
-                            'TYPEFGN'.
+                            <i class="bx bx-check-double"></i>Категориальные (полная бинаризация): 'VENDOR', 'TYPERU',
+                            'TYPEFGN
                         </li>
                     </ul>
                     <p>
-                        Used classifier: <strong>Catboost</strong>
+                        Использованный классификатор: <strong>Catboost</strong>
                     </p>
                     <p>
-                        Result after initial processing (SMAPE): <strong>0.734</strong>
+                        Результат после начальной обработки (SMAPE): <strong>0.734</strong>
                     </p>
                     <p>
-                        <strong>Two Parameter Weibull Distribution</strong>
+                        <strong>
+                            Двухпараметрическое распределение
+                            Вейбулла
+                        </strong>
                     </p>
                     <p>
-                        We used two-parameter Weibull distribution, which describes the time to failure and takes into account coefficient k, which characterizes the change in the failure rate over time.
+                        Нормальное
+                        распределение является частным случаем
+                        двухпараметрического распределения Вейбулла , которое
+                        описывает наработку до отказа с учетом коэффициента k,
+                        характеризующую изменение интенсивности отказов во
+                        времени.
                     </p>
                     <p>
-                        Adding features of Weibull Distribution by oilfield
+                        Добавление признаков распределения
+                        Вейбулла
+                        по месторождениям
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> For each oilfield's training sample
-                            for target attribute MTBF, the parameters of the Weibull distribution are automatically calculated (shape factor, expectation, variance)
+                            <i class="bx bx-check-double"></i> Для каждого месторождения обучающей выборки по
+                            целевому признаку (НнО) автоматически рассчитываются
+                            параметры распределения Вейбулла (коэффициент формы,
+                            матожидание, дисперсия)
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i>The specified parameters are added, depending on
-                            the oilfield, into the training and test datasets
+                            <i class="bx bx-check-double"></i>Указанные параметры добавляются, в зависимости от
+                            месторождения, в обучающую и тестовую выборки.                            
                         </li>
                     </ul>
                     <p>
-                        Result with Weibull features (SMAPE): <strong>0.732</strong>
+                        Результат
+                        с признаками Вейбулла (SMAPE): <strong>0.732</strong>
                     </p>
                     <p>
-                        Result after adjusting catboost parameters (SMAPE): <strong>0.726</strong>
+                        Результат
+                        после настройки параметров catboost (SMAPE): <strong>0.726</strong>
                     </p>
                 </div>
             </div>
@@ -177,12 +198,12 @@
                 <div class="col-lg-12">
                     <div class="portfolio-info">
                         <h3>
-                            2. Predicting failure of electric traction motors in locomotives
+                            2. Прогнозная система отказа тяговыхэлектродвигателей электровозов 2ЭС6
                         </h3>
                         <ul>
-                            <li><strong>Category</strong>: Forecasting systems</li>
-                            <li><strong>Client</strong>: Industrial company</li>
-                            <li><strong>Project date</strong>: 2019</li>
+                            <li><strong>Категория</strong>: Прогнозные системы</li>
+                            <li><strong>Клиент</strong>: Синара Транспортные Машины</li>
+                            <li><strong>Дата</strong>: 2019</li>
                         </ul>
                     </div>
                     @*<div class="portfolio-description">
@@ -267,12 +288,12 @@
                 <div class="col-lg-12">
                     <div class="portfolio-info">
                         <h3>
-                            3. Predicting shutdowns in peroxide-grade polypropylene production
+                            3. Система прогнозирования останова при производстве пероксидноймарки
                         </h3>
                         <ul>
-                            <li><strong>Category</strong>: NLP</li>
-                            <li><strong>Client</strong>: CIS countries petrochemical company</li>
-                            <li><strong>Project date</strong>: 2019</li>
+                            <li><strong>Категория</strong>: Прогнозные системы</li>
+                            <li><strong>Клиент</strong>: Сибур</li>
+                            <li><strong>Дата</strong>: 2019</li>
                         </ul>
                     </div>
                 </div>
