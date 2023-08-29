@@ -1817,7 +1817,6 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\DA.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Ml.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Nlp.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Services1.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Services2.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Services3.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Services4.cshtml.g.cs
@@ -1836,3 +1835,5 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Info.Company.en.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Info.Company.ru.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Ml2.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Product1.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Services1.cshtml.g.cs

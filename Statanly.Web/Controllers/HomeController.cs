@@ -87,22 +87,7 @@ namespace Statanly.Web.Controllers
             }
             return $"CurrentCulture:{CultureInfo.CurrentCulture.Name}, CurrentUICulture:{CultureInfo.CurrentUICulture.Name}";
         }
-        public IActionResult Case(int n = 1)
-        {
-            if (n < 1 || n > 9)
-            {
-                n = 1;
-            }
-            return View("Case" + n);
-        }
-        public IActionResult Service(int n=1)
-        {
-            if (n < 1 || n > 6)
-            {
-                n = 1;
-            }
-            return View("Services" + n);
-        }
+
         public IActionResult ML()
         {
             return View();
@@ -119,17 +104,41 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult Smartcity(int n = 0)
+        public IActionResult Case(int id = 1)
         {
-            if (n == 0)
+            if (id < 1 || id > 9)
+            {
+                id = 1;
+            }
+            return View("Case" + id);
+        }
+        public IActionResult Service(int id = 1)
+        {
+            if (id < 1 || id > 6)
+            {
+                id = 1;
+            }
+            return View("Services" + id);
+        }
+        public IActionResult Product(int id = 1)
+        {
+            if (id < 1 || id > 6)
+            {
+                id = 1;
+            }
+            return View("Product" + id);
+        }
+        public IActionResult Smartcity(int id = 0)
+        {
+            if (id == 0)
             {
                 return View("Smartcity");
             }
-            if (n < 0 || n > 6)
+            if (id < 0 || id > 6)
             {
-                n = 1;
+                id = 1;
             }          
-            return View("Smartcity" + n);
+            return View("Smartcity" + id);
         }
         public IActionResult SetLanguage(string culture, string returnUrl = "/")
         {

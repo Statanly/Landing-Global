@@ -1,0 +1,271 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html"></a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/">Главная</a></li>
+                <li>Классификация деталей</li>
+            </ol>
+            <h2>Описание системы</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-info">
+                        <h3>Система классификации деталей</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: Промышленность, обработка, машиностроение</li>
+                            <li><strong>Дата</strong>: 2022</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Обзор системы</h2>
+                        <p>
+                            Система классификации деталей, построенная на базе алгоритмов компьютерного зрения позволяет автоматически определять тип детали, ее артикул, характеристики, а также выделять бракованные детали.
+                        </p>
+                        <p>
+                            Разработана система классификации плоских деталей.
+                            Девяносто процентов диапазона составляют размеры от 20 мм до 600 мм, размеры деталей менее 200 мм могут отличаться по размеру не более чем на 1 мм.
+
+                        </p>
+                        <p>
+                            Фотография детали используется в качестве входных параметров системы.
+                            Результат формируется в виде классификации детали (отнесение детали к одному из 3800 классов).
+                            Система позволяет добавлять новые виды деталей для классификации (вводить в систему новую номенклатуру), а также имеет возможность
+                            генерировать данные для принтера этикеток.
+                        </p>
+                        <p>
+                            Система достигает точности приблизительно <strong>99,9%</strong>.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img style="max-height: 50%;" src="~/assets/img/portfolio/Case1/details/1.jpg" alt="">
+                        <p style="text-align:center"><em>Схема системы</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Система состоит из следующих компонентов:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bx bx-check-double"></i>IP-камеры
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Вычислительный сервер/компьютер для анализа и вывода результатов
+
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Программное обеспечение «Система классификации деталей»
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>(опционально) освещение, специализированная поверхность
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img style="width: 400px; height: auto" src="~/assets/img/portfolio/Case1/details/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>
+                                Особенности системы
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bx bx-check-double"></i>Позволяет проводить классификацию любых деталей и объектов, выявлять брак, распознавать геометрические размеры
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Работает со стандартными IP-камерами, которые могут подбираться индивидуально
+
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Быстрая донастройка (дообучение) системы под новые виды деталей без участия разработчиков
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Простой и понятный интерфейс (web/десктоп)
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Возможность интеграции со внутренней инфраструктурой заказчика для автоматизации управления различными устройствами
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <strong>
+                            Процесс внедрения
+                        </strong>
+                        </p>
+                        <p>
+                            Процесс внедрения состоит из следующих шагов:
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bx bx-check-double"></i>Установка камер и серверного оборудования
+
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Настройка системы под типовые детали на предприятии
+
+
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Эксплуатация
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img src="~/assets/img/portfolio/Case1/details/4.jpg" alt="">
+                        <p style="text-align:center"><em>Интерфейс системы</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>
+                                Технические детали
+                            </strong>
+                        </p>
+                        <p>
+                            В системе используются следующие модели компьютерного зрения:
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bx bx-check-double"></i>ShuffleNetV2
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Yolov8
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>RegNet
+                            </li>
+                        </ul>
+                        <p>
+                            Различные модели используются для распознавания деталей разных размеров
+                        </p>
+
+                        <p>
+                            <strong>
+                                Точность системы
+                            </strong>
+                        </p>
+                        <p>
+                            Анализ точности системы с использованием нескольких камер:
+                        </p>
+                        <img src="~/assets/img/portfolio/Case1/details/6.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img src="~/assets/img/portfolio/Case1/details/5.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    <strong>
+                        Примеры использования
+                    </strong>
+                </p>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case1/details/1.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case1/details/2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case1/details/3.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case1/details/4.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <p style="text-align:center"><em>Example</em></p>
+                <div class="row">
+                    <img src="~/assets/img/portfolio/Case1/details/train_batch_0.png" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Обучение</em></p>
+                    <img src="~/assets/img/portfolio/Case1/details/valid_batch_1.png" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Тестирование</em></p>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
