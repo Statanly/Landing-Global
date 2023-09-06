@@ -1,0 +1,336 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html"></a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
+                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/">Главная</a></li>
+                <li>Распознавание дефектов</li>
+            </ol>
+            <h2>Описание системы</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                    <div class="portfolio-info">
+                        <h3>Система распознавание дефектов</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: Промышленность, обработка, машиностроение</li>
+                            <li><strong>Дата</strong>: 2021-2023</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Обзор системы</h2>
+                        <p>
+                            Система распознавание дефектов, построенная на базе алгоритмов компьютерного зрения позволяет автоматически определять различные типы дефектов на поверхностях материалов, некачественную печать, ошибки в маркировке, а также выделять бракованные детали.
+                        </p>                    
+                    </div>           
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Система состоит из следующих компонентов:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bx bx-check-double"></i>IP-камеры
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Вычислительный сервер/компьютер для анализа и вывода результатов
+
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>Программное обеспечение «Система распознавание дефектов»
+                            </li>
+                            <li>
+                                <i class="bx bx-check-double"></i>(опционально) освещение, специализированная поверхность
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img style="width: 400px; height: auto" src="~/assets/img/portfolio/Case1/details/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Набор данных
+                                </th>
+                                <th>
+                                    Классы
+                                </th>
+                                <th>
+                                    Выборка
+                                </th>
+                                <th>
+                                    Пример
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Дерево</td>
+                                <td>
+                                    6+1
+                                    (Без дефектов + 6 типов дефектов)
+                                </td>
+                                <td>6652</td>
+                                <td><img src="~/assets/img/portfolio/Case6/1.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Сталь</td>
+                                <td>
+                                    4+1
+                                </td>
+                                <td>21500</td>
+                                <td><img src="~/assets/img/portfolio/Case6/2.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Мрамор</td>
+                                <td>
+                                    4+1
+                                </td>
+                                <td>2937</td>
+                                <td><img src="~/assets/img/portfolio/Case6/3.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Прочее</td>
+                                <td>
+                                    15 видов поверхностей
+                                </td>
+                                <td>~10000</td>
+                                <td><img src="" class="img-fluid" alt=""></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <p style="text-align:center"><em>Таблица 1 (Статистики наборов данных с дефектами на материалах)</em></p>
+                    </br>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Данные
+                                </th>
+                                <th>
+                                    F1
+                                </th>
+                                <th>
+                                    Пример
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Дерево</td>
+                                <td> 0.83</td>
+                                <td><img src="~/assets/img/portfolio/Case6/4.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Сталь</td>
+                                <td> 0.73</td>
+                                <td><img src="~/assets/img/portfolio/Case6/5.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Мрамор</td>
+                                <td> 0.71</td>
+                                <td><img src="~/assets/img/portfolio/Case6/6.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Bottle</td>
+                                <td> 0.6</td>
+                                <td><img src="~/assets/img/portfolio/Case6/7.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td> 0.6</td>
+                                <td><img src="~/assets/img/portfolio/Case6/8.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Zipper</td>
+                                <td> 0.55</td>
+                                <td><img src="~/assets/img/portfolio/Case6/9.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Cable</td>
+                                <td> 0.52</td>
+                                <td><img src="~/assets/img/portfolio/Case6/10.jpg" class="img-fluid" alt=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="text-align:center"><em>Таблица 2 (Тестирование на различных поверхностях)</em></p>
+                    </br>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Жидкость
+                                </th>
+                                <th>
+                                    Количество объектов
+                                </th>
+                                <th>
+                                    Precision
+                                </th>
+                                <th>
+                                    Recall
+                                </th>
+                                <th>
+                                    mAP50
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Бензин</td>
+                                <td> 50</td>
+                                <td> 0,867</td>
+                                <td> 0,723</td>
+                                <td> 0,879</td>
+                            </tr>
+                            <tr>
+                                <td>Лак</td>
+                                <td> 50</td>
+                                <td> 0,795</td>
+                                <td> 0,832</td>
+                                <td> 0,844</td>
+                            </tr>
+                            <tr>
+                                <td>Флотация</td>
+                                <td> 100</td>
+                                <td> 0,762</td>
+                                <td> 0,641</td>
+                                <td> 0,773</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <p style="text-align:center"><em>Таблица 3 (Значение метрик детекции для разных поверхностей и размер обучающей выборки (#объектов)</em></p>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                        <strong>Дефекты поверхностей</strong>
+                    </p>
+                    <p>
+                        Разработаны универсальные алгоритмы, которые распознают дефекты на любом материале, любых указанных пользователем видов.
+                        Разработан и реализован универсальный подход к поиску дефектов, то есть не по отдельной модели на каждый материал (дерево, сталь, бетон, мрамор и так далее, материалом множество), а одну модель для всех материалов. Качество, достигаемое такой моделью, будет меньше, но она не будет требовать дообучения под каждую конкретную задачу, хотя мы не исключаем эту возможность и добавляем соответствующий функционал.
+                    </p>
+
+                    <p>
+                        Архитектура универсальной модели основана на классической сети VGG19, признаки которой хорошо отражают паттерны на изображении. Используются 4 сверточных слоя предобученной сети VGG19, затем идут два обучаемых сверточных слоя, а затем два полносвязных слоя.
+                        Были проанализированы методы нахождения дефектов и отобраны данные для этой задачи. Эксперименты проводились на фотографиях дерева , металла , мрамора  и разных поверхностей и предметов , статистики по этим наборам изображений представлены в таблице
+                        <strong>Таблице 1</strong>
+                    </p>
+                    <p>
+                        Сеть была обучена на тренировочных частях данных о дефектах дерева и стали и протестирована на их тестовых частях по достигаемой точности (метрике F1).
+                        Также сеть была протестирована на разных типах поверхностей. Результаты представлены в  <strong>Таблице 2</strong>.
+                    </p>
+                    <p>
+                        Как можно видеть из таблицы, точность нахождения дефектов на дереве и металле больше 0,7.
+                        Дефекты на мраморе визуально похожи на дефекты на дереве, модель не обучалась на этом наборе изображений и никогда не видела поверхность мрамора,
+                        тем не менее смогла предсказать наличие и класс дефектов с точность более 0,7.
+                        На наборе изображений разнообразных предметов и поверхностей  достигается точность 0,55-0,65, что вызвано их непохожестью на обучающую выборку.
+                    </p>
+                    <p>
+                        Ожидаемая точность по F1-мере достигнута, но не для всех видов поверхностей, что требует дальнейшего улучшения модели.
+                    </p>
+                    <p>
+                        В рамках следующего этапа планируется доработать архитектуру модели и определять, сколько нужно данных для получения точность более 0,75.
+                    </p>
+                    <img src="~/assets/img/portfolio/Case6/11.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Примеры</em></p>
+
+
+                    <p>
+                        <strong>Дефекты жидкостей</strong>
+                    </p>
+                    <p>
+                        В рамках модуля обнаружения дефектов на жидкости рассмотрено три типа жидкостей: лакокрасочное покрытие, бензин и продукты флотации. Для первых двух типов жидкостей применялся детектор YOLOv8, примеры представлены на рисунке.
+                        Для детекции пузырей, возникающих в процессе флотации использована модель U-Net, результаты представлены на рисунке
+                    </p>
+
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <td><img src="~/assets/img/portfolio/Case6/12.jpg" class="img-fluid" alt=""></td>
+                                <td><img src="~/assets/img/portfolio/Case6/13.jpg" class="img-fluid" alt=""></td>
+
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    Обнаружение пузырьков на лакокрасочном покрытии
+                                </th>
+                                <th>
+                                    Обнаружение разливов бензина на воде
+                                </th>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img src="~/assets/img/portfolio/Case6/14.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Обнаружение крупных пузырьков во время флотации</em></p>
+                    <p>
+                        <strong>Таблица 3</strong> представлены результаты, полученные для трех типов жидкостей, а также размеры обучающих образцов.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->

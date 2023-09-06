@@ -204,6 +204,9 @@
   <data name="Services" xml:space="preserve">
     <value>Сервисы</value>
   </data>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Умный город</value>
+  </data>
   <data name="Solutions" xml:space="preserve">
     <value>Решения</value>
   </data>

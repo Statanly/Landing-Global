@@ -154,7 +154,7 @@
     <value>Миссия</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Ваше имя</value>
+    <value>Имя</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Телефон</value>
