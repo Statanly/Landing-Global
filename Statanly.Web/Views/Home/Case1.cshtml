@@ -1,61 +1,15 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
-
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
-
-@{
-    // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+﻿@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
 }
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
-                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
-    </div>
-</header><!-- End Header -->
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
     <section id="portfolio" class="breadcrumbs">
         <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Приложения системы</h2>
-                <ol>
-                    <li><a href="/#solutions">Главная</a></li>
-                    <li>Проекты</li>
-                </ol>
-            </div>
-
+            <h2>Приложения системы</h2>
+            <ol>
+                <li><a href="/#solutions">Главная</a></li>
+                <li>Проекты</li>
+            </ol>
         </div>
     </section><!-- End Breadcrumbs -->
     <!-- ======= Portfolio Details Section ======= -->
@@ -232,7 +186,7 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>2. Analysis of the movement of objects (people, cars, etc.)</h3>
+                        <h3>2. Анализ движения объектов (людей, транспортных средств и т.д.)</h3>
                         <ul>
                             <li><strong>Категория</strong>: Компьютерное зрение</li>
                             <li><strong>Заказчик</strong>: Гос. заказчик</li>
@@ -280,7 +234,7 @@
 
                     <img src="~/assets/img/portfolio/Case1/9.jpg" class="img-fluid" alt="">
                     </br>
-                    <p style="text-align:center"><em>Defined area example</em></p>
+                    <p style="text-align:center"><em>Определение опасных зон</em></p>
                     <img src="~/assets/img/portfolio/Case1/10.jpg" class="img-fluid" alt="">
                     </br>
                     <p style="text-align:center">
@@ -302,7 +256,7 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>3. Анализ флотационной картины</h3>                        
+                        <h3>3. Анализ флотационной картины</h3>
                         <ul>
                             <li><strong>Категория</strong>: Компьютерное зрение</li>
                             <li><strong>Заказчик</strong>: ГМК</li>
@@ -409,11 +363,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <img src="~/assets/img/portfolio/Case1/17.jpg" class="img-fluid" alt="">
-                    <p style="text-align:center"><em>Original image</em></p>
+                    <p style="text-align:center"><em>Исходный кадр</em></p>
                     <img src="~/assets/img/portfolio/Case1/18.jpg" class="img-fluid" alt="">
-                    <p style="text-align:center"><em>Original image</em></p>
+                    <p style="text-align:center"><em>Исходный кадр</em></p>
                     <img src="~/assets/img/portfolio/Case1/19.jpg" class="img-fluid" alt="">
-                    <p style="text-align:center"><em>Computed contours</em></p>
+                    <p style="text-align:center"><em>Вычисление расстояния</em></p>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
@@ -443,7 +397,7 @@
                         </li>
                     </ul>
                     <p>
-                        <strong>Steps:</strong>
+                        <strong>Этапы:</strong>
                     </p>
                     <ul>
                         <li>

@@ -124,7 +124,7 @@
     <value>The company is based on the international laboratory of machine learning at ITMO University and develops in the field of machine learning algorithms, computer vision and data analysis for solving various business problems. In recent years, many projects have been implemented for the largest enterprises in Russia, including Yandex, Mail.ru Group, Norilsk Nickel, Megafon, NMLK, Evraz, Sinara-Transport Machines, Gazprom Neft. This allowed us to accumulate sufficient experience and become a leading company in the implementation of machine learning algorithms, computer vision and data analysis.</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>We develop and implement machine learning modules in information systems for solving applied business problems</value>
+    <value>Development of systems based on artificial intelligence, machine learning, computer analysis and data analysis</value>
   </data>
   <data name="Address" xml:space="preserve">
     <value>Address</value>
@@ -221,7 +221,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Object characteristics detection system</value>
   </data>
   <data name="DetectionSystemText" xml:space="preserve">
-    <value>Determining the number, type, shape, speed, color and geometry of objects</value>
+    <value>Determination of the quantity, type, brand, speed, color and dimensions of the vehicle</value>
   </data>
   <data name="Developers" xml:space="preserve">
     <value>developers involved in various projects</value>
@@ -398,7 +398,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Testing hypotheses, conducting scientific research, developing new algorithms.</value>
   </data>
   <data name="RecognitionSystem" xml:space="preserve">
-    <value>License plate recognition system</value>
+    <value>Text recognition system</value>
   </data>
   <data name="RecognitionSystemText" xml:space="preserve">
     <value>Recognition of numbers, markings, QR-codes, free-form inscriptions</value>

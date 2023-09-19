@@ -2342,7 +2342,6 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Mission.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Press.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Research - Копировать.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Research.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Services.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Solution.cshtml.g.cs
@@ -2399,5 +2398,19 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product1.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.SmartCity.en.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.SmartCity.ru.resources
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Resources\Views\Home\Solution.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product2.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Product1.en.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Product1.ru.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Product2.en.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Product2.ru.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Product3.en.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Product3.ru.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product3.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Shared._SolutionsLayout.en.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.Resources.Views.Shared._SolutionsLayout.ru.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Shared\_SolutionsLayout.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product4.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product5.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product6.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product7.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Product8.cshtml.g.cs

@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/#products">Главная</a></li>
+                <li>Распознавание лиц</li>
+            </ol>
+            <h2>Описание системы</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-info">
+                        <h3>Система распознавания лиц</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: Умный/безопасный город</li>
+                            <li><strong>Цена</strong>: 300000 рублей без ограничений по количеству камер и лиц</li>
+                            <li><strong>Доработки под задачу</strong>: По запросу</li>
+
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Обзор системы</h2>
+                        <p>
+                            Система распознавания лиц, построенная на базе алгоритмов компьютерного зрения позволяет автоматически сравнить входное лицо с лицами из базы данных и определить, есть ли этот человек в базе данных и если да, то что это за человек.
+                        </p>
+                        <p>
+                            Процесс распознавания состоит из следующих этапов:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Детекция лица:</strong> нахождение прямоугольников (боксов), в которых есть лица. Используется быстродействующая модель YOLOv8n. Также на этом же этапе детектор находит ключевые точки лица (точки носа и глаз).
+                            </li>
+                            <li>
+                                <strong>Выравнивание лица:</strong> найденные боксы с лицами нужно вырезать и каждое лицо выровнять так, чтобы голова не была повернута. Угол поворота головы определяется на основе найденных детектором ключевых точек лица.
+                            </li>
+                            <li>
+                                <strong>Выделение числовых признаков лица.</strong>
+                                Для этого используется легковесная модель-экстрактор вектора признаков лица: MobileFaceNet, обученная с помощью лосса ArcFace. На вход ей подается выровненное лицо, и она выдает вектор чисел ("слепок") лица.
+                                Такую операцию можно сделать для каждого лица, т.е. отобразить каждое лицо в вектор чисел.
+
+                            </li>
+                            <li>
+                                <strong>Поиск заданного лица в базе данных.</strong>
+                                Для этого возьмем "слепок" нашего текущего лица и будем сравнивать его со "слепками" из базы данных. Т.к. "слепок" лица — это вектор чисел, то простыми операциями сравнить лица нельзя. В итоге для сравнения используется косинусное расстояние, которое выдает одно число, показывающее насколько лица близки друг к другу. Если полученное число меньше заданного порога, то считается, что лица совпали.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img style="max-height: 40%;" src="~/assets/img/Products/Product3/1.jpg" alt="">
+                        <p style="text-align:center"><em></em></p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Products/Product3/2.jpeg" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Products/Product3/4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Products/Product3/3.jpg" alt="">
+                            </div><div class="col-lg-6">
+                                <img src="~/assets/img/Products/Product3/5.png" alt="">
+                            </div>
+                        </div>
+                        <p style="text-align:center"><em></em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->

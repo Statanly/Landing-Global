@@ -122,7 +122,7 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Product(int id = 1)
         {
-            if (id < 1 || id > 6)
+            if (id < 1 || id > 9)
             {
                 id = 1;
             }

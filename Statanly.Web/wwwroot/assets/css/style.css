@@ -591,7 +591,14 @@ section {
   padding-bottom: 0;
   color: #054a85;
 }
-
+    .section-title h3 {
+        font-size: 18px;
+        font-weight: bold;
+        /*    text-transform: uppercase;
+*/ margin-bottom: 20px;
+        padding-bottom: 0;
+        color: #0880e8;
+    }
 .section-title p {
   margin-bottom: 0;
   font-style: italic;

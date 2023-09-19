@@ -1,62 +1,16 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
-
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
-
-@{
-    // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+﻿@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
 }
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
-                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
-    </div>
-</header><!-- End Header -->
 <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Приложения системы</h2>
-                <ol>
-                    <li><a href="/#solutions">Главная</a></li>
-                    <li>Проекты</li>
-                </ol>
-            </div>
-
+            <h2>Приложения системы</h2>
+            <ol>
+                <li><a href="/#solutions">Главная</a></li>
+                <li>Проекты</li>
+            </ol>
         </div>
     </section><!-- End Breadcrumbs -->
     <!-- ======= Portfolio Details Section ======= -->
@@ -69,16 +23,19 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>1. Predictive Publication Characteristics System (Views, Likes, Clicks, Comments, etc.)</h3>
+                        <h3>
+                            1. Прогнозная система характеристик публикаций (Views, Likes, Clicks, Comments, и т.д.)
+                        </h3>
                         <ul>
-                            <li><strong>Category</strong>: NLP</li>
-                            <li><strong>Client</strong>: Commercial Client</li>
-                            <li><strong>Project date</strong>: 2021</li>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Заказчик</strong>: Life.ru</li>
+                            <li><strong>Дата</strong>: 2021</li>
                         </ul>
                     </div>
                     <div class="portfolio-description">
                         <p>
-                            Utilizing historical data from diverse sources and the interactions associated with publications, we have developed a predictive system that analyzes article content to forecast various characteristics of publications. These characteristics include views, link clicks, likes, etc. By leveraging this system, organizations can optimize their content strategies and make data-driven decisions to maximize engagement and interaction with their publications.
+                            Используя исторические данные из различных источников и взаимодействие, связанное с публикациями, разработана система прогнозирования, которая анализирует содержание статей для прогнозирования различных характеристик публикаций.
+                            К этим характеристикам относятся просмотры, клики по ссылкам, лайки и т. д. Используя эту систему, организации могут оптимизировать свои контент-стратегии и принимать решения на основе данных, чтобы максимизировать вовлеченность и взаимодействие со своими публикациями.
                         </p>
                     </div>
                 </div>
@@ -97,10 +54,10 @@
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        <strong>Used Approaches</strong>
+                        <strong>Подходы</strong>
                     </p>
                     <p>
-                        Header vectorization*
+                        Векторизация заголовка*
                     </p>
                     <ul>
                         <li>
@@ -111,7 +68,7 @@
                         </li>
                     </ul>
                     <p>
-                        Regression model**
+                        Регрессионная модель**
                     </p>
                     <ul>
                         <li>
@@ -122,23 +79,32 @@
                         </li>
                     </ul>
                     <p>
-                        <em>*Vectorization is the process of extracting features from data (text) that are used to build predictive models</em>
+                        <em>
+                            *Векторизация
+                            процесс выделения из данных (текста) признаков которые используются для построения
+                            прогнозных моделей
+                        </em>
                     </p>
                     <p>
-                        <em>** Regression models - predictive function of the independent variable and parameters with the addition of a random variable</em>
+                        <em>
+                            ** Регрессионные модели
+                            прогнозирующая функция от независимой переменной и параметров с
+                            добавлением случайной переменной
+                        </em>
                     </p>
                     <p>
-                        Metrics for assessing the quality of predictive models
+                        Метрики оценки качества прогнозирующих
+                        моделей
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Mean Squared Error (MSE)
+                            Mean Squared Error (MSE)
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> RMSE
+                            RMSE
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Mean Absolute Error (MAE) ~ 2500 views
+                            <strong>Mean Absolute Error (MAE) ~ 2500 просмотров</strong>
                         </li>
                     </ul>
 
@@ -157,26 +123,24 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>2. Domain-Specific Search and Q&A Systems</h3>
+                        <h3>2. Специализированные системы поиска и вопросов и ответов</h3>
                         <ul>
-                            <li><strong>Category</strong>: NLP</li>
-                            <li><strong>Client</strong>: Commercial Clients</li>
-                            <li><strong>Project date</strong>: 2019-2023</li>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: ТВЦ, и другие компании</li>
+                            <li><strong>Дата</strong>: 2019-2023</li>
                         </ul>
                     </div>
                     <div class="portfolio-description">
                         <p>
-                            Before the emergence of ChatGPT, there was a need for systems that could swiftly find answers in specific, narrow areas like technical documentation, instructions, and user guides. In such instances, ChatGPT may not provide the correct solution. Our NLP team has been instrumental in creating such systems, specifically:
+                            До появления ChatGPT существовала потребность в системах, которые могли бы быстро находить ответы в конкретных, узких областях, таких как техническая документация, инструкции и руководства пользователя. В таких случаях ChatGPT может не предоставить правильное решение. Наша команда НЛП сыграла важную роль в создании таких систем, в частности:
                         </p>
                         <p>
-                            Our NLP team has been instrumental in creating such systems, including:
+                            Наша команда сыграла важную роль в создании таких систем, в том числе:
                         </p>
                         <ul>
-                            <li>Information search systems able to locate specific articles within a vast knowledge base by using text descriptions</li>
-                            <li>Voice assistants that find required answers in technical documentation based on ambiguously formed questions (as users often lack technical terminology)</li>
-                            <li>
-                                Automated systems for recognizing and classifying breakdowns and malfunctions of  industrial equipment. In the event of production equipment failure, these systems recognize specific malfunction terminology based on voice calls from production machine operators and promptly generate equipment repair requests.
-                            </li>
+                            <li>Системы поиска информации, способные находить конкретные статьи в обширной базе знаний с помощью текстовых описаний.</li>
+                            <li>Голосовые помощники, которые находят нужные ответы в технической документации по неоднозначно сформулированным вопросам (поскольку пользователям часто не хватает технической терминологии)</li>
+                            <li>Автоматизированные системы распознавания и классификации поломок и неисправностей промышленного оборудования. В случае выхода из строя производственного оборудования эти системы распознают конкретную терминологию неисправностей на основе голосовых вызовов операторов производственных машин и оперативно формируют заявки на ремонт оборудования.</li>
                         </ul>
                     </div>
                 </div>

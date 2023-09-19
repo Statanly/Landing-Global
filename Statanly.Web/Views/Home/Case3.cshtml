@@ -1,62 +1,16 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
-
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
-
-@{
-    // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+﻿@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
 }
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
-                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
-    </div>
-</header><!-- End Header -->
 <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Приложения системы</h2>
-                <ol>
-                    <li><a href="/#solutions">Главная</a></li>
-                    <li>Проекты</li>
-                </ol>
-            </div>
-
+            <h2>Приложения системы</h2>
+            <ol>
+                <li><a href="/#solutions">Главная</a></li>
+                <li>Проекты</li>
+            </ol>
         </div>
     </section><!-- End Breadcrumbs -->
     <!-- ======= Portfolio Details Section ======= -->
@@ -69,16 +23,16 @@
                     <div class="portfolio-info">
                         <div class="row gy-4">
                             <div class="col-lg-11">
-                                <h3>1. Language recognition for Arabic, Chinese, Korean, Japanese, Latin and Russian</h3>
+                                <h3>1. Распознавание языков арабского, китайского, корейского, японского, латинского и русского языков.</h3>
                             </div>
                             <div class="col-lg-1">
                                 <img src="~/assets/img/Partners/client-7.png" style="max-height: 50px" class="img-fluid" alt="">
                             </div>
                         </div>
                         <ul>
-                            <li><strong>Category</strong>: Computer vision</li>
-                            <li><strong>Client</strong>: HUAWEI TECHNOLOGIES CO., LTD</li>
-                            <li><strong>Project date</strong>: 2019</li>
+                            <li><strong>Категория</strong>: Компьютерное зрение</li>
+                            <li><strong>Заказчик</strong>: HUAWEI TECHNOLOGIES CO., LTD</li>
+                            <li><strong>Дата</strong>: 2018-2019</li>
                         </ul>
                     </div>
                 </div>
@@ -94,10 +48,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h4>
-                        SegLink with DenseNet results visualization
+                        SegLink с DenseNet результаты
                     </h4>
                     <p>
-                        Pretrained on SynthText dataset
+                        Предварительно обученный на наборе данных SynthText
                     </p>
                     <img src="~/assets/img/portfolio/Case3/14.jpg" class="img-fluid" alt="">
                     <img src="~/assets/img/portfolio/Case3/15.jpg" class="img-fluid" alt="">
@@ -108,77 +62,70 @@
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        <strong>Goal</strong>
-                    </p>
-                    <p>
-                        Complete Task 1 and either Task 2 or Task 3
+                        <strong>Цель</strong>
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Task 1: Improve detection for Arabic
+                            <i class="bx bx-check-double"></i> Задача 1. Улучшение детекции арабского языка
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Task 2: Improve recognition for Arabic
+                            <i class="bx bx-check-double"></i> Задача 2. Улучшение распознавания арабского языка
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Task 3: Improve recognition for Chinese
+                            <i class="bx bx-check-double"></i> Задача 3. Улучшение распознавания китайского языка
                         </li>
                     </ul>
                     <p>
-                        <strong>Results</strong>
-                    </p>
-                    <p>
-                        Goal: Complete 1st task and at least one of 2nd or 3rd tasks
+                        <strong>Результаты</strong>
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Task 1: Improve detection for Arabic <strong>(completed)</strong>
-
+                            <i class="bx bx-check-double"></i> Задача 1. Улучшение обнаружения арабского языка <strong>(выполнено)</strong>
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Task 2: Improve recognition for Arabic
+                            <i class="bx bx-check-double"></i> Задача 2. Улучшение распознавания арабского языка
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Task 3: Improve recognition for Chinese <strong>(completed)</strong>
+                            <i class="bx bx-check-double"></i> Задача 3. Улучшение распознавания китайского языка <strong>(выполнено)</strong>
                         </li>
                     </ul>
                     <p>
                         <strong>
-                            Task 3 specifications
+                            Задание 3 технические характеристики
                         </strong>
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Improve HQ solution [for Chinese and English recognition] by 3% (end-to-end)
+                            <i class="bx bx-check-double"></i> Улучшить решение HQ [для распознавания китайского и английского языков] на 3% (сквозное)
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Model should meet NPU restrictions
+                            <i class="bx bx-check-double"></i> Модель должна соответствовать ограничениям NPU
                         </li>
                     </ul>
                     <p>
                         <strong>
-                            Results for Chinese and English recognition
+                            Результаты распознавания китайского и английского языков
                         </strong>
-                    </p>
+                        < / p>
                     <p>
-                        Solution elements:
+                        Элементы решения:
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Baseline architecture
+                            <i class="bx bx-check-double"></i> Базовая архитектура
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Advanced learning techniques
+                            <i class="bx bx-check-double"></i> Продвинутые методы обучения
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Improved training data selection
+                            <i class="bx bx-check-double"></i> Улучшен выбор обучающих данных
                         </li>
                     </ul>
                     <table class="table table-bordered table-hover">
                         <tbody>
                             <tr>
                                 <th>
-                                    Solution
+                                    Решение
                                 </th>
                                 <th>
                                     F1-score
@@ -194,7 +141,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    Statanly 
+                                    Statanly
                                 </td>
                                 <td> <strong>0.939</strong></td>
                             </tr>
@@ -206,71 +153,71 @@
                         </strong>
                     </p>
                     <ul>
-                        <li><i class="bx bx-check-double"></i> Provide single detection model for Arabic, Chinese, Korean, Japanese, Latin, and Russian languages</li>
+                        <li><i class="bx bx-check-double"></i> Предоставляет единую модель обнаружения для арабского, китайского, корейского, японского, латинского и русского языков</li>
                         <li>
-                            <i class="bx bx-check-double"></i> For Arabic for Kirin 980 Precision/Recall ≥ 94/92% accordingly
+                            <i class="bx bx-check-double"></i> Для арабского языка для Kirin 980 Точность/отзыв ≥ 94/92% соответственно
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> For Arabic for Kirin 970 Precision/Recall ≥ 92/90% accordingly
+                            <i class="bx bx-check-double"></i> Для арабского языка для Kirin 970 Точность/отзыв ≥ 92/90% соответственно
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> No negative affect on detection of other scripts
+                            <i class="bx bx-check-double"></i> Не оказывает негативного влияния на обнаружение других скриптов
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Model should meet NPU restrictions
+                            <i class="bx bx-check-double"></i> Модель должна соответствовать ограничениям NPU
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Model size in Cambricon format ≤ 12 Mb
+                            <i class="bx bx-check-double"></i> Размер модели в формате Cambricon ≤ 12 Мб
                         </li>
                     </ul>
                     <p>
                         <strong>
-                            Task 1 specification reformulated
+                            Спецификация переформулирована
                         </strong>
                     </p>
                     <ul>
-                        <li><i class="bx bx-check-double"></i> Provide single detection model for Arabic, Chinese, Korean, Japanese, Latin, and Russian languages</li>
+                        <li><i class="bx bx-check-double"></i> Предоставляет единую модель обнаружения для арабского, китайского, корейского, японского, латинского и русского языков</li>
                         <li>
-                            <i class="bx bx-check-double"></i> For Arabic for Kirin 980 Precision/Recall <strong>comparable with other languages</strong>
+                            <i class="bx bx-check-double"></i> Для арабского языка для Kirin 980 Точность/отзыв <strong>сопоставима с другими языками</strong>
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> For Arabic for Kirin 970 Precision/Recall  <strong>comparable with other languages</strong>
+                            <i class="bx bx-check-double"></i> Для арабского языка для Kirin 970 Точность/отзыв <strong>сопоставима с другими языками</strong>
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> No negative affect on detection of other scripts
+                            <i class="bx bx-check-double"></i> Не оказывает негативного влияния на обнаружение других скриптов
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Model should meet NPU restrictions
+                            <i class="bx bx-check-double"></i> Модель должна соответствовать ограничениям NPU
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Model size in Cambricon format ≤ <strong>15 Mb</strong>
+                            <i class="bx bx-check-double"></i> Размер модели в формате Cambricon ≤ <strong>15 Мб</strong>
                         </li>
                     </ul>
                     <p>
                         <strong>
-                            Solutions for detection
+                            Решения для детекции
                         </strong>
                     </p>
                     <p>
-                        Solution Elements:
+                        Элементы решения:
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Seglink model combined with DenseNet
+                            <<i class="bx bx-check-double"></i> Модель Seglink в сочетании с DenseNet
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> AdvancedEAST model
+                            <i class="bx bx-check-double"></i> Усовершенствованная модель EAST
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Trained on Batch2+arabic dataset
+                            <i class="bx bx-check-double"></i> Обучен на наборе данных Batch2+арабский
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Both models are on Keras, .pb graphs were extracted
+                            <i class="bx bx-check-double"></i> Обе модели находятся на Keras, были извлечены графики .pb
                         </li>
                     </ul>
                     <p>
                         <strong>
-                            Results for all scripts
+                            Общий результат
                         </strong>
                     </p>
                     <table class="table table-bordered table-hover">
@@ -335,7 +282,7 @@
                     </table>
                     <p>
                         <strong>
-                            Results for Arabic
+                            Результаты по арабскому языку
                         </strong>
                     </p>
                     <table class="table table-bordered table-hover">
@@ -400,7 +347,7 @@
                     </table>
                     <p>
                         <strong>
-                            Results for all languages
+                            Результаты для всех языков
                         </strong>
                     </p>
                     <table class="table table-bordered table-hover">
@@ -577,7 +524,7 @@
                     </table>
                     <p>
                         <strong>
-                            Model weights
+                            Веса моделей
                         </strong>
                     </p>
                     <table class="table table-bordered table-hover">
@@ -632,13 +579,12 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>2. License plate recognition system</h3>
+                        <h3>2. Система распознавания номерных знаков</h3>
                         <ul>
-                            <li><strong>Category</strong>: Computer vision</li>
-                            <li><strong>Client</strong>: Municipal Client</li>
-                            <li><strong>Project date</strong> :2021</li>
+                            <li><strong>Категория</strong>: Компьютерное зрение</li>
+                            <li><strong>Дата</strong>: 202-2021</li>
                             <li>
-                                <strong>Description</strong>: A system for traffic flow analysis and license plate recognition under various conditions.
+                                Система для анализа транспортного потока и распознавания номерных знаков в различных условиях.
                             </li>
                         </ul>
                     </div>
@@ -668,29 +614,23 @@
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        License plate recognition algorithms typically consist of two components: a localization (detection) component that identifies the portion of an image containing the relevant information, and a character set generation component that extracts characters from the selected area.
+                        Алгоритмы распознавания номерных знаков обычно состоят из двух компонентов: компонента локализации (обнаружения), который идентифицирует часть изображения, содержащую соответствующую информацию, и компонента генерации набора символов, который извлекает символы из выбранной области.
                     </p>
                     <p>
-                        To select the detection model, a thorough analysis of literature was conducted, identifying the best models in terms of both speed and detection accuracy. The YOLOv5 model was determined to be the optimal choice at the time, offering comparable accuracy to SOTA models while delivering impressive performance.
+                        Чтобы выбрать модель обнаружения, был проведен тщательный анализ литературы, выявивший наилучшие модели как с точки зрения скорости, так и точности обнаружения. В то время было определено, что модель YOLOv5 является оптимальным выбором, обеспечивая точность, сравнимую с моделями SOTA, при впечатляющей производительности.
+                    </p>
+                    <p>
+                        Аналогичным образом был проведен анализ литературы для изучения моделей SOTA для распознавания текста по изображениям (OCR). Хотя существуют различные решения, основанные на архитектуре Transformer, они часто демонстрируют более низкую производительность. В результате модель CRNN была определена как наиболее подходящая для решения поставленной задачи.
+                    </p>                    <p>
+                        Существующий набор данных был преобразован для переобучения модели YOLOv5, что потребовало десяти периодов обучения для наблюдения желаемых улучшений.
+                    </p>                    <p>
+                        Впоследствии переобученная модель YOLOv5 была использована для построения набора данных, состоящего исключительно из изображений номерных знаков. Аннотации к числам были получены из исходного набора данных. Затем модель CRNN была повторно обучена на этом модифицированном наборе данных, достигнув точности распознавания <strong>96%</strong> на тестовом образце.
+                    </p>                    <p>
+                        Модели YOLOv5 (обнаружение) и CRNN (распознавание) были интегрированы в библиотечный компонент для распознавания номерных знаков из видеопотока, легко интегрируясь с существующей архитектурой библиотеки. Во время разработки этого модуля ultralytics выпустила несколько моделей YOLO. Версия YOLOv8n, обладающая точностью обнаружения, сравнимой с YOLOv5s, но меньшим количеством параметров и более высокой скоростью, была включена в алгоритм и дополнительно доработана для распознавания номерных знаков.
 
                     </p>
-
                     <p>
-                        Similarly, an analysis of literature was conducted to explore SOTA models for text recognition from images (OCR). Although there are various solutions based on the Transformer architecture, they often exhibit slower performance. As a result, the CRNN model was identified as the most suitable model for the task.
-                    </p>
-                    <p>
-                        The existing dataset was transformed to retrain the YOLOv5 model, which involved ten epochs of training to observe the desired improvements.
-                    </p>
-                    <p>
-                        Subsequently, the retrained YOLOv5 model was utilized to construct a dataset consisting exclusively of license plate images. Annotations for the numbers were obtained from the original dataset. The CRNN model was then retrained on this modified dataset, achieving a recognition accuracy of <strong>96%</strong> on the test sample.
-                    </p>
-                    <p>
-                        The YOLOv5 (detection) and CRNN (recognition) models were integrated into a library component for license plate recognition from a video stream, seamlessly integrating with the existing library architecture. During the development of this module, ultralytics released several YOLO models. The YOLOv8n version, with comparable detection accuracy to YOLOv5s but fewer parameters and higher speed, was incorporated into the algorithm and further fine-tuned for license plate recognition.
-
-                    </p>
-
-                    <p>
-                        To ensure maximum stability of the algorithms in adverse weather conditions, image augmentation methods and projective geometry techniques were implemented. Augmentation is the process of enriching a set of data by generating their “distorted” versions. Several types of distortions were implemented:
+                        Чтобы обеспечить максимальную стабильность алгоритмов в неблагоприятных погодных условиях, были реализованы методы увеличения изображения и методы проективной геометрии. Дополнение - это процесс обогащения набора данных путем создания их “искаженных” версий. Было реализовано несколько типов искажений:
                     </p>
                     <ul>
                         <li><i class="bx bx-check-double"></i> Shifts</li>
@@ -701,10 +641,10 @@
                         <li><i class="bx bx-check-double"></i> Color (for simulating night filters)</li>
                     </ul>
                     <p>
-                        Augmentation of the available datasets made models more resistant to various weather conditions.
+                        Расширение доступных наборов данных сделало модели более устойчивыми к различным погодным условиям.
                     </p>
                     <p>
-                        To evaluate the algorithm's performance in challenging weather conditions, an additional 357 test images of cars (captured under poor lighting, snow, rain) were collected and labeled using the Roboflow service. Examples of such images:
+                        Чтобы оценить эффективность алгоритма в сложных погодных условиях, с помощью сервиса Roboflow были собраны и помечены дополнительные 357 тестовых изображений автомобилей (снятых при плохом освещении, снеге, дожде). Примеры таких изображений:
                     </p>
                     <img src="~/assets/img/portfolio/Case3/5.jpg" class="img-fluid" alt="">
 
@@ -722,18 +662,15 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>3. Train car number recognition</h3>
+                        <h3>3. Распознавание номера вагона поезда</h3>
                         <ul>
-                            <li><strong>Category</strong>: Computer vision</li>
-                            <li><strong>Client</strong>: Transportation Company</li>
+                            <li><strong>Категория</strong>: Компьютерное зрение</li>
+                            <li><strong>Заказчик</strong>: Транспортная компания</li>
                             <li><strong>Project date</strong>: 2022</li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </section><!-- End Portfolio Details Section -->
     <!-- ======= About Section ======= -->
@@ -747,20 +684,20 @@
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        Creating training examples from natural images involves collecting real data through various means:
+                        Создание обучающих примеров на основе естественных изображений предполагает сбор реальных данных с помощью различных средств:
                     </p>
                     <ul>
-                        <li><i class="bx bx-check-double"></i> Collection of images (photographing objects of interest, capturing a video stream from a camera, highlighting a part of an image on a web page).</li>
-                        <li><i class="bx bx-check-double"></i> Filtering - checking images for a number of requirements: adequate object illumination, the presence of the target object, etc.</li>
-                        <li><i class="bx bx-check-double"></i> Preparing annotation tools (developing custom annotation tools or optimizing existing ones).</li>
-                        <li><i class="bx bx-check-double"></i> Marking (selecting rectangles or regions of interest in the images).</li>
-                        <li><i class="bx bx-check-double"></i> Assigning a label to each image (letter or name of the object in the image).</li>
+                        <li>Коллекция изображений (фотографирование интересующих объектов, захват видеопотока с камеры, выделение части изображения на веб-странице).</li>
+                        <li>Фильтрация - проверка изображений на соответствие ряду требований: адекватное освещение объекта, наличие целевого объекта и т.д.</li>
+                        <li>Подготовка инструментов аннотации (разработка пользовательских инструментов аннотации или оптимизация существующих).</li>
+                        <li>Разметка (выделение интересующих прямоугольников или областей на изображениях).</li>
+                        <li>Присвоение метки каждому изображению (буква или название объекта на изображении).</li>
                     </ul>
                     <p>
-                        As part of the initial project phase, data collection was organized, including photographing and recording passing trains under various conditions. The collected data was then labeled using the Label Studio tool, marking the coordinates of the bounding rectangle for each car number.
+                        В рамках начальной фазы проекта был организован сбор данных, включая фотографирование и запись проходящих поездов в различных условиях. Затем собранные данные были помечены с помощью инструмента Label Studio, отметив координаты ограничивающего прямоугольника для каждого номера автомобиля.
                     </p>
                     <p>
-                        The detection (YOLOv8) and recognition (CRNN) components were subsequently retrained on the collected dataset for car number recognition. The overall recognition accuracy on the test sample was 89%, indicating that the model correctly recognizes all characters of the number in 89% of cases. This result demonstrates the model's ability to generalize well to related problems, which can be further improved with additional labeled examples.
+                        Компоненты обнаружения (YOLOv8) и распознавания (CRNN) впоследствии были переобучены на собранном наборе данных для распознавания автомобильных номеров. Общая точность распознавания на тестовом образце составила 89%, что указывает на то, что модель правильно распознает все символы номера в 89% случаев. Этот результат демонстрирует способность модели хорошо обобщаться на связанные проблемы, которые могут быть дополнительно улучшены с помощью дополнительных помеченных примеров.
                     </p>
                 </div>
             </div>
@@ -774,10 +711,10 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>4. QR and barcode recognition system</h3>
+                        <h3>4. Система распознавания QR-кода и штрих-кодов</h3>
                         <ul>
-                            <li><strong>Category</strong>: Computer vision</li>
-                            <li><strong>Client</strong>: Commercial Client</li>
+                            <li><strong>Категория</strong>: Компьютерное зрение</li>
+                            <li><strong>Заказчик</strong>: Транспортная компания</li>
                             <li><strong>Project date</strong>: 2022</li>
                         </ul>
                     </div>
@@ -802,23 +739,24 @@
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0">
                     <p>
-                        Existing solutions for QR and barcode recognition were considered. Running the OpenCV library with the zbar algorithm revealed that QR codes are generally detected more effectively than barcodes of the same size. The results of the analysis on read quality are presented in Figure and further discussed below.
+                        Были рассмотрены существующие решения для распознавания QR-кода и штрих-кодов. Запуск библиотеки OpenCV с использованием алгоритма zbar показал, что QR-коды, как правило, обнаруживаются более эффективно, чем штрих-коды того же размера. Результаты анализа качества считывания представлены на рисунке и более подробно обсуждаются ниже.
                     </p>
-                    <p>Empirical observations indicated that complex QR codes begin to be detected and read correctly when they occupy approximately 0.8% of the frame, while simpler codes require around 0.64% of the frame. Codes below approximately 0.74% for complex QR codes and 0.57% for simple ones were no longer reliably detected.</p>
+                    <p>
+                        Эмпирические наблюдения показали, что сложные QR-коды начинают обнаруживаться и считываться правильно, когда они занимают примерно 0,8% кадра, в то время как более простые коды занимают около 0,64% кадра. Коды ниже примерно 0,74% для сложных QR-кодов и 0,57% для простых больше не были надежно обнаружены.
+                    </p>
 
                     <p>
-                        Barcodes, on the other hand, face challenges due to the closely spaced bars, which often result in blurred frames. Unlike QR codes, barcodes can be partially read even if horizontally cut off to some extent, though the data might be incomplete. For instance, some frames might read an area as small as 0.04% of the frame, while detection might not work correctly below 0.74%. If over 0.91% of the area is present during the detection and not cut off, the codes are recognized with clarity and completeness.
+                        С другой стороны, штрих-коды сталкиваются с трудностями из-за близко расположенных полос, что часто приводит к размытию рамок. В отличие от QR-кодов, штрих-коды могут быть частично считаны, даже если они в некоторой степени обрезаны по горизонтали, хотя данные могут быть неполными. Например, некоторые кадры могут считывать область размером всего 0,04% от кадра, в то время как обнаружение ниже 0,74% может работать некорректно. Если во время обнаружения присутствует более 0,91% площади и она не обрезана, коды распознаются четко и полно.
                     </p>
                     <p>
-                        In experiments, the distance from which all codes were easily detected was determined (QR codes with sizes of 1.26 cm for simple ones and 1.55 cm for complex ones). When rotated at an angle of 43 degrees, the codes were no longer readable. However, when the rotation angle was reduced to 40 degrees or less, all codes were correctly read. The transition point from complex code unreadability to simple code readability could not be precisely identified, as both occurred around the same time.
+                        В ходе экспериментов было определено расстояние, с которого все коды были легко обнаружены (QR-коды размером 1,26 см для простых и 1,55 см для сложных). При повороте на угол 43 градуса коды больше не считывались. Однако, когда угол поворота был уменьшен до 40 градусов или меньше, все коды считывались правильно. Точку перехода от нечитаемости сложного кода к удобочитаемости простого кода точно определить не удалось, поскольку и то, и другое произошло примерно в одно и то же время.
                     </p>
                     <p>
-                        For barcodes, the distance from which all codes were easily detected was determined (barcode sizes approximately occupying 0.96% of the frame). When rotated at an angle of 43 degrees, the codes were no longer readable. At a rotation angle of 40 degrees, not all codes were read successfully, and those that were read had detection errors, resulting in incorrect readings. Starting from a rotation angle of 33 degrees, everything became readable, but occasional detection errors began to occur. When rotated at 30 degrees or less, everything was read correctly.
+                        Для штрих-кодов было определено расстояние, с которого все коды были легко обнаружены (размеры штрих-кодов приблизительно занимали 0,96% кадра). При повороте на угол 43 градуса коды больше не считывались. При угле поворота в 40 градусов не все коды были считаны успешно, а те, которые были считаны, содержали ошибки обнаружения, что приводило к неправильным показаниям. Начиная с угла поворота в 33 градуса, все стало читаемым, но время от времени стали возникать ошибки обнаружения. При повороте на 30 градусов или меньше все считывалось правильно.
                     </p>
                     <p>
-                        Based on the satisfactory results achieved using the OpenCV library with the addition of the zbar library, the decision was made to adapt the existing solution.
+                        Основываясь на удовлетворительных результатах, достигнутых с использованием библиотеки OpenCV с добавлением библиотеки zbar, было принято решение адаптировать существующее решение.
                     </p>
-
                 </div>
             </div>
         </div>
@@ -831,10 +769,10 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>5. Free-Form Text Recognition System</h3>
+                        <h3>5. Система распознавания текста в произвольной форме</h3>
                         <ul>
-                            <li><strong>Category</strong>: Computer vision</li>
-                            <li><strong>Client</strong>: Industrial Client</li>
+                            <li><strong>Категория</strong>: Компьютерное зрение</li>
+                            <li><strong>Заказчик</strong>: Транспортная компания</li>
                             <li><strong>Project date</strong>: 2022</li>
                             <li><strong>Description</strong>: Recognition of text of arbitrary form, various fonts, markings, inscriptions in conditions of various noise levels and for various alphabets</li>
                         </ul>
@@ -859,7 +797,7 @@
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        To compare the performance of existing character recognition libraries, namely PaddleOCR, Tesseract, Doctr, and EasyOCR, a dataset of 1210 photographs of produced objects (metal, plastic, glass, brick, paper, wood) was collected. The average Levenshtein distances between the recognized inscriptions and the ground truth were calculated for various material categories, as presented in Table:
+                        Чтобы сравнить производительность существующих библиотек распознавания символов, а именно Paddle OCR, Tesseract, Doctr и EasyOCR, был собран набор данных из 1210 фотографий созданных объектов (металл, пластик, стекло, кирпич, бумага, дерево). Средние расстояния Левенштейна между распознанными надписями и исходным текстом были рассчитаны для различных категорий материалов, как представлено в таблице:
                     </p>
                     <table class="table table-bordered table-hover">
                         <tbody>
@@ -1002,12 +940,10 @@
                         </tbody>
                     </table>
                     <p>
-                        The results revealed that a significant error factor stems from incorrect text position detection within the image. To address this, an external detector, the YOLOv8 small model, was employed for text detection. However, the initial weights yielded unsatisfactory results. To further enhance its performance, a synthetic dataset comprising 10,000 photographs of industrial premises featuring text in various Latin and Cyrilic fonts was generated for additional training.
+                        Результаты показали, что существенный фактор ошибок связан с неправильным определением положения текста на изображении. Чтобы решить эту проблему, для обнаружения текста был использован внешний детектор, небольшая модель YOLOv8. Однако первоначальные взвешивания дали неудовлетворительные результаты. Чтобы еще больше повысить его производительность, для дополнительного обучения был создан синтетический набор данных, содержащий 10 000 фотографий промышленных помещений с текстом, выполненным различными латинскими и кириллическими шрифтами.
                     </p>
                     <p>
-                        Based on testing results with real-world data, the algorithm achieved an accuracy of 0.3, which is dependent on the conditions of photographing the numbers on objects. The photos need to be clear and captured in good lighting. The angle of text inclination should not exceed 20 degrees, and the text must occupy at least 1.5% of the frame for successful recognition. Vertically written text cannot be recognized reliably, while numbers written on plastic, glass, paper, and cardboard yield the best recognition results.
-                    </p>
-                    <p>
+                        Основываясь на результатах тестирования с использованием реальных данных, алгоритм достиг точности 0,3, которая зависит от условий фотографирования чисел на объектах. Фотографии должны быть четкими и снятыми при хорошем освещении. Угол наклона текста не должен превышать 20 градусов, а для успешного распознавания текст должен занимать не менее 1,5% кадра. Текст, написанный вертикально, не может быть надежно распознан, в то время как цифры, написанные на пластике, стекле, бумаге и картоне, дают наилучшие результаты распознавания.
                     </p>
                 </div>
             </div>

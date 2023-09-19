@@ -1,62 +1,15 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
-
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
-
-@{
-    // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+﻿@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
 }
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
-                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
-    </div>
-</header><!-- End Header -->
 <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Приложения системы</h2>
-                <ol>
-                    <li><a href="/#solutions">Главная</a></li>
-                    <li>Проекты</li>
-                </ol>
-            </div>
-
+            <h2>Приложения системы</h2>
+            <ol>
+                <li><a href="/#solutions">Главная</a></li>
+                <li>Проекты</li>
+            </ol>
         </div>
     </section><!-- End Breadcrumbs -->
     <!-- ======= Portfolio Details Section ======= -->
@@ -71,9 +24,9 @@
                     <div class="portfolio-info">
                         <h3>1. Система генерации доменных имен по описанию</h3>
                         <ul>
-                            <li><strong>Category</strong>: NLP</li>
-                            <li><strong>Client</strong>: Commercial EU Client</li>
-                            <li><strong>Project date</strong>: 2021-2022</li>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: It.com</li>
+                            <li><strong>Дата</strong>: 2022</li>
                         </ul>
                     </div>
                 </div>
@@ -87,28 +40,32 @@
 
             <div class="row">
                 <p>
-                    A system built on the basis of generative models allows you to generate unique domain names based on a text description.
+                    Система, построенная на основе генеративных моделей, позволяет генерировать уникальные доменные имена на основе текстового описания.
                 </p>
                 <div class="col-lg-7">
-                    <p style="text-align:center"><em>Processed data</em></p>
+                    <p style="text-align:center"><em>Обработанные данные</em></p>
                     <img src="~/assets/img/portfolio/Case9/1.jpg" class="img-fluid" alt="">
+                    <p style="text-align:center"><em>Процесс</em></p>
+                    <img src="~/assets/img/portfolio/Case9/10.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-5 pt-4 pt-lg-0">
 
                     <p>
-                        <strong>Domain sales data</strong>
+                        <strong>
+                            Данные по продажам доменов
+                        </strong>
                     </p>
                     <table class="table table-bordered table-hover">
                         <tbody>
                             <tr>
                                 <th>
-                                    Name
+                                    Название
                                 </th>
                                 <th>
-                                    Price ($)
+                                    Цена ($)
                                 </th>
                                 <th>
-                                    Date
+                                    Дата
                                 </th>
                             </tr>
                             <tr>
@@ -182,22 +139,26 @@
 
 
                     <p>
-                        <strong> Evaluation of models</strong>
+                        <strong>
+                            Оценка моделей
+                        </strong>
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> The assessment was carried out by experts
+                            Оценка производилась экспертно
                         </li>
                     </ul>
                     <p>
-                        <strong> Data features</strong>
+                        <strong>
+                            Особенности данных
+                        </strong>
                     </p>
                     <ul>
                         <li>
-                            <i class="bx bx-check-double"></i> Inaccessible web pages
+                            Недоступные веб страницы
                         </li>
                         <li>
-                            <i class="bx bx-check-double"></i> Web pages without a description
+                            Веб страницы без описания
                         </li>
                     </ul>
                 </div>
@@ -213,11 +174,11 @@
 
                 <div class="col-lg-12">
                     <div class="portfolio-info">
-                        <h3>2. Generating logos based on survey results/description</h3>
+                        <h3>2. Создание логотипов на основе результатов/описания опроса</h3>
                         <ul>
-                            <li><strong>Category</strong>: NLP</li>
-                            <li><strong>Client</strong>: Commercial EU Client</li>
-                            <li><strong>Project date</strong>: 2022</li>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: Медиа компания</li>
+                            <li><strong>Дата</strong>: 2021-2022</li>
                         </ul>
                     </div>
                 </div>
@@ -231,9 +192,9 @@
 
             <div class="row">
                 <p>
-                    A system built on the basis of generative models allows you to generate unique logos based on a text description.
+                    Система, построенная на основе генеративных моделей, позволяет генерировать уникальные логотипы на основе текстового описания.
                 </p>
-                <p style="text-align:center"><em>Examples</em></p>
+                <p style="text-align:center"><em>Примеры</em></p>
                 <div class="col-lg-4">
                     <img src="~/assets/img/portfolio/Case9/2.jpg" class="img-fluid" alt="">
                 </div>
