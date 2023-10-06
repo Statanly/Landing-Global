@@ -491,6 +491,12 @@
   <data name="TextSystemText" xml:space="preserve">
     <value>Выделение ключевых слов, тегов, тональностей текста, анализ смысла и интонаций текстов</value>
   </data>
+  <data name="TPU" xml:space="preserve">
+    <value>TPU - Тензорные процессоры</value>
+  </data>
+  <data name="TPUText" xml:space="preserve">
+    <value>Адаптация алгоритмов искусственного интеллекта под тензорные процессоры</value>
+  </data>
   <data name="TrafficManagement" xml:space="preserve">
     <value>Управление трафиком</value>
   </data>

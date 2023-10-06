@@ -128,6 +128,10 @@ namespace Statanly.Web.Controllers
             }
             return View("Product" + id);
         }
+        public IActionResult Tpu()
+        {
+           return View();
+        }
         public IActionResult Smartcity(int id = 0)
         {
             if (id == 0)

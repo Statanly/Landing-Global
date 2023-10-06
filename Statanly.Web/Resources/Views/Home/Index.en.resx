@@ -491,6 +491,12 @@ You can automatically receive notifications of stock out of stock or other custo
   <data name="TextSystemText" xml:space="preserve">
     <value>Highlighting keywords, tags, sentiments of text, analysis of the meaning and intonation of texts</value>
   </data>
+  <data name="TPU" xml:space="preserve">
+    <value>TPU - Tensor Processors</value>
+  </data>
+  <data name="TPUText" xml:space="preserve">
+    <value>Adaptation of artificial intelligence algorithms to tensor processors</value>
+  </data>
   <data name="TrafficManagement" xml:space="preserve">
     <value>Traffic management</value>
   </data>
