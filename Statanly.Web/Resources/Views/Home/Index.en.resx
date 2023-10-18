@@ -316,6 +316,12 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="IndustryText" xml:space="preserve">
     <value>Modern high-tech production requires special approaches to quality control of manufactured products, as well as optimization of technological processes. Machine vision has made a real technological breakthrough and significantly expanded the capabilities of flaw detection in industry, and brought it to a new level. Now technologies allow monitoring quality not only after the manufacture of a product or product, but also directly during the production process. Other possibilities of using computer vision, such as, for example, the analysis of the granulometric composition of raw materials can significantly optimize the production process.</value>
   </data>
+  <data name="IRS" xml:space="preserve">
+    <value>Information retrieval system</value>
+  </data>
+  <data name="IRSText" xml:space="preserve">
+    <value>The system allows you, like chattpt, to find information in a local document database, segment and summarize texts</value>
+  </data>
   <data name="Lawenforcement" xml:space="preserve">
     <value>Law enforcement</value>
   </data>
