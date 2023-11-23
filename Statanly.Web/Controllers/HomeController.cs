@@ -69,6 +69,15 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Products()
+        {
+            return View();
+        }
+        
+        public FileResult Reference(int id = 1)
+        {
+            return File("~/Content/" + "Ref " + id + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
         public FileResult Download(string lang = "RU")
         {
             return File("~/Content/" + lang + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
@@ -77,6 +86,10 @@ namespace Statanly.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult News()
+        {
+            return View();
         }
         public string GetCulture(string code = "")
         {

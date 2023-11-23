@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="AboutLongText" xml:space="preserve">
+    <value>Компания основана на базе международной лаборатория машинного обучения университета ИТМО и ведет разработки в области применения алгоритмов машинного обучения, компьютерного зрения и анализа данных для решения различных задач бизнеса. За последние годы было реализовано множество проектов для крупнейших предприятий России, среди которых  Яндекс, Mail.ru Group, Норникель, Мегафон, НМЛК, Евраз,  Синара-Транспортные машины, Газпром нефть. Это позволило нам накопить достаточный опыт и стать ведущей компанией в области внедрения алгоритмов машинного обучения, компьютерного зрения и анализа данных.</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>Разработка систем на базе искусственного интеллекта, машинного обучения, компьютерного анализа и анализа данных</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="AddressText" xml:space="preserve">
+    <value>Россия, Санкт-Петербург, Биржевая линия, 16</value>
+  </data>
+  <data name="Agriculture" xml:space="preserve">
+    <value>Сельское хозяйство</value>
+  </data>
+  <data name="AgricultureText" xml:space="preserve">
+    <value>Внедрение технологий компьютерного зрения совместно с системами глобального позиционирования позволяет вести прецизионное земледелие, которое может значительно повысить урожайность и эффективность сельского хозяйства.
+Мониторинг сельскохозяйственных полей со спутниковых снимков и беспилотных летательных аппаратов, определение зрелости урожая позволяют делать прогнозы количества продукции.</value>
+  </data>
+  <data name="AIDevelopment" xml:space="preserve">
+    <value>Разработка интеллектуальных алгоритмов</value>
+  </data>
+  <data name="AIDevelopmentText" xml:space="preserve">
+    <value>Разработка аналитических систем на базе машинного обучения и компьютерного зрения.</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Области</value>
+  </data>
+  <data name="ApplicationSubTitle" xml:space="preserve">
+    <value>Сегодня машинное Обучение широко применяется во многих отраслях цифровой экономики, таких как промышленность, ретейл, автономные транспортные средства и системы помощи водителю, беспилотные летательные аппараты, высокотехнологичное сельское хозяйство, здравоохранение и многих других.</value>
+  </data>
+  <data name="Areas" xml:space="preserve">
+    <value>применения</value>
+  </data>
+  <data name="ChurnSystem" xml:space="preserve">
+    <value>Прогнозная система оттока</value>
+  </data>
+  <data name="ChurnSystemText" xml:space="preserve">
+    <value>Определение в базе данных сегмента клиентов, склонных к оттоку</value>
+  </data>
+  <data name="Classifierparts" xml:space="preserve">
+    <value>Классификатор деталей</value>
+  </data>
+  <data name="ClassifierpartsText" xml:space="preserve">
+    <value>Система классификации деталей, построенная на базе алгоритмов компьютерного зрения позволяет автоматически определять тип детали, ее артикул, характеристики, а также выделять бракованные детали</value>
+  </data>
+  <data name="Clients" xml:space="preserve">
+    <value>Нам доверяют</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Компания</value>
+  </data>
+  <data name="Consulting" xml:space="preserve">
+    <value>Консалтинг в области внедрения интеллектуальных систем</value>
+  </data>
+  <data name="ConsultingText" xml:space="preserve">
+    <value>Анализ и изучение перспектив внедрения интеллектуальных алгоритмов для решения бизнес задач.</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="ContactsText" xml:space="preserve">
+    <value>Остались вопросы? Напишите нам.</value>
+  </data>
+  <data name="ConversionSystem" xml:space="preserve">
+    <value>Система прогнозирования конверсии</value>
+  </data>
+  <data name="ConversionSystemText" xml:space="preserve">
+    <value>Прогнозирование конверсии продаж, оптимизация наценок на товар</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>Компьютерное зрение</value>
+  </data>
+  <data name="CVSubTitle" xml:space="preserve">
+    <value>Системы на базе компьютерного зрения и видеоаналитика</value>
+  </data>
+  <data name="CVVA" xml:space="preserve">
+    <value>Компьютерное зрение, видеоаналитика</value>
+  </data>
+  <data name="CVVAText" xml:space="preserve">
+    <value>Решения и системы на основе машинного зрения, видеоаналитики, распознавания образов, фото и видео потоков</value>
+  </data>
+  <data name="DA" xml:space="preserve">
+    <value>Анализ данных</value>
+  </data>
+  <data name="DASubTitle" xml:space="preserve">
+    <value>Сегментация данных, выявление закономерностей, поиск аномалий</value>
+  </data>
+  <data name="DAText" xml:space="preserve">
+    <value>Исследование данных, выявление скрытых закономерностей и аномалий в данных. Сегментация и кластеризация данных.</value>
+  </data>
+  <data name="Defectrecognition" xml:space="preserve">
+    <value>Система распознавания дефектов</value>
+  </data>
+  <data name="DefectrecognitionText" xml:space="preserve">
+    <value>Система распознавания дефектов на различных поверхностях, посторонних включений, качества печати и т.д.</value>
+  </data>
+  <data name="DetectionSystem" xml:space="preserve">
+    <value>Система детекции характеристик транспортных средств</value>
+  </data>
+  <data name="DetectionSystemText" xml:space="preserve">
+    <value>Определение количества, типа, марки, скорости, цвета и габаритов ТС</value>
+  </data>
+  <data name="Developers" xml:space="preserve">
+    <value>разработчиков, участвующих в различных проектах</value>
+  </data>
+  <data name="Development" xml:space="preserve">
+    <value>Девелопмент</value>
+  </data>
+  <data name="DevelopmentText" xml:space="preserve">
+    <value>Контроль работы персонала, трафика посетителей, контроль пропускного режима, оптимизация рабочего графика, системы безопасности и охраны труда и множество других приложений.</value>
+  </data>
+  <data name="DistanceSystem" xml:space="preserve">
+    <value>Система определения расстояний</value>
+  </data>
+  <data name="DistanceSystemText" xml:space="preserve">
+    <value>Определение расстояний и размеров объектов</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Скачать презентацию</value>
+  </data>
+  <data name="DP" xml:space="preserve">
+    <value>Процесс разработки</value>
+  </data>
+  <data name="DP1" xml:space="preserve">
+    <value>Понимание задачи</value>
+  </data>
+  <data name="DP2" xml:space="preserve">
+    <value>Постановка задачи</value>
+  </data>
+  <data name="DP3" xml:space="preserve">
+    <value>Подготовка данных</value>
+  </data>
+  <data name="DP4" xml:space="preserve">
+    <value>Построение моделей</value>
+  </data>
+  <data name="DP5" xml:space="preserve">
+    <value>Тестирование и улучшение</value>
+  </data>
+  <data name="DP6" xml:space="preserve">
+    <value>Развертывание и мониторинг</value>
+  </data>
+  <data name="DPText1" xml:space="preserve">
+    <value>Анализ бизнес требований и выявление главных бизнес-целей.</value>
+  </data>
+  <data name="DPText2" xml:space="preserve">
+    <value>Анализ бизнес требований и постановка задачи.</value>
+  </data>
+  <data name="DPText3" xml:space="preserve">
+    <value>Сбор, подготовка и предобработка данных, на которых будут строиться модели.</value>
+  </data>
+  <data name="DPText4" xml:space="preserve">
+    <value>Разработка и обучение алгоритмов и построение моделей машинного зрения.</value>
+  </data>
+  <data name="DPText5" xml:space="preserve">
+    <value>Тестирование, проверка метрик и соответствию бизнес требованиям и целям.</value>
+  </data>
+  <data name="DPText6" xml:space="preserve">
+    <value>Развертывание полноценной системы, мониторинг и поддержка решения.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Почта</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Facerecognition" xml:space="preserve">
+    <value>Система распознавания лиц</value>
+  </data>
+  <data name="FacerecognitionText" xml:space="preserve">
+    <value>Система распознавания лиц, силуэтов, возраста</value>
+  </data>
+  <data name="Forecasting" xml:space="preserve">
+    <value>Предиктивная аналитика</value>
+  </data>
+  <data name="ForecastingText" xml:space="preserve">
+    <value>Разработка прогнозных систем оттока, поведения потребителей, прогноза поломок и нагрузки оборудования, прогнозирования конверсии продаж, спроса и страхового случая, предсказания трифика, ДТП и т.д.</value>
+  </data>
+  <data name="GPU" xml:space="preserve">
+    <value>GPU/TPU - вычисления</value>
+  </data>
+  <data name="GPUText" xml:space="preserve">
+    <value>Вычисления требующие наличия графических и тензорных процессоров.</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Гостинично-ресторанный бизнес</value>
+  </data>
+  <data name="HotelText" xml:space="preserve">
+    <value>Контроль работы персонала, нарушений сотрудниками регламентов и дисциплины труда, детекция трафика посетителей, нарушение общественной безопасности и порядка и множество других приложений.</value>
+  </data>
+  <data name="Industry" xml:space="preserve">
+    <value>Промышленность, энергетика, производство</value>
+  </data>
+  <data name="IndustryText" xml:space="preserve">
+    <value>Современное высокотехнологичное производство требует особых подходов к контролю качества выпускаемой продукции, а также оптимизации технологических процессов. Машинное зрение совершило настоящий технологический прорыв и значительно расширило возможности дефектоскопии в промышленности, перевела ее на новый уровень.                                        Теперь технологии позволяют отслеживать качество не только после изготовления изделия или продукта, но и непосредственно во время производственного процесса. Другие возможности применения компьютерного зрения, такие как, например, анализ гранулометрического состава сырья позволяют существенно оптимизировать процесс производства.</value>
+  </data>
+  <data name="IRS" xml:space="preserve">
+    <value>Система информационного поиска</value>
+  </data>
+  <data name="IRSText" xml:space="preserve">
+    <value>Система позволяет подобно ChatGPT находить информацию в локальной документной базе, сегментировать и суммиризовать тексты</value>
+  </data>
+  <data name="Lawenforcement" xml:space="preserve">
+    <value>Правоохранительная деятельность</value>
+  </data>
+  <data name="LeadDevelopers" xml:space="preserve">
+    <value>ведущих разработчиков с научной степенью</value>
+  </data>
+  <data name="Logistics" xml:space="preserve">
+    <value>Логистика, перевозки</value>
+  </data>
+  <data name="LogisticsText" xml:space="preserve">
+    <value>Анализ складских запасов, системы автоматизированной сортировки и отслеживания товаров, сканеры для считывания штрих кодов и проверки соответствия продукта заказу. Автоматизированные системы пропуска и контроля, а также системы прогнозирования спроса и объемов поставок на базе машинного обучения.</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Medicine" xml:space="preserve">
+    <value>Медицина и здравоохранение</value>
+  </data>
+  <data name="MedicineText" xml:space="preserve">
+    <value>Применение компьютерного зрения для обработки медицинских изображений используется в компьютерной диагностике для планирования персональной терапии, медицинского ухода и улучшения принятия решений. Системы на базе компьютерного зрения помогают врачу поставить диагноз, поскольку на изображении могут присутствовать мелкие детали, которые врач может не заметить, но такие детали могут быть распознаны системой с высокой степенью точности. Кроме того, изображение может быть сравнено с тысячами других подобных изображений в базе данных медицинской системы, и результат сравнения используется для более точной постановки диагноза медицинским специалистом.</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>Машинное обучение</value>
+  </data>
+  <data name="MLSubTitile" xml:space="preserve">
+    <value>Прогнозные и рекомендательные системы, обработка естественных языков</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="NLP" xml:space="preserve">
+    <value>Обработка естественного языка</value>
+  </data>
+  <data name="NLPText" xml:space="preserve">
+    <value>Решения и системы на основе синтеза и распознавания естественного языка, автоматизация работы call-центов</value>
+  </data>
+  <data name="NumberSystem" xml:space="preserve">
+    <value>Система определения количества объектов</value>
+  </data>
+  <data name="NumberSystemText" xml:space="preserve">
+    <value>Подсчет транспортного и пассажиропотока</value>
+  </data>
+  <data name="Ourprojects" xml:space="preserve">
+    <value>Наши проекты</value>
+  </data>
+  <data name="Ourprojectsex" xml:space="preserve">
+    <value>Примеры наших проектов</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Наши партнеры</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Наши решения</value>
+  </data>
+  <data name="ProductsSubtitle" xml:space="preserve">
+    <value>Типовые решения и продукты, разрабатываемые компанией</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>проектов в области машинного обучения и анализа данных</value>
+  </data>
+  <data name="PublicSafety" xml:space="preserve">
+    <value>Общественная безопасность</value>
+  </data>
+  <data name="PublicTransport" xml:space="preserve">
+    <value>Диспетчеризация пассажирского транспорта</value>
+  </data>
+  <data name="R&amp;D" xml:space="preserve">
+    <value>R&amp;D проекты и научные исследования</value>
+  </data>
+  <data name="R&amp;DText" xml:space="preserve">
+    <value>Проверка гипотез, проведение научных исследований, разработка новых алгоритмов.</value>
+  </data>
+  <data name="RecognitionSystem" xml:space="preserve">
+    <value>Система распознавания текста</value>
+  </data>
+  <data name="RecognitionSystemText" xml:space="preserve">
+    <value>Распознавание номеров, маркировок, QR-кодов, надписей произвольной формы</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Исследования</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Розничная торговля</value>
+  </data>
+  <data name="RetailText" xml:space="preserve">
+    <value>Машинное обучение позволяет ритейлерам автоматизировать процессы, которые раньше требовалось выполнять вручную.
+Уведомления о закончившихся товарах или неудовлетворении других требований покупателей можно получать автоматически, создав систему аналитики непосредственно в торговой точке. Контроль работы персонала, подсчет посетителей, оптимизация рабочего графика, анализ эффективности рекламных акций и множество других приложений позволяет решить технология машинного обучения.</value>
+  </data>
+  <data name="RoadMaintenance" xml:space="preserve">
+    <value>Содержание дорог</value>
+  </data>
+  <data name="RS" xml:space="preserve">
+    <value>Рекомендательные системы</value>
+  </data>
+  <data name="RSText" xml:space="preserve">
+    <value>Персонализированные предложения на основе предпочтений клиентов, программы лояльности, рекомендательные системы и системы помощи принятия решений</value>
+  </data>
+  <data name="SafetySystem" xml:space="preserve">
+    <value>Система контроля и безопасности</value>
+  </data>
+  <data name="SafetySystemText" xml:space="preserve">
+    <value>Контроль нахождения в опасных зонах, нарушения границ зон, возгораний и задымленности</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>Отправляем</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Ваше сообщение отправлено. Спасибо!</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Сервисы</value>
+  </data>
+  <data name="ServicesTitle" xml:space="preserve">
+    <value>Широкий спектр услуг по анализу данных, разработке интеллектуальных систем на базе машинного обучения и компьютерного зрения</value>
+  </data>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Умный город</value>
+  </data>
+  <data name="SmartCityDisc" xml:space="preserve">
+    <value>Интеллектуальная система анализа городской среды</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Решения</value>
+  </data>
+  <data name="SomeTasks" xml:space="preserve">
+    <value>Некоторые задачи, с которыми сталкиваются компании:</value>
+  </data>
+  <data name="SP" xml:space="preserve">
+    <value>Предложить проект</value>
+  </data>
+  <data name="SPText" xml:space="preserve">
+    <value>По любым вопросам и предложения пишите нам</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="T1" xml:space="preserve">
+    <value>Прогнозные и рекомендательные системы</value>
+  </data>
+  <data name="T2" xml:space="preserve">
+    <value>Системы на базе компьютерного зрения</value>
+  </data>
+  <data name="T3" xml:space="preserve">
+    <value>Выявление аномалий в данных</value>
+  </data>
+  <data name="T4" xml:space="preserve">
+    <value>Обработка естественных языков</value>
+  </data>
+  <data name="T5" xml:space="preserve">
+    <value>Сегментация данных</value>
+  </data>
+  <data name="T6" xml:space="preserve">
+    <value>Поиск скрытых закономерностей в данных</value>
+  </data>
+  <data name="T7" xml:space="preserve">
+    <value>Системы информационного поиска</value>
+  </data>
+  <data name="TextSystem" xml:space="preserve">
+    <value>Система анализа текстов</value>
+  </data>
+  <data name="TextSystemText" xml:space="preserve">
+    <value>Выделение ключевых слов, тегов, тональностей текста, анализ смысла и интонаций текстов</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>TPU - Тензорные процессоры</value>
+  </data>
+  <data name="TPUText" xml:space="preserve">
+    <value>Адаптация алгоритмов искусственного интеллекта под тензорные процессоры</value>
+  </data>
+  <data name="TrafficManagement" xml:space="preserve">
+    <value>Управление трафиком</value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Транспорт</value>
+  </data>
+  <data name="TransportText" xml:space="preserve">
+    <value>На базе искусственного интеллекта строятся системы предупреждения о боковом трафике, автопилоты, автономные транспортные средства.</value>
+  </data>
+  <data name="TS" xml:space="preserve">
+    <value>Типовые решения на базе машинного обучения и компьютерного зрения</value>
+  </data>
+  <data name="TSText" xml:space="preserve">
+    <value>Готовые решения на базе алгоритмов компьютерного зрения, которые необходимо дообучить на данных заказчика.</value>
+  </data>
+  <data name="WasteManagement" xml:space="preserve">
+    <value>Контроль обращения с мусором</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Написать</value>
+  </data>
+</root>

@@ -117,74 +117,101 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>О нас</value>
+  <data name="AS" xml:space="preserve">
+    <value>Поиск аномалий</value>
   </data>
-  <data name="Accreditation" xml:space="preserve">
-    <value>Открытый код и реестр ПО</value>
-  </data>
-  <data name="Adress1" xml:space="preserve">
-    <value>Биржевая линия, 16</value>
-  </data>
-  <data name="Adress2" xml:space="preserve">
-    <value>Россия, Санкт-Петербург</value>
+  <data name="Categories" xml:space="preserve">
+    <value>Категории</value>
   </data>
   <data name="Company" xml:space="preserve">
     <value>Компания</value>
-  </data>
-  <data name="CompanyText" xml:space="preserve">
-    <value>Разработка и внедрение систем и сервисов на базе алгоритмов машинного обучения, компьютерного зрения и анализа данных</value>
   </data>
   <data name="Contacts" xml:space="preserve">
     <value>Контакты</value>
   </data>
   <data name="CV" xml:space="preserve">
+    <value>Компьютерное зрение и видеоаналитика</value>
+  </data>
+  <data name="CV1" xml:space="preserve">
     <value>Компьютерное зрение</value>
+  </data>
+  <data name="CVText" xml:space="preserve">
+    <value>Решения и системы на основе машинного зрения, видео аналитики, распознавания образов, позволяют автоматизировать различные процессы на промышленных предприятиях, заводах, в транспортных и логистических компаниях. Подобные решения все чаще находят применения и пользуются большой популярностью среди технологических, развивающихся компаний. Наш многолетний опыт в области машинного зрения и видео аналитики, множество реализованных проектов позволяют гарантировать превосходное качество и точность создаваемых решений.</value>
   </data>
   <data name="DA" xml:space="preserve">
     <value>Анализ данных</value>
   </data>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="DAText" xml:space="preserve">
+    <value>Анализ и предобработка данных, поиск аномалий и скрытых закономерностей в данных. Разделение пользователей или посетителей сайта на сегменты по схожему поведению, предпочтениям или другим характеристикам на основе анализа исторических данных - важная стратегия грамотного распределения ресурсов на рекламные и маркетинговые компании. Визуальные модели такой сегментации позволяют выявлять различные закономерности и связи между группами, которые могут быть использованы для оптимизации каналов продвижения и выбора наиболее эффективных маркетинговых ходов для успешного позиционирования товара на рынке.</value>
   </data>
-  <data name="Home" xml:space="preserve">
+  <data name="February" xml:space="preserve">
+    <value>Февраль</value>
+  </data>
+  <data name="IS" xml:space="preserve">
+    <value>Информационный поиск</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>Январь</value>
+  </data>
+  <data name="LP" xml:space="preserve">
+    <value>Последние публикации</value>
+  </data>
+  <data name="Main" xml:space="preserve">
     <value>Главная</value>
   </data>
-  <data name="Links" xml:space="preserve">
-    <value>Ссылки</value>
+  <data name="March" xml:space="preserve">
+    <value>Март</value>
   </data>
   <data name="ML" xml:space="preserve">
     <value>Машинное обучение</value>
   </data>
-  <data name="News" xml:space="preserve">
-    <value>Новости</value>
+  <data name="More" xml:space="preserve">
+    <value>Подробнее</value>
   </data>
   <data name="NLP" xml:space="preserve">
-    <value>Обработка естественных языков</value>
+    <value>Обработка естественного языка</value>
   </data>
-  <data name="Phone" xml:space="preserve">
-    <value>Телефон</value>
+  <data name="NLPText" xml:space="preserve">
+    <value>Решения и системы на основе синтеза и обработки естественного языка, системы информационного поиска и распознования речи. Данное направление успешно развивается совместно с международной лабораторией машинного обучения. Каждый год проводится международная конференция &lt;a href="https://ainlconf.ru/" target="_blank"&gt;Artificial Intelligence and Natural Language&lt;/a&gt;.</value>
   </data>
-  <data name="PP" xml:space="preserve">
-    <value>Политика конфиденциальности</value>
+  <data name="NN" xml:space="preserve">
+    <value>Нейросети</value>
   </data>
-  <data name="PS" xml:space="preserve">
+  <data name="November" xml:space="preserve">
+    <value>Ноябрь</value>
+  </data>
+  <data name="OS" xml:space="preserve">
+    <value>Наши решения</value>
+  </data>
+  <data name="PredictiveSystems" xml:space="preserve">
     <value>Прогнозные системы</value>
+  </data>
+  <data name="PredictiveSystemsText" xml:space="preserve">
+    <value>Прогнозные модели позволяют с высокой вероятностью оценить перспективы развития бизнеса, вычислить конверсию продаж в будущем, спрогнозировать наступление страхового случая, оценить эффективность маркетинговых кампаний и вероятность того, будет ли клиент вовремя оплачивать кредит. Прогнозные системы отказа оборудования позволяет на ранней стадии диагностировать и предотвратить поломки и выходы из строя сложных систем. Оценивая будущие результаты, вы сможете грамотно распределять ресурсы, сократить расходы, контролировать качество продукции, повысить эффективность принимаемых решений и автоматизировать ручной труд.</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>проектов</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Исследования</value>
   </data>
   <data name="RS" xml:space="preserve">
     <value>Рекомендательные системы</value>
   </data>
+  <data name="RSText" xml:space="preserve">
+    <value>Анализ поведения пользователей и формирование релевантных рекомендаций, предложение сопутствующих товаров и повышение доверия покупателей. Персональные рекомендации и рекомендации услуг в зависимости от потребностей отдельного клиента увеличивают продажи и повышают лояльность клиентов в различных отраслях бизнеса, таких как розничная торговля, банки, агрегаторы и маркетплейсы, интернет-магазины, туристические компании.</value>
+  </data>
   <data name="Services" xml:space="preserve">
     <value>Сервисы</value>
   </data>
-  <data name="Smartcity" xml:space="preserve">
+  <data name="SmartCity" xml:space="preserve">
     <value>Умный город</value>
   </data>
-  <data name="Subscribe" xml:space="preserve">
-    <value>Подписаться</value>
+  <data name="Solutions" xml:space="preserve">
+    <value>Решения</value>
   </data>
-  <data name="SubscribeText" xml:space="preserve">
-    <value>Быть в курсе наших новостей, новых проектов и сервисов</value>
+  <data name="Tags" xml:space="preserve">
+    <value>Теги</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Написать</value>
