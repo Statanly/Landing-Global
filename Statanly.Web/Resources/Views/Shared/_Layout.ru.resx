@@ -168,6 +168,9 @@
   <data name="PP" xml:space="preserve">
     <value>Политика конфиденциальности</value>
   </data>
+  <data name="Products" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
   <data name="PS" xml:space="preserve">
     <value>Прогнозные системы</value>
   </data>
@@ -179,6 +182,9 @@
   </data>
   <data name="Smartcity" xml:space="preserve">
     <value>Умный город</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Решения</value>
   </data>
   <data name="Subscribe" xml:space="preserve">
     <value>Подписаться</value>

@@ -521,6 +521,9 @@ You can automatically receive notifications of stock out of stock or other custo
   <data name="WasteManagement" xml:space="preserve">
     <value>Waste management</value>
   </data>
+  <data name="WorkCompanies" xml:space="preserve">
+    <value>Companies we have worked with and continue to work with</value>
+  </data>
   <data name="Write" xml:space="preserve">
     <value>Write a message</value>
   </data>

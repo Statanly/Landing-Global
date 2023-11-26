@@ -521,6 +521,9 @@
   <data name="WasteManagement" xml:space="preserve">
     <value>Контроль обращения с мусором</value>
   </data>
+  <data name="WorkCompanies" xml:space="preserve">
+    <value>Компании с которыми мы работали и продолжаем работать</value>
+  </data>
   <data name="Write" xml:space="preserve">
     <value>Написать</value>
   </data>

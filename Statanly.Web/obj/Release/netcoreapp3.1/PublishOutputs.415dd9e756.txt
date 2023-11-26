@@ -10,6 +10,8 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\bad.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\bg_header.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\bg_header1.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\2.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\897201.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\automl.jpeg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\blog-1.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\blog-2.jpg
@@ -22,7 +24,9 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\oblozhka-2.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\reit.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\rockstar.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\seg.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\texttoimg.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\blog\WEU9ZuZwx78.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-0.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-1.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-10.png
@@ -37,6 +41,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-2.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-20.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-21.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-22.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-3.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-4.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsEN\client-5.png
@@ -58,6 +63,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-2.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-20.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-21.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-22.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-3.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-4.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\clientsRU\client-5.png
@@ -100,6 +106,8 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\deflamel.JPG
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\fasie.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\Ft.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\ftim.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\generations.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\icv.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\ilct.JPG
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\imoscow.png
@@ -109,7 +117,6 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\mindgap.JPG
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\ori.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\reksoft.jpg
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\runcall.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\russoft.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\skolkovo.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\so5.JPG
