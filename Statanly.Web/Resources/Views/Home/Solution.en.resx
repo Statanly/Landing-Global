@@ -189,6 +189,9 @@
   <data name="PredictiveSystemsText" xml:space="preserve">
     <value>Predictive models make it possible with a high probability to assess the prospects for business development, calculate the conversion of sales in the future, predict the occurrence of an insured event, evaluate the effectiveness of marketing campaigns and the likelihood of a client paying a loan on time. Predictive systems of equipment failure allow you to diagnose and prevent breakdowns and failures of complex systems at an early stage. By assessing future results, you will be able to intelligently allocate resources, reduce costs, control product quality, improve the efficiency of decisions and automate manual labor.</value>
   </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
   <data name="Projects" xml:space="preserve">
     <value>projects</value>
   </data>

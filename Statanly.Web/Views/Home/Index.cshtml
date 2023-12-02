@@ -53,12 +53,20 @@
                 <li><a class="nav-link scrollto active" href="/">@Localizer["Main"]</a></li>
                 <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
                 <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/research">Исследования</a></li>
+                        <li><a href="https://science.itmo.ru/" target="_blank">Наука</a></li>
+                        <li><a href="/info/reestr">Open source</a></li>
+                        <li><a href="/info/cvflow">Документация</a></li>
+                    </ul>
+                </li>
                 <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
                 <li class="dropdown">
                     <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>                  
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
                         <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
                     </ul>
                 </li>

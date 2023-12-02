@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Accreditation" xml:space="preserve">
+    <value>Свидетельство государственной аккредитации</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Адрес</value>
   </data>
@@ -128,10 +131,10 @@
   </data>
   <data name="CH1" xml:space="preserve">
     <value>История нашей компании началась несколько лет назад.
-Тогда на &lt;a href="http://ditp.ifmo.ru/ru/" target="_blank"&gt;факультете информационных технологий и программирования&lt;/a&gt; Университета &lt;a href="http://www.ifmo.ru/ru/" target="_blank"&gt;ИТМО&lt;/a&gt; появилась &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;лаборатория машинного обучения&lt;/a&gt;, а студенты университета в очередной раз стали абсолютными чемпионами самой престижной международной олимпиады по программированию &lt;a href="https://icpc.global" target="_blank"&gt;ACM/ICPC&lt;/a&gt;.</value>
+Тогда на &lt;a href="https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm" target="_blank"&gt;факультете информационных технологий и программирования&lt;/a&gt; Университета &lt;a href="https://abit.itmo.ru/program/master/deep_learning" target="_blank"&gt;ИТМО&lt;/a&gt; появилась &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;лаборатория машинного обучения&lt;/a&gt;, а студенты университета в очередной раз стали абсолютными чемпионами самой престижной международной олимпиады по программированию &lt;a href="https://icpc.global" target="_blank"&gt;ACM/ICPC&lt;/a&gt;.</value>
   </data>
   <data name="CH2" xml:space="preserve">
-    <value>С тех пор, совместно с крупными российскими и международными компаниями, среди которых &lt;strong&gt;Норильский никель&lt;/strong&gt;, &lt;strong&gt;Мегафон&lt;/strong&gt;, &lt;strong&gt;Евраз&lt;/strong&gt;, &lt;strong&gt;Газпром нефть&lt;/strong&gt;, &lt;strong&gt;Яндекс&lt;/strong&gt;, &lt;strong&gt;Mail.ru Group&lt;/strong&gt;, &lt;strong&gt;Insilico Medicine&lt;/strong&gt;, &lt;strong&gt;Сбербанк&lt;/strong&gt;, &lt;strong&gt;ВКонтакте&lt;/strong&gt;, &lt;strong&gt;СТМ-Сервис&lt;/strong&gt;, было  реализовано более 250 совместных проектов.</value>
+    <value>С тех пор, совместно с крупными российскими и международными компаниями, среди которых &lt;strong&gt;Норильский никель&lt;/strong&gt;, &lt;strong&gt;Мегафон&lt;/strong&gt;, &lt;strong&gt;Евраз&lt;/strong&gt;, &lt;strong&gt;Газпром нефть&lt;/strong&gt;, &lt;strong&gt;Яндекс&lt;/strong&gt;, &lt;strong&gt;Mail.ru Group&lt;/strong&gt;, &lt;strong&gt;Insilico Medicine&lt;/strong&gt;, &lt;strong&gt;Сбербанк&lt;/strong&gt;, &lt;strong&gt;ВКонтакте&lt;/strong&gt;, &lt;strong&gt;СТМ-Сервис&lt;/strong&gt;, было  реализовано более 300 совместных проектов.</value>
   </data>
   <data name="Company" xml:space="preserve">
     <value>Компания</value>
@@ -149,7 +152,7 @@
     <value>Сотрудничество</value>
   </data>
   <data name="CT1" xml:space="preserve">
-    <value>Сегодня наша компания — это молодые, амбициозные сотрудники, разработчики и программисты, специалисты в области машинного обучения, анализа и визуализации данных, высоконагруженных систем и хранения информации, ученые, ведущие свои научные исследования на передовом крае науки. Наши тесные связи с &lt;a href="http://ctlab.ifmo.ru/ru/87845/structure/structure" target="_blank"&gt;международной лабораторией компьютерных технологий&lt;/a&gt; университета ИТМО позволяют нам привлекать молодых, талантливых специалистов на стажировки и постоянные позиции, поддерживать высочайший уровень и профессионализм.</value>
+    <value>Сегодня наша компания — это молодые, амбициозные сотрудники, разработчики и программисты, специалисты в области машинного обучения, анализа и визуализации данных, высоконагруженных систем и хранения информации, ученые, ведущие свои научные исследования на передовом крае науки. Наши тесные связи с &lt;a href="https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm" target="_blank"&gt;международной лабораторией компьютерных технологий&lt;/a&gt; университета ИТМО позволяют нам привлекать молодых, талантливых специалистов на стажировки и постоянные позиции, поддерживать высочайший уровень и профессионализм.</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Почта</value>
