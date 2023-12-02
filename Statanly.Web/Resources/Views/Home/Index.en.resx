@@ -238,6 +238,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="DistanceSystemText" xml:space="preserve">
     <value>Determining the distances and sizes of objects</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
   <data name="Download" xml:space="preserve">
     <value>Download presentation</value>
   </data>
@@ -383,7 +386,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Phone</value>
   </data>
   <data name="Products" xml:space="preserve">
-    <value>Our solutions</value>
+    <value>Products</value>
   </data>
   <data name="ProductsSubtitle" xml:space="preserve">
     <value>Typical solutions and products developed by the company</value>
@@ -434,6 +437,9 @@ You can automatically receive notifications of stock out of stock or other custo
   <data name="SafetySystemText" xml:space="preserve">
     <value>Control of being in hazardous areas, violation of zone boundaries, fires and smoke</value>
   </data>
+  <data name="Science" xml:space="preserve">
+    <value>Science</value>
+  </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>
   </data>
@@ -454,6 +460,9 @@ You can automatically receive notifications of stock out of stock or other custo
   </data>
   <data name="SmartCityDisc" xml:space="preserve">
     <value>Intelligent system for analyzing the urban environment</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Software</value>
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Solutions</value>

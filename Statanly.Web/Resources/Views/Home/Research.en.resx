@@ -123,8 +123,14 @@
   <data name="Contacts" xml:space="preserve">
     <value>Contacts</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
   <data name="Main" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
   </data>
   <data name="R&amp;D" xml:space="preserve">
     <value>R&amp;D projects and research</value>
@@ -139,11 +145,26 @@ Our team members are young scientists, employees of scientific laboratories of t
   <data name="Science" xml:space="preserve">
     <value>Science</value>
   </data>
+  <data name="Science1" xml:space="preserve">
+    <value>Science</value>
+  </data>
   <data name="ScientificActivity" xml:space="preserve">
     <value>Scientific activity</value>
   </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Smart city</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Software</value>
+  </data>
   <data name="Solutions" xml:space="preserve">
     <value>Solutions</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>TPU - Tensor Processors</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Write a message</value>

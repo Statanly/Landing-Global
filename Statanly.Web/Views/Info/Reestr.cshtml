@@ -1,49 +1,8 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
-
+﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
-
 @{
-    // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+    Layout = "/Views/Shared/_CompanyLayout.cshtml";
 }
-
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/solution">@Localizer["Solutions"]</a></li>
-                <li><a class="nav-link scrollto active" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
-                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
-    </div>
-</header><!-- End Header -->
 
 <main id="main">
 
@@ -120,7 +79,7 @@
                         <ul>
                             <li><a href="/info/installation" target="_blank">Документация по установке и эксплуатации</a></li>
                         </ul>
-                    </div>               
+                    </div>
 
                     <div class="portfolio-description">
                         <h2>Документация, содержащая информацию, необходимую для эксплуатации, описание процессов, функциональных характеристик</h2>
@@ -205,6 +164,8 @@
                             <li><a href="/info/code" target="_blank">Репозиторий ПО</a></li>
                             <li><a href="/info/weight" target="_blank">Веса моделей</a></li>
                             <li><a href="/info/accreditation" target="_blank">Свидетельство государственной аккредитации</a></li>
+                            <li><a href="https://reestr.digital.gov.ru/reestr/1627901/" target="_blank">Выписка из реестра</a></li>
+
                             <li><strong>Лицензия Free BSD</strong></li>
                         </ul>
                     </div>
@@ -212,5 +173,5 @@
             </div>
 
         </div>
-    </section><!-- End Portfolio Details Section --> 
+    </section><!-- End Portfolio Details Section -->
 </main><!-- End #main -->

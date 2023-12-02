@@ -135,6 +135,9 @@
   <data name="Cooperation" xml:space="preserve">
     <value>Cooperation</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
@@ -159,11 +162,17 @@
   <data name="Press" xml:space="preserve">
     <value>Press</value>
   </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
   <data name="Questions" xml:space="preserve">
     <value>Any other questions?</value>
   </data>
   <data name="Research" xml:space="preserve">
     <value>Research</value>
+  </data>
+  <data name="Science" xml:space="preserve">
+    <value>Science</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>
@@ -174,6 +183,15 @@
   <data name="SendMessage" xml:space="preserve">
     <value>Your message has been sent. Thanks!</value>
   </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Smart city</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Software</value>
+  </data>
   <data name="Solutions" xml:space="preserve">
     <value>Solutions</value>
   </data>
@@ -182,6 +200,9 @@
   </data>
   <data name="Team" xml:space="preserve">
     <value>Team</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>TPU - Tensor Processors</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Write a message</value>

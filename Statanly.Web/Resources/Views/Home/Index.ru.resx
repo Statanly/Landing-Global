@@ -238,6 +238,9 @@
   <data name="DistanceSystemText" xml:space="preserve">
     <value>Определение расстояний и размеров объектов</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Документация</value>
+  </data>
   <data name="Download" xml:space="preserve">
     <value>Скачать презентацию</value>
   </data>
@@ -383,7 +386,7 @@
     <value>Телефон</value>
   </data>
   <data name="Products" xml:space="preserve">
-    <value>Наши решения</value>
+    <value>Продукты</value>
   </data>
   <data name="ProductsSubtitle" xml:space="preserve">
     <value>Типовые решения и продукты, разрабатываемые компанией</value>
@@ -434,6 +437,9 @@
   <data name="SafetySystemText" xml:space="preserve">
     <value>Контроль нахождения в опасных зонах, нарушения границ зон, возгораний и задымленности</value>
   </data>
+  <data name="Science" xml:space="preserve">
+    <value>Наука</value>
+  </data>
   <data name="Send" xml:space="preserve">
     <value>Отправить</value>
   </data>
@@ -454,6 +460,9 @@
   </data>
   <data name="SmartCityDisc" xml:space="preserve">
     <value>Интеллектуальная система анализа городской среды</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Разработка</value>
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Решения</value>

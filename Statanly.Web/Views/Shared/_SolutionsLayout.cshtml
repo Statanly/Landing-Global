@@ -29,9 +29,26 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li><a class="nav-link scrollto active" href="/home/solution">@Localizer["Solutions"]</a></li>
+                <li class="dropdown">
+                    <a class="active" href="/home/solution"><span>@Localizer["Solutions"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/solution">Разработка</a></li>
+                        <li><a href="/home/services">@Localizer["Services"]</a></li>
+                        <li><a href="/home/products">@Localizer["Products"]</a></li>
+                        <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                        <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
+                    </ul>
+                </li>
                 <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li><a class="nav-link scrollto" href="/home/research">@Localizer["Research"]</a></li>
+                <li class="dropdown">
+                    <a href="/home/research"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/research">R&D</a></li>
+                        <li><a href="https://science.itmo.ru/" target="_blank">@Localizer["Science"]</a></li>
+                        <li><a href="/info/reestr">Open source</a></li>
+                        <li><a href="/info/cvflow">@Localizer["Documentation"]</a></li>
+                    </ul>
+                </li>
                 <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
                 <li class="dropdown">
                     <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
