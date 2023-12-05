@@ -17,6 +17,8 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Statanly.Web.Infrastructure.Interfaces;
 using Statanly.Web.Infrastructure.Implementation;
+using Statanly.Web.Infrastructure.IRepositories;
+using Statanly.Web.Infrastructure.Repositories;
 
 namespace Statanly.Web
 {
@@ -55,6 +57,8 @@ namespace Statanly.Web
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddMvc().AddViewLocalization();
             services.AddTransient<IMessageService, MessageService>();
+            services.AddTransient<IClickRepository, ClickRepository>();
+            services.AddTransient<IUnitOfWork, ApplicationDbContext>();
 
         }
 

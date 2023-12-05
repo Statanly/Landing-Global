@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Statanly.Web.Data;
+using Statanly.Web.Infrastructure.IRepositories;
 using Statanly.Web.Models;
 
 namespace Statanly.Web.Controllers
@@ -16,13 +18,21 @@ namespace Statanly.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IClickRepository clickRepository;
+        public HomeController(ILogger<HomeController> logger, IClickRepository clickRepository)
         {
             _logger = logger;
+            this.clickRepository = clickRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string id)
         {
+            if (!String.IsNullOrWhiteSpace(id))
+            {
+                var click = new Click() { Date = DateTime.Now, Guid = id };
+                await this.clickRepository.Add(click);
+            }
+            
             return View();
         }
         public IActionResult Company()

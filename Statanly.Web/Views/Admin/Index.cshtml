@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Statanly.Web.Data.Click>
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <h2>Статистика</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="about" class="about">
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                          Дата
+                        </th>
+                        <th>
+                            Идентификатор
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Guid)
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+        </div>
+    </section><!-- End About Us Section -->
+</main><!-- End #main -->
+

@@ -426,7 +426,8 @@ You can automatically receive notifications of stock out of stock or other custo
     <value>Control and safety system</value>
   </data>
   <data name="SafetySystemText" xml:space="preserve">
-    <value>Control of being in hazardous areas, violation of zone boundaries, fires and smoke</value>
+    <value>Control of presence in hazardous areas, violation of zone boundaries, control of personal protective equipment (helmet, mask, overalls, safety rope,
+glasses, gloves, device), fire and smoke</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>
