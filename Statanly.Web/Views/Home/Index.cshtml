@@ -38,6 +38,8 @@
     var client20 = "assets/img/clients" + lang + "/client-20.png";
     var client21 = "assets/img/clients" + lang + "/client-21.png";
     var client22 = "assets/img/clients" + lang + "/client-22.png";
+    var client23 = "assets/img/clients" + lang + "/client-23.png";
+
 }
 
 <!-- ======= Header ======= -->
@@ -50,18 +52,44 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="/">@Localizer["Main"]</a></li>                
+                <li><a class="nav-link scrollto active" href="/">@Localizer["Main"]</a></li>
                 <li class="dropdown">
                     <a href="/home/solution"><span>@Localizer["Solutions"]</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="/home/solution">@Localizer["Software"]</a></li>
+                        <li><a href="/home/solution">@Localizer["Projects"]</a></li>
                         <li><a href="/home/services">@Localizer["Services"]</a></li>
                         <li><a href="/home/products">@Localizer["Products"]</a></li>
                         <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                        <li><a href="/home/uav">БПЛА</a></li>
                         <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
+                <li class="dropdown">
+                    <a href="/industry"><span>@Localizer["Industries"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/industry/retail">Ретейл</a></li>
+                        <li><a href="/industry/logistics">Логистика</a></li>
+                        <li><a href="/industry/prom">Промышленность</a></li>
+                        <li><a href="/industry/development">Девелопмент</a></li>
+                        <li><a href="/industry/horeca">HoReCa </a></li>
+                        <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                        <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                        <li><a href="/industry/transport">Транспорт</a></li>
+                        <li><a href="/industry/media">Медиа, реклама</a></li>
+                        <li><a href="/home/smartcity">Умный город</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/home/company"><span>@Localizer["Company"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/company">@Localizer["History"]</a></li>
+                        <li><a href="/home/team">@Localizer["Team"]</a></li>
+                        <li><a href="/home/mission">@Localizer["Mission"]</a></li>
+                        <li><a href="/home/press">@Localizer["Press"]</a></li>
+                        <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                        <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="/home/research"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -281,7 +309,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h4>300+<span>@Localizer["Projects"]</span></h4>
+                        <h4>300+<span>@Localizer["MLProjects"]</span></h4>
                     </div>
                 </div>
             </div>
@@ -319,6 +347,8 @@
                     <div class="swiper-slide"><img src=@client20 class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src=@client21 class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src=@client22 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client23 class="img-fluid" alt=""></div>
+
                 </div>
                 <div class="swiper-pagination">
 
@@ -372,6 +402,9 @@
                                     <p>
                                         @Localizer["RetailText"]
                                     </p>
+                                    <p>
+                                        <a href="/industry/retail">@Localizer["More"]</a>
+                                    </p>
                                 </div>
                             </li>
                             <li>
@@ -379,6 +412,9 @@
                                 <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
                                         @Localizer["LogisticsText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/logistics">@Localizer["More"]</a>
                                     </p>
                                 </div>
                             </li>
@@ -388,6 +424,9 @@
                                     <p>
                                         @Localizer["IndustryText"]
                                     </p>
+                                    <p>
+                                        <a href="/industry/prom">@Localizer["More"]</a>
+                                    </p>                                   
                                 </div>
                             </li>
                             <li>
@@ -395,6 +434,9 @@
                                 <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
                                         @Localizer["DevelopmentText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/development">@Localizer["More"]</a>
                                     </p>
                                 </div>
                             </li>
@@ -404,6 +446,9 @@
                                     <p>
                                         @Localizer["HotelText"]
                                     </p>
+                                    <p>
+                                        <a href="/industry/horeca">@Localizer["More"]</a>
+                                    </p>
                                 </div>
                             </li>
                             <li>
@@ -411,6 +456,9 @@
                                 <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
                                         @Localizer["AgricultureText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/agro">@Localizer["More"]</a>
                                     </p>
                                 </div>
                             </li>
@@ -420,6 +468,9 @@
                                     <p>
                                         @Localizer["MedicineText"]
                                     </p>
+                                    <p>
+                                        <a href="/industry/medicine">@Localizer["More"]</a>
+                                    </p>
                                 </div>
                             </li>
                             <li>
@@ -427,6 +478,9 @@
                                 <div id="accordion-list-8" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
                                         @Localizer["TransportText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/transport">@Localizer["More"]</a>
                                     </p>
                                 </div>
                             </li>

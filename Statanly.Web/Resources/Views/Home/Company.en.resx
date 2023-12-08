@@ -172,6 +172,9 @@ Then on &lt;a href="https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_teh
   <data name="Press" xml:space="preserve">
     <value>Press</value>
   </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
   <data name="Research" xml:space="preserve">
     <value>Research</value>
   </data>

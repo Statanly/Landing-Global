@@ -133,7 +133,7 @@
     <value>Россия, Санкт-Петербург, Биржевая линия, 16</value>
   </data>
   <data name="Agriculture" xml:space="preserve">
-    <value>Сельское хозяйство</value>
+    <value>Сельское хозяйство и агропромышленность</value>
   </data>
   <data name="AgricultureText" xml:space="preserve">
     <value>Внедрение технологий компьютерного зрения совместно с системами глобального позиционирования позволяет вести прецизионное земледелие, которое может значительно повысить урожайность и эффективность сельского хозяйства.
@@ -190,6 +190,9 @@
   <data name="ConversionSystemText" xml:space="preserve">
     <value>Прогнозирование конверсии продаж, оптимизация наценок на товар</value>
   </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Сотрудничество</value>
+  </data>
   <data name="CV" xml:space="preserve">
     <value>Компьютерное зрение</value>
   </data>
@@ -227,7 +230,7 @@
     <value>разработчиков, участвующих в различных проектах</value>
   </data>
   <data name="Development" xml:space="preserve">
-    <value>Девелопмент</value>
+    <value>Девелопмент и строительство</value>
   </data>
   <data name="DevelopmentText" xml:space="preserve">
     <value>Контроль работы персонала, трафика посетителей, контроль пропускного режима, оптимизация рабочего графика, системы безопасности и охраны труда и множество других приложений.</value>
@@ -307,11 +310,17 @@
   <data name="GPUText" xml:space="preserve">
     <value>Вычисления требующие наличия графических и тензорных процессоров.</value>
   </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
   <data name="Hotel" xml:space="preserve">
     <value>Гостинично-ресторанный бизнес</value>
   </data>
   <data name="HotelText" xml:space="preserve">
     <value>Контроль работы персонала, нарушений сотрудниками регламентов и дисциплины труда, детекция трафика посетителей, нарушение общественной безопасности и порядка и множество других приложений.</value>
+  </data>
+  <data name="Industries" xml:space="preserve">
+    <value>Индустрии</value>
   </data>
   <data name="Industry" xml:space="preserve">
     <value>Промышленность, энергетика, производство</value>
@@ -349,8 +358,14 @@
   <data name="Message" xml:space="preserve">
     <value>Сообщение</value>
   </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Миссия</value>
+  </data>
   <data name="ML" xml:space="preserve">
     <value>Машинное обучение</value>
+  </data>
+  <data name="MLProjects" xml:space="preserve">
+    <value>проектов в области машинного обучения и анализа данных</value>
   </data>
   <data name="MLSubTitile" xml:space="preserve">
     <value>Прогнозные и рекомендательные системы, обработка естественных языков</value>
@@ -385,6 +400,9 @@
   <data name="Phone" xml:space="preserve">
     <value>Телефон</value>
   </data>
+  <data name="Press" xml:space="preserve">
+    <value>Пресса</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Продукты</value>
   </data>
@@ -392,7 +410,7 @@
     <value>Типовые решения и продукты, разрабатываемые компанией</value>
   </data>
   <data name="Projects" xml:space="preserve">
-    <value>проектов в области машинного обучения и анализа данных</value>
+    <value>Проекты</value>
   </data>
   <data name="PublicSafety" xml:space="preserve">
     <value>Общественная безопасность</value>
@@ -500,6 +518,9 @@
   </data>
   <data name="T7" xml:space="preserve">
     <value>Системы информационного поиска</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Команда</value>
   </data>
   <data name="TextSystem" xml:space="preserve">
     <value>Система анализа текстов</value>

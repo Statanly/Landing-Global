@@ -133,7 +133,7 @@
     <value>Russia, Saint Petersburg, Birzhevaya liniya, 16</value>
   </data>
   <data name="Agriculture" xml:space="preserve">
-    <value>Agriculture</value>
+    <value>Agro-industry and agriculture</value>
   </data>
   <data name="AgricultureText" xml:space="preserve">
     <value>The introduction of computer vision technologies together with global positioning systems allows for precision farming, which can significantly increase the yield and efficiency of agriculture.
@@ -189,6 +189,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   </data>
   <data name="ConversionSystemText" xml:space="preserve">
     <value>Forecasting sales conversions, optimizing product markups</value>
+  </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Cooperation</value>
   </data>
   <data name="CV" xml:space="preserve">
     <value>Computer vision</value>
@@ -307,11 +310,17 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="GPUText" xml:space="preserve">
     <value>Calculations that require graphics and tensor processors.</value>
   </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
   <data name="Hotel" xml:space="preserve">
     <value>Hotel and restaurant business</value>
   </data>
   <data name="HotelText" xml:space="preserve">
     <value>Monitoring the work of personnel, violations by employees of regulations and labor discipline, detection of traffic of visitors, violation of public safety and order, and many other applications.</value>
+  </data>
+  <data name="Industries" xml:space="preserve">
+    <value>Industries</value>
   </data>
   <data name="Industry" xml:space="preserve">
     <value>Industry, energy, manufacturing</value>
@@ -349,8 +358,14 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="Message" xml:space="preserve">
     <value>Message</value>
   </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Mission</value>
+  </data>
   <data name="ML" xml:space="preserve">
     <value>Machine Learning</value>
+  </data>
+  <data name="MLProjects" xml:space="preserve">
+    <value>projects in the field of machine learning and data analysis</value>
   </data>
   <data name="MLSubTitile" xml:space="preserve">
     <value>Predictive and recommendation systems, natural language processing</value>
@@ -385,6 +400,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="Press" xml:space="preserve">
+    <value>Press</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Products</value>
   </data>
@@ -392,7 +410,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Typical solutions and products developed by the company</value>
   </data>
   <data name="Projects" xml:space="preserve">
-    <value>projects in the field of machine learning and data analysis</value>
+    <value>Projects</value>
   </data>
   <data name="PublicSafety" xml:space="preserve">
     <value>Public safety</value>
@@ -500,6 +518,9 @@ glasses, gloves, device), fire and smoke</value>
   </data>
   <data name="T7" xml:space="preserve">
     <value>Information retrieval systems</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
   </data>
   <data name="TextSystem" xml:space="preserve">
     <value>Text analysis system</value>

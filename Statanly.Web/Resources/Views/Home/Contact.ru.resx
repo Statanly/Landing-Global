@@ -147,6 +147,9 @@
   <data name="History" xml:space="preserve">
     <value>История</value>
   </data>
+  <data name="Industries" xml:space="preserve">
+    <value>Индустрии</value>
+  </data>
   <data name="Main" xml:space="preserve">
     <value>Главная</value>
   </data>

@@ -1,0 +1,138 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "~/Views/Shared/_IndustryLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/industry/retail">Ретейл</a></li>
+                <li><a href="/industry/logistics">Логистика</a></li>
+                <li>Промышленность</li>
+                <li><a href="/industry/development">Девелопмент</a></li>
+                <li><a href="/industry/horeca">HoReCa </a></li>
+                <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                <li><a href="/industry/transport">Транспорт</a></li>
+                <li><a href="/industry/media">Медиа, реклама</a></li>
+                <li><a href="/home/smartcity">Умный город</a></li>
+            </ol>
+            <h2>Промышленность, энергетика, производство</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="~/assets/img/Industry/Prom/prom.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="">Искусственный интеллект в промышленности</a>
+                        </h2>
+                        <div class="entry-content">
+                            <p>
+                                Современное высокотехнологичное производство требует особых подходов к контролю качества выпускаемой продукции, а также оптимизации 
+                                технологических процессов. Машинное зрение совершило настоящий технологический прорыв и значительно расширило возможности дефектоскопии в 
+                                промышленности, перевела ее на новый уровень. Теперь технологии позволяют отслеживать качество не только после изготовления изделия или продукта, 
+                                но и непосредственно во время производственного процесса. Другие возможности применения компьютерного зрения, такие как, например, 
+                                анализ гранулометрического состава сырья позволяют существенно оптимизировать процесс производства.
+                            </p>
+                            <ul>
+                                <li>
+                                    Управление технологическими процессами
+                                </li>
+                                <li>
+                                    Управление производственными процессами
+                                </li>
+                                <li>
+                                    Управление ремонтом и обслуживанием оборудования
+                                </li>
+                                <li>
+                                    Анализ гранулометрического состава сырья
+                                </li>
+                                <li>
+                                    Подсчёт количества объектов на конвейере. Оценка масса продукта на основании его размера
+                                </li>
+                                <li>
+                                    Видеоаналитика эффективности работы персонала
+                                </li>
+
+                                <li>
+                                    Анализ наличия маркировки
+                                </li>
+                                <li>
+                                    Распознавание дефектов, брака
+                                </li>
+                                <li>
+                                    Наличие или отсутствие предметов или персонала в интересующих зонах. Опасное сближение. Промышленная безопасность
+                                </li>
+                                <li>
+                                    Контроль использования СИЗ
+                                </li>
+                                <li>
+                                    Системы распознавании речи на участках где требуется взаимодействие операторов
+                                </li>
+                                <li>
+                                    Системы поиска информации в документной базе (аналог ChatGPT)
+                                </li>
+                            </ul>
+                            <p>
+                                И многое другое. По любым вопросам и предложениям  <a href="/home/contact">пишите нам</a>.
+                            </p>
+                            <div class="read-more">
+                                <a href="/home/cv">Проекты</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->
+                </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">Индустрии</h3>
+                        <div class="sidebar-item categories">
+                            <ul>
+                                <li><a href="/industry/retail">Ретейл</a></li>
+                                <li><a href="/industry/logistics">Логистика</a></li>
+                                <li>Промышленность</li>
+                                <li><a href="/industry/development">Девелопмент</a></li>
+                                <li><a href="/industry/horeca">HoReCa </a></li>
+                                <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                                <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                                <li><a href="/industry/transport">Транспорт</a></li>
+                                <li><a href="/industry/media">Медиа, реклама</a></li>
+                                <li><a href="/home/smartcity">Умный город</a></li>
+                            </ul>
+                        </div><!-- End sidebar categories-->
+                        <h3 class="sidebar-title">Категории</h3>
+                        <div class="sidebar-item tags">
+                            <ul>
+                                <li><a href="/home/ml">Машинное обучение</a></li>
+                                <li><a href="/home/da">Рекомендательные системы</a></li>
+                                <li><a href="/home/cv">Компьютерное зрение</a></li>
+                                <li><a href="/home/ml">Прогнозные системы</a></li>
+                                <li><a href="/home/nlp">Обработка естественных языков</a></li>
+                            </ul>
+                        </div><!-- End sidebar tags-->
+
+                    </div><!-- End sidebar -->
+
+                </div><!-- End blog sidebar -->
+
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+</main>

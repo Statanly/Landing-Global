@@ -24,39 +24,66 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="/">@Localizer["Main"]</a></li>
-                <li class="dropdown">
-                    <a href="/home/solution"><span>@Localizer["Solutions"]</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/solution">Разработка</a></li>
-                        <li><a href="/home/services">@Localizer["Services"]</a></li>
-                        <li><a href="/home/products">@Localizer["Products"]</a></li>
-                        <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto" href="/home/company">@Localizer["Company"]</a></li>
-                <li class="dropdown">
-                    <a href="/home/research"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/research">R&D</a></li>
-                        <li><a href="https://science.itmo.ru/" target="_blank">@Localizer["Science"]</a></li>
-                        <li><a href="/info/reestr">Open source</a></li>
-                        <li><a href="/info/cvflow">@Localizer["Documentation"]</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto active" href="/home/contact">@Localizer["Contacts"]</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="/">@Localizer["Main"]</a></li>
+            <li class="dropdown">
+                <a href="/home/solution"><span>@Localizer["Solutions"]</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/home/solution">@Localizer["Software"]</a></li>
+                    <li><a href="/home/services">@Localizer["Services"]</a></li>
+                    <li><a href="/home/products">@Localizer["Products"]</a></li>
+                    <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                    <li><a href="/home/uav">БПЛА</a></li>
+                    <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="/industry"><span>@Localizer["Industries"]</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/industry/retail">Ретейл</a></li>
+                    <li><a href="/industry/logistics">Логистика</a></li>
+                    <li><a href="/industry/prom">Промышленность</a></li>
+                    <li><a href="/industry/development">Девелопмент</a></li>
+                    <li><a href="/industry/horeca">HoReCa </a></li>
+                    <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                    <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                    <li><a href="/industry/transport">Транспорт</a></li>
+                    <li><a href="/industry/media">Медиа, реклама</a></li>
+                    <li><a href="/home/smartcity">Умный город</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="/home/company"><span>@Localizer["Company"]</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/home/company">@Localizer["History"]</a></li>
+                    <li><a href="/home/team">@Localizer["Team"]</a></li>
+                    <li><a href="/home/mission">@Localizer["Mission"]</a></li>
+                    <li><a href="/home/press">@Localizer["Press"]</a></li>
+                    <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                    <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="/home/research"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/home/research">R&D</a></li>
+                    <li><a href="https://science.itmo.ru/" target="_blank">@Localizer["Science"]</a></li>
+                    <li><a href="/info/reestr">Open source</a></li>
+                    <li><a href="/info/cvflow">@Localizer["Documentation"]</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-link scrollto active"  href="/home/contact">@Localizer["Contacts"]</a></li>
+            <li class="dropdown">
+                <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                    <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                </ul>
+            </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
 
     </div>
 </header><!-- End Header -->

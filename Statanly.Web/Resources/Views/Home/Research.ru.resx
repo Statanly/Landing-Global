@@ -123,14 +123,32 @@
   <data name="Contacts" xml:space="preserve">
     <value>Контакты</value>
   </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Сотрудничество</value>
+  </data>
   <data name="Documentation" xml:space="preserve">
     <value>Документация</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="Industries" xml:space="preserve">
+    <value>Индустрии</value>
   </data>
   <data name="Main" xml:space="preserve">
     <value>Главная</value>
   </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Миссия</value>
+  </data>
+  <data name="Press" xml:space="preserve">
+    <value>Пресса</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Продукты</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Проекты</value>
   </data>
   <data name="R&amp;D" xml:space="preserve">
     <value>R&amp;D проекты и исследования</value>
@@ -162,6 +180,9 @@
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Решения</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Команда</value>
   </data>
   <data name="TPU" xml:space="preserve">
     <value>TPU - Тензорные процессоры</value>
