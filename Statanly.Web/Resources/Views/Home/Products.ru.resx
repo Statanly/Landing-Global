@@ -211,6 +211,9 @@
   <data name="DAText" xml:space="preserve">
     <value>Исследование данных, выявление скрытых закономерностей и аномалий в данных. Сегментация и кластеризация данных.</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Дипфейки</value>
+  </data>
   <data name="Defectrecognition" xml:space="preserve">
     <value>Система распознавания дефектов</value>
   </data>
@@ -391,6 +394,9 @@
   <data name="Projects" xml:space="preserve">
     <value>проектов в области машинного обучения и анализа данных</value>
   </data>
+  <data name="Projects1" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
   <data name="PublicSafety" xml:space="preserve">
     <value>Общественная безопасность</value>
   </data>
@@ -499,7 +505,7 @@
     <value>Выделение ключевых слов, тегов, тональностей текста, анализ смысла и интонаций текстов</value>
   </data>
   <data name="TPU" xml:space="preserve">
-    <value>TPU - Тензорные процессоры</value>
+    <value>Тензорные процессоры (TPU)</value>
   </data>
   <data name="TPUText" xml:space="preserve">
     <value>Адаптация алгоритмов искусственного интеллекта под тензорные процессоры</value>
@@ -518,6 +524,9 @@
   </data>
   <data name="TSText" xml:space="preserve">
     <value>Готовые решения на базе алгоритмов компьютерного зрения, которые необходимо дообучить на данных заказчика.</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>БПЛА</value>
   </data>
   <data name="WasteManagement" xml:space="preserve">
     <value>Контроль обращения с мусором</value>

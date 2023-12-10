@@ -135,11 +135,17 @@
   <data name="CTO" xml:space="preserve">
     <value>CTO</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Deepfakes</value>
+  </data>
   <data name="Documentation" xml:space="preserve">
     <value>Documentation</value>
   </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
+  </data>
+  <data name="Industries" xml:space="preserve">
+    <value>Industries</value>
   </data>
   <data name="KeyTeam" xml:space="preserve">
     <value>Management and key employees of the company</value>
@@ -158,6 +164,9 @@
   </data>
   <data name="Products" xml:space="preserve">
     <value>Products</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projects</value>
   </data>
   <data name="Research" xml:space="preserve">
     <value>Research</value>
@@ -185,6 +194,9 @@
   </data>
   <data name="TPU" xml:space="preserve">
     <value>TPU - Tensor Processors</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>UAV</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Write a message</value>

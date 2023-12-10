@@ -1,0 +1,105 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <ol>
+                    <li><a href="/home/solution">@Localizer["Projects"]</a></li>
+                    <li><a href="/home/services">@Localizer["Services"]</a></li>
+                    <li><a href="/home/products">@Localizer["Products"]</a></li>
+                    <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                    <li>@Localizer["UAV"]</li>
+                    <li><a href="/technology/deepfakes">@Localizer["Deepfakes"]</a></li>
+                    <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-7">
+                    <div class="portfolio-info">
+                        <h3>Система классификации объектов и выделения различных характеристик с БПЛА</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: Агро, БПЛА</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Обзор системы</h2>
+                        <p>
+                            Система представляет сервис, позволяющий по данным аэрофотосъемки анализировать наземные объекты и выявлять основные характеристики.
+                        </p>
+                        <p>
+                            Возможности системы:
+                        </p>
+                        <ul>
+                            <li>
+                                Классификация транспортных средств
+                            </li>
+                            <li>
+                                Классификаций прочих наземных объектов
+                            </li>
+                            <li>
+                                Выделение ключевых признаков для классификации домохозяйств
+                            </li>
+
+                            <li>
+                                Сопоставления снимков с БПЛА со спутниковыми снимками
+                            </li>
+                            <li>
+                                Формирование полетного задания в случае невозможности классификации по спутниковым снимкам
+                            </li>
+                            <li>
+                                Оптимизация полетного задания
+                            </li>
+                        </ul>
+                        <p>
+                            Основные отличия моделей, которые используются в системе связаны с квантизацией (технология, позволяющая снизить размер модели нейронной сети, не уменьшая ее эффективность)
+                            и адаптация на такие устройства, как <a target="_blank" href="https://developer.nvidia.com/embedded/jetson-nano">Jetson Nano</a> и даже <a target="_blank" href="https://www.raspberrypi.com/">Raspberry Pi</a>,
+                            что позволяет устанавливать систему <strong>непосредственно на БПЛА</strong>.
+                        </p>
+                    </div>
+                    <img style="max-width: 100%" src="~/assets/img/Technology/UAV/8.png" alt="">
+                </div>
+                <div class="col-lg-5">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="row gy-4">
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Technology/UAV/1.jpeg" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Technology/UAV/2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="row gy-4">
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Technology/UAV/3.jpeg" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Technology/UAV/6.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="row gy-4">
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Technology/UAV/7.jpeg" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="~/assets/img/Technology/UAV/4.jpeg" alt="">
+                            </div>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+</main>

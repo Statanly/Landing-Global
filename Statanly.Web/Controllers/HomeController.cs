@@ -83,10 +83,7 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult UAV()
-        {
-            return View();
-        }
+
         public FileResult Reference(int id = 1)
         {
             return File("~/Content/" + "Ref " + id + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);

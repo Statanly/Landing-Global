@@ -144,6 +144,9 @@
   <data name="DAText" xml:space="preserve">
     <value>Анализ и предобработка данных, поиск аномалий и скрытых закономерностей в данных. Разделение пользователей или посетителей сайта на сегменты по схожему поведению, предпочтениям или другим характеристикам на основе анализа исторических данных - важная стратегия грамотного распределения ресурсов на рекламные и маркетинговые компании. Визуальные модели такой сегментации позволяют выявлять различные закономерности и связи между группами, которые могут быть использованы для оптимизации каналов продвижения и выбора наиболее эффективных маркетинговых ходов для успешного позиционирования товара на рынке.</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Дипфейки</value>
+  </data>
   <data name="February" xml:space="preserve">
     <value>Февраль</value>
   </data>
@@ -195,6 +198,9 @@
   <data name="Projects" xml:space="preserve">
     <value>проектов</value>
   </data>
+  <data name="Projects1" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
   <data name="Research" xml:space="preserve">
     <value>Исследования</value>
   </data>
@@ -215,6 +221,12 @@
   </data>
   <data name="Tags" xml:space="preserve">
     <value>Теги</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>Тензорные процессоры (TPU)</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>БПЛА</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Написать</value>

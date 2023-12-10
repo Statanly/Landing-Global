@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <ol>
+                    <li><a href="/home/solution">@Localizer["Projects"]</a></li>
+                    <li><a href="/home/services">@Localizer["Services"]</a></li>
+                    <li><a href="/home/products">@Localizer["Products"]</a></li>
+                    <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                    <li><a href="/technology/uav">@Localizer["UAV"]</a></li>
+                    <li>@Localizer["Deepfakes"]</li>
+                    <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-7">
+                    <div class="portfolio-info">
+                        <h3>Система классификации видео на наличие использования технологии хромакей и дипфейков</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: Социальные сети</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Обзор системы</h2>
+                        <p>
+                            Система представляет сервис, позволяющий пользователю по переданному видео узнать, использовался ли в нем хромакей или технология дипфейк на конкретных интервалах.
+                        </p>
+                        <p>
+                            Функционал позволяет пользователю настраивать пороги уверенности и длительности классифицируемых интервалов.
+                        </p>
+                        <p>
+                            В ходе анализа проблемы было выявлено, что использование технологии хромакей приводит к неестественному освещению вокруг объектов в движении.
+                            В связи с этим было принято решение оценивать разностные кадры в течении видео
+                        </p>
+                        <p>
+                            В системе используются следующие модели компьютерного зрения:
+                        </p>
+                        <ul>
+                            <li>
+                                ResNet50
+                            </li>
+                            <li>
+                                EfficientNetB0
+
+                            </li>
+                            <li>
+                                ResNext101x64
+
+                            </li>
+                        </ul>
+                        <p>
+                            Основные трудности:
+                        </p>
+                        <ul>
+                            <li>
+                                Мало движений – разностные кадры пустые, нужен другой метод
+                            </li>
+                            <li>
+                                Много движений – в кадре движется не только объект, но и фон
+                            </li>
+                            <li>
+                                Светлые или темные кадры – разницу на краях не видно
+                            </li>
+                            <li>
+                                Рентген, который не перекрывается движущимися объектами
+                            </li>
+                            <li>
+                                На видео присутствует и хромакей и дипфейк – пока убирали дипфейк из разностного кадра, в дальнейшем планируем найти различие в артефактах
+                            </li>
+                        </ul>
+                        <p>
+                            Примеры:
+                        </p>
+                        <ul>
+                            <li>
+                                Мало движений <a target="_blank" href="https://www.youtube.com/watch?v=L0CjAwPnLsg">https://www.youtube.com/watch?v=L0CjAwPnLsg</a>
+                            </li>
+                            <li>
+                                Много движений  <a target="_blank" href="https://www.youtube.com/shorts/_JYUgCWaCwc">https://www.youtube.com/shorts/_JYUgCWaCwc</a>
+                            </li>
+                            <li>
+                                Светлое  <a target="_blank" href="https://www.youtube.com/shorts/6Lf8O306Dqw">https://www.youtube.com/shorts/6Lf8O306Dqw</a>
+                            </li>
+                            <li>
+                                Темное  <a target="_blank" href="https://www.youtube.com/watch?v=pAJzTAL7j70">https://www.youtube.com/watch?v=pAJzTAL7j70</a>
+                            </li>
+                            <li>
+                                Рентген <a target="_blank" href="https://www.youtube.com/watch?v=TQgtGzetPk8">https://www.youtube.com/watch?v=TQgtGzetPk8</a>                                 
+                            </li>
+                            <li>
+                                Хромакей и дипфейк  <a target="_blank" href="https://www.youtube.com/shorts/noaZCbzm7gM">https://www.youtube.com/shorts/noaZCbzm7gM</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="portfolio-details-slider swiper">
+                        <img style="width: 400px; height: auto" src="~/assets/img/Technology/Deepfakes/1.jpg" alt="">
+                        <img style="width: 400px; height: auto" src="~/assets/img/Technology/Deepfakes/3.jpg" alt="">
+                        <img style="width: 400px; height: auto" src="~/assets/img/Technology/Deepfakes/2.jpg" alt="">
+                        <img style="width: 400px; height: auto" src="~/assets/img/Technology/Deepfakes/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>        
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+</main>

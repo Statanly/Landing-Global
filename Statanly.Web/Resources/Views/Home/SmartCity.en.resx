@@ -189,6 +189,9 @@
   <data name="CVSystemsTitle" xml:space="preserve">
     <value>Key features</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Deepfakes</value>
+  </data>
   <data name="DeflamelText1" xml:space="preserve">
     <value>The service of automatic design creation, developed by our company, based on the content of the text, sentimentality and sentimentality, allows you to quickly obtain a high-quality design for books, articles, postcards. We are constantly improving the quality of the results that our algorithms generate and bringing the created design closer to the design created by professional designers.</value>
   </data>
@@ -216,6 +219,9 @@
   <data name="Products" xml:space="preserve">
     <value>Products</value>
   </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
   <data name="Research" xml:space="preserve">
     <value>Research</value>
   </data>
@@ -242,6 +248,12 @@
   </data>
   <data name="TextAnalysis4" xml:space="preserve">
     <value>Extract keywords from any text in a moment</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>Tensor Processors (TPU)</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>UAV</value>
   </data>
   <data name="WitsArtText1" xml:space="preserve">
     <value>Service based on the meringue of an AI search engine developed by our company for images, photos, illustrations and vector graphics based on the meaning, sentiment and keywords of texts, articles and notes. Allows you to instantly find relevant images for news articles, notes, social media posts and news aggregators. Now you do not need to highlight the key ideas of large texts in order to provide them with a beautiful and suitable image, it is enough to download the entire text and instantly get a huge selection of images that are different in meaning and content.</value>

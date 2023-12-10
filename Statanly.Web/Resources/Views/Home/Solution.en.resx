@@ -144,6 +144,9 @@
   <data name="DAText" xml:space="preserve">
     <value>Analysis and preprocessing of data, search for anomalies and hidden patterns in the data. Dividing users or site visitors into segments for similar behavior, preferences, or other characteristics based on historical data analysis is an important strategy for wisely allocating resources to advertising and marketing companies. Visual models of such segmentation allow us to identify various patterns and connections between groups, which can be used to optimize promotion channels and select the most effective marketing moves for successful product positioning in the market.</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Deepfakes</value>
+  </data>
   <data name="February" xml:space="preserve">
     <value>February</value>
   </data>
@@ -195,6 +198,9 @@
   <data name="Projects" xml:space="preserve">
     <value>projects</value>
   </data>
+  <data name="Projects1" xml:space="preserve">
+    <value>Projects</value>
+  </data>
   <data name="Research" xml:space="preserve">
     <value>Research</value>
   </data>
@@ -213,8 +219,17 @@
   <data name="Solutions" xml:space="preserve">
     <value>Solutions</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
   <data name="Tags" xml:space="preserve">
     <value>Tags</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>Tensor processors (TPU)</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>UAV</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Write a message</value>

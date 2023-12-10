@@ -214,6 +214,9 @@
   <data name="DAText" xml:space="preserve">
     <value>Исследование данных, выявление скрытых закономерностей и аномалий в данных. Сегментация и кластеризация данных.</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Дипфейки</value>
+  </data>
   <data name="Defectrecognition" xml:space="preserve">
     <value>Система распознавания дефектов</value>
   </data>
@@ -348,6 +351,12 @@
   </data>
   <data name="Main" xml:space="preserve">
     <value>Главная</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Медиа, реклама, маркетинг</value>
+  </data>
+  <data name="MediaText" xml:space="preserve">
+    <value>Оптимизация рекламных компаний, look-alike аудитория (LAL), прогнозирование просмотров, кликов, отзывов, лайков и других характеристик публикаций</value>
   </data>
   <data name="Medicine" xml:space="preserve">
     <value>Медицина и здравоохранение</value>
@@ -529,7 +538,7 @@
     <value>Выделение ключевых слов, тегов, тональностей текста, анализ смысла и интонаций текстов</value>
   </data>
   <data name="TPU" xml:space="preserve">
-    <value>TPU - Тензорные процессоры</value>
+    <value>Тензорные процессоры (TPU)</value>
   </data>
   <data name="TPUText" xml:space="preserve">
     <value>Адаптация алгоритмов искусственного интеллекта под тензорные процессоры</value>
@@ -541,13 +550,16 @@
     <value>Транспорт</value>
   </data>
   <data name="TransportText" xml:space="preserve">
-    <value>На базе искусственного интеллекта строятся системы предупреждения о боковом трафике, автопилоты, автономные транспортные средства.</value>
+    <value>Оптимизация дорожного трафика, работы светофоров, детекция нарушений правил дорожного движения (ПДД), распознавание характеристик транспортных средств (номер, типа, марка, цвет и т.д.)</value>
   </data>
   <data name="TS" xml:space="preserve">
     <value>Типовые решения на базе машинного обучения и компьютерного зрения</value>
   </data>
   <data name="TSText" xml:space="preserve">
     <value>Готовые решения на базе алгоритмов компьютерного зрения, которые необходимо дообучить на данных заказчика.</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>БПЛА</value>
   </data>
   <data name="WasteManagement" xml:space="preserve">
     <value>Контроль обращения с мусором</value>

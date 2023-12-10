@@ -135,11 +135,17 @@
   <data name="CTO" xml:space="preserve">
     <value>Технический директор</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Дипфейки</value>
+  </data>
   <data name="Documentation" xml:space="preserve">
     <value>Документация</value>
   </data>
   <data name="History" xml:space="preserve">
     <value>История</value>
+  </data>
+  <data name="Industries" xml:space="preserve">
+    <value>Индустрии</value>
   </data>
   <data name="KeyTeam" xml:space="preserve">
     <value>Руководство и ключевые сотрудники компании</value>
@@ -158,6 +164,9 @@
   </data>
   <data name="Products" xml:space="preserve">
     <value>Продукты</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Проекты</value>
   </data>
   <data name="Research" xml:space="preserve">
     <value>Исследования</value>
@@ -185,6 +194,9 @@
   </data>
   <data name="TPU" xml:space="preserve">
     <value>TPU - Тензорные процессоры</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>БПЛА</value>
   </data>
   <data name="Write" xml:space="preserve">
     <value>Написать</value>

@@ -214,6 +214,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="DAText" xml:space="preserve">
     <value>Explore data, identify hidden patterns and anomalies in the data. Segmentation and clustering of data.</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Deepfakes</value>
+  </data>
   <data name="Defectrecognition" xml:space="preserve">
     <value>Defect recognition system</value>
   </data>
@@ -348,6 +351,12 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   </data>
   <data name="Main" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Media, advertising, marketing</value>
+  </data>
+  <data name="MediaText" xml:space="preserve">
+    <value>Optimization of advertising campaigns, look-alike audience (LAL), forecasting views, clicks, reviews, likes and other characteristics of publications</value>
   </data>
   <data name="Medicine" xml:space="preserve">
     <value>Medicine and healthcare</value>
@@ -529,7 +538,7 @@ glasses, gloves, device), fire and smoke</value>
     <value>Highlighting keywords, tags, sentiments of text, analysis of the meaning and intonation of texts</value>
   </data>
   <data name="TPU" xml:space="preserve">
-    <value>TPU - Tensor Processors</value>
+    <value>Tensor Processors (TPU)</value>
   </data>
   <data name="TPUText" xml:space="preserve">
     <value>Adaptation of artificial intelligence algorithms to tensor processors</value>
@@ -541,13 +550,16 @@ glasses, gloves, device), fire and smoke</value>
     <value>Transport</value>
   </data>
   <data name="TransportText" xml:space="preserve">
-    <value>On the basis of artificial intelligence, side traffic warning systems, autopilots, and autonomous vehicles are being built.</value>
+    <value>Optimization of road traffic, operation of traffic lights, detection of violations of traffic rules (traffic rules), recognition of vehicle characteristics (number, type, brand, color, etc.)</value>
   </data>
   <data name="TS" xml:space="preserve">
     <value>Typical solutions based on machine learning and computer vision</value>
   </data>
   <data name="TSText" xml:space="preserve">
     <value>Ready-made solutions based on computer vision algorithms that need to be retrained using customer data.</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>UAV</value>
   </data>
   <data name="WasteManagement" xml:space="preserve">
     <value>Waste management</value>

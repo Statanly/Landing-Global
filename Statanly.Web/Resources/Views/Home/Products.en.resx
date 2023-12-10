@@ -211,6 +211,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="DAText" xml:space="preserve">
     <value>Explore data, identify hidden patterns and anomalies in the data. Segmentation and clustering of data.</value>
   </data>
+  <data name="Deepfakes" xml:space="preserve">
+    <value>Deepfakes</value>
+  </data>
   <data name="Defectrecognition" xml:space="preserve">
     <value>Defect recognition system</value>
   </data>
@@ -391,6 +394,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="Projects" xml:space="preserve">
     <value>projects in the field of machine learning and data analysis</value>
   </data>
+  <data name="Projects1" xml:space="preserve">
+    <value>Projects</value>
+  </data>
   <data name="PublicSafety" xml:space="preserve">
     <value>Public safety</value>
   </data>
@@ -499,7 +505,7 @@ glasses, gloves, device), fire and smoke</value>
     <value>Highlighting keywords, tags, sentiments of text, analysis of the meaning and intonation of texts</value>
   </data>
   <data name="TPU" xml:space="preserve">
-    <value>TPU - Tensor Processors</value>
+    <value>Tensor Processors (TPU)</value>
   </data>
   <data name="TPUText" xml:space="preserve">
     <value>Adaptation of artificial intelligence algorithms to tensor processors</value>
@@ -518,6 +524,9 @@ glasses, gloves, device), fire and smoke</value>
   </data>
   <data name="TSText" xml:space="preserve">
     <value>Ready-made solutions based on computer vision algorithms that need to be retrained using customer data.</value>
+  </data>
+  <data name="UAV" xml:space="preserve">
+    <value>UAV</value>
   </data>
   <data name="WasteManagement" xml:space="preserve">
     <value>Waste management</value>
