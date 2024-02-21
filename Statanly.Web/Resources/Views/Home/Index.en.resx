@@ -331,6 +331,18 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="IndustryText" xml:space="preserve">
     <value>Modern high-tech production requires special approaches to quality control of manufactured products, as well as optimization of technological processes. Machine vision has made a real technological breakthrough and significantly expanded the capabilities of flaw detection in industry, and brought it to a new level. Now technologies allow monitoring quality not only after the manufacture of a product or product, but also directly during the production process. Other possibilities of using computer vision, such as, for example, the analysis of the granulometric composition of raw materials can significantly optimize the production process.</value>
   </data>
+  <data name="Insurance" xml:space="preserve">
+    <value>Insurance</value>
+  </data>
+  <data name="InsuranceText" xml:space="preserve">
+    <value>The introduction of artificial intelligence (AI) technologies allows you to increase productivity, optimize and automate various processes
+                                         insurance companies, as well as improve the quality of customer service.
+                                         Systems based on machine learning algorithms, natural language processing and data analysis can significantly reduce risks, the likelihood of fraud,
+                                         give high-quality forecasts, automate and speed up the process of obtaining data for making various decisions
+                                         Thanks to such systems, the speed of processing applications increases, as well as the level of personalization of insurance products.
+                                         Artificial intelligence technologies are used, among other things, for better customer segmentation and identifying break-even customers
+                                         and as a tool to attract audiences interested in new technologies</value>
+  </data>
   <data name="IRS" xml:space="preserve">
     <value>Information retrieval system</value>
   </data>

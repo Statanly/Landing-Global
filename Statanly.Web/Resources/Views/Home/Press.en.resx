@@ -138,6 +138,9 @@
   <data name="Press" xml:space="preserve">
     <value>Press</value>
   </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
   <data name="Publications" xml:space="preserve">
     <value>Publications about the company</value>
   </data>

@@ -138,6 +138,9 @@
   <data name="Press" xml:space="preserve">
     <value>Пресса</value>
   </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
   <data name="Publications" xml:space="preserve">
     <value>Публикации о компании</value>
   </data>

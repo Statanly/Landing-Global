@@ -20,8 +20,8 @@
             <div class="col-lg-8">
                 <h3>Системы на базе анализа естественного языка</h3>
                 <p>
-                    Недавний подъём интереса к системам АI/ML был вызван появлением неожиданно успешных LLMs типа ChatGPT и GPT-4.  Хотя это только одна из многих областей AI/ML,
-                    именно в этой области произошли наиболее важные и наиболее обсуждаемые изменения. Наша компания имеет большой опыт и глубокую экспертизу в области систем на базе
+                    Недавний подъём интереса к системам АI/ML был вызван появлением неожиданно успешных LLMs типа ChatGPT и GPT-4, а также open source моделей, типа LLaMA, опубликованной в феврале 2023 года. 
+                    Хотя это только одна из многих областей AI/ML, именно в этой области произошли наиболее важные и наиболее обсуждаемые изменения. Наша компания имеет большой опыт и глубокую экспертизу в области систем на базе
                     обработки естественного языка. За последние годы были реализованы десятки проектов, среди которых можно выделить:
                 </p>
                 <p>
@@ -44,9 +44,10 @@
                         Позволяет “интеллектуально” собирать различную информацию из интернета, агрегировать ее в заданный формат (csv, json и другие), находить различный контент по определенным параметрам.
                     </li>
                     <li>
-                        <strong>Структурированное извлечение данных из документов</strong>
+                        <strong>Структурированное извлечение данных из документов (Named Entity Recognition)</strong>
                         </br>
-                        Извлечение информации из различных источников, например, контактных данных, геолокаций, определенных слов и характеристик, любой специфической информации.
+                        Технология NER (Named Entity Recognition) — «распознавание именованных сущностей» позволяет извлекать информацию из различных источников, например, контактные данные, геолокацию, определенные слова и характеристики объектов, любую специфическую информацию.
+                        За одной задачей NER, на самом деле, стоит две: 1) обнаружить, что какая-то последовательность слов — это именованная сущность; 2) понять, к какому классу (имя человека, название организации, локация, время и т.п.) эта именованная сущность относится.
                     </li>
                     <li>
                         <strong>
@@ -205,43 +206,73 @@
                 </ul>
             </div>
         </div>
-      
-        <div class="row gy-4">
+        <div>
             <p>
                 <strong> Примеры проектов</strong>
             </p>
-            <div class="col-lg-4">
-                <div class="portfolio-info">
-                    <h3>Прогнозная система характиристик публикаций</h3>
-                    <ul>
-                        <li><strong>Категория</strong>: NLP</li>
-                        <li><strong>Клиент</strong>: Life.ru</li>
-                        <li><strong>Дата</strong>: 2021</li>
-                        <li><strong>Детали</strong>: <a href="/home/case/2">Подробнее</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="portfolio-info">
-                    <h3>Классификация веб сайтов по категориям</h3>
-                    <ul>
-                        <li><strong>Категория</strong>: NLP</li>
-                        <li><strong>Клиент</strong>: Segmento</li>
-                        <li><strong>Дата</strong>: 2022</li>
-                        <li><strong>Детали</strong>: <a href="/home/case/5">Подробнее</a></li>
-                    </ul>
-                </div>
-            </div>
+            <div class="row gy-4">
 
-            <div class="col-lg-4">
-                <div class="portfolio-info">
-                    <h3>Генерация доменных имен по описанию</h3>
-                    <ul>
-                        <li><strong>Категория</strong>: NLP</li>
-                        <li><strong>Клиент</strong>: It.com</li>
-                        <li><strong>Дата</strong>: 2021</li>
-                        <li><strong>Детали</strong>: <a href="/home/case/9">Подробнее</a></li>
-                    </ul>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Прогнозная система характиристик публикаций</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: Life.ru</li>
+                            <li><strong>Дата</strong>: 2021</li>
+                            <li><strong>Детали</strong>: <a href="/home/case/2">Подробнее</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Классификация веб сайтов по категориям</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: Segmento</li>
+                            <li><strong>Дата</strong>: 2022</li>
+                            <li><strong>Детали</strong>: <a href="/home/case/5">Подробнее</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Генерация доменных имен по описанию</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: It.com</li>
+                            <li><strong>Дата</strong>: 2021</li>
+                            <li><strong>Детали</strong>: <a href="/home/case/9">Подробнее</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Поисковая информационная система (локальная LLM)</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: Devprom</li>
+                            <li><strong>Дата</strong>: 2023</li>
+                            <li><strong>Детали</strong>: <a href="/home/case/2#3">Подробнее</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Специализированные системы поиска и вопросов и ответов</h3>
+                        <ul>
+                            <li><strong>Категория</strong>: NLP</li>
+                            <li><strong>Клиент</strong>: ТВЦ</li>
+                            <li><strong>Дата</strong>: 2019</li>
+                            <li><strong>Детали</strong>: <a href="/home/case/2#2">Подробнее</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                 
+                    </div>
                 </div>
             </div>
         </div>

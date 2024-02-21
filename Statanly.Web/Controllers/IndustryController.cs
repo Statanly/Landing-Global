@@ -24,6 +24,10 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Insurance()
+        {
+            return View();
+        }
         public IActionResult Logistics()
         {
             return View();

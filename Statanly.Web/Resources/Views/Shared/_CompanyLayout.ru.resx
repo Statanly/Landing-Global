@@ -165,6 +165,9 @@
   <data name="Products" xml:space="preserve">
     <value>Продукты</value>
   </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
   <data name="Research" xml:space="preserve">
     <value>Исследования</value>
   </data>

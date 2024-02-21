@@ -145,7 +145,7 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Product(int id = 1)
         {
-            if (id < 1 || id > 10)
+            if (id < 1 || id > 12)
             {
                 id = 1;
             }
