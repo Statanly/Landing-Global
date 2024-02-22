@@ -52,5 +52,9 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Food()
+        {
+            return View();
+        }
     }
 }
