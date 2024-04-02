@@ -121,10 +121,10 @@
     <value>About</value>
   </data>
   <data name="AboutLongText" xml:space="preserve">
-    <value>The company is based on the international laboratory of machine learning at ITMO University and develops in the field of machine learning algorithms, computer vision and data analysis for solving various business problems. In recent years, many projects have been implemented for the largest enterprises in Russia, including Yandex, Mail.ru Group, Norilsk Nickel, Megafon, NMLK, Evraz, Sinara-Transport Machines, Gazprom Neft. This allowed us to accumulate sufficient experience and become a leading company in the implementation of machine learning algorithms, computer vision and data analysis.</value>
+    <value>The company is based on the international machine learning laboratory of ITMO University and is developing in the field of implementing machine learning technologies, computer vision, natural language processing and data analysis to solve various business problems. In recent years, many projects have been implemented for the largest Russian and foreign companies, including Norilsk Nickel, Megafon, Evraz, Sinara-Transport Machines, Gazprom Neft. This allowed us to accumulate vast experience and expertise, create a product line and become a leading company in the field of artificial intelligence technology implementation.</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>Development of systems based on artificial intelligence, machine learning, computer analysis and data analysis</value>
+    <value>Solutions based on artificial intelligence, machine learning, computer analysis, natural language processing and data analysis technologies</value>
   </data>
   <data name="Address" xml:space="preserve">
     <value>Address</value>
@@ -203,7 +203,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Computer vision, video analytics</value>
   </data>
   <data name="CVVAText" xml:space="preserve">
-    <value>Solutions and systems based on machine vision, video analytics, image recognition, photo and video streams</value>
+    <value>Systems based on computer vision technologies, video analytics, recognition, classification, detection and segmentation of objects and images</value>
   </data>
   <data name="DA" xml:space="preserve">
     <value>Data Analysis</value>
@@ -401,13 +401,19 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Natural language processing</value>
   </data>
   <data name="NLPText" xml:space="preserve">
-    <value>Solutions and systems based on natural language synthesis and recognition, automation of call centers</value>
+    <value>Systems based on natural language processing technologies, large language models, local ChatGPT, structured information extraction</value>
   </data>
   <data name="NumberSystem" xml:space="preserve">
     <value>System for determining the number of objects</value>
   </data>
   <data name="NumberSystemText" xml:space="preserve">
     <value>Counting transport and passenger traffic</value>
+  </data>
+  <data name="Ofprojects" xml:space="preserve">
+    <value>projects</value>
+  </data>
+  <data name="OtherTask" xml:space="preserve">
+    <value>Other tasks</value>
   </data>
   <data name="Ourprojects" xml:space="preserve">
     <value>Our projects</value>
@@ -508,7 +514,7 @@ glasses, gloves, device), fire and smoke</value>
     <value>Solutions</value>
   </data>
   <data name="SomeTasks" xml:space="preserve">
-    <value>Some of the challenges that companies face:</value>
+    <value>The main directions of development:</value>
   </data>
   <data name="SP" xml:space="preserve">
     <value>Suggest a project</value>
@@ -532,13 +538,16 @@ glasses, gloves, device), fire and smoke</value>
     <value>Natural language processing</value>
   </data>
   <data name="T5" xml:space="preserve">
-    <value>Data segmentation</value>
+    <value>Data segmentation and clustering</value>
   </data>
   <data name="T6" xml:space="preserve">
     <value>Find hidden patterns in your data</value>
   </data>
   <data name="T7" xml:space="preserve">
     <value>Information retrieval systems</value>
+  </data>
+  <data name="T8" xml:space="preserve">
+    <value>Large language models (LLM)</value>
   </data>
   <data name="Team" xml:space="preserve">
     <value>Team</value>
@@ -554,6 +563,9 @@ glasses, gloves, device), fire and smoke</value>
   </data>
   <data name="TPUText" xml:space="preserve">
     <value>Adaptation of artificial intelligence algorithms to tensor processors</value>
+  </data>
+  <data name="TPUTitle" xml:space="preserve">
+    <value>Tensor processors (TPUs) and single-board</value>
   </data>
   <data name="TrafficManagement" xml:space="preserve">
     <value>Traffic management</value>
