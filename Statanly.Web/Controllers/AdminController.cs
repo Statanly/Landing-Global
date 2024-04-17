@@ -93,7 +93,7 @@ namespace Statanly.Web.Controllers
 
 
             new SitemapDocument().CreateSitemapXML(list, _env.WebRootPath);
-            return "sitemap.xml file should be create in root directory";
+            return "ok";
         }
         public AdminController(IClickRepository clickRepository, ILogger<HomeController> logger, IWebHostEnvironment env)
         {
