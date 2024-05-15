@@ -88,6 +88,10 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/" + "Ref " + id + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult Presentation(int id = 1)
+        {
+            return File("~/Content/" + "Presentation " + id + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
         public FileResult Download(string lang = "RU")
         {
             return File("~/Content/" + lang + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
@@ -145,7 +149,7 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Product(int id = 1)
         {
-            if (id < 1 || id > 12)
+            if (id < 1 || id > 13)
             {
                 id = 1;
             }
