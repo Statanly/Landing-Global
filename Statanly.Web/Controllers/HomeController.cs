@@ -154,6 +154,10 @@ namespace Statanly.Web.Controllers
                 id = 1;
             }
             return View("Product" + id);
+        }        
+        public IActionResult Singleboard()
+        {
+            return View();
         }
         public IActionResult Tpu()
         {

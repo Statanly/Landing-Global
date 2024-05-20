@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <ol>
+                <li><a href="/#services">Главная</a></li>
+                <li><a href="/home/service/6">TPU вычисления</a></li>
+                <li><a href="/home/tpu">Инструкция</a></li>
+                <li>Одноплатники</li>
+
+            </ol>
+        </div>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-12">
+                <div class="portfolio-description">
+                    <h2>Oдноплатные компьютеры</h2>
+                    <p>
+                        Одноплатники - полностью самодостаточные вычислительные устройства, собранные на одной печатной плате, на которую установлены процессор, оперативная память,
+                        графический ускоритель, системы ввода-вывода и другие модули, необходимые для функционирования компьютера.
+                    </p>
+                    <p>
+                        В последние годы, такие устройства получили особенную популярность из-за возможности создавать на их базе различные автономные системы,
+                        позволяющие в реальном времени решать множество задач компьютерного зрения, такие как распознавание номерных знаков, лиц, системы промышленной безопасности.
+                        Такие устройства позволяют анализировать видеопотоки с IP-камер прямо на месте установки и передавать только необходимую информацию по сети.
+                    </p>
+                    <p>
+                        На сегодняшний день существует целая линейка таких устройств, начиная с <strong>RaspberryPi</strong>, <strong>OrangePi</strong>, <strong>Jetson Nano</strong>
+                        давно зарекомендовавшими себя, так и новинками, среди которых <strong>Banana Pi</strong>, <strong>Firefly</strong>, <strong>Sipeed Longan</strong>, <strong>Youyetoo R1</strong>, 
+                        <strong>NanoPi</strong> и многие другие.
+                        Безусловно, модели, изначально разработанные для работы на серверном оборудовании с полноценными графическими ускорителями вряд ли будут полноценно работать
+                        на одноплатниках. Одним из способов адаптации моделей на такие устройства является <strong>квантизация</strong> - метод оптимизации, при котором данные модели — как параметры сети,
+                        так и активации — преобразуются из представления с плавающей запятой в представление с более низкой точностью, например, с использованием 8-битных целых чисел. Это позволяет максимально облегчить модели при совсем незначительной потере их качества.
+                    </p>
+                    <p>
+                        Наша команда имеет большое количество различных моделей, которые оптимизированы для одноплатников и опыт таких адаптацию под любую задачу машинного обучения и
+                        компьютерного зрения.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 entries">
+                <article class="entry">
+                    <div class="entry-img">
+                        <img src="/assets/img/Singleboard/orange.png" alt="" class="img-fluid">
+                    </div>
+                    <h2 class="entry-title">
+                        <a href="http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html" target="_blank">
+                            Orange Pi 5
+                        </a>
+                    </h2>
+                    <blockquote style="text-align:left;">
+                        💡 (4GB/8GB/16GB/32GB), <strong>6 ГФЛОПС</strong>
+                    </blockquote>
+                    <div class="entry-content">
+                        <p>
+                            Rockchip RK3588S процессор с 4x Cortex-A76 ядра вплоть до 2.4 GHz, 4x Cortex-A55 ядра вплоть до 1.8 GHz, Arm Mali-G610 MP4 GPU, 6 TOPS AI ускоритель
+                        </p>
+
+                    </div>
+
+                </article>
+            </div>
+            <div class="col-lg-4 entries">
+                <article class="entry">
+
+                    <div class="entry-img">
+                        <img src="/assets/img/Singleboard/raspberry.jpg" alt="" class="img-fluid">
+                    </div>
+
+                    <h2 class="entry-title">
+                        <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank">
+                            Raspberry Pi 5
+                        </a>
+                    </h2>
+                    <blockquote style="text-align:left;">
+                        💡 (2GB/4GB/8GB/16GB/32GB), <strong>10 ГФЛОПС</strong>
+                    </blockquote>
+                    <div class="entry-content">
+                        <p>
+                            ARM-процессор Cortex-A76 с частотой 2,4 ГГц, GPU VideoCore VII/ARM Mali-G610 MP4, работающий на частоте 800 МГц
+                        </p>
+
+                    </div>
+
+                </article>
+            </div>
+            <div class="col-lg-4 entries">
+                <article class="entry">
+
+                    <div class="entry-img">
+                        <img src="/assets/img/Singleboard/Jetson.jpg" alt="" class="img-fluid">
+                    </div>
+
+                    <h2 class="entry-title">
+                        <a href="https://www.nvidia.com/ru-ru/autonomous-machines/embedded-systems/jetson-nano/product-development/" target="_blank">
+                            Jetson Nano
+                        </a>
+                    </h2>
+                    <blockquote style="text-align:left;">
+                        💡  (4GB), <strong>472 ГФЛОПС</strong>
+                    </blockquote>
+                    <div class="entry-content">
+                        <p>
+                            ARM® Cortex®-A57 MPCore, графический процессор со 128-ядерной архитектурой NVIDIA Maxwell, 4 ГБ LPDDR4, 64-бит
+                        </p>
+
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

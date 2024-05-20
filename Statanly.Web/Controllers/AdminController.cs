@@ -76,6 +76,8 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/product/11", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/product/12", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/product/13", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/singleboard", Frequency = SitemapFrequency.Weekly });
+
 
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/insurance", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/food", Frequency = SitemapFrequency.Weekly });
