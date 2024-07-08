@@ -38,7 +38,7 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Weight()
         {
-            return Redirect("https://drive.google.com/drive/folders/1YPBDpGG3spgh7J8HKUtmDJi7KX7BwNmJ?usp=sharing");
+            return Redirect("https://disk.yandex.ru/d/n4ZydwYeeJwiHA");
         }
         public FileResult Ustav()
         {
