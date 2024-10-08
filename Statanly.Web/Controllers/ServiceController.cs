@@ -1,0 +1,52 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Statanly.Web.Controllers
+{
+    public class ServiceController : Controller
+    {
+        public IActionResult Restaurants()
+        {
+            return View();
+        }
+        public IActionResult Banks()
+        {
+            return View();
+        }
+        public IActionResult Pvz()
+        {
+            return View();
+        }
+        public IActionResult Warehouses()
+        {
+            return View();
+        }
+        public IActionResult Parking()
+        {
+            return View();
+        }
+        public IActionResult Business()
+        {
+            return View();
+        }
+        public IActionResult Shops()
+        {
+            return View();
+        }
+        public IActionResult Beauty()
+        {
+            return View();
+        }
+        public IActionResult Industry()
+        {
+            return View();
+        }
+        public IActionResult Hospitals()
+        {
+            return View();
+        }
+    }
+}

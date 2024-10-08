@@ -1,0 +1,162 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+
+                <li><a href="/home/services">Все сервисы</a></li>
+                <li><a href="/service/restaurants">Рестораны</a></li>
+                <li><a href="/service/banks">Банки</a></li>
+                <li><a href="/service/pvz">ПВЗ</a></li>
+                <li>Склады</li>
+                <li><a href="/service/Parking ">Парковки</a></li>
+                <li><a href="/service/Business ">Бизнес-центры</a></li>
+                <li><a href="/service/shops">Магазины</a></li>
+                <li><a href="/service/beauty ">Салоны красоты</a></li>
+                <li><a href="/service/industry">Производство</a></li>
+                <li><a href="/service/hospitals">Медицинские учреждения</a></li>
+            </ol>
+            <h2>Склады</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Видеоаналитика для складов</h3>
+                    <p>Умное видеонаблюдение для складов, перевалочных пунктов</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Типовые задачи</h2>
+                @*<p></p>*@
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-1-circle"></i>
+                        <h4><a href="#">Контроль работы сотрудников</a></h4>
+                        <p>Анализ эффективности работы сотрудников, наличие специалистов в зале обслуживания</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-2-circle"></i>
+                        <h4><a href="#">Подсчет людей</a></h4>
+                        <p>Подсчет людей в заданнах зонах и помещениях</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-3-circle"></i>
+                        <h4><a href="#">Распознавание лиц</a></h4>
+                        <p>Выявление посторонних и подозрительных лиц, поиск по лицам</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-4-circle"></i>
+                        <h4><a href="#">Анализ нарушений</a></h4>
+                        <p>Предотвращение порчи имущества и воровства и краж</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-5-circle"></i>
+                        <h4><a href="#">Анализ эмоций</a></h4>
+                        <p>Анализ поведения, эмоций и реакций на различные действия</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-6-circle"></i>
+                        <h4><a href="#">Уникальные события</a></h4>
+                        <p>Система позволяет добавлять и дообучаться на любые уникальные события</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Системы на базе больших языковых моделей для банков и страховых компаний</h3>
+                    <p>Системы информационного поиска, анализа текстов и структурированного извлечения информации, локальные модели типа <strong>ChatGPT</strong></p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-search"></i>
+                        <h4><a href="#">Системы информационного поиска</a></h4>
+                        <p>Умный поиск в локальных информационнах базах данных компаний позволяет мгновенно находить всю необходимую информацию</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <h4><a href="#">Интеллектуальный анализ текста</a></h4>
+                        <p>Извлечение из текстов структурированной информации, ключевых слов, тегов и других объектов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <section id="smart" class="smart">
+        <div class="container">
+            <div class="section-title">
+                <h2>Варианты поставки ПО</h2>
+                <p>
+
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-5 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href=""><img src="/assets/img/Services/Cloud.jpg" alt=""></a>
+                        <h4> <a tabindex="-1" href="">Облачное решение</a></h4>
+                        <p>Развертывание системы видеоаналитики в нашем облаке, удаленный доступ к системе</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+
+                </div>
+                <div class="col-lg-5 col-md-5 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.jpg" alt=""></a>
+                        <h4><a tabindex="-1" href="">On-Premise</a></h4>
+                        <p>Развертывание ПО на внутренних ресурсах компании</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
