@@ -94,6 +94,18 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/technology/deepfakes", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/technology/uav", Frequency = SitemapFrequency.Weekly });
 
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/restaurants", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/banks", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/pvz", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/warehouses", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/parking", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/business", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/shops", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/beauty", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/industry", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/hospitals", Frequency = SitemapFrequency.Weekly });
+
+
 
             new SitemapDocument().CreateSitemapXML(list, _env.WebRootPath);
             return "ok";

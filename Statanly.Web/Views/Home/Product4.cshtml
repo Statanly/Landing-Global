@@ -9,7 +9,7 @@
 
             <ol>
                 <li><a href="/#products">Главная</a></li>
-                <li>Распознавание лиц</li>
+                <li>Распознавание текста</li>
             </ol>
             <h2>Описание системы</h2>
 
@@ -21,82 +21,171 @@
             <div class="row gy-4">
                 <div class="col-lg-6">
                     <div class="portfolio-info">
-                        <h3>Система распознавания лиц</h3>
+                        <h3>Система распознавание текста</h3>
                         <ul>
-                            <li><strong>Категория</strong>: Производство</li>
-                            <li><strong>Цена лицензии</strong>: 300000 рублей без ограничений по количеству камер</li>
+                            <li><strong>Категория</strong>: Промышленность, агро, машиностроение</li>
+                            <li><strong>Цена лицензии</strong>: 300000 рублей</li>
                             <li><strong>Доработки под задачу</strong>: По запросу</li>
+                            <li><strong><a href="/home/case/3">Примеры внедрения</a></strong></li>
 
                         </ul>
                     </div>
                     <div class="portfolio-description">
                         <h2>Обзор системы</h2>
+                        <p>
+                            Система распознавание текста, построенная на базе алгоритмов компьютерного зрения позволяет автоматически распознавать произвольные тексты, надписи, QR-коды, номера, символы
+                        <p>
+                            Чтобы обеспечить максимальную стабильность алгоритмов в неблагоприятных погодных условиях, были реализованы методы увеличения изображения и методы проективной геометрии. 
+                            Дополнение - это процесс обогащения набора данных путем создания их “искаженных” версий.
 
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <img src="~/assets/img/portfolio/Case1/17.jpg" class="img-fluid" alt="">
-                                <p style="text-align:center"><em>Original image</em></p>
-                                <img src="~/assets/img/portfolio/Case1/18.jpg" class="img-fluid" alt="">
-                                <p style="text-align:center"><em>Original image</em></p>
-                                <img src="~/assets/img/portfolio/Case1/19.jpg" class="img-fluid" alt="">
-                                <p style="text-align:center"><em>Computed contours</em></p>
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0">
-                                <p>
-                                    <strong>Описание системы</strong>
-                                </p>
-                                <p>
-                                    Система использует видеопоток, видеофайл или набор фотографий в качестве входных параметров и генерирует результаты, определяя различные характеристики процесса:
-                                </p>
-                                <ul>
-                                    <li><i class="bx bx-check-double"></i>Контроль фактического сжатия и разжима тормозных колодок</li>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Измерение расстояния
-                                    </li>
-                                </ul>
-                                <p>
-                                    и предупреждение об отклонении от заданного значения. Кроме того, предоставляются рекомендации по оптимальному качеству видео и количеству кадров в секунду (fps).
-                                </p>
-                                <p>
-                                    <strong>Сегментационная карта:</strong>
-                                </p>
-                                <ul>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Для расчета расстояния
-                                    </li>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Для отслеживания и оценки цвета
-                                    </li>
-                                </ul>
-                                <p>
-                                    <strong>Steps:</strong>
-                                </p>
-                                <ul>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Захват объекта
-                                    </li>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Извлечение контура
-
-                                    </li>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Вычисление расстояний между объектами в пикселях на основе их площади, цвета, координат центра и конкретных гиперпараметров
-
-                                    </li>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Перевод расстояний в пикселях в метрическую систему
-                                    </li>
-                                    <li>
-                                        <i class="bx bx-check-double"></i>Отслеживание объектов
-                                    </li>
-                                </ul>
-                                <p>
-                                    Точность системы приблизительно <strong>1 мм</strong>.
-                                </p>
-                            </div>
-                        </div>
+                        </p>
+                        <p>
+                            На вход система принимает видео поток с IP-камер, набор фотографий и возвращает результат в виде текста. Система обладает модулем разметки и дообучения, что
+                            позволяет улучшать точность без специализированных знаний и адаптировать на любые условия эксплуатации.
+                        </p>
+                        <p>
+                            Система достигает точности <strong>99%</strong>.
+                        </p>
                     </div>
-                </div>  
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img src="~/assets/img/portfolio/Case3/14.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/16.jpg" class="img-fluid" alt="">
+                        <p style="text-align:center"><em>Распознавание текста</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Система состоит из следующих компонентов:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                IP-камеры
+                            </li>
+                            <li>
+                                Вычислительный сервер/компьютер для анализа и вывода результатов
+
+                            </li>
+                            <li>
+                                Программное обеспечение «Система распознавание текста»
+                            </li>
+                            <li>
+                                (опционально) освещение, специализированная поверхность
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider swiper">
+                        <img style="width: 400px; height: auto" src="~/assets/img/portfolio/Case3/11.jpg" alt="">
+                        <img style="width: 400px; height: auto" src="~/assets/img/portfolio/Case3/12.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-12">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>
+                                Возможности системы
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                Распознавание языков арабского, китайского, корейского, японского, латинского и русского языков
+                            </li>
+                            <li>
+                                Распознавания номерных знаков
+                            </li>
+                            <li>
+                                Распознавание номера вагона поезда, вагонетки, и т.д.
+                            </li>
+                            <li>
+                                Распознавания QR-кода и штрих-кодов
+                            </li>
+                            <li>
+                                Распознавания текста в произвольной форме
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <strong>
+                            Процесс внедрения
+                        </strong>
+                        <p>
+                            Процесс внедрения состоит из следующих шагов:
+                        </p>
+                        <ul>
+                            <li>
+                                Установка камер и серверного оборудования
+
+                            </li>
+                            <li>
+                                Настройка системы под типовые детали на предприятии
+                            </li>
+                            <li>
+                                Эксплуатация
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+        
+                </div>
+            </div>
+
+            <div class="row">
+                <p>
+                    <strong>
+                        Примеры использования
+                    </strong>
+                </p>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/14.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/15.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/16.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/17.jpg" class="img-fluid" alt="">  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/18.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/19.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/9.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="~/assets/img/portfolio/Case3/6.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/7.jpg" class="img-fluid" alt="">
+
+                    </div>
+                </div>
             </div>
         </div>
     </section><!-- End Portfolio Details Section -->
