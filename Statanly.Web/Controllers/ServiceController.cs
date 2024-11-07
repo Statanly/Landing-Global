@@ -48,5 +48,9 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Agro()
+        {
+            return View();
+        }
     }
 }
