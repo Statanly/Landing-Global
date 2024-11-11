@@ -12,9 +12,18 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult Agro()
+ 
+        public IActionResult Agro(int? id)
         {
             return View();
+            if (id == 2)
+            {
+                return View("Agro2");
+            }
+            else
+            {
+                return View();
+            }
         }
         public IActionResult Development()
         {

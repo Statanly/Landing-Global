@@ -271,6 +271,45 @@
     });
 
 
+    new Swiper('.industry-slider', {
+        speed: 400,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        //mousewheel: true,
+        keyboard: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 40
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 60
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 60
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 60
+            }
+        }
+    });
+
   /**
    * Porfolio isotope and filter
    */

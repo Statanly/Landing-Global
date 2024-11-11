@@ -32,10 +32,6 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult Shops()
-        {
-            return View();
-        }
         public IActionResult Beauty()
         {
             return View();
@@ -48,9 +44,17 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult Agro()
+        public IActionResult Shops(int? id)
         {
-            return View();
+
+            if (id == 1)
+            {
+                return View("Shops1");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
