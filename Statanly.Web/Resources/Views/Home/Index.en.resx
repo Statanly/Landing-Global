@@ -504,6 +504,9 @@ glasses, gloves, device), fire and smoke</value>
   <data name="Services" xml:space="preserve">
     <value>Services</value>
   </data>
+  <data name="Services1" xml:space="preserve">
+    <value>Our services</value>
+  </data>
   <data name="ServicesTitle" xml:space="preserve">
     <value>A wide range of services for data analysis, development of intelligent systems based on machine learning and computer vision</value>
   </data>

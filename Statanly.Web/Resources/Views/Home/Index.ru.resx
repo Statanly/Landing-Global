@@ -504,6 +504,9 @@
   <data name="Services" xml:space="preserve">
     <value>Сервисы</value>
   </data>
+  <data name="Services1" xml:space="preserve">
+    <value>Наши услуги</value>
+  </data>
   <data name="ServicesTitle" xml:space="preserve">
     <value>Широкий спектр услуг по анализу данных, разработке интеллектуальных систем на базе машинного обучения и компьютерного зрения</value>
   </data>
