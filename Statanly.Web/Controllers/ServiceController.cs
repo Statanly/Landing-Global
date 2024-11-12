@@ -56,5 +56,17 @@ namespace Statanly.Web.Controllers
                 return View();
             }
         }
+        public IActionResult Housing(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Housing1");
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }
