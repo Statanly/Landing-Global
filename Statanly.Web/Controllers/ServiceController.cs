@@ -63,9 +63,17 @@ namespace Statanly.Web.Controllers
             {
                 return View("Housing1");
             }
+            if (id == 3)
+            {
+                return View("Housing3");
+            }
             if (id == 4)
             {
                 return View("Housing4");
+            }
+            if (id == 5)
+            {
+                return View("Housing5");
             }
             else
             {
