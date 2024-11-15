@@ -51,6 +51,10 @@ namespace Statanly.Web.Controllers
             {
                 return View("Shops1");
             }
+            if (id == 2)
+            {
+                return View("Shops2");
+            }
             else
             {
                 return View();
