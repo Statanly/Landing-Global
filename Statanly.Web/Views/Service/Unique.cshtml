@@ -1,0 +1,155 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/home/services">Все сервисы</a></li>
+                <li><a href="/service/restaurants">Рестораны</a></li>
+                <li><a href="/service/shops">Магазины</a></li>
+                <li><a href="/service/housing">ЖКХ</a></li>
+                <li><a href="/service/parking ">Парковки</a></li>
+                <li><a href="/service/banks">Банки</a></li>
+                <li><a href="/service/pvz">ПВЗ</a></li>
+                <li><a href="/service/warehouses">Склады</a></li>
+                <li><a href="/service/Business ">Бизнес-центры</a></li>
+                <li><a href="/service/beauty ">Салоны красоты</a></li>
+                <li><a href="/service/industry">Производство</a></li>
+                <li><a href="/service/hospitals">Медицинские учреждения</a></li>
+            </ol>
+            <h2>Уникальные события</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Поддержка уникальных событий</h3>
+                    <p>Система имеет возможность добавление любых дополнительных событий, которые нужно детектировать</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Services/Shops/2/1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="portfolio-description">
+                        <h2>Модуль дообучения системы и добавления событий</h2>
+                        <p>
+                            Система компьютерного зрения имеет модуль дообучения системы и добавление новых событий на которых ранее обучение не происходило.
+                        </p>
+                        <p>
+                            Для этого предусмотрен специальный инструмент разметки данных, где пользователь системы без специальных данных может произвести донастройку системы и добавить любые события, которые должна распознавать система.
+                        </p>
+                        <p>
+                            Это дает системе практически неограниченные возможности для настройки и использования для самых специфических кейсов.
+                        </p>
+                        <p>
+                            Для добавления нового события необходимо:
+                        </p>
+                        <ol>
+                            <li>Загрузить видео добавляемых событий</li>
+                            <li>Произвести разметку этих видео, используя интерфейс системы</li>
+                            <li>Дообучить систему на детекцию новых событий</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+        <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Особенности системы</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-1-circle"></i>
+                        <h4>Мгновенные нотификации</h4>
+                        <p>Нотификации через SMS, Email или любой другой удобный способ</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-2-circle"></i>
+                        <h4>Гибкая настройка алгоритмов</h4>
+                        <p>
+                            Возможность дообучения системы, добавления новых объектов и событий без привлечения разработчиков
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-3-circle"></i>
+                        <h4>Снижение расходов на эксплуатацию</h4>
+                        <p>
+                            Нет необходимости в контроле системы со стороны диспетчера
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-4-circle"></i>
+                        <h4>Круглосуточная техническая поддержка</h4>
+                        <p>
+                            Проблемы наших клиентов - наши проблемы! Обеспечим полный стек техподдержки
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <section id="smart" class="smart">
+        <div class="container">
+            <div class="section-title">
+                <h2>Варианты поставки ПО</h2>
+                <p>
+
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                    <div class="member" style="margin: 0 auto;">
+                        <a tabindex="-1" href=""><img src="/assets/img/Services/cloud.png" alt=""></a>
+                        <h4> <a tabindex="-1" href="">Cloud</a></h4>
+                        <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                    <div class="member" style="margin: 0 auto;">
+                        <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.png" alt=""></a>
+                        <h4> <a tabindex="-1" href="">On-Premise</a></h4>
+                        <p>Развертывание ПО на внутренних ресурсах компании</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
