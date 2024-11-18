@@ -174,18 +174,53 @@ namespace Statanly.Web.Controllers
                 return View();
             }
         }
-        public IActionResult Industry()
+        public IActionResult Industry(int? id)
         {
-            return View();
+
+            if (id == 1)
+            {
+                return View("Industry1");
+            }
+            if (id == 2)
+            {
+                return View("Industry2");
+            }
+            if (id == 4)
+            {
+                return View("Industry4");
+            }
+            if (id == 5)
+            {
+                return View("Industry5");
+            }
+            else
+            {
+                return View();
+            }
         }
-        public IActionResult Hospitals()
+        public IActionResult Hospitals(int? id)
         {
-            return View();
-        }
-        
-        public IActionResult Unique()
-        {
-            return View();
+
+            if (id == 1)
+            {
+                return View("Hospitals1");
+            }
+            if (id == 2)
+            {
+                return View("Hospitals2");
+            }
+            if (id == 4)
+            {
+                return View("Hospitals4");
+            }
+            if (id == 5)
+            {
+                return View("Hospitals5");
+            }
+            else
+            {
+                return View();
+            }
         }
         public IActionResult Shops(int? id)
         {
@@ -234,6 +269,34 @@ namespace Statanly.Web.Controllers
             {
                 return View();
             }
+        }
+        public IActionResult Railwaystation(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Railwaystation1");
+            }
+            if (id == 2)
+            {
+                return View("Railwaystation2");
+            }
+            if (id == 4)
+            {
+                return View("Railwaystation4");
+            }
+            if (id == 5)
+            {
+                return View("Railwaystation5");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult Unique()
+        {
+            return View();
         }
     }
 }
