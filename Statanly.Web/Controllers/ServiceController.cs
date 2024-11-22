@@ -150,6 +150,30 @@ namespace Statanly.Web.Controllers
                 return View();
             }
         }
+        public IActionResult Shoppingmalls(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Shoppingmalls1");
+            }
+            if (id == 2)
+            {
+                return View("Shoppingmalls2");
+            }
+            if (id == 4)
+            {
+                return View("Shoppingmalls4");
+            }
+            if (id == 5)
+            {
+                return View("Shoppingmalls5");
+            }
+            else
+            {
+                return View();
+            }
+        }
         public IActionResult Beauty(int? id)
         {
 
@@ -240,6 +264,78 @@ namespace Statanly.Web.Controllers
             if (id == 5)
             {
                 return View("Shops5");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult Institutions(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Institutions1");
+            }
+            if (id == 2)
+            {
+                return View("Institutions2");
+            }
+            if (id == 4)
+            {
+                return View("Institutions4");
+            }
+            if (id == 5)
+            {
+                return View("Institutions5");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult Sports(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Sports1");
+            }
+            if (id == 2)
+            {
+                return View("Sports2");
+            }
+            if (id == 4)
+            {
+                return View("Sports4");
+            }
+            if (id == 5)
+            {
+                return View("Sports5");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult Transport(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Transport1");
+            }
+            if (id == 2)
+            {
+                return View("Transport2");
+            }
+            if (id == 4)
+            {
+                return View("Transport4");
+            }
+            if (id == 5)
+            {
+                return View("Transport5");
             }
             else
             {

@@ -1,0 +1,159 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/home/services">Все сервисы</a></li>
+                <li><a href="/service/restaurants">Рестораны</a></li>
+                <li><a href="/service/shops">Магазины</a></li>
+                <li><a href="/service/housing">ЖКХ</a></li>
+                <li><a href="/service/railwaystation">Аэропорты и вокзалы</a></li>
+                <li>ТРЦ & ТРК</li>
+                <li><a href="/service/parking ">Парковки</a></li>
+                <li><a href="/service/banks">Банки</a></li>
+                <li><a href="/service/pvz">ПВЗ</a></li>
+                <li><a href="/service/warehouses">Склады</a></li>
+                <li><a href="/service/Business ">Бизнес-центры</a></li>
+                <li><a href="/service/beauty ">Салоны красоты</a></li>
+                <li><a href="/service/industry">Производство</a></li>
+                <li><a href="/service/hospitals">Медицинские учреждения</a></li>
+            </ol>
+            <h2>Общественный транспорт</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Видеоаналитика на транспорте</h3>
+                    <p>Подсчет пассажиров, детекция посторонних предметов, распознавание дыма, возгораний, выявление драк, конфликтов, давки, безопасность на железной дороге</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Типовые сервисы</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-1-circle"></i>
+                        <h4><a href="/service/transport/1">Анализ работы водителя</a></h4>
+                        <p>Мониторинг состояния водителя, детекция усталости, анализ нарушений</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-2-circle"></i>
+                        <h4><a href="/service/transport/2">Подсчет пассажиров</a></h4>
+                        <p>Подсчет входящих и выходящих пассажиров, статистика наполненности транспорты</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-3-circle"></i>
+                        <h4><a href="/home/product/3">Распознавание лиц</a></h4>
+                        <p>Выявление посторонних и подозрительных лиц, поиск по лицам</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-4-circle"></i>
+                        <h4><a href="/service/transport/4">Анализ нарушений</a></h4>
+                        <p>Безбилетный проезд, предотвращение порчи имущества и воровства, краж, вандализма</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-5-circle"></i>
+                        <h4><a href="/service/transport/5">Мониторинг безопасности</a></h4>
+                        <p>Детекция оставленных предметов, драк и конфликтов, распознавание дыма, возгораний</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-6-circle"></i>
+                        <h4><a href="/service/unique">Уникальные события</a></h4>
+                        <p>Система позволяет добавлять и дообучаться на любые уникальные события</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <section id="smart" class="smart">
+        <div class="container">
+            <div class="section-title">
+                <h2>Варианты поставки ПО</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                    <div class="member" style="margin: 0 auto;">
+                        <a tabindex="-1" href=""><img src="/assets/img/Services/cloud.png" alt=""></a>
+                        <h4> <a tabindex="-1" href="">Cloud</a></h4>
+                        <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                    <div class="member" style="margin: 0 auto;">
+                        <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.png" alt=""></a>
+                        <h4> <a tabindex="-1" href="">On-Premise</a></h4>
+                        <p>Развертывание ПО на внутренних ресурсах компании</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Возможности</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-messenger"></i>
+                        <h4>Нотификации</h4>
+                        <p>
+                            Система информирует о выявленных событиях различными способами: <strong>SMS</strong>, <strong>Email</strong>, <strong>Telegram</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-camera-video"></i>
+                        <h4>Любые типы камер</h4>
+                        <p>
+                            Система может использовать <strong>уже установленное оборудование</strong>. Или выбраем наиболее подходящие варианты
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-window-stack"></i>
+                        <h4>Удобный интерфейc</h4>
+                        <p>
+                            Система хранит все события, имеет простой, понятный интерфейс и <strong>возможность расширения</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
