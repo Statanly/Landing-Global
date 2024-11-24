@@ -270,6 +270,30 @@ namespace Statanly.Web.Controllers
                 return View();
             }
         }
+        public IActionResult Gasstation(int? id)
+        {
+
+            if (id == 1)
+            {
+                return View("Gasstation1");
+            }
+            if (id == 2)
+            {
+                return View("Gasstation2");
+            }
+            if (id == 4)
+            {
+                return View("Gasstation4");
+            }
+            if (id == 5)
+            {
+                return View("Gasstation5");
+            }
+            else
+            {
+                return View();
+            }
+        }
         public IActionResult Institutions(int? id)
         {
 
