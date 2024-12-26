@@ -77,10 +77,14 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Services()
         {
+            ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственный интеллект";
+            ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
             return View();
         }
         public IActionResult Products()
         {
+            ViewData["Title"] = "Statanly Technologies - продукты на базе искусственный интеллект";
+            ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
             return View();
         }
 
@@ -141,14 +145,25 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Service(int id = 1)
         {
+            ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственный интеллект";
+            ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
+
             if (id < 1 || id > 6)
             {
                 id = 1;
+            }
+            if (id == 6)
+            {
+                ViewData["Title"] = "Statanly Technologies - тензорные процессоры";
+                ViewData["Description"] = "Адаптация алгоритмов искусственного интеллекта под тензорные процессоры, одноплатники типа Jetson Nano, Raspberry Pi";
             }
             return View("Services" + id);
         }
         public IActionResult Product(int id = 1)
         {
+            ViewData["Title"] = "Statanly Technologies - продукты на базе искусственный интеллект";
+            ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
+
             if (id < 1 || id > 13)
             {
                 id = 1;
@@ -157,14 +172,22 @@ namespace Statanly.Web.Controllers
         }        
         public IActionResult Singleboard()
         {
+            ViewData["Title"] = "Statanly Technologies - одноплатники";
+            ViewData["Description"] = "Адаптация алгоритмов искусственного интеллекта под тензорные процессоры, одноплатники типа Jetson Nano, Raspberry Pi";
             return View();
         }
         public IActionResult Tpu()
         {
-           return View();
+            ViewData["Title"] = "Statanly Technologies - тензорные процессоры";
+            ViewData["Description"] = "Адаптация алгоритмов искусственного интеллекта под тензорные процессоры, одноплатники типа Jetson Nano, Raspberry Pi";
+
+            return View();
         }
         public IActionResult Smartcity(int id = 0)
         {
+            ViewData["Title"] = "Statanly Technologies - умный и безопасный город";
+            ViewData["Description"] = "Интеллектуальная система анализа городской среды";
+
             if (id == 0)
             {
                 return View("Smartcity");

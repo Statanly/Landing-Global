@@ -242,7 +242,7 @@
     <value>Система определения расстояний</value>
   </data>
   <data name="DistanceSystemText" xml:space="preserve">
-    <value>Определение расстояний и размеров объектов</value>
+    <value>Определение расстояний, размеров и геометрии объектов</value>
   </data>
   <data name="Documentation" xml:space="preserve">
     <value>Документация</value>

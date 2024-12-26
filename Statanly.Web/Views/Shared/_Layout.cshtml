@@ -5,7 +5,10 @@
 
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
-
+@{ 
+    var tittle = ViewData["Title"] == null ? "Statanly Technologies ∘ Искусственный интеллект ∘ Машинное обучение ∘ Компьютерное зрение ∘ Анализ данных" : (string)ViewData["Title"];
+    var description = ViewData["Description"] == null ? "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных" : (string)ViewData["Description"];
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +20,9 @@
     <link href="~/favicon.ico" rel="shortcut icon" />
     <link href="~/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="icon" href="~/favicon.ico">
-    <title>Statanly Technologies ∘ Искусственный интеллект ∘ Машинное обучение ∘ Компьютерное зрение ∘ Анализ данных</title>
+    <title>@tittle</title>
 
-    <meta name="description" content="Statanly Technologies – разработка систем на базе искусственного интеллекта, машинного обучения, компьютерного зрения и анализа данных." />
+    <meta name="description" content=@description/>
     <meta name="keywords" content="разработка систем искусственного интеллекта, разработка систем машинного обучения, разработка систем компьютерного зрения, искусственный интеллект, машинное обучение, большие данные, компьютерное зрение, машинное зрение, техническое зрение, нейронные сети, анализ данных, визуализация данных, прогнозирование, сегментирование пользователей, рекомендательные системы, прогнозные системы, интеллектульные системы, big data, machine learning, computer vision, artificial intelligence" />
 
     <meta property="og:title" content="Statanly Technologies ∘ Искусственный интеллект ∘ Машинное обучение ∘ Компьютерное зрение ∘ Анализ данных">
