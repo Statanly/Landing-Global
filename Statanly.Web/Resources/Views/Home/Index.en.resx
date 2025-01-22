@@ -392,7 +392,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>projects in the field of machine learning and data analysis</value>
   </data>
   <data name="MLSubTitile" xml:space="preserve">
-    <value>Predictive and recommendation systems, natural language processing</value>
+    <value>Forecasting and recommendation systems, time series analysis</value>
   </data>
   <data name="More" xml:space="preserve">
     <value>More</value>
@@ -402,6 +402,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   </data>
   <data name="NLP" xml:space="preserve">
     <value>Natural language processing</value>
+  </data>
+  <data name="NLPSubTitle" xml:space="preserve">
+    <value>Solutions based on large language models (LLM)</value>
   </data>
   <data name="NLPText" xml:space="preserve">
     <value>Systems based on natural language processing technologies, large language models, local ChatGPT, structured information extraction</value>
