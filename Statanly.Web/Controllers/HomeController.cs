@@ -168,6 +168,10 @@ namespace Statanly.Web.Controllers
             {
                 id = 1;
             }
+            if (id == 8)
+            { 
+                id = 3;
+            }
             return View("Product" + id);
         }        
         public IActionResult Singleboard()

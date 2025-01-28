@@ -44,5 +44,18 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Ustav.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult Product7(int id)
+        {
+            if (id == 1)
+            {
+                return File("~/Content/Product7_Installation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+            }
+            if (id == 2)
+            {
+                return File("~/Content/Product7_Documentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+            }
+            return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
     }
 }
