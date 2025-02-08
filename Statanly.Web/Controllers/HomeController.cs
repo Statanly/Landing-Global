@@ -75,6 +75,10 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Conveyers()
+        {
+            return View();
+        }
         public IActionResult Services()
         {
             ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственный интеллект";
