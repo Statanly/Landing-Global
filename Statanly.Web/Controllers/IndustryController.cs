@@ -19,11 +19,21 @@ namespace Statanly.Web.Controllers
         {
             ViewData["Title"] = "Statanly Technologies - искусственный интеллект для агропромышленности и сельского хозяйства";
             ViewData["Description"] = "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных для агропромышленности и сельского хозяйства";
-
-            return View();
+            if (id == 1)
+            {
+                return View("Agro1"); //Pigs
+            }
             if (id == 2)
             {
-                return View("Agro2");
+                return View("Agro2");//chickens
+            }
+            if (id == 3)
+            {
+                return View("Agro3");//agro
+            }
+            if (id == 4)
+            {
+                return View("Agro4");//fish
             }
             else
             {

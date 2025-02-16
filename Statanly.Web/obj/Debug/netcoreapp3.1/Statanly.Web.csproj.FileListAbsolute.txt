@@ -1945,7 +1945,6 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Warehouses.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Shops1.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Agro2.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\AgroNew.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Housing.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Housing1.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Housing4.cshtml.g.cs
@@ -2022,3 +2021,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Gasstation4.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Gasstation5.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Conveyers.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Agro1.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Agro3.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Agro4.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\AgroOld.cshtml.g.cs
