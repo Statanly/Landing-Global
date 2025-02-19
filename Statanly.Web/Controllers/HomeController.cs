@@ -63,6 +63,10 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Brand()
+        {
+            return View();
+        }
         public IActionResult Cooperation()
         {
             return View();
