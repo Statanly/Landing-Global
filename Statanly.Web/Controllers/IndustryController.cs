@@ -40,6 +40,14 @@ namespace Statanly.Web.Controllers
                 return View();
             }
         }
+        public IActionResult Pigs()
+        {     
+            return View();           
+        }
+        public IActionResult Cows()
+        {
+            return View();
+        }
         public IActionResult Development()
         {
             ViewData["Title"] = "Statanly Technologies - искусственный интеллект для строительства и девелопмента";

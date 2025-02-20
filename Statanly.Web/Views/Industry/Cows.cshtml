@@ -1,0 +1,268 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/industry/retail">Ретейл</a></li>
+                <li><a href="/industry/logistics">Логистика</a></li>
+                <li><a href="/industry/prom">Промышленность</a></li>
+                <li><a href="/industry/development">Девелопмент</a></li>
+                <li><a href="/industry/horeca">HoReCa </a></li>
+                <li><a href="/industry/food">Пищевая промышленность</a></li>
+                <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                <li><a href="/industry/transport">Транспорт</a></li>
+                <li><a href="/industry/media">Медиа, реклама</a></li>
+                <li><a href="/industry/insurance">Страхование</a></li>
+                <li><a href="/home/smartcity">Умный город</a></li>
+            </ol>
+            <h2>Классификация животных</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Система определения степени упитанности КРС
+                    </h3>
+                    <p>
+                        Оценка животных без нарушения привычного технологического процесса
+                    </p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="portfolio-description">
+                    <h2>Система компьютерного зрения</h2>
+                    <p>
+                        Включает в себя видеокамеры для сбора данных об особях, анализатор видеоданных и программное обеспечение для обработки информации.
+                        Технология позволяет использовать простые и недорогие видеокамеры и обеспечивать ежедневный мониторинг каждого животного без стрессов и без участия человека.
+                    </p>
+                    <p>
+                        Уровень и качество метаболических процессов в сухостойный и новотельный периоды во многом определяют здоровье и продолжительность жизни коровы. Максимальная выбраковка и гибель коров наблюдается в первый месяц после отела. Поэтому важно определить наличие патологии как можно раньше. Одним из основных индикаторов здоровья стада является упитанность коров.
+                        Нельзя допускать ожирения животных в период сухостоя - упи­танность в этот период не должна превышать 3,75 балла.
+                    </p>
+                    <p>
+                        Оценка внешнего вида животного позволяет проанализировать информацию о племенных качествах, возрасте, содержании и состоянии здоровья животного.
+                    </p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Дистрофия жировой и мышечной ткани</strong> всегда говорит о наличии тяжелых заболеваний различного характера – копытных, гинекологических, эндокринных, метаболических (прогрессирующие нарушения обмена веществ).
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Высокая упитанность</strong> у молочных высокопродуктивных животных может сигнализировать о наличии проблем с репродуктивной системой, гормональным фоном, кормлением. Животные, страдающие ожирением гораздо чаще подвержены риску получить различные осложнения после отела, такие как задержание последа, эндометрит, смещение сычуга, кетоз.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-details-slider">
+                    <div class="align-items-center">
+                        <div class="swiper-slide">
+                            <img src="~/assets/img/Industry/Agro/cows1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="portfolio-description">
+                    <h2>
+                        Методология оценки упитанности
+                    </h2>
+                    <p>
+                        Диапазон оптимальной упитанности
+                    </p>
+                </div>
+                <div class="col-lg-4" style="margin-top: 10px">
+                    <div class="portfolio-description">
+                        <table class="table table-striped table-hover" style="font-size: 0.8em">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Стадия лактации
+                                    </th>
+                                    <th>
+                                        Оценка
+                                    </th>
+                                </tr>
+                                <tr><td>Отел</td><td>3.0 - 3.75</td></tr>
+                                <tr><td>1 месяц после отела</td><td>2.5 - 3.25</td></tr>
+                                <tr><td>Середина периода лактации</td><td>2.75 - 3.25</td></tr>
+                                <tr><td>Поздний период / Сухостойный период</td><td>3.0 - 3.5</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Оценка упитанности </strong> коров в баллах и отслеживание динамики этого показателя во времени помогут:
+                        </p>
+                        <ul>
+                            <li>
+                                Решением проблем с кетозом
+                            </li>
+                            <li>
+                                Снижением риска образования хромоты
+                            </li>
+                            <li>
+                                Своевременным принятием мер, которые позволят избежать потерь и повысить эффективность
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            <strong>Несоответствие рекомендуемой упитанности </strong> у животных на разных этапах лактации может привести:
+                        </p>
+                        <ul>
+                            <li>
+                                К потерям молочной продуктивности
+                            </li>
+                            <li>К нарушению репродуктивной функции животных</li>
+                            <li>К необходимости дорогостоящего лечения</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows7.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <strong>Состав системы</strong>
+                        <p>
+                            Системы автоматизации конвейерных процессов представляют собой полноценные программно-аппаратные комплексы, состоящие из оборудования и программного обеспечения для анализа конвейерных процессов, сбора статистики, а также, в случае необходимости модуля управления конвейером. Основные компоненты системы:
+                        </p>
+                        <ul>
+                            <li>
+                                IP-камеры (освещение, защита, лидары, дополнительные детекторы)
+                            </li>
+                            <li>
+                                Вычислительный сервер (возможность использование одноплатных компьютеров, типа Orange Pi, Raspberry Pi)
+                            </li>
+                            <li>
+                                Программное обеспечение
+                            </li>
+                            <li>
+                                База данных для хранения статистики и отчетности
+                            </li>
+                            <li>
+                                Модуль интеграции со внетренними системами
+                            </li>
+                        </ul>
+                        <strong>
+                            Внедрение системы включает:
+                        </strong>
+                        <ul>
+                            <li>
+                                Исследование объекта для внедрения системы
+                            </li>
+                            <li>
+                                Анализ существующего оборудования или выбор нового
+                            </li>
+
+                            <li>
+                                Настройка (дообучение) системы по конкретные условия
+                            </li>
+                            <li>
+                                Внедрение, тестирование, промышленная эксплуатация
+                            </li>
+                        </ul>
+                        <p>
+                            Предпроектное обследование объекта внедрения системы включает выбор наилучшего расположения для установки оборудования, оптимального освещения, оптики, типа и характеристик камеры.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Agro/cows8.jpg" alt="">
+                                <p style="text-align:center"><em>Использование лидара</em></p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+</main><!-- End #main -->
