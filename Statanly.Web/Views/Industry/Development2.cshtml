@@ -1,0 +1,127 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/industry/retail">Ретейл</a></li>
+                <li><a href="/industry/logistics">Логистика</a></li>
+                <li><a href="/industry/prom">Промышленность</a></li>
+                <li><a href="/industry/development">Девелопмент</a></li>
+                <li><a href="/industry/horeca">HoReCa </a></li>
+                <li><a href="/industry/food">Пищевая промышленность</a></li>
+                <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                <li><a href="/industry/transport">Транспорт</a></li>
+                <li><a href="/industry/media">Медиа, реклама</a></li>
+                <li><a href="/industry/insurance">Страхование</a></li>
+                <li><a href="/home/smartcity">Умный город</a></li>
+            </ol>
+            <h2>Контроль работы оборудования</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Контроль работы крана, погрузчиков, экскаватора и бульдозеров</h3>
+                    <p>Система мониторинга работы оборудования (кран, погрузчик, экскаватор, бульдозер)</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="portfolio-description">
+                    <h2>Система анализа работы бульдозера</h2>
+                    <p>
+                        Включает в себя видеокамеры для сбора данных об особях, находящихся в кластере, анализатор видеоданных и программное обеспечение для обработки информации.
+                    </p>
+                    <p>
+                        Технология позволяет использовать простые и недорогие видеокамеры и обеспечивать ежедневный контроль и анализ работы строительного оборудования без участия человека.
+                    </p>              
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="portfolio-details-slider" style="margin-top: 10px">
+                    <div class="align-items-center">
+                        <div class="swiper-slide">
+                            <img src="~/assets/img/Industry/Development/6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="portfolio-description">
+                        <p>
+                            При проведении работ бульдозер выполняет различные операции. Основная задача системы – выделить различные редимы работы и операции, в частности «работа под нагрузкой»,
+                            «движение бульдозера вперёд с опущенным на уровень земли (либо ниже) отвалом» и т.д.
+                        </p>
+                        <p>
+                            Основные режимы работы:
+                        </p>
+                        <ul>
+                            <li>Верхняя кромка капота и верхняя линия отвала</li>
+                            <li>Отвал поднят (не работа)</li>
+                            <li>Отвал опущен на землю (работа) </li>
+                            <li>Отвал заглублён ниже уровня земли (работа)</li>
+                        </ul>
+                        <p>
+                            Результатом работы системы является постоянный мониторинг работы бульдозеров и отправка ежедневных отчетов по каждой рабочей смене. Также позволяет загружать записи с камер видео мониторинга за любой период и выгружать текстовые отчеты режимов работы и простоев машин.
+                            Система <strong>легко адаптируется</strong> на любой тип бульдозеров и погрузчиков
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="portfolio-details-slider" style="margin-top: 10px">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Development/12.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="portfolio-details-slider" style="margin-top: 10px">
+                    <div class="align-items-center">
+                        <div class="swiper-slide">
+                            <img src="~/assets/img/Industry/Development/7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="portfolio-description">
+                        <h2>Контроль работы крана</h2>
+                        <p>
+                            Система аналогичная системе контроля работы бульдозера и позволяет анализировать простой крана, отсутствие движения крюковой подвески, а также подсчитывать количество погрузок краном и количество подъемов груза.
+                        </p>          
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider" style="margin-top: 10px">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Industry/Development/11.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+</main><!-- End #main -->

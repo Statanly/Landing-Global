@@ -15,23 +15,23 @@ namespace Statanly.Web.Controllers
             return View();
         }
  
-        public IActionResult Agro(int? id)
+        public IActionResult Agro(string id)
         {
             ViewData["Title"] = "Statanly Technologies - искусственный интеллект для агропромышленности и сельского хозяйства";
             ViewData["Description"] = "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных для агропромышленности и сельского хозяйства";
-            if (id == 1)
+            if (id == "livestock")
             {
                 return View("Agro1"); //Pigs
             }
-            if (id == 2)
+            if (id == "poultry")
             {
                 return View("Agro2");//chickens
             }
-            if (id == 3)
+            if (id == "crops")
             {
-                return View("Agro3");//agro
+                return View("Agro3");//crops
             }
-            if (id == 4)
+            if (id == "fishery")
             {
                 return View("Agro4");//fish
             }
@@ -48,10 +48,14 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
-        public IActionResult Development()
+        public IActionResult Development(string id)
         {
             ViewData["Title"] = "Statanly Technologies - искусственный интеллект для строительства и девелопмента";
             ViewData["Description"] = "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных для строительства и девелопмента";
+            if (id == "monitoring")
+            {
+                return View("Development2");//fish
+            }
             return View();
         }
         public IActionResult Horeca()
@@ -64,6 +68,12 @@ namespace Statanly.Web.Controllers
         {
             ViewData["Title"] = "Statanly Technologies - искусственный интеллект в страховой сфере";
             ViewData["Description"] = "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных в страховой сфере";
+            return View();
+        }
+        public IActionResult Printing()
+        {
+            ViewData["Title"] = "Statanly Technologies - искусственный интеллект для типографий";
+            ViewData["Description"] = "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных для типографий";
             return View();
         }
         public IActionResult Logistics()

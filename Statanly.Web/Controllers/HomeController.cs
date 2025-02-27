@@ -81,6 +81,8 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Conveyers()
         {
+            ViewData["Title"] = "Statanly Technologies - Автоматизация конвейеров и производственных линий на базе искусственного интеллекта";
+            ViewData["Description"] = "Контроль и оптимизация конвейерных процессов и производственной линии, снижение зависимости от человека и ручного труда";
             return View();
         }
         public IActionResult Services()
@@ -112,10 +114,6 @@ namespace Statanly.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-        public IActionResult News()
-        {
-            return View();
         }
         public string GetCulture(string code = "")
         {

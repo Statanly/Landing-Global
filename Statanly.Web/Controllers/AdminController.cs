@@ -40,7 +40,7 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/da", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/cv", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/nlp", Frequency = SitemapFrequency.Weekly });
-            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "http://api.statanly.com:5001", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/conveyers", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/service/1", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/service/2", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/service/3", Frequency = SitemapFrequency.Weekly });
@@ -78,10 +78,17 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/product/13", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/singleboard", Frequency = SitemapFrequency.Weekly });
 
-
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/insurance", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/food", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/pigs", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/cows", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/livestock", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/poultry", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/crops", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/fishery", Frequency = SitemapFrequency.Weekly });
+
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/development", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/horeca", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/logistics", Frequency = SitemapFrequency.Weekly });
@@ -90,9 +97,9 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/prom", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/retail", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/transport", Frequency = SitemapFrequency.Weekly });
-            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/technology/deepfakes", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/technology/uav", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/printing", Frequency = SitemapFrequency.Weekly });
 
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/restaurants", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/agro", Frequency = SitemapFrequency.Weekly });
@@ -107,6 +114,7 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/service/hospitals", Frequency = SitemapFrequency.Weekly });
 
 
+            //list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "http://api.statanly.com:5001", Frequency = SitemapFrequency.Weekly });
 
             new SitemapDocument().CreateSitemapXML(list, _env.WebRootPath);
             return "ok";

@@ -2028,3 +2028,5 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Brand.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Cows.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Pigs.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Development2.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Industry\Printing.cshtml.g.cs
