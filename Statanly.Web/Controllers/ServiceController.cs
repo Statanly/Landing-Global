@@ -418,5 +418,9 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Monitoring()
+        {
+            return View();
+        }
     }
 }

@@ -85,6 +85,13 @@ namespace Statanly.Web.Controllers
             ViewData["Description"] = "Контроль и оптимизация конвейерных процессов и производственной линии, снижение зависимости от человека и ручного труда";
             return View();
         }
+
+        public IActionResult Manufacturing()
+        {
+            ViewData["Title"] = "Statanly Technologies - Автоматизация производственных и промышленных предприятий на базе искусственного интеллекта";
+            ViewData["Description"] = "Контроль и оптимизация конвейерных процессов и производственной линии, снижение зависимости от человека и ручного труда";
+            return View();
+        }
         public IActionResult Services()
         {
             ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственный интеллект";

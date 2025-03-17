@@ -1,0 +1,303 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/home/solution">@Localizer["Projects"]</a></li>
+                <li><a href="/home/services">@Localizer["Services"]</a></li>
+                <li><a href="/home/products">@Localizer["Products"]</a></li>
+                <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                <li><a href="/technology/uav">@Localizer["UAV"]</a></li>
+                <li><a href="/technology/deepfakes">@Localizer["Deepfakes"]</a></li>
+                <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
+                <li><a href="/home/singleboard">Одноплатники</a></li>
+                <li><a href="/home/conveyers">Автоматизация конвейеров</a></li>
+                <li><a href="/home/manufacturing">Автоматизация производства</a></li>
+                <li>Интеллектуальный мониторинг</li>
+
+            </ol>
+            <h2>Интеллектуальный мониторинг состояния человека</h2>
+</div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Cta Section ======= -->
+<section id="cta" class="cta">
+    <div class="container">
+        <div class="row" data-aos="zoom-in">
+            <div class="col-lg-9 text-center text-lg-start">
+                <h3>Видеоаналитика поведения, нарушений и происшествий</h3>
+                <p>Анализ состояния пожилых или больных людей, водителя, засыпание за рулем, не пристегнутый ремень, курение, разговоры по телефону, отвлечение внимания и многое другое</p>
+            </div>
+            <div class="col-lg-3 cta-btn-container text-center">
+                <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</section><!-- End Cta Section -->
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-flex align-items-stretch">
+                <div class="icon-box">
+                    <i class="bi bi-fingerprint"></i>
+                    <h4><a href="#">Безопасность</a></h4>
+                    <p>Обеспечение безопасности и сохранности имущества</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-binoculars"></i>
+                    <h4><a href="#">Мониторинг</a></h4>
+                    <p>Анализ эффективности использования рабочего времени </p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-camera-video"></i>
+                    <h4><a href="#">Мошенничество</a></h4>
+                    <p>Предотвращение краж, обмана и недобросовестного поведения</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-graph-up"></i>
+                    <h4><a href="#">Качество</a></h4>
+                    <p>Контроль качества обслуживания клиентов </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End Services Section -->
+<section id="smart" class="smart">
+    <div class="container">
+        <div class="section-title">
+            <h2>Состав системы</h2>
+            <p>Система представляет из себя программно-аппаратный комплекс, состоящий из миниатюрного вычислительного устройства, IP-камер и программного обеспечения</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" style="margin: 0 auto;">
+                    <a tabindex="-1" href=""><img src="/assets/img/Monitoring/Orange.png" alt=""></a>
+                    <h4> <a tabindex="-1" href="">Cloud</a></h4>
+                    <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" style="margin: 0 auto;">
+                    <a tabindex="-1" href=""><img src="/assets/img/Monitoring/IP-camera.jpeg" alt=""></a>
+                    <h4> <a tabindex="-1" href="">On-Premise</a></h4>
+                    <p>Развертывание ПО на внутренних ресурсах компании</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= Три шага ======= -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Внедрение системы</h2>
+            <p>Три шага для внедрения и использования системы</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-1-circle"></i>
+                    <h4>Выбор оборудования</h4>
+                    <p>
+                        Выбор всего необходимого оборудования: <strong>IP-камеры</strong> и <strong>серверное оборудование</strong> (в случае выбора <strong>On-Premise</strong> решения)
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-2-circle"></i>
+                    <h4>Настройка системы</h4>
+                    <p>
+                        Донастройка алгоритмов для решения любых задач видеоаналитики
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="icon-box">
+                    <i class="bi bi-3-circle"></i>
+                    <h4>Техническая поддержка</h4>
+                    <p>
+                        Система с доступом в личный кабинет через приложение или веб-браузер готова к использованию
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="smart" class="smart">
+    <div class="container">
+        <div class="section-title">
+            <h2>Варианты поставки ПО</h2>
+            <p>
+
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" style="margin: 0 auto;">
+                    <a tabindex="-1" href=""><img src="/assets/img/Services/cloud.png" alt=""></a>
+                    <h4> <a tabindex="-1" href="">Cloud</a></h4>
+                    <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" style="margin: 0 auto;">
+                    <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.png" alt=""></a>
+                    <h4> <a tabindex="-1" href="">On-Premise</a></h4>
+                    <p>Развертывание ПО на внутренних ресурсах компании</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======= Why Us Section ======= -->
+<section id="why-us" class="why-us">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 align-items-stretch position-relative video-box" style='background-image: url("/assets/img/Services/userint.jpg");'>
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+
+                <div class="content">
+                    <h3>Переходите на <strong>умную видеоаналитику</strong></h3>
+                    <p>
+                        Используйте все возможности современных технологий компьютерного зрения для автоматизации видео мониторинга
+                    </p>
+                </div>
+                <div class="accordion-list">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>Используйте все возможности вашей системы видеонаблюдения<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                <p>
+                                    Используя алгоритмы компьютерного зрения ваша локальная система видеоаналитики превратиться в действительно эффективный инструмент мониторинга
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>Позволяет подключить любые типы камер<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                <p>
+                                    Система адаптирована под практически любые типы видеокамер. Мы также можем подобрать подходящий вариант необходимого оборудования
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>Удобный интерфейс и простота использования<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                <p>
+                                    Удобное управление видеонаблюдением, нотификация о произошедших события (Email, SMS, Telegram) и возможность дополнять новыми моделями детекции
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section><!-- End Why Us Section -->
+
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Модули аналитики</h2>
+            <p>Алгоритмы и модели, которые решают следующие задачи:</p>
+        </div>
+        <div class="row">
+            <div class="services-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-123"></i>
+                            <h4>Подсчет объектов</h4>
+                            <p>
+                                Подсчет людей в очереди и заданной зоне
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-bounding-box"></i>
+                            <h4>Анализ эффективности</h4>
+                            <p>
+                                Контроль нахождения в заданной зоне
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-camera-video"></i>
+                            <h4>Контроль безопасности</h4>
+                            <p>
+                                Распознавание дыма и возгораний
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-sort-numeric-down"></i>
+                            <h4>Распознвание номеров</h4>
+                            <p>
+                                Распознавание номеров и типов транспортных средств
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-person-bounding-box"></i>
+                            <h4>Распознавание лиц</h4>
+                            <p>
+                                Распознавание лиц, силуэтов, пола, возраста
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-ev-front"></i>
+                            <h4>Детекция нарушений </h4>
+                            <p>
+                                Контроль СИЗ, распознавание драк, распития спиртных напитков, курения
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon-box" style="height: 180px">
+                            <i class="bi bi-binoculars"></i>
+                            <h4>Уникальные события</h4>
+                            <p>
+                                Дообучение системы на распознавание уникальных событий
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Services Section -->
+</main><!-- End #main -->

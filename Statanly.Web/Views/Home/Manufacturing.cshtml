@@ -1,0 +1,429 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/home/solution">Проекты</a></li>
+                <li><a href="/home/services">Сервисы</a></li>
+                <li><a href="/home/products">Продукты</a></li>
+                <li><a href="/home/smartcity">Умный город</a></li>
+                <li><a href="/technology/uav">БПЛА</a></li>
+                <li><a href="/technology/deepfakes">Дипфейки</a></li>
+                <li><a href="/home/service/6">Тензорные процессоры (TPU)</a></li>
+                <li><a href="/home/singleboard">Одноплатники</a></li>
+                <li><a href="/home/conveyers">Автоматизация конвейеров</a></li>
+                <li>Автоматизация производства</li>
+            </ol>
+            <h2>Автоматизация производственных и промышленных предприятий</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>
+                        Автоматизация производства
+                    </h3>
+                    <p>Оптимизация и контроль производственных процессов, снижение рисков и чрезвычайных ситуаций, повышение эффективности и качества  </p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-123"></i>
+                        <h4><a href="#">Подсчет и классификация</a></h4>
+                        <p>
+                            Подсчет и классификация объектов и объема продукции, выявление аномалий и инородных тел на конвейере или производственной линии
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-bricks"></i>
+                        <h4><a href="#">Выявление дефектов и брака</a></h4>
+                        <p>
+                            Детекция дефектов ленты, брака продукции, некачественной печати или маркировки
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-eye"></i>
+                        <h4><a href="#">Промышленная безопасность</a></h4>
+                        <p>
+                            Контроль ношения СИЗ, проникновения в опасные зоны, детекция огня и дыма, обнаружение утечек, выбросов, посторонних людей и объектов, выявление краж и воровства
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-camera-video"></i>
+                        <h4><a href="#">Анализ эффективности труда </a></h4>
+                        <p>
+                            Анализ поведения на рабочем месте, подсчет времени нахождения в различных зонах, распознавание различных действий работников предприятия, контроль исполнения задач, анализ усталости и концентрации внимания
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-binoculars"></i>
+                        <h4><a href="#">Мониторинг производственных процессов</a></h4>
+                        <p>
+                            Контроль производственных процессов и соблюдение технологии производства, мониторинг проведения работ
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-graph-up"></i>
+                        <h4><a href="#">Уникальные кейсы</a></h4>
+                        <p>Специфические задачи для оптимизации сложных технологических процессов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Services/userint.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="portfolio-description">
+                        <h2><a href="/home/product/13">Подсчет и классификация</a></h2>
+                        <p>
+                            Система позволяет в режиме реального времени:
+                        </p>
+                        <ul>
+                            <li>
+                                классифицировать тип объекта (например тип хлеба)
+                            </li>
+                            <li>
+                                вести подсчет изделий на конвейере
+                            </li>
+                            <li>
+                                выявлять брак
+                            </li>
+                            <li>
+                                вести статистику и передавать данные во внутренние системы предприятия.
+                            </li>
+                        </ul>
+                        <p>
+                            Технология позволяет использовать простые и недорогие видеокамеры и обеспечивать ежедневный контроль
+                            без участия человека.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row portfolio-details-slider swiper">
+                <div class="col-lg-3">
+                    <img src="~/assets/img/Products/Product13/3.gif" alt="">
+                    <p style="text-align:center"><em>Подсчет белого хлеба</em></p>
+                </div>
+                <div class="col-lg-3">
+                    <img src="~/assets/img/Products/Product13/4.gif" alt="">
+                    <p style="text-align:center"><em>Подсчет краюшек</em></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/Manufacturing/chips.gif" alt="">
+                    <p style="text-align:center"><em>Подсчет чипсов</em></p>
+                </div>
+                <div class="col-lg-2">
+                    <img src="~/assets/img/Manufacturing/1.jpg" alt="">
+                    <p style="text-align:center"><em>Подсчет людей</em></p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="portfolio-description">
+                        <h2><a href="/home/product/2">Выявление дефектов и брака</a></h2>
+                        <p>
+                            Система позволяет визуального выявлять дефекты на поверхности:
+                        </p>
+                        <ul>
+                            <li>
+                                распознавать наиболее критичные дефекты
+                            </li>
+                            <li>
+                                распознавать некачественную флексопечать на верхней поверхности продукции
+                            </li>
+                            <li>
+                                классифицировать типы дефектов
+                            </li>
+                            <li>
+                                определять координаты и геометрические характеристики дефектов
+                            </li>
+                            <li>
+                                управлять производственной линией в зависимости от качества продукции
+                            </li>
+                            <li>
+                                выявлять брак
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Manufacturing/defect.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/portfolio/Case1/30.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="portfolio-description">
+                        <h2><a href="/home/product/7">Промышленная безопасность</a></h2>
+                        <p>
+                            Система определяет целый класс событий и нарушений:
+                        </p>
+                        <ul>
+                            <li>
+                                Контроль СИЗ (Каски, маски, cпецодежда, страховочный трос, защитные очки, перчатки, устройства)
+                            </li>
+                            <li>
+                                Контроль поведения (Проникновение в запрещенные зоны, нарушение техники безопасности, курение, анализ действий и эффективности)
+                            </li>
+                            <li>
+                                Контроль процессов (Опасные ситуации и поведение, задымление, возгорания, пожар, ЧП, использование гаджетов, драки, падения)
+                            </li>
+                            <li>
+                                Контроль оборудования (Мониторинг состояния и режимов работы оборудования, погрузо-разгрузочные работы, поломки, дефекты на конвейере)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row portfolio-details-slider swiper">
+                <div class="col-lg-4">
+                    <img src="~/assets/img/Products/Product7/2.jpg" alt="">
+                    <p style="text-align:center"><em>Контроль СИЗ</em></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/Products/Product7/1.jpg" alt="">
+                    <p style="text-align:center"><em>Контроль движения погрузчика</em></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case1/9.jpg" alt="">
+                    <p style="text-align:center"><em>Определение опасных зон</em></p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="portfolio-description">
+                        <h2><a href="/home/product/13">Анализ эффективности труда</a></h2>
+                        <p>
+                            Система включает:
+                        </p>
+                        <ul>
+                            <li>
+                                анализ поведения на рабочем месте
+                            </li>
+                            <li>
+                                подсчет времени нахождения в различных зонах
+                            </li>
+                            <li>
+                                распознавание различных действий работников предприятия
+                            </li>
+                            <li>
+                                контроль исполнения задач
+                            </li>
+                            <li>
+                                нарушение условий труда
+                            </li>
+                            <li>
+                                визуальные и тепловые карты
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/Products/Product13/9.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row portfolio-details-slider swiper">
+                <div class="col-lg-4">
+                    <img src="~/assets/img/Products/Product13/7.gif" alt="">
+                    <p style="text-align:center"><em>Трекинг людей</em></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/Products/Product13/6.gif" alt="">
+                    <p style="text-align:center"><em>Контроль работ</em></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/portfolio/Case1/8.gif" alt="">
+                    <p style="text-align:center"><em>Анализ погрузочных работ</em></p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-details-slider">
+                        <div class="align-items-center">
+                            <div class="swiper-slide">
+                                <img src="~/assets/img/portfolio/Case1/28.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="portfolio-description">
+                        <h2><a href="/industry/development/monitoring">Мониторинг производственных процессов</a></h2>
+                        <p>
+                            Система позволяет контролировать нанесение линии герметика на блок цилиндров и предусматривает выявление двигателей с дефектами на начальной стадии для их оперативного устранения.
+
+                            Внедрение системы машинного зрения позволяет в режиме реального времени вести контроль правильности установленных траверс на каждой паре клапанов с световой и звуковой сигнализаций в случае выявления отклонений. Это решение позволяет снизить количество бракованных агрегатов практически до нуля.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row portfolio-details-slider swiper">
+                <div class="col-lg-8">
+                    <img src="~/assets/img/Industry/Development/6.jpg" alt="">
+                    <p style="text-align:center"><em>Статистика работы бульдойзера</em></p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="~/assets/img/Industry/Development/12.jpg" alt="">
+                    <p style="text-align:center"><em>Анализ работы бульдойзера</em></p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Внедрение системы</h2>
+                <p>Три шага для внедрения и использования системы</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-1-circle"></i>
+                        <h4>Выбор оборудования</h4>
+                        <p>
+                            Выбор всего необходимого оборудования: <strong>IP-камеры</strong> и <strong>серверное оборудование</strong> (в случае выбора <strong>On-Premise</strong> решения)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-2-circle"></i>
+                        <h4>Настройка системы</h4>
+                        <p>
+                            Донастройка алгоритмов для решения любых задач видеоаналитики
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-3-circle"></i>
+                        <h4>Техническая поддержка</h4>
+                        <p>
+                            Система с доступом в личный кабинет через приложение или веб-браузер готова к использованию
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 align-items-stretch position-relative video-box" style='background-image: url("/assets/img/Services/userint.jpg");'>
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+
+                    <div class="content">
+                        <h3>Переходите на <strong>умную видеоаналитику</strong></h3>
+                        <p>
+                            Используйте все возможности современных технологий компьютерного зрения для автоматизации видео мониторинга
+                        </p>
+                    </div>
+                    <div class="accordion-list">
+                        <ul>
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>Используйте все возможности вашей системы видеонаблюдения 24/7<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Используя алгоритмы компьютерного зрения ваша локальная система видеоаналитики превратиться в действительно эффективный инструмент мониторинга
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li data-aos="fade-up" data-aos-delay="200">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>Позволяет подключить любые типы камер<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Система адаптирована под практически любые типы видеокамер. Мы также можем подобрать подходящий вариант необходимого оборудования
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>Удобный интерфейс и простота использования<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Удобное управление видеонаблюдением, нотификация о произошедших события (Email, SMS, Telegram) и возможность дополнять новыми моделями детекции
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Why Us Section -->
+
+</main><!-- End #main -->

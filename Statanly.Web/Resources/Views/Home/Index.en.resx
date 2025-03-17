@@ -561,6 +561,9 @@ glasses, gloves, device), fire and smoke</value>
   <data name="T8" xml:space="preserve">
     <value>Large language models (LLM)</value>
   </data>
+  <data name="T9" xml:space="preserve">
+    <value>Automatic machine learning</value>
+  </data>
   <data name="Team" xml:space="preserve">
     <value>Team</value>
   </data>
