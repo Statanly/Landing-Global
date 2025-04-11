@@ -55,6 +55,16 @@ namespace Statanly.Web.Controllers
                 return File("~/Content/Product7_Documentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
 
             }
+            if (id == 3)
+            {
+                return File("~/Content/Product7_Instruct.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+            }
+            if (id == 4)
+            {
+                return File("~/Content/Product7_Architecture.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+            }
             return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
     }

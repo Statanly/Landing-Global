@@ -121,22 +121,36 @@
     </div>
 </section><!-- End Portfolio Details Section -->
 <!-- ======= Product Section ======= -->
-<section id="services" class="services">
+<section id="products" class="services">
     <div class="container">
         <div class="section-title">
             <h2>@Localizer["Products"]</h2>
             <p>
                 @Localizer["ProductsSubtitle"]
-                </br>
-                <a href="/home/products">@Localizer["More"]</a>
             </p>
         </div>
         <div class="row">
-            <div class="col-md-6 d-flex align-items-stretch">
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div class="icon-box">
-                    <i class="bi bi-wrench"></i>
-                    <h4><a href="/home/product/1">@Localizer["Classifierparts"]</a></h4>
-                    <p>@Localizer["ClassifierpartsText"]</p>
+                    <i class="bi bi-eye"></i>
+                    <h4><a href="/home/product/7">@Localizer["SafetySystem"]</a></h4>
+                    <p>@Localizer["SafetySystemText"]</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-123"></i>
+                    <h4><a href="/home/product/13">Система подсчета и трекинга объектов</a></h4>
+                    <p>Анализ времени нахождения объекта в зоне, подсчет, классификация и трекинг объектов по заданным параметрам</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-truck"></i>
+                    <h4><a href="/home/product/5">@Localizer["DetectionSystem"]</a></h4>
+                    <p>@Localizer["DetectionSystemText"]</p>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
@@ -158,40 +172,27 @@
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div class="icon-box">
                     <i class="bi bi-qr-code-scan"></i>
-                    <h4><a href="/home/case/3">@Localizer["RecognitionSystem"]</a></h4>
+                    <h4><a href="/home/product/4">@Localizer["RecognitionSystem"]</a></h4>
                     <p>@Localizer["RecognitionSystemText"]</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="col-md-6 d-flex align-items-stretch">
                 <div class="icon-box">
-                    <i class="bi bi-truck"></i>
-                    <h4><a href="/home/product/5">@Localizer["DetectionSystem"]</a></h4>
-                    <p>@Localizer["DetectionSystemText"]</p>
+                    <i class="bi bi-calculator"></i>
+                    <h4><a href="http://api.statanly.com:9050/docs">Сервис автоматического обучения моделей</a></h4>
+                    <p>
+                        Автоматическое обучение моделей детекции и сегментации убирает необходимость работать с кодом напрямую.
+                        Необходимо прикрепить в запрос ссылку на данные (на сервере или на яндекс диске).
+                    </p>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div class="icon-box">
-                    <i class="bi bi-zoom-in"></i>
-                    <h4><a href="/home/product/6">@Localizer["DistanceSystem"]</a></h4>
-                    <p>@Localizer["DistanceSystemText"]</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box">
-                    <i class="bi bi-eye"></i>
-                    <h4><a href="/home/product/7">@Localizer["SafetySystem"]</a></h4>
-                    <p>@Localizer["SafetySystemText"]</p>
-                </div>
-            </div>
-            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box">
-                    <i class="bi bi-cart4"></i>
-                    <h4><a href="/home/case/7">@Localizer["ChurnSystem"]</a></h4>
-                    <p>@Localizer["ChurnSystemText"]</p>
+                    <i class="bi bi-activity"></i>
+                    <h4><a href="http://mlflow.statanly.com">Сервис отображения результатов обучения</a></h4>
+                    <p>Отображение результатов обучения в графическом виде и контроля исследований MLFlow убирает необходимость вести вручную таблицы с результатами обучения</p>
                 </div>
             </div>
         </div>
@@ -206,8 +207,8 @@
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div class="icon-box">
                     <i class="bi bi-file-earmark-word"></i>
-                    <h4><a href="/home/product/10">Система информационного поиска</a></h4>
-                    <p>Система позволяет подобно ChatGPT находить информацию в локальной документной базе, сегментировать и суммиризовать тексты</p>
+                    <h4><a href="/home/product/10">@Localizer["IRS"]</a></h4>
+                    <p>@Localizer["IRSText"]</p>
                 </div>
             </div>
         </div>
@@ -230,16 +231,35 @@
         <div class="row">
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div class="icon-box">
-                    <i class="bi bi-123"></i>
-                    <h4><a href="/home/product/13">Система подсчета объектов</a></h4>
-                    <p>Система подсчета и трекинга любых объектов</p>
+                    <i class="bi bi-cart4"></i>
+                    <h4><a href="/home/case/7">@Localizer["ChurnSystem"]</a></h4>
+                    <p>@Localizer["ChurnSystemText"]</p>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-
+                <div class="icon-box">
+                    <i class="bi bi-wrench"></i>
+                    <h4><a href="/home/product/1">@Localizer["Classifierparts"]</a></h4>
+                    <p>@Localizer["ClassifierpartsText"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-zoom-in"></i>
+                    <h4><a href="/home/product/6">@Localizer["DistanceSystem"]</a></h4>
+                    <p>@Localizer["DistanceSystemText"]</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-card-checklist"></i>
+                    <h4><a href="">Сервис разметки данных </a></h4>
+                    <p>Сервис разметки данных интегрированный с сервисов автоматического обучения моделей и отображение результатов обучения в графическом виде</p>
+                </div>
             </div>
         </div>
     </div>
-
 </section>
 <!-- End Products Section -->

@@ -46,6 +46,8 @@
     var client28 = "assets/img/clients" + lang + "/client-28.png";
     var client29 = "assets/img/clients" + lang + "/client-29.png";
     var client30 = "assets/img/clients" + lang + "/client-30.jpg";
+    var client31 = "assets/img/clients" + lang + "/client-31.jpg";
+
 }
 
 <!-- ======= Header ======= -->
@@ -593,8 +595,8 @@
                     </ul>
                 </div>
                 <div class="col-lg-7 pt-4 pt-lg-0">
-                    <p>                        
-                            @Localizer["AboutLongText"]
+                    <p>
+                        @Localizer["AboutLongText"]
                     </p>
                     <a href="/home/company" class="btn-learn-more">@Localizer["More"]</a>
                 </div>
@@ -713,6 +715,8 @@
                     <div class="swiper-slide"><img src=@client28 class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src=@client29 class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src=@client30 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client31 class="img-fluid" alt=""></div>
+
                 </div>
                 <div class="swiper-pagination">
 
@@ -1125,42 +1129,21 @@
                 <h2>@Localizer["Products"]</h2>
                 <p>
                     @Localizer["ProductsSubtitle"]
-                    </br>
-                    <a href="/home/products">@Localizer["More"]</a>
                 </p>
             </div>
             <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch">
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <i class="bi bi-calculator"></i>
-                        <h4><a href="http://api.statanly.com:9050/docs">Сервис автоматического обучения моделей</a></h4>
-                        <p>
-                            Автоматическое обучение моделей детекции и сегментации убирает необходимость работать с кодом напрямую.
-                            Необходимо прикрепить в запрос ссылку на данные (на сервере или на яндекс диске).
-                        </p>
+                        <i class="bi bi-eye"></i>
+                        <h4><a href="/home/product/7">@Localizer["SafetySystem"]</a></h4>
+                        <p>@Localizer["SafetySystemText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <i class="bi bi-activity"></i>
-                        <h4><a href="http://mlflow.statanly.com">Сервис отображения результатов обучения</a></h4>
-                        <p>Отображение результатов обучения в графическом виде и контроля исследований MLFlow убирает необходимость вести вручную таблицы с результатами обучения</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <i class="bi bi-person-bounding-box"></i>
-                        <h4><a href="/home/product/3">@Localizer["Facerecognition"] </a></h4>
-                        <p>@Localizer["FacerecognitionText"] </p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-qr-code-scan"></i>
-                        <h4><a href="/home/product/4">@Localizer["RecognitionSystem"]</a></h4>
-                        <p>@Localizer["RecognitionSystemText"]</p>
+                        <i class="bi bi-123"></i>
+                        <h4><a href="/home/product/13">Система подсчета и трекинга объектов</a></h4>
+                        <p>Анализ времени нахождения объекта в зоне, подсчет, классификация и трекинг объектов по заданным параметрам</p>
                     </div>
                 </div>
             </div>
@@ -1181,18 +1164,37 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
-                        <i class="bi bi-eye"></i>
-                        <h4><a href="/home/product/7">@Localizer["SafetySystem"]</a></h4>
-                        <p>@Localizer["SafetySystemText"]</p>
+                        <i class="bi bi-person-bounding-box"></i>
+                        <h4><a href="/home/product/3">@Localizer["Facerecognition"] </a></h4>
+                        <p>@Localizer["FacerecognitionText"] </p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <i class="bi bi-cart4"></i>
-                        <h4><a href="/home/case/7">@Localizer["ChurnSystem"]</a></h4>
-                        <p>@Localizer["ChurnSystemText"]</p>
+                        <i class="bi bi-qr-code-scan"></i>
+                        <h4><a href="/home/product/4">@Localizer["RecognitionSystem"]</a></h4>
+                        <p>@Localizer["RecognitionSystemText"]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <i class="bi bi-calculator"></i>
+                        <h4><a href="http://api.statanly.com:9050/docs">Сервис автоматического обучения моделей</a></h4>
+                        <p>
+                            Автоматическое обучение моделей детекции и сегментации убирает необходимость работать с кодом напрямую.
+                            Необходимо прикрепить в запрос ссылку на данные (на сервере или на яндекс диске).
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-activity"></i>
+                        <h4><a href="http://mlflow.statanly.com">Сервис отображения результатов обучения</a></h4>
+                        <p>Отображение результатов обучения в графическом виде и контроля исследований MLFlow убирает необходимость вести вручную таблицы с результатами обучения</p>
                     </div>
                 </div>
             </div>
@@ -1231,9 +1233,9 @@
             <div class="row">
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <i class="bi bi-123"></i>
-                        <h4><a href="/home/product/13">Система подсчета и трекинга объектов</a></h4>
-                        <p>Анализ времени нахождения объекта в зоне, подсчет, классификация и трекинг объектов по заданным параметрам</p>
+                        <i class="bi bi-cart4"></i>
+                        <h4><a href="/home/case/7">@Localizer["ChurnSystem"]</a></h4>
+                        <p>@Localizer["ChurnSystemText"]</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
@@ -1578,13 +1580,12 @@
                     <div class="swiper-slide"><a href="https://ctlab.ifmo.ru/" target="_blank"><img src="~/assets/img/partners/ilct.jpg" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://www.reksoft.ru/" target="_blank"><img src="~/assets/img/partners/reksoft.jpg" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://somin.ai/" target="_blank"><img src="~/assets/img/partners/bbridge.jpg" class="img-fluid" alt=""></a></div>
-                    <div class="swiper-slide"><a href="https://www.mindgap.dev/" target="_blank"><img src="~/assets/img/partners/mindgap.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://rt.ru/" target="_blank"><img src="~/assets/img/partners/rostelecom.png" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://churn.statanly.com/" target="_blank"><img src="~/assets/img/partners/cusflow.jpg" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://deflamel.com/" target="_blank"><img src="~/assets/img/partners/deflamel.jpg" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="http://icv.systems/" target="_blank"><img src="~/assets/img/partners/icv.png" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://ori.team/" target="_blank"><img src="~/assets/img/partners/ori.png" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://cv.statanly.com/" target="_blank"><img src="~/assets/img/partners/visionlab.jpg" class="img-fluid" alt=""></a></div>
-                    <div class="swiper-slide"><a href="https://witsart.com/" target="_blank"><img src="~/assets/img/partners/witsart.png" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://ingria-park.ru/" target="_blank"><img src="~/assets/img/partners/techspb.png" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://ftim.ru/" target="_blank"><img src="~/assets/img/partners/ftim.png" class="img-fluid" alt=""></a></div>
                     <div class="swiper-slide"><a href="https://generation-startup.ru/" target="_blank"><img src="~/assets/img/partners/generations.png" class="img-fluid" alt=""></a></div>
