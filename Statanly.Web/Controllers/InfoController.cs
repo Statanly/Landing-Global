@@ -67,5 +67,11 @@ namespace Statanly.Web.Controllers
             }
             return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+
+        //Rostelecom
+        public FileResult Report()
+        {
+            return File("~/Content/Report.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
     }
 }
