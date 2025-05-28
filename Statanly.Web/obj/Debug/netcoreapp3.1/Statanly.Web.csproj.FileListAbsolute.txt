@@ -2036,3 +2036,5 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Service.Monitoring.en.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Service.Monitoring.ru.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Mobile.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Logo.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Trademark.cshtml.g.cs

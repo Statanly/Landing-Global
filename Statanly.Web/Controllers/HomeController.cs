@@ -67,6 +67,14 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Logo()
+        {
+            return View();
+        }
+        public IActionResult Trademark()
+        {
+            return View();
+        }
         public IActionResult Cooperation()
         {
             return View();

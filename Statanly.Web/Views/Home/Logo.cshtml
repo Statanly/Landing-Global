@@ -1,0 +1,74 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_CompanyLayout.cshtml";
+}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">              
+            <ol>
+                <li><a href="/home/company">История</a></li>
+                <li><a href="/home/team">Команда</a></li>
+                <li>Миссия</li>
+                <li><a href="/home/press">Пресса</a></li>
+                <li><a href="/home/cooperation">Сотрудничество</a></li>
+                <li><a href="/home/contact">Контакты</a></li>
+            </ol>
+            <h2>Бренд компании</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details " class="portfolio-details blog">
+        <div class="container">
+
+            <div class="row gy-4">
+                <div class="col-lg-3">
+
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">@*Индустрии*@</h3>
+                        <div class="sidebar-item categories">
+                            <ul>
+                                <li><a href="/home/mission">Миссия</a></li>
+                                <li><a href="/info/brandbook">Бренд компании</a></li>
+                                <li>Логотип Statanly Technologies</li>
+                                <li><a href="/home/trademark">Товарный знак</a></li>
+                            </ul>
+                        </div><!-- End sidebar categories-->    
+
+                    </div><!-- End sidebar -->
+
+                </div><!-- End blog sidebar -->
+                <div class="col-lg-9">
+                    <div class="section-title">
+                        <h2>Логотип</h2>
+                    </div>
+                    <div class="portfolio-description">
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-md-6"><img style="width: 100%" src="~/assets/img/Brand/Logo-Chernyy.png" alt=""></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4"> </br><h3><a href="/assets/img/Brand/Logo-Chernyy.png" target="_blank">Логотип с текстом</a></h3></div>
+                            </div>
+                            </br>
+                            <div class="row">
+                                <div class="col-md-6"><img style="width: 30%" src="~/assets/img/Brand/Logo.png" alt=""></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4">  </br><h3><a href="/assets/img/Brand/Logo.png" target="_blank">Логотип без текста</a></h3></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-description">
+                        <div class="swiper-slide row">
+                            <img src="~/assets/img/Brand/logo1.jpg" alt="">
+                            <img src="~/assets/img/Brand/logo2.jpg" alt="">
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
