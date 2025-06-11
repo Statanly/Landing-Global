@@ -400,6 +400,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
   <data name="NLP" xml:space="preserve">
     <value>Natural language processing</value>
   </data>

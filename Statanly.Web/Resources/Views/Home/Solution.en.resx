@@ -171,6 +171,9 @@
   <data name="More" xml:space="preserve">
     <value>More</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
   <data name="NLP" xml:space="preserve">
     <value>Natural language processing</value>
   </data>

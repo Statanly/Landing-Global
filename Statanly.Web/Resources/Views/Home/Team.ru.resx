@@ -153,6 +153,9 @@
   <data name="Mission" xml:space="preserve">
     <value>Миссия</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>Новости</value>
+  </data>
   <data name="OurTeam" xml:space="preserve">
     <value>Наша команда</value>
   </data>

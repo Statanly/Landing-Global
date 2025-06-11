@@ -79,6 +79,7 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/product/13", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/singleboard", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/mobile", Frequency = SitemapFrequency.Weekly });
+            list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/home/news", Frequency = SitemapFrequency.Weekly });
 
 
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry", Frequency = SitemapFrequency.Weekly });
@@ -91,7 +92,6 @@ namespace Statanly.Web.Controllers
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/poultry", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/crops", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/agro/fishery", Frequency = SitemapFrequency.Weekly });
-
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/development", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/horeca", Frequency = SitemapFrequency.Weekly });
             list.Add(new SitemapNode() { LastModified = DateTime.UtcNow, Priority = 1.0, Url = "https://statanly.com/industry/logistics", Frequency = SitemapFrequency.Weekly });

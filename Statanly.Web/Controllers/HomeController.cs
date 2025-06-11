@@ -228,6 +228,12 @@ namespace Statanly.Web.Controllers
             }          
             return View("Smartcity" + id);
         }
+        public IActionResult News()
+        {
+            ViewData["Title"] = "Statanly Technologies - новости компании";
+            ViewData["Description"] = "Новости, анонсы, мероприятия компании";
+            return View();
+        }
         public IActionResult SetLanguage(string culture, string returnUrl = "/")
         {
             Response.Cookies.Append(

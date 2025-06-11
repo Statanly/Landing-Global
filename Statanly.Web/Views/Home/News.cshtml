@@ -1,0 +1,289 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "/Views/Shared/_CompanyLayout.cshtml";
+}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li>@Localizer["News"]</li>
+                <li><a href="/home/company">@Localizer["History"]</a></li>
+                <li><a href="/home/team">@Localizer["Team"]</a></li>
+                <li><a href="/home/mission">@Localizer["Mission"]</a></li>
+                <li><a href="/home/press">@Localizer["Press"]</a></li>
+                <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+            </ol>
+            <h2>@Localizer["Press"]</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="~/assets/img/News/AI - future today.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="https://aiappforum.com/" target="_blank">17 июня в Санкт-Петербурге (на полях ПМЭФ) пройдет Национальный форум «ИИ — будущее сегодня»</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">События компании</a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2025-06-17">17 июня, 2025</time></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                На полях 28-го Петербургского международного экономического форума и в разгар белых ночей пройдет национальный форум «Прикладной искусственный интеллект: решения для взрывного роста экономического развития. Будущее сегодня».
+                                С докладом <strong>«Искусственный интеллект в сельском хозяйстве и агропромышленности. Тренды и кейсы»</strong> выступит генеральный директор Statanly Technologies - Сергей Федоров.
+                            </p>
+                            <div class="read-more">
+                                <a href="https://aiappforum.com/" target="_blank">Подробнее</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="~/assets/img/News/ADOP 2025.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="https://adop.nw.ru/2025/" target="_blank">V Международная конференция по цифровизации сельского хозяйства и органическому производству (ADOP 2025)</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">События компании</a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2025-06-03">3 - 6 июня, 2025</time></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                В рамках конференции ADOP 2025 рукодитель отдела высоконагруженных систем Вячеслав Шаламов выступил с докладом 
+                                "Тренды и кейсы внедрения искусственного интеллекта для сельского хозяйства и агропромышленности на примере запросов и кейсов компании"
+                            </p>
+                            <div class="read-more">
+                                <a href="https://adop.nw.ru/2025/" target="_blank">Подробнее</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="~/assets/img/News/YandexPrize2.jpeg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="https://companies.rbc.ru/news/rMvkHQ0lbA/statanly-technologies---lider-po-kolichestvu-laureatov-yandex-ml-prize" target="_blank">Statanly Technologies — лидер по количеству лауреатов Yandex ML Prize</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Новости компании</a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2024-11-07">7 ноября, 2024</time></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                На прошлой неделе компания «Яндекс» объявила очередных лауреатов премии Yandex ML Prize в области искусственного интеллекта. 
+                                За 6 лет лауреатами премии стали более 60 ученых. Среди них уже три сотрудника компании Statanly Technologies, что делает ее <strong>лидером в списке независимых компаний</strong> в области искусственного интеллекта по количеству лауреатов.
+                            </p>
+                            <div class="read-more">
+                                <a href="https://companies.rbc.ru/news/rMvkHQ0lbA/statanly-technologies---lider-po-kolichestvu-laureatov-yandex-ml-prize/" target="_blank">Подробнее</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="~/assets/img/News/YandexPrize1.jpeg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="https://yandex.ru/company/news/02-31-10-2024" target="_blank">Яндекс наградил 14 учёных за достижения в сфере машинного обучения</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Новости компании</a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2024-10-31">31 октября, 2024</time></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                Компания Яндекс объявила лауреатов престижной премии Yandex ML Prize в области искусственного интеллекта. 
+                                Среди них Валерия Ефимова — руководитель отдела компьютерного зрения компании Statanly Technologies.
+                            </p>
+                            <div class="read-more">
+                                <a href="https://yandex.ru/company/news/02-31-10-2024" target="_blank">Подробнее</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+
+                    <div class="blog-pagination">
+                        <ul class="justify-content-center">
+                            @*  <li><a href="#">1</a></li>*@
+                            <li class="active"><a href="#">1</a></li>
+                              <li><a href="/home/press">2</a></li>
+                        </ul>
+                    </div>
+
+                </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar">
+                        <div class="sidebar-item recent-posts">
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/agro.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/vK3Hzu83q4/iskusstvennyij-intellekt-v-selskom-hozyajstve-i-agropromyishlennosti/">Искусственный интеллект в сельском хозяйстве и агропромышленности</a></h4>
+                                <time datetime="2025-05-28">Май, 2025</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/conv.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/kHmF6yJgnR/avtomatizatsiya-konvejernyih-protsessov-s-pomoschyu-iskusstvennogo-intellekta/">Автоматизация конвейерных процессов с помощью искусственного интеллекта</a></h4>
+                                <time datetime="2025-02-17">февраль, 2025</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/deepseek.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/38CohigbtC/kak-deepseek-r1-snizil-stoimost-obucheniya-ii-modelej-do-6-mln-dollarov/">Как DeepSeek R1 снизил стоимость обучения ИИ-моделей до 6 млн долларов</a></h4>
+                                <time datetime="2025-02-17">январь, 2025</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/yandexML.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/rMvkHQ0lbA/statanly-technologies---lider-po-kolichestvu-laureatov-yandex-ml-prize/">Statanly Technologies — лидер по количеству лауреатов Yandex ML Prize</a></h4>
+                                <time datetime="2024-04-17">ноябрь, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/yandexML2.jpg" alt="">
+                                <h4><a target="_blank" href="https://yandex.ru/company/news/02-31-10-2024">Валерия Ефимова - руководитель отдела компьютерного зрения Statanly Technologies. Уже третий лауреат Yandex ML Prize</a></h4>
+                                <time datetime="2024-04-17">Октябрь, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/projects.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/UmxyjjHjAy/samyie-neobyichnyie-zadachi-kotoryie-reshaet-iskusstvennyij-intellekt/">Самые необычные задачи, которые решает искусственный интеллект</a></h4>
+                                <time datetime="2024-04-17">Сентябрь, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/PromAI.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/sOZzVUaBU8/kogda-kompaniyam-stoit-vnedryat-tehnologii-iskustvennogo-intellekta/">Когда компаниям стоит внедрять технологии искусственного интеллекта</a></h4>
+                                <time datetime="2024-04-17">Август, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/tpugpu.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/3OQ4Bk8TQ0/smogut-li-tenzornyie-protsessoryi-konkurirovat-s-resheniyami-nvidia-dlya-ii/">Смогут ли тензорные процессоры конкурировать с решениями NVidia для ИИ?</a></h4>
+                                <time datetime="2024-04-17">Июнь, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/cover_1.jpg" alt="">
+                                <h4><a target="_blank" href="https://vaiti.io/sobiraem-kompyuter-dlya-raboty-s-bolshimi-yazykovymi-modelyami/">Собираем компьютер для работы с большими языковыми моделями</a></h4>
+                                <time datetime="2024-04-17">Май 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/LLM1.jpg" alt="">
+                                <h4><a target="_blank" href="https://companies.rbc.ru/news/nwFZwqApye/kak-kompanii-vnedryayut-yazyikovyie-modeli-llm-dlya-avtomatizatsii-biznesa/">Как компании внедряют языковые модели (LLM) для автоматизации бизнеса</a></h4>
+                                <time datetime="2024-04-17">Апрель, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/itmo1.jpg" alt="">
+                                <h4><a target="_blank" href="https://news.itmo.ru/ru/university_live/ratings/news/13704/">ИТМО — единственный российский вуз в мировом топ-100 по искусственному интеллекту</a></h4>
+                                <time datetime="2024-04-10">Апрель, 2024</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/itmo.jpg" alt="">
+                                <h4><a target="_blank" href="https://news.itmo.ru/ru/university_live/ratings/news/13514/">ИТМО готовит лучших специалистов по искусственному интеллекту</a></h4>
+                                <time datetime="2023-11-01">Ноябрь, 2023</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/oblozhka-2.png" alt="">
+                                <h4><a target="_blank" href="https://vaiti.io/tenzornye-proczessory-tpu-kak-alternativa-nvidia-instrukcziya-po-primeneniyu-dlya-razrabotchikov/">Тензорные процессоры (TPU) как альтернатива NVIDIA. Инструкция по применению для разработчиков</a></h4>
+                                <time datetime="2023-10-01">Ноябрь, 2023</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/WEU9ZuZwx78.jpg" alt="">
+                                <h4><a target="_blank" href="https://vk.com/@@-218809901-intervu-statanly-technologies-ob-ii">Интервью Statanly Technologies об ИИ</a></h4>
+                                <time datetime="2023-02-01">Февраль, 2023</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/mask.jpg" alt="">
+                                <h4><a target="_blank" href="https://abnews.ru/2021/03/12/peterburgskaya-kompaniya-sozdaet-nejroset-kak-u-ilona-maska/">Петербургская компания создает нейросеть, как у Илона Маска</a></h4>
+                                <time datetime="2020-01-01">Март, 2021</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/seg.jpg" alt="">
+                                <h4><a target="_blank" href="https://news.itmo.ru/ru/university_live/achievements/news/9565/">Лауреат премии Яндекса им. Ильи Сегаловича Вячеслав Шаламов: Нельзя положить результаты своих исследований в стол, нужно подумать, как их внедрить в компании</a></h4>
+                                <time datetime="2020-01-01">Июль, 2021</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/texttoimg.jpg" alt="">
+                                <h4><a target="_blank" href="https://www.dp.ru/a/2021/03/12/Gonka_perevoploshhenij">Гонка перевоплощений: петербургская компания научит нейросети рисовать</a></h4>
+                                <time datetime="2020-01-01">Апрель, 2021</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/automl.jpeg" alt="">
+                                <h4><a target="_blank" href="https://habr.com/ru/company/jetinfosystems/blog/485232/l">Автоматическое машинное обучение: когда data scientist’ы будут не нужны</a></h4>
+                                <time datetime="2020-01-01">Январь, 2020</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/rockstar.jpg" alt="">
+                                <h4><a target="_blank" href="https://news.itmo.ru/ru/startups_and_business/startup/news/8972/">Резидент технопарка ИТМО, компания Statanly Technologies: «Мы не стали ждать инвестиций, а начали обеспечивать себя сами»</a></h4>
+                                <time datetime="2020-01-01">Ноябрь, 2019</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/reit.jpg" alt="">
+                                <h4><a target="_blank" href="https://habr.com/ru/company/habr_career/blog/342258/">Рейтинг ИТ-работодателей Санкт-Петербурга и Москвы: результаты опроса разработчиков</a></h4>
+                                <time datetime="2020-01-01">Январь, 2018</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/897201.jpg" alt="">
+                                <h4><a target="_blank" href="https://news.itmo.ru/en/startups_and_business/startup/news/8972/">ITMO Technopark Resident Statanly Technologies Shares Its Story of Success</a></h4>
+                                <time datetime="2020-01-01">Январь, 2018</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/2.png" alt="">
+                                <h4><a target="_blank" href="http://news.ifmo.ru/ru/startups_and_business/startup/news/6653/">Будни стартапа</a></h4>
+                                <time datetime="2020-01-01">Сентябрь, 2017</time>
+                            </div>
+                            <div class="post-item clearfix">
+                                <img src="/assets/img/blog/2.png" alt="">
+                                <h4><a target="_blank" href="http://news.ifmo.ru/ru/news/6831/">Фестиваль стартапов *SHIP в Котке, Финляндия</a></h4>
+                                <time datetime="2020-01-01">Июль, 2017</time>
+                            </div>
+
+
+                        </div><!-- End sidebar recent posts-->
+                    </div><!-- End sidebar -->
+
+
+                </div><!-- End blog sidebar -->
+
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+</main><!-- End #main -->

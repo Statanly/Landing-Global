@@ -138,6 +138,9 @@
   <data name="MissionText" xml:space="preserve">
     <value>Our mission is to improve people's lives by automating routine work using machine learning and bringing data mining services to all areas of human activity. We are building an ecosystem where any company, regardless of size and field of activity, can use and implement machine learning services in their projects and applications.</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
   <data name="OurMission" xml:space="preserve">
     <value>Our mission</value>
   </data>

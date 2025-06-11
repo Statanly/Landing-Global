@@ -135,6 +135,9 @@
   <data name="Mission" xml:space="preserve">
     <value>Mission</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
   <data name="Press" xml:space="preserve">
     <value>Press</value>
   </data>

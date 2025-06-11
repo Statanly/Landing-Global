@@ -126,8 +126,17 @@
   <data name="Company" xml:space="preserve">
     <value>Компания</value>
   </data>
+  <data name="Company1" xml:space="preserve">
+    <value>Компания</value>
+  </data>
   <data name="Contacts" xml:space="preserve">
     <value>Контакты</value>
+  </data>
+  <data name="Contacts1" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Сотрудничество</value>
   </data>
   <data name="CV" xml:space="preserve">
     <value>Компьютерное зрение и видеоаналитика</value>
@@ -147,6 +156,9 @@
   <data name="February" xml:space="preserve">
     <value>Февраль</value>
   </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
   <data name="IS" xml:space="preserve">
     <value>Информационный поиск</value>
   </data>
@@ -159,14 +171,23 @@
   <data name="Main" xml:space="preserve">
     <value>Главная</value>
   </data>
+  <data name="Main1" xml:space="preserve">
+    <value>Главная</value>
+  </data>
   <data name="March" xml:space="preserve">
     <value>Март</value>
+  </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Миссия</value>
   </data>
   <data name="ML" xml:space="preserve">
     <value>Машинное обучение</value>
   </data>
   <data name="More" xml:space="preserve">
     <value>Подробнее</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Новости</value>
   </data>
   <data name="NLP" xml:space="preserve">
     <value>Обработка естественного языка</value>
@@ -189,10 +210,22 @@
   <data name="PredictiveSystemsText" xml:space="preserve">
     <value>Прогнозные модели позволяют с высокой вероятностью оценить перспективы развития бизнеса, вычислить конверсию продаж в будущем, спрогнозировать наступление страхового случая, оценить эффективность маркетинговых кампаний и вероятность того, будет ли клиент вовремя оплачивать кредит. Прогнозные системы отказа оборудования позволяет на ранней стадии диагностировать и предотвратить поломки и выходы из строя сложных систем. Оценивая будущие результаты, вы сможете грамотно распределять ресурсы, сократить расходы, контролировать качество продукции, повысить эффективность принимаемых решений и автоматизировать ручной труд.</value>
   </data>
+  <data name="Press" xml:space="preserve">
+    <value>Пресса</value>
+  </data>
   <data name="Projects" xml:space="preserve">
     <value>проектов</value>
   </data>
+  <data name="Projects1" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Публикации о компании</value>
+  </data>
   <data name="Research" xml:space="preserve">
+    <value>Исследования</value>
+  </data>
+  <data name="Research1" xml:space="preserve">
     <value>Исследования</value>
   </data>
   <data name="RS" xml:space="preserve">
@@ -210,10 +243,19 @@
   <data name="Solutions" xml:space="preserve">
     <value>Решения</value>
   </data>
+  <data name="Solutions1" xml:space="preserve">
+    <value>Решения</value>
+  </data>
   <data name="Tags" xml:space="preserve">
     <value>Теги</value>
   </data>
+  <data name="Team" xml:space="preserve">
+    <value>Команда</value>
+  </data>
   <data name="Write" xml:space="preserve">
+    <value>Написать</value>
+  </data>
+  <data name="Write1" xml:space="preserve">
     <value>Написать</value>
   </data>
 </root>
