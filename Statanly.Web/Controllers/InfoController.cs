@@ -77,5 +77,9 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Report.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult Agro()
+        {
+            return File("~/Content/Agro Presentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
     }
 }
