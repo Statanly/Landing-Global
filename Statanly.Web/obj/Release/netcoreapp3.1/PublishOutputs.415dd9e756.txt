@@ -414,10 +414,12 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\MyCollages.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\News\ADOP 2025.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\News\AI - future today.JPG
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\News\Itmo.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\News\YandexPrize1.jpeg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\News\YandexPrize2.jpeg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\NLP.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\NY.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\alrii.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\bbridge.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\CusFlow.JPG
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\partners\deflamel.JPG
@@ -584,6 +586,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanl
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Products\Product5\7.jpeg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Products\Product7\1.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Products\Product7\2.JPG
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Products\Product7\3.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\prom.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\restoran.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\retail.jpg

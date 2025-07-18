@@ -1,4 +1,4 @@
-/**
+﻿/**
 * Template Name: Anyar - v4.0.1
 * Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
 * Author: BootstrapMade.com
@@ -1081,7 +1081,47 @@ color: #384046;
     margin-bottom: 0;
     color: #777777;
 }
+    .services .icon-box ul {
+        padding: 0;
+        margin-left: 70px;
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 0;
+        color: #777777;
+        list-style: none ;
 
+    }
+        .services .icon-box ul > li {
+            padding-left: 0px;
+            position: relative;
+            margin: 0px;
+        }
+
+            .services .icon-box ul > li:before {
+                content: '✔';
+                position: absolute;
+                top: 0;
+                left: 0px;
+                color: #f6b024;
+            }
+
+        .services .icon-box ul li {
+            padding-left: 15px;
+            position: relative;
+        }
+
+            .services .icon-box ul li + li {
+                margin-top: 0px;
+            }
+
+.services .icon-box ul i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+    color: #0880e8;
+    line-height: 1;
+}
 /*--------------------------------------------------------------
 # CVServices
 --------------------------------------------------------------*/
@@ -2378,6 +2418,25 @@ color: #384046;
 .blog .entry .entry-content .read-more a:hover {
   background: #f7b93c;
 }
+
+.services .entry-content .read-more {
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+    .services .entry-content .read-more a {
+        display: inline-block;
+        background: #f6b024;
+        color: #fff;
+        padding: 6px 20px;
+        transition: 0.3s;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+        .services .entry-content .read-more a:hover {
+            background: #f7b93c;
+        }
 
 .blog .entry .entry-content h3 {
   font-size: 22px;
