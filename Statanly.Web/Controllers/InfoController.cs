@@ -81,5 +81,9 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Agro Presentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult SafetyPlatform()
+        {
+            return File("~/Content/Safety_Platform.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
     }
 }
