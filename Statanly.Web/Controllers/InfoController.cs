@@ -72,6 +72,30 @@ namespace Statanly.Web.Controllers
             return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
 
+        public FileResult Granulometry(int id)
+        {
+            if (id == 1)
+            {
+                return File("~/Content/Granulometry_Documentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+            }
+            if (id == 2)
+            {
+                return File("~/Content/Granulometry_Instruct.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+            }
+            if (id == 3)
+            {
+                return File("~/Content/Granulometry_Installation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+            }
+            if (id == 4)
+            {
+                return File("~/Content/Granulometry_Architecture.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+            }
+            return File("~/Content/Accreditation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
+
         //Rostelecom
         public FileResult Report()
         {
