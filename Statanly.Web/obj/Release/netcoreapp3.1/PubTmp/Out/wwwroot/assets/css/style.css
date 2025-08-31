@@ -1789,6 +1789,100 @@ color: #384046;
 }
 
 /*--------------------------------------------------------------
+# NLPText
+--------------------------------------------------------------*/
+.nlptext .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+    height: 200px;
+}
+
+    .nlptext .member .pic {
+        overflow: hidden;
+        width: 180px;
+        border-radius: 50%;
+    }
+
+        .nlptext .member .pic img {
+            transition: ease-in-out 0.3s;   
+        }
+
+    .nlptext .member:hover img {
+        transform: scale(1.1);
+    }
+
+    .nlptext .member .member-info {
+        padding-left: 20px;
+    }
+
+    .nlptext .member h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #05579e;
+    }
+
+    .nlptext .member span {
+        display: block;
+        font-size: 15px;
+        padding-bottom: 10px;
+        position: relative;
+        font-weight: 500;
+    }
+
+        .nlptext .member span::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: #bfe0fd;
+            bottom: 0;
+            left: 0;
+        }
+
+    .nlptext .member p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+    }
+
+    .nlptext .member .social {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+        .nlptext .member .social a {
+            transition: ease-in-out 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            width: 32px;
+            height: 32px;
+            background: #ecf6fe;
+            color: #0665b7;
+        }
+
+            .nlptext .member .social a i {
+                font-size: 16px;
+                margin: 0 2px;
+            }
+
+            .nlptext .member .social a:hover {
+                background: #0880e8;
+                color: #fff;
+            }
+
+            .nlptext .member .social a + a {
+                margin-left: 8px;
+            }
+
+/*--------------------------------------------------------------
 # numbers
 --------------------------------------------------------------*/
 .numbers .box {
@@ -2052,6 +2146,231 @@ color: #384046;
     .areas .areas-list {
         padding: 0;
     }
+}
+
+/*--------------------------------------------------------------
+# nlpspeech
+--------------------------------------------------------------*/
+.nlpspeech .box {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    height: 370px;
+}
+
+.nlpspeech h3 {
+    font-weight: 400;
+    margin: -20px -20px 20px -20px;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #05579e;
+    background: #f8f8f8;
+}
+
+.nlpspeech h4 {
+    font-size: 36px;
+    color: #0880e8;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+
+    .nlpspeech h4 sup {
+        font-size: 20px;
+        top: -15px;
+        left: -3px;
+    }
+
+    .nlpspeech h4 span {
+        color: #bababa;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+.nlpspeech ul {
+    padding: 0;
+    list-style: disc;
+    color: #444444;
+    text-align: left;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+    .nlpspeech ul li {
+        padding-bottom: 16px;
+    }
+        .nlpspeech ul li::marker {
+            color: #f6b024;
+        }
+
+    .nlpspeech ul i {
+        color: #0880e8;
+        font-size: 18px;
+        padding-right: 4px;
+    }
+
+    .nlpspeech ul .na {
+        color: #ccc;
+        text-decoration: line-through;
+    }
+
+.nlpspeech .btn-wrap {
+    margin: 20px -20px -20px -20px;
+    padding: 20px 15px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.nlpspeech .btn-buy {
+    background: #0880e8;
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 50px;
+    color: #fff;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .nlpspeech .btn-buy:hover {
+        background: #2b99f8;
+    }
+
+.nlpspeech .featured h3 {
+    color: #fff;
+    background: #0880e8;
+}
+
+.nlpspeech .advanced {
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+    background: #0880e8;
+    color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.pricing .box {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing h3 {
+    font-weight: 400;
+    margin: -20px -20px 20px -20px;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #05579e;
+    background: #f8f8f8;
+}
+
+.pricing h4 {
+    font-size: 36px;
+    color: #0880e8;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+
+    .pricing h4 sup {
+        font-size: 20px;
+        top: -15px;
+        left: -3px;
+    }
+
+    .pricing h4 span {
+        color: #bababa;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+.pricing ul {
+    padding: 0;
+    list-style: none;
+    color: #444444;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+    .pricing ul li {
+        padding-bottom: 16px;
+    }
+
+    .pricing ul i {
+        color: #0880e8;
+        font-size: 18px;
+        padding-right: 4px;
+    }
+
+    .pricing ul .na {
+        color: #ccc;
+        text-decoration: line-through;
+    }
+
+.pricing .btn-wrap {
+    margin: 20px -20px -20px -20px;
+    padding: 20px 15px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.pricing .btn-buy {
+    background: #0880e8;
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 50px;
+    color: #fff;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .pricing .btn-buy:hover {
+        background: #2b99f8;
+    }
+
+.pricing .featured h3 {
+    color: #fff;
+    background: #0880e8;
+}
+
+.pricing .advanced {
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+    background: #0880e8;
+    color: #fff;
 }
 
 /*--------------------------------------------------------------

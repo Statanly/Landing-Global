@@ -4,277 +4,469 @@
 <!-- ======= Breadcrumbs ======= -->
 <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
-        <h2>NLP системы</h2>
+        <h2>Обработка естественных языков</h2>
         <ol>
             <li><a href="/home/ml">Прогнозные системы</a></li>
             <li><a href="/home/da">Рекомендательные системы</a></li>
             <li><a href="/home/cv">Компьютерное зрение</a></li>
-            <li>Обработка естественного языка</li>
+            <li>Обработка естественных языков</li>
         </ol>
     </div>
 </section><!-- End Breadcrumbs -->
-<!-- ======= Portfolio Details Section ======= -->
-<section id="portfolio-details" class="portfolio-details">
+<section id="cta" class="cta">
     <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-8">
-                <h3>Системы на базе анализа естественного языка</h3>
-                <p>
-                    Недавний подъём интереса к системам АI/ML был вызван появлением неожиданно успешных LLMs типа ChatGPT и GPT-4, а также open source моделей, типа LLaMA, опубликованной в феврале 2023 года. 
-                    Хотя это только одна из многих областей AI/ML, именно в этой области произошли наиболее важные и наиболее обсуждаемые изменения. Наша компания имеет большой опыт и глубокую экспертизу в области систем на базе
-                    обработки естественного языка. За последние годы были реализованы десятки проектов, среди которых можно выделить:
-                </p>
-                <p>
-                    <strong>Доменно-специфичные поисковые вопросно-ответные системы</strong>
-                </p>
-                <p>
-                    ChatGPT был запущен в конце 2022 года и привлёк внимание своими широкими возможностями: написание кода, создание текстов, возможности перевода, демонстрируя удивительные
-                    возможности отвечать на любые человеческие вопросы, зачастую на уровне не хуже эксперта в определенной области.
-                    Получить ответы на многие вопросы теперь стало гораздо проще и быстрее. Не нужно искать необходимую информацию среди сотен страниц, выдаваемых поисковыми системами
-                    по определенным запросам. Данная модель (Generative Pre-trained Transformer) - обучен на сотнях миллионов текстов различной тематике, специфики и языков.
-                    Тем не менее, еще задолго до появления ChatGPT возникала потребность в системах, способных быстро найти ответ в определенной узкой области, в технической документации, инструкции,
-                    руководстве пользователей. В таких случаях, к сожалению, ChatGPT будет бесполезным (конечно, он просто может придумать ответ, но это будет не корректно).
-                    Наша NLP-команда принимала участие в создании таких систем, в частности:
-                </p>
-
-                <ul>
-                    <li>
-                        <strong>Веб скраппинг (web scraping) с использованием LLM</strong>
-                        </br>
-                        Позволяет “интеллектуально” собирать различную информацию из интернета, агрегировать ее в заданный формат (csv, json и другие), находить различный контент по определенным параметрам.
-                    </li>
-                    <li>
-                        <strong>Структурированное извлечение данных из документов (Named Entity Recognition)</strong>
-                        </br>
-                        Технология NER (Named Entity Recognition) — «распознавание именованных сущностей» позволяет извлекать информацию из различных источников, например, контактные данные, геолокацию, определенные слова и характеристики объектов, любую специфическую информацию.
-                        За одной задачей NER, на самом деле, стоит две: 1) обнаружить, что какая-то последовательность слов — это именованная сущность; 2) понять, к какому классу (имя человека, название организации, локация, время и т.п.) эта именованная сущность относится.
-                    </li>
-                    <li>
-                        <strong>
-                            Вопросно-ответная система с использованием коллекции документов, RAG (Retrieval-Augmented Generation)
-                        </strong>
-                        </br>
-                        Локальный аналог ChatGPT по специализированной документной базе. Разрабатываем, используя "generic" LLM, обученную на большом массиве данных и дополняя решение поиском по базе знаний, специфичной для определенного домена. Подходит, например, если необходима система помощи для работы с внутренней базой знаний компании. В качестве документной базы могут быть различные типы информации, не только текст. Можно в базу добавить картинки, звук и таблицы. Как отдельный пункт можно добавить RAG с использованием интернет браузера (вместо коллекции документов -  интернет). Пример - <strong>BingChat</strong>.
-                    </li>
-                    <li>
-                        <strong>Специализированные диалоговые агенты / чат боты (ChatGPT )</strong>
-                        </br>
-                        Finetuning LLM модели, когда необходима модификация поведения или стиля ответов для специализированной области знаний. RLHF для адаптирования модели к человеческим предпочтениям.
-                        Примером может быть система генерации доменов, где, предположим, мы собрали много человеческого фидбека о том, какой домен из сгенерированных лучше, и на таком наборе данных сделали Reinforcement learning from human feedback).
-                        В целом тема очень популярная и широко используемая, в Яндексе, например, мы так делали для адаптирования переводов под человеческие предпочтения
-                    </li>
-                    <li>
-                        <strong>
-                            Чат Боты с поддержкой базы знаний (knowledge graph), способные вносить знания в нее, и использовать информацию выходящую за рамки контекстного окна
-                        </strong>
-                        </br>
-                        В случае, если дополнительно необходимо вносить фактические знания в граф, чтобы помнить долгосрочные зависимости и легко восстанавливать историю. Кроме того, составление такого графа может быть полезно для персонализированного анализа для каждого пользователя (можно имплементировать рекомендательную систему)
-                    </li>
-                    <li>
-                        <strong>Суммаризация</strong>
-                        </br>
-                        Выделение нужной информации из больших текстов и неструктурированных документов в компактный вид, резюме, краткое содержание, выделение основных тем, положений и смысла. В качестве примеров – сервис для генерирования краткого содержания по субтитрам из ютуб видео или сервис для автоматического составления meeting notes после важной видеоконференции
-                    </li>
-                    <li>
-                        <strong>
-                            Персонализированный copilot
-                        </strong>
-                        </br>
-                        Помощник, который помогает писать не только программный код, но и техническую документацию, контракты, договоры и т.д.. Аналог AI помощников, например в Notion, Todoist, и, вероятно, скоро появится в многих других приложениях. Можно использовать таких помощников для более быстрого написания специализированных текстов (в том числе и кода).
-                    </li>
-                    <li>
-                        <strong>
-                            Автоматический перевод
-                        </strong>
-                        </br>
-                        Может быть частью сервиса. Например, для банковского приложения можно облегчить жизнь своему call-центру. В него могут приходить вопросы на разных языках и разного уровня структуризации. Можно комбинировать с пунктами  2, 5, 6, 7, 9 для создания такого сервиса эффективно. Дополнительно можно сделать модели перевода с любых языков
-                    </li>
-                    <li>
-                        <strong>
-                            Классификация,  тегирование
-                        </strong>
-                        </br>
-                        Любой анализ текста, классификация по тематике, выделение сущностей, тегов, анализ тональности, стилю, проверка документов на соответствие определенным параметрам. В частности, такие системы используются для анализа
-                        ответов операторов колцентра (вежливо, грубо), отзывов и кометариев к статьям (положительный, отрицательный, нейтральный)
-                    </li>
-                    <li>
-                        <strong>
-                            LLM агенты (пример AutoGPT)
-                        </strong>
-                        </br>
-                        Перспективная область развития генеративных моделей. Microsoft описывает AutoGen как фреймворк для упрощения оркестровки, оптимизации и автоматизации задач, использующих языковые модели. Агенты могут быть настроены и дополнены с помощью внешних инструментов, которые позволяют им извлекать информацию или выполнять код.Такой совместный подход может привести к значительному повышению эффективности работы генеративных моделей. Например агента, который будет делать research (web_search, запись в файлы), агента который будет автоматически писать код (доступ к дебаггеру и stackoverflow например) и итеративно "улучшать" себя. Выглядит это, как реализованный шахматный бот, который анализирует ходы, разбирает их и дает советы или система, которая выявляет различные новостные фейки.
-                        LLM агенты = LLM с внешними инструментами + Chain of Thought
-                        Инструменты, такие как: поиск в интернете, wolfram, переводчик, калькулятор, пойти в базу данных, да что угодно в принципе
-                        Chain of Thought значит, что на каждом шаге модель "думает" какое действие ей сделать (использовать калькулятор или wolfram).
-                        Формат CoT примерно следующий: на каждом шаге модель генерирует Thought, Action (какой инструмент использовать, либо дать финальный ответ), ActionInput,
-                        затем генерируется Observation в зависимости от инструмента и процесс повторяется:
-                        </br>
-                        <code>
-                            Input: Who is Brad Pitt's girlfriend and what is her age in the power of 2?
-                            ———
-                            Thought: I need to look up Brad Pitt's girlfriend on the internet.
-                            Action: web_search
-                            ActionInput: {"query": "Brad Pitts's girlfriend"}
-                            Observation: Ines de Ramon
-
-                            Thought: Now I know who is Brad Pitt's girlfriend. I need to find her age and take it to the power of 2.
-                            Action: web_search
-                            ActionInput: {"query": "Ines de Ramon age"}
-                            Observation: 30
-
-                            Thought: Ines de Ramon is 30 years old, I need to take it to the power of 2.
-                            Action: calculator
-                            ActionInput: {"input": 30**2}
-                            Observation: 900
-
-                            Thought: Now I am ready to give final answer.
-                            Action: final_answer
-                            ActionInput: {"input": "Brad Pitt's girlfriend is Ines de Ramon and her age to the power of 2 is 900"}
-
-                            ——
-                            Finished Chain
-                            ——-
-                            Output: "Brad Pitt's girlfriend is Ines de Ramon and her age to the power of 2 is 900"
-                        </code>
-                    </li>
-                    <li>
-                        <strong>
-                            Проверка документов
-                        </strong>
-                        </br>
-                        Анализ и проверка документов по различным критерием, например соответствию закону страны, выявление сомнительных и подозрительных пунктов.
-                    </li>
-                    <li>
-                        <strong>
-                            Голосовой помощник
-                        </strong>
-                        </br>
-                        Находит необходимый ответ в технической документации даже на базе не четко поставленного вопроса (как правило пользователь не знает техническую терминологию)
-                    </li>
-                    <li>
-                        <strong>
-                            Системы перефразирования текстов
-                        </strong>
-                        </br>
-                        Системы перефразирования текстов (задача парафраза), когда необходимо, возможно в сжатом виде пересказать определенной статью, текст, заметку.
-                    </li>
-                </ul>
-
-
-
+        <div class="row" data-aos="zoom-in">
+            <div class="col-lg-9 text-center text-lg-start">
+                <h3>Сервисы на базе больших языковых моделей и речевая аналитика</h3>
+                <p>Автоматизируйте работу с документами, обработку текстовой информации и речевых обращений</p>
             </div>
-            <div class="col-lg-4">
-                <img src="~/assets/img/NLP.png" style="max-width: 100%" alt="">
+            <div class="col-lg-3 cta-btn-container text-center">
+                <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
             </div>
         </div>
-        <div class="row gy-4">
-            <p>
-                <strong>Подходы</strong>
-            </p>
-            <div class="col-lg-12">
-                <ul>
-                    <li>
-                        <strong>
-                            LLM
-                        </strong>
-                        </br>
-                        - это просто языковая модель, которая предсказывает следующий токен
-                    </li>
-                    <li>
-                        <strong>
-                            Диалоговый агент (или чат-бот)
-                        </strong>
-                        </br>
-                        - LLM, дообученная на диалоговых данных и рекурсивно предсказывающая следующее сообщение
-                    </li>
-
-                    <li>
-                        <strong>
-                            RAG - LLM
-                        </strong>
-                        </br>
-                        (не важно диалоговая или нет) с возможностью обращаться в базу знаний (гитхаб репозиторий, документация, интернет) и вытаскивать оттуда что-то полезное для генерации ответов
-                    </li>
-                    <li>
-                        <strong>
-                            LLM с knowledge graph
-                        </strong>
-                        </br>
-                        может, наоборот, вносить в базу знания, представленные в виде графа связей. Подходит для запоминания фактической информации типа «Париж - столица Франции».
-                        Это можно назвать подвидом RAG, но классически RAG это про коллекции эмбеддингов, как в примере с документацией. Это направление еще более новое и часто нетривиальное в решении.
-                    </li>
-                </ul>
+    </div>
+</section><!-- End Cta Section -->
+<!-- ======= NLP Section ======= -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-flex align-items-stretch">
+                <div class="icon-box">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <h4><a href="#1">Анализ документов</a></h4>
+                    <p>Информационный поиск, структурированное извлечение и классификация информации</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-mic"></i>
+                    <h4><a href="#2">Речевая аналитика</a></h4>
+                    <p>Распознавание речи и диалогов, выявление речевых паттернов, ключевых фраз и тегов</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-filetype-pdf"></i>
+                    <h4><a href="#3">Распознавание документов</a></h4>
+                    <p>Извлечение информации из сканов и фотографий документов, распознавание рукописного текста и документов на видео</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-chat-dots"></i>
+                    <h4><a href="#4">ИИ-ассистенты</a></h4>
+                    <p>Оптимизация клиентского сервиса, автоматизация коммуникаций и работы с данными</p>
+                </div>
             </div>
         </div>
-        <div>
-            <p>
-                <strong> Примеры проектов</strong>
-            </p>
-            <div class="row gy-4">
 
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Прогнозная система характиристик публикаций</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: NLP</li>
-                            <li><strong>Клиент</strong>: Life.ru</li>
-                            <li><strong>Дата</strong>: 2021</li>
-                            <li><strong>Детали</strong>: <a href="/home/case/2">Подробнее</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Классификация веб сайтов по категориям</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: NLP</li>
-                            <li><strong>Клиент</strong>: Segmento</li>
-                            <li><strong>Дата</strong>: 2022</li>
-                            <li><strong>Детали</strong>: <a href="/home/case/5">Подробнее</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Генерация доменных имен по описанию</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: NLP</li>
-                            <li><strong>Клиент</strong>: It.com</li>
-                            <li><strong>Дата</strong>: 2021</li>
-                            <li><strong>Детали</strong>: <a href="/home/case/9">Подробнее</a></li>
-                        </ul>
+    </div>
+</section><!-- End NLP Section -->
+<!-- ======= NLP Section ======= -->
+<section id="1" class="nlptext section-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>Анализ документов</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/1.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Информационный поиск</h4>
+                        <span>Интеллектуальный поиск информации во внутренней базе данны, веб-скраппинг (web scraping) автоматический поиск информации в интернете, агрегация в заданном формате (csv, json и другие)</span>
                     </div>
                 </div>
             </div>
-            <div class="row gy-4">
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Поисковая информационная система (локальная LLM)</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: NLP</li>
-                            <li><strong>Клиент</strong>: Devprom</li>
-                            <li><strong>Дата</strong>: 2023</li>
-                            <li><strong>Детали</strong>: <a href="/home/case/2#3">Подробнее</a></li>
-                        </ul>
+
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/2.webp" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Извлечение информации</h4>
+                        <span>Структурированное извлечение данных из документов, суммаризация текста в компактный вид, резюме, краткое содержание</span>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                        <h3>Специализированные системы поиска и вопросов и ответов</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: NLP</li>
-                            <li><strong>Клиент</strong>: ТВЦ</li>
-                            <li><strong>Дата</strong>: 2019</li>
-                            <li><strong>Детали</strong>: <a href="/home/case/2#2">Подробнее</a></li>
-                        </ul>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/4.png" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Классификация текстов</h4>
+                        <span>Классификация по тематике, анализ тональности, стилю, проверка документов на соответствие определенным параметрам. Анализ ответов оператора (вежливо, грубо), отзывов и кометариев к статьям (положительный, отрицательный, нейтральный)</span>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="portfolio-info">
-                 
+            </div>
+
+            <div class="col-lg-6 mt-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/3.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Выделение ключевых фраз</h4>
+                        <span>Извлечение ключевых слов, тегов, сущностей и речевых оборотов, выделение основных тем, положений и смысла</span>
                     </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/5.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Проверка документов</h4>
+                        <span>Анализ и проверка документов по различным критерием, соответствию закону страны, выявление сомнительных и подозрительных пунктов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/6.jpeg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Автоматический перевод</h4>
+                        <span>Анализ текста на разных языках и разного уровня структуризации и автоматический перевод на любые языки</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End NLP Section -->
+<!-- ======= NLP Section ======= -->
+<section id="2" class="nlpspeech">
+    <div class="container">
+        <div class="section-title">
+            <h2>Речевая аналитика</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="box">
+                    <h3>Расшифровка звонков</h3>
+                    <ul>
+                        <li>Транскрибация аудио и видео в текст</li>
+                        <li>Выделение участников диалога</li>
+                        <li>Составление краткого резюме разговора</li>
+                        <li>Исключение шумов и помех при обработке диалогов</li>
+                        <li>Автоматический перевод на любые языки</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+                <div class="box">
+                    <h3>Выявление ключевых фраз</h3>
+                    <ul>
+                        <li>Извлечение ключевых слов, тегов, сущностей и речевых оборотов</li>
+                        <li>Выявление ошибок оператора (незнание продукта, грубость)</li>
+                        <li>Выявление нецензурной лексики и слов-паразитов</li>
+                        <li>Поиск по негативным фразам и тегам</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                <div class="box">
+                    <h3>Анализ речи</h3>
+                    <ul>
+                        <li>Анализ тональности, стиля, эмоционального окраса</li>
+                        <li>Классификация обращений</li>
+                        <li>Определение проблемных мест в коммуникации с клиентами</li>
+                        <li>Определение популярных вопросов</li>
+                        <li>Анализ ответов оператора (вежливо, грубо) и реакций клиента (положительная, отрицательная, нейтральная)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                <div class="box">
+                    <h3>Контроль выполнения скриптов</h3>
+                    <ul>
+                        <li>Проверка на соответствие определенным параметрам</li>
+                        <li>Фиксация ошибок оператора (не рассказали про акции или новые продукты)</li>
+                        <li>Автоматический контроль выполнение скриптов сотрудниками</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End NLP Section -->
+<!-- ======= NLP Section ======= -->
+<section id="3" class="nlptext section-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>Распознавание документов</h2>
+            <p>
+                Автоматизируйте распознавание и проверку документов, повышайте эффективность процессов
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/7.png" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Распознавание текста</h4>
+                        <span>Извлечение информации из документов любых типов и форматов: PDF, JPG/JPEG, PNG, TIFF, WEBP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/8.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Проверка документов</h4>
+                        <span>Структурированное извлечение данных из документов, распознавание шаблонных документов и базовых атрибутов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/9.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Распознавание рукописного текста</h4>
+                        <span>Чтение кириллицы и латиницы, извлечение информации из сканов и фотографий, содержащих рукописный текст</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic"><img src="~/assets/img/Nlp/10.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Распознавание текста на видео</h4>
+                        <span>Извлечение информации и распознавание текста из различных кадров на видео, проверка документов при видеоконтроле</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End NLP Section -->
+<!-- ======= NLP Section ======= -->
+<section id="4" class="nlpspeech">
+    <div class="container">
+        <div class="section-title">
+            <h2>ИИ-ассистенты</h2>
+            <p>Виртуальные ассистенты и кастомизированные бизнес-боты на основе популярных языковых моделей (LLM)</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="box">
+                    <h3>LLM агенты</h3>
+                    <ul>
+                        <li>Оптимизация и автоматизация задач пользователя</li>
+                        <li>Извлечение информации или выполнение кода</li>
+                        <li>Анализ действий пользователя и формирование рекомендаций и советов</li>
+                        <li>Поиск в интернете и выполнение действий</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+                <div class="box">
+                    <h3>Виртуальный помощник</h3>
+                    <ul>
+                        <li>Диалоговые агенты</li>
+                        <li>Чат боты</li>
+                        <li>Чат боты с поддержкой базы знаний (knowledge graph)</li>
+                        <li>Модификация поведения или стиля ответов для специализированной области знаний</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                <div class="box">
+                    <h3>Персонализированный copilot</h3>
+                    <ul>
+                        <li>Помощник, который помогает писать программный код</li>
+                        <li>Помощник, который помогает писать документацию, контракты, договоры</li>
+                        <li>AI помощник</li>
+                        <li>Помощник для более быстрого написания специализированных текстов</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                <div class="box">
+                    <h3>Вопросно-ответная система</h3>
+                    <ul>
+                        <li>Локальный аналог ChatGPT с использованием коллекции документов, RAG (Retrieval-Augmented Generation)</li>
+                        <li>Система помощи для работы с внутренней базой знаний компании</li>
+                        <li>База знаний в виде текста, таблиц, картинок, звука, видео</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section><!-- End Portfolio Details Section -->
+</section><!-- End NLP Section -->
+
+<section id="blog" class="blog">
+    <div class="container">
+        <div class="section-title">
+            <h2>Наши кейсы</h2>
+        </div>
+        <div class="row">
+            <div class="services-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/2"><img src="/assets/img/Nlp/11.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                            <h2 class="entry-title">
+                                <a href="/home/case/2">Прогнозная система характиристик публикаций</a>
+                            </h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Прогнозная система характеристик публикаций (Views, Likes, Clicks, Comments, и т.д.)
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/2">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/5"><img src="/assets/img/Nlp/12.jpg" alt="" class="img-fluid"></a>
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="/home/case/5">Классификация веб сайтов</a>
+                            </h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Иерархическая система классификации веб-сайтов по категориям
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/5">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/9"><img src="/assets/img/Nlp/13.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                            <h2 class="entry-title">
+                                <a href="/home/case/9">Генерация доменных имен</a>
+                            </h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Система генерации доменных имен по текстовому описанию
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/9">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/2#3"><img src="/assets/img/Nlp/14.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                            <h2 class="entry-title">
+                                <a href="/home/case/2#3">Поисковая информационная система</a>
+                            </h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Поисковая информационная система (локальная LLM) для внутренних документных баз данных компании
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/2#3">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/2#2"><img src="/assets/img/Nlp/15.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                            <h2 class="entry-title">
+                                <a href="/home/case/2#2">Специализированные системы поиска</a>
+                            </h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Системы поиска информации, способные находить конкретные статьи в обширной базе знаний с помощью текстовых описаний
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/2#2">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/2#2"><img src="/assets/img/Nlp/16.png" alt="" class="img-fluid"></a>
+                            </div>
+                            <h2 class="entry-title">
+                                <a href="/home/case/2#2">Анализ телеграмм каналов</a>
+                            </h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Система анализа и выделения новых популярных тем на базе данных телеграмм каналов
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/2#2">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="entry">
+                            <div class="entry-img">
+                                <a href="/home/case/2#2"><img src="/assets/img/Nlp/17.jpg" alt="" class="img-fluid"></a>
+                            </div>
+                            <h2 class="entry-title"><a href="/home/case/2#2">Анализ трендов общественных настроений</a></h2>
+                            <div class="entry-content">
+                                <p style="height: 180px">
+                                    Система прогнозирования тенденций общественных настроений по заданным тематикам
+                                </p>
+                                <div class="read-more">
+                                    <a href="/home/case/2#2">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="smart" class="smart">
+    <div class="container">
+        <div class="section-title">
+            <h2>Варианты поставки ПО</h2>
+            <p>
+
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" style="margin: 0 auto;">
+                    <a tabindex="-1" href=""><img src="/assets/img/Services/cloud.png" alt=""></a>
+                    <h4> <a tabindex="-1" href="">Cloud</a></h4>
+                    <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" style="margin: 0 auto;">
+                    <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.png" alt=""></a>
+                    <h4> <a tabindex="-1" href="">On-Premise</a></h4>
+                    <p>Развертывание ПО на внутренних ресурсах компании</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= Portfolio Details Section ======= -->

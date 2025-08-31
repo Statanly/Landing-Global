@@ -200,10 +200,10 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Systems based on computer vision and video analytics</value>
   </data>
   <data name="CVVA" xml:space="preserve">
-    <value>Computer vision, video analytics</value>
+    <value>Computer vision and video analytics</value>
   </data>
   <data name="CVVAText" xml:space="preserve">
-    <value>Systems based on computer vision technologies, video analytics, recognition, classification, detection and segmentation of objects and images</value>
+    <value>Systems based on computer vision and video analytics technologies, recognition and detection of objects and events, classification and segmentation of images</value>
   </data>
   <data name="DA" xml:space="preserve">
     <value>Data Analysis</value>
@@ -302,10 +302,10 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>Face, silhouette, age recognition system</value>
   </data>
   <data name="Forecasting" xml:space="preserve">
-    <value>Forecasting</value>
+    <value>Forecasting and predictive analytics</value>
   </data>
   <data name="ForecastingText" xml:space="preserve">
-    <value>Development of predictive systems for customer churn, consumer behavior, equipment breakdowns and load forecasting, sales conversion, demand and insurance event forecasting, trifc prediction, road accidents, etc.</value>
+    <value>Development of predictive systems for customer churn and consumer behavior, forecasting equipment breakdowns and load, forecasting sales conversion, demand and insurance claims, predicting traffic and accidents</value>
   </data>
   <data name="GAI" xml:space="preserve">
     <value>Generative Artificial Intelligence</value>
@@ -404,13 +404,13 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>News</value>
   </data>
   <data name="NLP" xml:space="preserve">
-    <value>Natural language processing</value>
+    <value>Large language models and speech analytics</value>
   </data>
   <data name="NLPSubTitle" xml:space="preserve">
-    <value>Solutions based on large language models (LLM)</value>
+    <value>Solutions based on large language models (LLM) and speech analytics</value>
   </data>
   <data name="NLPText" xml:space="preserve">
-    <value>Systems based on natural language processing technologies, large language models, local ChatGPT, structured information extraction</value>
+    <value>Natural language processing and speech analytics, large language models (LLM), structured information extraction, classification and retrieval</value>
   </data>
   <data name="NumberSystem" xml:space="preserve">
     <value>System for determining the number of objects</value>
@@ -483,10 +483,10 @@ You can automatically receive notifications of stock out of stock or other custo
     <value>Road maintenance</value>
   </data>
   <data name="RS" xml:space="preserve">
-    <value>Recommendation systems</value>
+    <value>Recommendation systems and data analysis</value>
   </data>
   <data name="RSText" xml:space="preserve">
-    <value>Personalized offers based on customer preferences, loyalty programs, recommendation systems, and decision-making assistance systems</value>
+    <value>Data analysis and anomaly search, personalized offers based on customer preferences, loyalty programs, recommendation systems and decision support systems</value>
   </data>
   <data name="SafetySystem" xml:space="preserve">
     <value>Control and safety system</value>
