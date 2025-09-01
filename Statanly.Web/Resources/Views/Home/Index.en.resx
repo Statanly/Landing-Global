@@ -424,6 +424,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="OtherTask" xml:space="preserve">
     <value>Other tasks</value>
   </data>
+  <data name="Ourproducts" xml:space="preserve">
+    <value>Our products</value>
+  </data>
   <data name="Ourprojects" xml:space="preserve">
     <value>Our projects</value>
   </data>

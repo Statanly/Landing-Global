@@ -424,8 +424,11 @@
   <data name="OtherTask" xml:space="preserve">
     <value>Другие задачи</value>
   </data>
+  <data name="Ourproducts" xml:space="preserve">
+    <value>Наши продукты</value>
+  </data>
   <data name="Ourprojects" xml:space="preserve">
-    <value>Наши проекты</value>
+    <value>Наши кейсы</value>
   </data>
   <data name="Ourprojectsex" xml:space="preserve">
     <value>Примеры наших проектов</value>
@@ -595,10 +598,10 @@
     <value>Оптимизация дорожного трафика, работы светофоров, детекция нарушений правил дорожного движения (ПДД), распознавание характеристик транспортных средств (номер, типа, марка, цвет и т.д.)</value>
   </data>
   <data name="TS" xml:space="preserve">
-    <value>Типовые решения на базе машинного обучения и компьютерного зрения</value>
+    <value>Типовые решения на базе искусственного интеллекта</value>
   </data>
   <data name="TSText" xml:space="preserve">
-    <value>Готовые решения на базе алгоритмов компьютерного зрения, которые необходимо дообучить на данных заказчика.</value>
+    <value>Готовые решения на базе технологий машинного обучения, компьютерного зрения и языковых моделей для различных индустрий и отраслей</value>
   </data>
   <data name="UAV" xml:space="preserve">
     <value>БПЛА</value>

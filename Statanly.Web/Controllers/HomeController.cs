@@ -37,34 +37,45 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Company()
         {
+            ViewData["Title"] = "Statanly Technologies - решения на базе искусственного интеллекта";
+            ViewData["Description"] = "О компании";
             return View();
         }
         public IActionResult About()
         {
+            ViewData["Title"] = "Statanly Technologies - решения на базе искусственного интеллекта";
+            ViewData["Description"] = "О компании";
             return RedirectToAction("Company");
         }
         public IActionResult Solution()
         {
+            ViewData["Title"] = "Statanly Technologies - решения на базе искусственного интеллекта";
+            ViewData["Description"] = "Решения на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
             return View();
         }
         public IActionResult Research()
         {
+            ViewData["Title"] = "Statanly Technologies - наука и технологии";
             return View();
         }
         public IActionResult Contact()
         {
+            ViewData["Title"] = "Statanly Technologies - наши контакты";
             return View();
         }
         public IActionResult Team()
         {
+            ViewData["Title"] = "Statanly Technologies - наша команда";
             return View();
         }
         public IActionResult Mission()
         {
+            ViewData["Title"] = "Statanly Technologies - наша миссия";
             return View();
         }
         public IActionResult Brand()
         {
+            ViewData["Title"] = "Statanly Technologies - бренд компании";
             return View();
         }
         public IActionResult Logo()
@@ -77,10 +88,12 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Cooperation()
         {
+            ViewData["Title"] = "Statanly Technologies - сотрудничество";
             return View();
         }
         public IActionResult Press()
         {
+            ViewData["Title"] = "Statanly Technologies - публикации";
             return View();
         }
         public IActionResult Privacy()
@@ -107,13 +120,13 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Services()
         {
-            ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственный интеллект";
+            ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственного интеллекта";
             ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
             return View();
         }
         public IActionResult Products()
         {
-            ViewData["Title"] = "Statanly Technologies - продукты на базе искусственный интеллект";
+            ViewData["Title"] = "Statanly Technologies - продукты на базе искусственного интеллекта";
             ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
             return View();
         }
@@ -155,6 +168,8 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult NLP()
         {
+            ViewData["Title"] = "Statanly Technologies - большие языковые моделей и речевая аналитика";
+            ViewData["Description"] = "Сервисы на базе больших языковых моделей (LLM) и речевая аналитика";
             return View();
         }
         public IActionResult DA()
@@ -171,7 +186,7 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Service(int id = 1)
         {
-            ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственный интеллект";
+            ViewData["Title"] = "Statanly Technologies - сервисы на базе искусственного интеллекта";
             ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
 
             if (id < 1 || id > 6)
@@ -187,7 +202,7 @@ namespace Statanly.Web.Controllers
         }
         public IActionResult Product(int id = 1)
         {
-            ViewData["Title"] = "Statanly Technologies - продукты на базе искусственный интеллект";
+            ViewData["Title"] = "Statanly Technologies - продукты на базе искусственного интеллекта";
             ViewData["Description"] = "Системы и сервисы на базе технологий искусственного интеллекта, машинного обучения, компьютерного зрения, обработки естественных языков и анализа данных";
 
             if (id < 1 || id > 13)
@@ -202,7 +217,7 @@ namespace Statanly.Web.Controllers
         }        
         public IActionResult Singleboard()
         {
-            ViewData["Title"] = "Statanly Technologies - одноплатники";
+            ViewData["Title"] = "Statanly Technologies - одноплатники и микрокомпьютеры";
             ViewData["Description"] = "Адаптация алгоритмов искусственного интеллекта под тензорные процессоры, одноплатники типа Jetson Nano, Raspberry Pi";
             return View();
         }
