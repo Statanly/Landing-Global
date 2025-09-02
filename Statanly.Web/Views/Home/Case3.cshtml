@@ -16,589 +16,562 @@
     <!-- ======= Portfolio Details Section ======= -->
     <section id="1" class="portfolio-details">
         <div class="container">
-
             <div class="row gy-4">
-
-                <div class="col-lg-12">
-                    <div class="portfolio-info">
-                        <div class="row gy-4">
-                            <div class="col-lg-11">
-                                <h3>1. Распознавание языков арабского, китайского, корейского, японского, латинского и русского языков.</h3>
-                            </div>
-                            <div class="col-lg-1">
-                                <img src="~/assets/img/Partners/client-7.png" style="max-height: 50px" class="img-fluid" alt="">
-                            </div>
+                <div class="portfolio-info">
+                    <div class="row gy-4">
+                        <div class="col-lg-11">
+                            <h3>1. Распознавание языков арабского, китайского, корейского, японского, латинского и русского языков.</h3>
                         </div>
+                        <div class="col-lg-1">
+                            <img src="~/assets/img/Partners/client-7.png" style="max-height: 50px" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Категория</strong>: Компьютерное зрение</li>
+                        <li><strong>Заказчик</strong>: HUAWEI TECHNOLOGIES CO., LTD</li>
+                        <li><strong>Дата</strong>: 2018-2019</li>
+                    </ul>
+                </div>
+                <div class="row portfolio-description">
+                    <div class="col-lg-6">
+                        <h4>
+                            SegLink с DenseNet результаты
+                        </h4>
+                        <p>
+                            Предварительно обученный на наборе данных SynthText
+                        </p>
+                        <img src="~/assets/img/portfolio/Case3/14.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/15.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/16.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/17.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/18.jpg" class="img-fluid" alt="">
+                        <img src="~/assets/img/portfolio/Case3/19.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+                            <strong>Цель</strong>
+                        </p>
                         <ul>
-                            <li><strong>Категория</strong>: Компьютерное зрение</li>
-                            <li><strong>Заказчик</strong>: HUAWEI TECHNOLOGIES CO., LTD</li>
-                            <li><strong>Дата</strong>: 2018-2019</li>
+                            <li>
+                                Задача 1. Улучшение детекции арабского языка
+                            </li>
+                            <li>
+                                Задача 2. Улучшение распознавания арабского языка
+                            </li>
+                            <li>
+                                Задача 3. Улучшение распознавания китайского языка
+                            </li>
                         </ul>
+                        <p>
+                            <strong>Результаты</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                Задача 1. Улучшение обнаружения арабского языка <strong>(выполнено)</strong>
+                            </li>
+                            <li>
+                                Задача 2. Улучшение распознавания арабского языка
+                            </li>
+                            <li>
+                                Задача 3. Улучшение распознавания китайского языка <strong>(выполнено)</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Задание 3 технические характеристики
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                Улучшить решение HQ [для распознавания китайского и английского языков] на 3% (сквозное)
+                            </li>
+                            <li>
+                                Модель должна соответствовать ограничениям NPU
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Результаты распознавания китайского и английского языков
+                            </strong>
+                        </p>
+                        <p>
+                            Элементы решения:
+                        </p>
+                        <ul>
+                            <li>
+                                Базовая архитектура
+                            </li>
+                            <li>
+                                Продвинутые методы обучения
+                            </li>
+                            <li>
+                                Улучшен выбор обучающих данных
+                            </li>
+                        </ul>
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Решение
+                                    </th>
+                                    <th>
+                                        F1-score
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Baseline (NLPR)
+                                    </td>
+                                    <td>
+                                        0.908
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Statanly
+                                    </td>
+                                    <td> <strong>0.939</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <strong>
+                                Задача 1 (спецификация)
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>  Предоставляет единую модель обнаружения для арабского, китайского, корейского, японского, латинского и русского языков</li>
+                            <li>
+                                Для арабского языка для Kirin 980 Точность/отзыв ≥ 94/92% соответственно
+                            </li>
+                            <li>
+                                Для арабского языка для Kirin 970 Точность/отзыв ≥ 92/90% соответственно
+                            </li>
+                            <li>
+                                Не оказывает негативного влияния на обнаружение других скриптов
+                            </li>
+                            <li>
+                                Модель должна соответствовать ограничениям NPU
+                            </li>
+                            <li>
+                                Размер модели в формате Cambricon ≤ 12 Мб
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Спецификация переформулирована
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>  Предоставляет единую модель обнаружения для арабского, китайского, корейского, японского, латинского и русского языков</li>
+                            <li>
+                                Для арабского языка для Kirin 980 Точность/отзыв <strong>сопоставима с другими языками</strong>
+                            </li>
+                            <li>
+                                Для арабского языка для Kirin 970 Точность/отзыв <strong>сопоставима с другими языками</strong>
+                            </li>
+                            <li>
+                                Не оказывает негативного влияния на обнаружение других скриптов
+                            </li>
+                            <li>
+                                Модель должна соответствовать ограничениям NPU
+                            </li>
+                            <li>
+                                Размер модели в формате Cambricon ≤ <strong>15 Мб</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Решения для детекции
+                            </strong>
+                        </p>
+                        <p>
+                            Элементы решения:
+                        </p>
+                        <ul>
+                            <li>
+                                Модель Seglink в сочетании с DenseNet
+                            </li>
+                            <li>
+                                Усовершенствованная модель EAST
+                            </li>
+                            <li>
+                                Обучен на наборе данных Batch2+арабский
+                            </li>
+                            <li>
+                                Обе модели находятся на Keras, были извлечены графики .pb
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Общий результат
+                            </strong>
+                        </p>
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Model
+                                    </th>
+                                    <th>
+                                        F (Metrics)
+                                    </th>
+                                    <th>
+                                        P (Metrics)
+                                    </th>
+                                    <th>
+                                        R (Metrics)
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Seglink on DenseNet
+                                    </td>
+                                    <td>
+                                        0.84
+                                    </td>
+                                    <td>
+                                        0.86
+                                    </td>
+                                    <td>
+                                        0.82
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        AdvancedEAST
+                                    </td>
+                                    <td>
+                                        <strong>0.85</strong>
+                                    </td>
+                                    <td>
+                                        <strong>0.97</strong>
+                                    </td>
+                                    <td>
+                                        <strong>0.76</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Baseline (HQ)
+                                    </td>
+                                    <td>
+                                        0.82
+                                    </td>
+                                    <td>
+                                        0.92
+                                    </td>
+                                    <td>
+                                        0.76
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <strong>
+                                Результаты по арабскому языку
+                            </strong>
+                        </p>
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Model
+                                    </th>
+                                    <th>
+                                        F (Metrics)
+                                    </th>
+                                    <th>
+                                        P (Metrics)
+                                    </th>
+                                    <th>
+                                        R (Metrics)
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Seglink on DenseNet
+                                    </td>
+                                    <td>
+                                        0.77
+                                    </td>
+                                    <td>
+                                        0.71
+                                    </td>
+                                    <td>
+                                        0.84
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        AdvancedEAST
+                                    </td>
+                                    <td>
+                                        <strong>0.83</strong>
+                                    </td>
+                                    <td>
+                                        <strong>0.9</strong>
+                                    </td>
+                                    <td>
+                                        <strong>0.76</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Baseline (HQ)
+                                    </td>
+                                    <td>
+                                        0.67
+                                    </td>
+                                    <td>
+                                        0.73
+                                    </td>
+                                    <td>
+                                        0.61
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <strong>
+                                Результаты для всех языков
+                            </strong>
+                        </p>
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Language (Script)
+                                    </th>
+                                    <th>
+                                        F (Metrics)
+                                    </th>
+                                    <th>
+                                        P (Metrics)
+                                    </th>
+                                    <th>
+                                        R (Metrics)
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Arabic
+                                    </td>
+                                    <td>
+                                        0.83
+                                    </td>
+                                    <td>
+                                        0.9
+                                    </td>
+                                    <td>
+                                        0.76
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        English (Latin)
+                                    </td>
+                                    <td>
+                                        0.86
+                                    </td>
+                                    <td>
+                                        0.96
+                                    </td>
+                                    <td>
+                                        0.77
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        French (Latin)
+                                    </td>
+                                    <td>
+                                        0.84
+                                    </td>
+                                    <td>
+                                        0.98
+                                    </td>
+                                    <td>
+                                        0.74
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Russian
+                                    </td>
+                                    <td>
+                                        0.75
+                                    </td>
+                                    <td>
+                                        0.96
+                                    </td>
+                                    <td>
+                                        0.62
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Italian (Latin)
+                                    </td>
+                                    <td>
+                                        0.88
+                                    </td>
+                                    <td>
+                                        0.98
+                                    </td>
+                                    <td>
+                                        0.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Chinese
+                                    </td>
+                                    <td>
+                                        0.93
+                                    </td>
+                                    <td>
+                                        0.99
+                                    </td>
+                                    <td>
+                                        0.88
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Korean
+                                    </td>
+                                    <td>
+                                        0.84
+                                    </td>
+                                    <td>
+                                        0.96
+                                    </td>
+                                    <td>
+                                        0.75
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Portuguese (Latin)
+                                    </td>
+                                    <td>
+                                        0.78
+                                    </td>
+                                    <td>
+                                        0.98
+                                    </td>
+                                    <td>
+                                        0.65
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        German (Latin)
+                                    </td>
+                                    <td>
+                                        0.83
+                                    </td>
+                                    <td>
+                                        0.98
+                                    </td>
+                                    <td>
+                                        0.72
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Japanese
+                                    </td>
+                                    <td>
+                                        0.81
+                                    </td>
+                                    <td>
+                                        0.97
+                                    </td>
+                                    <td>
+                                        0.69
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Spanish (Latin)
+                                    </td>
+                                    <td>
+                                        0.85
+                                    </td>
+                                    <td>
+                                        0.97
+                                    </td>
+                                    <td>
+                                        0.75
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <strong>
+                                Веса моделей
+                            </strong>
+                        </p>
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Model
+                                    </th>
+                                    <th>
+                                        Weights size (MB)
+                                    </th>
+                                    <th>
+                                        Estimated size after quantization (MB)
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Seglink on DenseNet
+                                    </td>
+                                    <td>
+                                        ~50
+                                    </td>
+                                    <td>
+                                        ~14
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        AdvancedEAST
+                                    </td>
+                                    <td>
+                                        ~60
+                                    </td>
+                                    <td>
+                                        ~15
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section><!-- End Portfolio Details Section -->
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container">
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <h4>
-                        SegLink с DenseNet результаты
-                    </h4>
-                    <p>
-                        Предварительно обученный на наборе данных SynthText
-                    </p>
-                    <img src="~/assets/img/portfolio/Case3/14.jpg" class="img-fluid" alt="">
-                    <img src="~/assets/img/portfolio/Case3/15.jpg" class="img-fluid" alt="">
-                    <img src="~/assets/img/portfolio/Case3/16.jpg" class="img-fluid" alt="">
-                    <img src="~/assets/img/portfolio/Case3/17.jpg" class="img-fluid" alt="">
-                    <img src="~/assets/img/portfolio/Case3/18.jpg" class="img-fluid" alt="">
-                    <img src="~/assets/img/portfolio/Case3/19.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <p>
-                        <strong>Цель</strong>
-                    </p>
-                    <ul>
-                        <li>
-                              Задача 1. Улучшение детекции арабского языка
-                        </li>
-                        <li>
-                              Задача 2. Улучшение распознавания арабского языка
-                        </li>
-                        <li>
-                              Задача 3. Улучшение распознавания китайского языка
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>Результаты</strong>
-                    </p>
-                    <ul>
-                        <li>
-                              Задача 1. Улучшение обнаружения арабского языка <strong>(выполнено)</strong>
-                        </li>
-                        <li>
-                              Задача 2. Улучшение распознавания арабского языка
-                        </li>
-                        <li>
-                              Задача 3. Улучшение распознавания китайского языка <strong>(выполнено)</strong>
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            Задание 3 технические характеристики
-                        </strong>
-                    </p>
-                    <ul>
-                        <li>
-                              Улучшить решение HQ [для распознавания китайского и английского языков] на 3% (сквозное)
-                        </li>
-                        <li>
-                              Модель должна соответствовать ограничениям NPU
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            Результаты распознавания китайского и английского языков
-                        </strong>
-                    </p>
-                    <p>
-                        Элементы решения:
-                    </p>
-                    <ul>
-                        <li>
-                              Базовая архитектура
-                        </li>
-                        <li>
-                              Продвинутые методы обучения
-                        </li>
-                        <li>
-                              Улучшен выбор обучающих данных
-                        </li>
-                    </ul>
-                    <table class="table table-bordered table-hover">
-                        <tbody>
-                            <tr>
-                                <th>
-                                    Решение
-                                </th>
-                                <th>
-                                    F1-score
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Baseline (NLPR)
-                                </td>
-                                <td>
-                                    0.908
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Statanly
-                                </td>
-                                <td> <strong>0.939</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <strong>
-                            Задача 1 (спецификация)
-                        </strong>
-                    </p>
-                    <ul>
-                        <li>  Предоставляет единую модель обнаружения для арабского, китайского, корейского, японского, латинского и русского языков</li>
-                        <li>
-                              Для арабского языка для Kirin 980 Точность/отзыв ≥ 94/92% соответственно
-                        </li>
-                        <li>
-                              Для арабского языка для Kirin 970 Точность/отзыв ≥ 92/90% соответственно
-                        </li>
-                        <li>
-                              Не оказывает негативного влияния на обнаружение других скриптов
-                        </li>
-                        <li>
-                              Модель должна соответствовать ограничениям NPU
-                        </li>
-                        <li>
-                              Размер модели в формате Cambricon ≤ 12 Мб
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            Спецификация переформулирована
-                        </strong>
-                    </p>
-                    <ul>
-                        <li>  Предоставляет единую модель обнаружения для арабского, китайского, корейского, японского, латинского и русского языков</li>
-                        <li>
-                              Для арабского языка для Kirin 980 Точность/отзыв <strong>сопоставима с другими языками</strong>
-                        </li>
-                        <li>
-                              Для арабского языка для Kirin 970 Точность/отзыв <strong>сопоставима с другими языками</strong>
-                        </li>
-                        <li>
-                              Не оказывает негативного влияния на обнаружение других скриптов
-                        </li>
-                        <li>
-                              Модель должна соответствовать ограничениям NPU
-                        </li>
-                        <li>
-                              Размер модели в формате Cambricon ≤ <strong>15 Мб</strong>
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            Решения для детекции
-                        </strong>
-                    </p>
-                    <p>
-                        Элементы решения:
-                    </p>
-                    <ul>
-                        <li>
-                              Модель Seglink в сочетании с DenseNet
-                        </li>
-                        <li>
-                              Усовершенствованная модель EAST
-                        </li>
-                        <li>
-                              Обучен на наборе данных Batch2+арабский
-                        </li>
-                        <li>
-                              Обе модели находятся на Keras, были извлечены графики .pb
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>
-                            Общий результат
-                        </strong>
-                    </p>
-                    <table class="table table-bordered table-hover">
-                        <tbody>
-                            <tr>
-                                <th>
-                                    Model
-                                </th>
-                                <th>
-                                    F (Metrics)
-                                </th>
-                                <th>
-                                    P (Metrics)
-                                </th>
-                                <th>
-                                    R (Metrics)
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Seglink on DenseNet
-                                </td>
-                                <td>
-                                    0.84
-                                </td>
-                                <td>
-                                    0.86
-                                </td>
-                                <td>
-                                    0.82
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    AdvancedEAST
-                                </td>
-                                <td>
-                                    <strong>0.85</strong>
-                                </td>
-                                <td>
-                                    <strong>0.97</strong>
-                                </td>
-                                <td>
-                                    <strong>0.76</strong>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Baseline (HQ)
-                                </td>
-                                <td>
-                                    0.82
-                                </td>
-                                <td>
-                                    0.92
-                                </td>
-                                <td>
-                                    0.76
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <strong>
-                            Результаты по арабскому языку
-                        </strong>
-                    </p>
-                    <table class="table table-bordered table-hover">
-                        <tbody>
-                            <tr>
-                                <th>
-                                    Model
-                                </th>
-                                <th>
-                                    F (Metrics)
-                                </th>
-                                <th>
-                                    P (Metrics)
-                                </th>
-                                <th>
-                                    R (Metrics)
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Seglink on DenseNet
-                                </td>
-                                <td>
-                                    0.77
-                                </td>
-                                <td>
-                                    0.71
-                                </td>
-                                <td>
-                                    0.84
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    AdvancedEAST
-                                </td>
-                                <td>
-                                    <strong>0.83</strong>
-                                </td>
-                                <td>
-                                    <strong>0.9</strong>
-                                </td>
-                                <td>
-                                    <strong>0.76</strong>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Baseline (HQ)
-                                </td>
-                                <td>
-                                    0.67
-                                </td>
-                                <td>
-                                    0.73
-                                </td>
-                                <td>
-                                    0.61
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <strong>
-                            Результаты для всех языков
-                        </strong>
-                    </p>
-                    <table class="table table-bordered table-hover">
-                        <tbody>
-                            <tr>
-                                <th>
-                                    Language (Script)
-                                </th>
-                                <th>
-                                    F (Metrics)
-                                </th>
-                                <th>
-                                    P (Metrics)
-                                </th>
-                                <th>
-                                    R (Metrics)
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Arabic
-                                </td>
-                                <td>
-                                    0.83
-                                </td>
-                                <td>
-                                    0.9
-                                </td>
-                                <td>
-                                    0.76
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    English (Latin)
-                                </td>
-                                <td>
-                                    0.86
-                                </td>
-                                <td>
-                                    0.96
-                                </td>
-                                <td>
-                                    0.77
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    French (Latin)
-                                </td>
-                                <td>
-                                    0.84
-                                </td>
-                                <td>
-                                    0.98
-                                </td>
-                                <td>
-                                    0.74
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Russian
-                                </td>
-                                <td>
-                                    0.75
-                                </td>
-                                <td>
-                                    0.96
-                                </td>
-                                <td>
-                                    0.62
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Italian (Latin)
-                                </td>
-                                <td>
-                                    0.88
-                                </td>
-                                <td>
-                                    0.98
-                                </td>
-                                <td>
-                                    0.79
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Chinese
-                                </td>
-                                <td>
-                                    0.93
-                                </td>
-                                <td>
-                                    0.99
-                                </td>
-                                <td>
-                                    0.88
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Korean
-                                </td>
-                                <td>
-                                    0.84
-                                </td>
-                                <td>
-                                    0.96
-                                </td>
-                                <td>
-                                    0.75
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Portuguese (Latin)
-                                </td>
-                                <td>
-                                    0.78
-                                </td>
-                                <td>
-                                    0.98
-                                </td>
-                                <td>
-                                    0.65
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    German (Latin)
-                                </td>
-                                <td>
-                                    0.83
-                                </td>
-                                <td>
-                                    0.98
-                                </td>
-                                <td>
-                                    0.72
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Japanese
-                                </td>
-                                <td>
-                                    0.81
-                                </td>
-                                <td>
-                                    0.97
-                                </td>
-                                <td>
-                                    0.69
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Spanish (Latin)
-                                </td>
-                                <td>
-                                    0.85
-                                </td>
-                                <td>
-                                    0.97
-                                </td>
-                                <td>
-                                    0.75
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <strong>
-                            Веса моделей
-                        </strong>
-                    </p>
-                    <table class="table table-bordered table-hover">
-                        <tbody>
-                            <tr>
-                                <th>
-                                    Model
-                                </th>
-                                <th>
-                                    Weights size (MB)
-                                </th>
-                                <th>
-                                    Estimated size after quantization (MB)
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Seglink on DenseNet
-                                </td>
-                                <td>
-                                    ~50
-                                </td>
-                                <td>
-                                    ~14
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    AdvancedEAST
-                                </td>
-                                <td>
-                                    ~60
-                                </td>
-                                <td>
-                                    ~15
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End About Section -->
-    <!-- ======= Portfolio Details Section ======= -->
-    </br>
     <!-- ======= Portfolio Details Section ======= -->
     <section id="2" class="portfolio-details">
         <div class="container">
-
             <div class="row gy-4">
-
-                <div class="col-lg-12">
-                    <div class="portfolio-info">
-                        <h3>2. Система распознавания номерных знаков</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: Компьютерное зрение</li>
-                            <li><strong>Дата</strong>: 202-2021</li>
-                            <li>
-                                Система для анализа транспортного потока и распознавания номерных знаков в различных условиях.
-                            </li>
-                        </ul>
-                    </div>
-
+                <div class="portfolio-info">
+                    <h3>2. Система распознавания номерных знаков</h3>
+                    <ul>
+                        <li><strong>Категория</strong>: Компьютерное зрение</li>
+                        <li><strong>Дата</strong>: 202-2021</li>
+                        <li>
+                            Система для анализа транспортного потока и распознавания номерных знаков в различных условиях.
+                        </li>
+                    </ul>
                 </div>
-
             </div>
-
-        </div>
-    </section><!-- End Portfolio Details Section -->
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container">
-
             <div class="row">
                 <div class="col-lg-6">
                     <img src="~/assets/img/portfolio/Case3/1.jpg" class="img-fluid" alt="">
@@ -650,32 +623,21 @@
 
                 </div>
             </div>
-
-        </div>
-    </section><!-- End About Section -->
-    <!-- ======= Portfolio Details Section ======= -->
-    </br>
-    <section id="3" class="portfolio-details">
-        <div class="container">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-12">
-                    <div class="portfolio-info">
-                        <h3>3. Распознавание номера вагона поезда</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: Компьютерное зрение</li>
-                            <li><strong>Заказчик</strong>: Транспортная компания</li>
-                            <li><strong>Project date</strong>: 2022</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </section><!-- End Portfolio Details Section -->
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+
+    <section id="3" class="portfolio-details">
         <div class="container">
+            <div class="row gy-4">
+                <div class="portfolio-info">
+                    <h3>3. Распознавание номера вагона поезда</h3>
+                    <ul>
+                        <li><strong>Категория</strong>: Компьютерное зрение</li>
+                        <li><strong>Заказчик</strong>: Транспортная компания</li>
+                        <li><strong>Project date</strong>: 2022</li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-lg-6">
@@ -702,32 +664,20 @@
                 </div>
             </div>
         </div>
-    </section><!-- End About Section -->
-    </br>
+    </section><!-- End Portfolio Details Section -->
+
     <section id="4" class="portfolio-details">
         <div class="container">
-
             <div class="row gy-4">
-
-                <div class="col-lg-12">
-                    <div class="portfolio-info">
-                        <h3>4. Система распознавания QR-кода и штрих-кодов</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: Компьютерное зрение</li>
-                            <li><strong>Заказчик</strong>: Транспортная компания</li>
-                            <li><strong>Project date</strong>: 2022</li>
-                        </ul>
-                    </div>
+                <div class="portfolio-info">
+                    <h3>4. Система распознавания QR-кода и штрих-кодов</h3>
+                    <ul>
+                        <li><strong>Категория</strong>: Компьютерное зрение</li>
+                        <li><strong>Заказчик</strong>: Транспортная компания</li>
+                        <li><strong>Project date</strong>: 2022</li>
+                    </ul>
                 </div>
-
             </div>
-
-        </div>
-    </section><!-- End Portfolio Details Section -->
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container">
-
             <div class="row">
                 <div class="col-lg-4">
                     <img src="~/assets/img/portfolio/Case3/8.jpg" class="img-fluid" alt="">
@@ -760,33 +710,22 @@
                 </div>
             </div>
         </div>
-    </section><!-- End About Section -->
-    </br>
-    <section id="5" class="portfolio-details">
-        <div class="container">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-12">
-                    <div class="portfolio-info">
-                        <h3>5. Система распознавания текста в произвольной форме</h3>
-                        <ul>
-                            <li><strong>Категория</strong>: Компьютерное зрение</li>
-                            <li><strong>Заказчик</strong>: Транспортная компания</li>
-                            <li><strong>Project date</strong>: 2022</li>
-                            <li><strong>Description</strong>: Recognition of text of arbitrary form, various fonts, markings, inscriptions in conditions of various noise levels and for various alphabets</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
     </section><!-- End Portfolio Details Section -->
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-        <div class="container">
 
+    <section id="5" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="portfolio-info">
+                    <h3>5. Система распознавания текста в произвольной форме</h3>
+                    <ul>
+                        <li><strong>Категория</strong>: Компьютерное зрение</li>
+                        <li><strong>Заказчик</strong>: Транспортная компания</li>
+                        <li><strong>Project date</strong>: 2022</li>
+                        <li><strong>Description</strong>: Recognition of text of arbitrary form, various fonts, markings, inscriptions in conditions of various noise levels and for various alphabets</li>
+                    </ul>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6">
                     <img src="~/assets/img/portfolio/Case3/11.jpg" class="img-fluid" alt="">
@@ -948,5 +887,5 @@
                 </div>
             </div>
         </div>
-    </section><!-- End About Section -->
+    </section><!-- End Portfolio Details Section -->
 </main><!-- End #main -->

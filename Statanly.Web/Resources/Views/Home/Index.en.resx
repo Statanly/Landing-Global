@@ -140,10 +140,10 @@
 Monitoring agricultural fields from satellite images and unmanned aerial vehicles, determining the maturity of the crop allows you to make predictions of the amount of production.</value>
   </data>
   <data name="AIDevelopment" xml:space="preserve">
-    <value>Development of intelligent algorithms</value>
+    <value>Development of an artificial intelligence-based solution</value>
   </data>
   <data name="AIDevelopmentText" xml:space="preserve">
-    <value>Development of analytical systems based on machine learning and computer vision.</value>
+    <value>Development of solutions based on machine learning technologies, computer vision, language models and data analysis to solve the most complex and demanding tasks</value>
   </data>
   <data name="Application" xml:space="preserve">
     <value>Application</value>
@@ -388,6 +388,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="ML" xml:space="preserve">
     <value>Machine Learning</value>
   </data>
+  <data name="MLPrize" xml:space="preserve">
+    <value>winner of the Yandex Award named after Ilya Segalovich (&lt;strong&gt;Yandex ML Prize&lt;/strong&gt;)</value>
+  </data>
   <data name="MLProjects" xml:space="preserve">
     <value>projects in the field of machine learning and data analysis</value>
   </data>
@@ -464,7 +467,7 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
     <value>R&amp;D projects and scientific research</value>
   </data>
   <data name="R&amp;DText" xml:space="preserve">
-    <value>Testing hypotheses, conducting scientific research, developing new algorithms.</value>
+    <value>Hypothesis testing, scientific research, analysis of prospects for the introduction of artificial intelligence to solve business problems</value>
   </data>
   <data name="RecognitionSystem" xml:space="preserve">
     <value>Text recognition system</value>
@@ -583,10 +586,10 @@ glasses, gloves, device), fire and smoke</value>
     <value>Tensor Processors (TPU)</value>
   </data>
   <data name="TPUText" xml:space="preserve">
-    <value>Adaptation of artificial intelligence algorithms to tensor processors</value>
+    <value>Device development and algorithm adaptation for tensor processors, single-board devices such as Jetson Nano, Raspberry Pi</value>
   </data>
   <data name="TPUTitle" xml:space="preserve">
-    <value>Tensor processors (TPUs) and single-board</value>
+    <value>Devices and hardware and software complexes based on TPUs and single-board devices</value>
   </data>
   <data name="TrafficManagement" xml:space="preserve">
     <value>Traffic management</value>

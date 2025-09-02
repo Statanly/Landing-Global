@@ -1,6 +1,23 @@
 ﻿@{
     Layout = "/Views/Shared/_SolutionsLayout.cshtml";
 }
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+}
 <!-- ======= Breadcrumbs ======= -->
 <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
@@ -26,17 +43,80 @@
                         проведения таких исследований - является создание прототипа систем, на базе
                         которых, в случае успеха строятся полноценные интеллектуальные системы.
                         Команда имеет огромный опыт проведения научных исследований. Сотрудники компании имею множество
-                        научных публикаций в самых рецензируемых научных журналах.
-                    </p>
-                    <p>
-                        Команда имеет огромный опыт проведения научных исследований. Сотрудники компании имею множество
                         <a href="/home/research">научных публикаций</a> в самых рецензируемых научных журналах.
                     </p>
+                    <p>
+                        <strong>За 2023 - 2024 год сотрудники компании опубликовали более 50 научных работ и исследований в российских и зарубежных журналах, приняли участия в десятках научных конференциях в России и Европе.                    </strong>
+                    </p>
+                    <p>
+                        Большинство наших разработок в области анализа данных и машинного обучения тесно связаны с научной деятельностью, проводимой на факультете информационных технологий и 
+                        программирования Санкт-Петербургского исследовательского университета информационных технологий, механики и оптики (ИТМО). Участники нашей команды – молодые ученые, 
+                        сотрудники научных лабораторий университета и участники исследовательских проектов, реализуемых совместно с ведущими российскими и международными институтами. Мы очень гордимся тем, что наши технологии и продукты разрабатываются на стыке математики, программирования, визуализации больших данных и находят применение в различных областях повседневной человеческой деятельности.
+                    </p>        
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="portfolio-details-slider swiper">
                     <img src="~/assets/img/Services/3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="portfolio-details-slider swiper">
+                    <img src="~/assets/img/Services/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="portfolio-description">
+                    <h2>Консалтинг в области внедрения интеллектуальных систем</h2>
+                    <p>
+                        Консалтинг в области внедрения систем на базе ИИ. Data mining, анализ требований и рекомендации по сбору данных для
+                        построения аналитических систем.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="portfolio-description">
+                    <h2>Анализ данных</h2>
+                    <p>
+                        Первоначальный и один из самых важных и длительных этапов построение систем на базе искуственного интеллекта - сбор и анализ данных. Качественный анализ и предобработка данных
+                        позволяет, уже на начальном этапе получать интересные результаты и закономерности.
+                        Мы проводим исследование и глубокий анализ собранных данных, выявляя аномалии и различные закономерности в данных. В рамках этой программы выбираются признаки (featuries selection),
+                        которые имеют наибольшее влияние на результат, а также конструируются новые признаки (инженеия признаком), которые зачастую имеют довольно сложный вид.
+                        Среди основных задач анализа данных выделим:
+                    </p>
+                    <ul>
+                        <li>
+                            Кластризация данных
+                        </li>
+                        <li>
+                            Поиск аномалий в данных
+                        </li>
+                        <li>
+                            Классификация данных
+                        </li>
+                    </ul>
+                    <p>
+                        Итогом такого исследование является полноценный отчет и математические модели, а также множество идей по построению систем на базе ИИ, в частности по созданию прогнозных и рекомендательных систем,
+                        систем помощи принятия решений.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="portfolio-details-slider swiper">
+                    <img src="~/assets/img/Services/1.png" alt="">
                 </div>
             </div>
         </div>

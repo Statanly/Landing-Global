@@ -140,10 +140,10 @@
 Мониторинг сельскохозяйственных полей со спутниковых снимков и беспилотных летательных аппаратов, определение зрелости урожая позволяют делать прогнозы количества продукции.</value>
   </data>
   <data name="AIDevelopment" xml:space="preserve">
-    <value>Разработка интеллектуальных алгоритмов</value>
+    <value>Разработка решения на базе искусственного интеллекта</value>
   </data>
   <data name="AIDevelopmentText" xml:space="preserve">
-    <value>Разработка аналитических систем на базе машинного обучения и компьютерного зрения.</value>
+    <value>Разработка решений на базе технологий машинного обучения, компьютерного зрения, языковых моделей и анализа данных для решения самых сложных и требовательных задач</value>
   </data>
   <data name="Application" xml:space="preserve">
     <value>Области</value>
@@ -388,6 +388,9 @@
   <data name="ML" xml:space="preserve">
     <value>Машинное обучение</value>
   </data>
+  <data name="MLPrize" xml:space="preserve">
+    <value>лауреата премии Яндекса им. Ильи Сегалович (&lt;strong&gt;Yandex ML Prize&lt;/strong&gt;)</value>
+  </data>
   <data name="MLProjects" xml:space="preserve">
     <value>проектов в области машинного обучения и анализа данных</value>
   </data>
@@ -461,10 +464,10 @@
     <value>Диспетчеризация пассажирского транспорта</value>
   </data>
   <data name="R&amp;D" xml:space="preserve">
-    <value>R&amp;D проекты и научные исследования</value>
+    <value>R&amp;D, консалтинг и научные исследования в области искусственного интеллекта</value>
   </data>
   <data name="R&amp;DText" xml:space="preserve">
-    <value>Проверка гипотез, проведение научных исследований, разработка новых алгоритмов.</value>
+    <value>Проверка гипотез, проведение научных исследований, анализ перспектив внедрения искусственного интеллекта для решения бизнес-задач</value>
   </data>
   <data name="RecognitionSystem" xml:space="preserve">
     <value>Система распознавания текста</value>
@@ -583,10 +586,10 @@
     <value>Тензорные процессоры (TPU)</value>
   </data>
   <data name="TPUText" xml:space="preserve">
-    <value>Адаптация алгоритмов искусственного интеллекта под тензорные процессоры, одноплатники типа Jetson Nano, Raspberry Pi</value>
+    <value>Разработка устройств и адаптация алгоритмов под тензорные процессоры, одноплатники типа Jetson Nano, Raspberry Pi</value>
   </data>
   <data name="TPUTitle" xml:space="preserve">
-    <value>Тензорные процессоры (TPU) и одноплатники</value>
+    <value>Устройства и программно-аппаратные комплексы на базе TPU и одноплатников</value>
   </data>
   <data name="TrafficManagement" xml:space="preserve">
     <value>Управление трафиком</value>

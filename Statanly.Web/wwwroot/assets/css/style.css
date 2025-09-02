@@ -1797,7 +1797,7 @@ color: #384046;
     padding: 30px;
     border-radius: 10px;
     background: #fff;
-    height: 200px;
+    height: 220px;
 }
 
     .nlptext .member .pic {
@@ -1906,11 +1906,11 @@ color: #384046;
 }
 
 .numbers h4 {
-  font-size: 36px;
+  font-size: 30px;
   color: #0880e8;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .numbers h4 sup {
@@ -1919,11 +1919,11 @@ color: #384046;
   left: -3px;
 }
 
-.numbers h4 span {
-    color: #777777;
-    font-size: 16px;
-    font-weight: 300;    
-}
+    .numbers h4 span {
+        color: #777777;
+        font-size: 18px;
+        font-weight: 300;
+    }
 
 .numbers ul {
   padding: 0;
