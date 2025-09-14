@@ -107,6 +107,8 @@ namespace Statanly.Web.Controllers
         }
         public FileResult SafetyPlatform()
         {
+            ViewData["Title"] = "Statanly Technologies - Система охраны труда, промышленной безопасности и контроля нарушений";
+            ViewData["Description"] = "Универсальная платформа охраны труда, промышленной безопасности и контроля нарушений на базе технологий компьютерного зрения и речевой аналитики";
             return File("~/Content/Safety_Platform.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
     }
