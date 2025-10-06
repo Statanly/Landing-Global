@@ -105,6 +105,10 @@ namespace Statanly.Web.Controllers
         {
             return File("~/Content/Agro Presentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
+        public FileResult Avia()
+        {
+            return File("~/Content/Avia.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+        }
         public FileResult SafetyPlatform()
         {
             ViewData["Title"] = "Statanly Technologies - Система охраны труда, промышленной безопасности и контроля нарушений";
