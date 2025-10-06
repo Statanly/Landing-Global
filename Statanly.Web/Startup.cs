@@ -82,6 +82,7 @@ namespace Statanly.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseStatusCodePagesWithRedirects("/Home/Error");
 
             app.UseAuthentication();
             app.UseAuthorization();
