@@ -117,82 +117,103 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>О нас</value>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
   </data>
-  <data name="Accreditation" xml:space="preserve">
-    <value>Открытый код (Open source)</value>
-  </data>
-  <data name="Adress1" xml:space="preserve">
-    <value>Биржевая линия, 16</value>
-  </data>
-  <data name="Adress2" xml:space="preserve">
-    <value>Россия, Санкт-Петербург</value>
+  <data name="AddressText" xml:space="preserve">
+    <value>Russia, Saint Petersburg, Birzhevaya liniya, 16</value>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>Компания</value>
-  </data>
-  <data name="CompanyText" xml:space="preserve">
-    <value>Разработка и внедрение систем и сервисов на базе алгоритмов машинного обучения, компьютерного зрения и анализа данных</value>
+    <value>Company</value>
   </data>
   <data name="Contacts" xml:space="preserve">
-    <value>Контакты</value>
+    <value>Contacts</value>
   </data>
-  <data name="CV" xml:space="preserve">
-    <value>Компьютерное зрение</value>
+  <data name="ContactsText" xml:space="preserve">
+    <value>Any other questions? Write to us.</value>
   </data>
-  <data name="DA" xml:space="preserve">
-    <value>Анализ данных</value>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Cooperation</value>
   </data>
-  <data name="Email" xml:space="preserve">
-    <value>Почта</value>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Главная</value>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
   </data>
-  <data name="Links" xml:space="preserve">
-    <value>Ссылки</value>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
   </data>
-  <data name="ML" xml:space="preserve">
-    <value>Машинное обучение</value>
+  <data name="Industries" xml:space="preserve">
+    <value>Industries</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Mission" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="News" xml:space="preserve">
-    <value>Новости</value>
-  </data>
-  <data name="NLP" xml:space="preserve">
-    <value>Обработка естественных языков</value>
+    <value>News</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Телефон</value>
+    <value>Phone</value>
   </data>
-  <data name="PP" xml:space="preserve">
-    <value>Политика конфиденциальности</value>
+  <data name="Press" xml:space="preserve">
+    <value>Press</value>
   </data>
   <data name="Products" xml:space="preserve">
-    <value>Продукты</value>
+    <value>Products</value>
   </data>
-  <data name="PS" xml:space="preserve">
-    <value>Прогнозные системы</value>
+  <data name="Questions" xml:space="preserve">
+    <value>Any other questions?</value>
   </data>
-  <data name="RS" xml:space="preserve">
-    <value>Рекомендательные системы</value>
+  <data name="Research" xml:space="preserve">
+    <value>Research</value>
+  </data>
+  <data name="Science" xml:space="preserve">
+    <value>Science</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>Sending</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Your message has been sent. Thanks!</value>
   </data>
   <data name="Services" xml:space="preserve">
-    <value>Сервисы</value>
+    <value>Services</value>
   </data>
-  <data name="Smartcity" xml:space="preserve">
-    <value>Умный город</value>
+  <data name="SmartCity" xml:space="preserve">
+    <value>Smart city</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Software</value>
   </data>
   <data name="Solutions" xml:space="preserve">
-    <value>Решения</value>
+    <value>Solutions</value>
   </data>
-  <data name="Subscribe" xml:space="preserve">
-    <value>Подписаться</value>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
   </data>
-  <data name="SubscribeText" xml:space="preserve">
-    <value>Быть в курсе наших новостей, новых проектов и сервисов</value>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="TPU" xml:space="preserve">
+    <value>TPU - Tensor Processors</value>
   </data>
   <data name="Write" xml:space="preserve">
-    <value>Написать</value>
+    <value>Write a message</value>
+  </data>
+  <data name="WriteToUs" xml:space="preserve">
+    <value>Write to us.</value>
   </data>
 </root>

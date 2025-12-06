@@ -157,7 +157,10 @@ namespace Statanly.Web.Controllers
             }
             return $"CurrentCulture:{CultureInfo.CurrentCulture.Name}, CurrentUICulture:{CultureInfo.CurrentUICulture.Name}";
         }
-
+        public IActionResult Contacts()
+        {
+            return View();
+        }
         public IActionResult ML()
         {
             return View();
