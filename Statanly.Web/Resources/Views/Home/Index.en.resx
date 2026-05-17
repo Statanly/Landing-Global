@@ -120,6 +120,24 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="About1" xml:space="preserve">
+    <value>We develop advanced object and event recognition AI technologies tailored to the unique demands of each industry.</value>
+  </data>
+  <data name="About2" xml:space="preserve">
+    <value>Collectively, Statanly Technologies offers:</value>
+  </data>
+  <data name="About3" xml:space="preserve">
+    <value>Comprehensive experience garnered from hundreds of successfully completed projects for large commercial and industrial clients, underlining our capability to deliver high-caliber solutions.</value>
+  </data>
+  <data name="About4" xml:space="preserve">
+    <value>A team of skilled engineers and data scientists who have refined their abilities at some of the industry's leading AI/ML companies.</value>
+  </data>
+  <data name="About5" xml:space="preserve">
+    <value>Our team includes computer science graduates from prestigious universities and victors of top-tier &lt;a href="https://icpc.global/" target="_blank"&gt;international programming competitions&lt;/a&gt;.</value>
+  </data>
+  <data name="About6" xml:space="preserve">
+    <value>In 2022, numerous outstanding developers, scientists and experts in machine learning, computer vision, data analysis and large language models left Russia. A number of them came together to build a new company, a leader in creating AI-based solutions for the corporate sector.</value>
+  </data>
   <data name="AboutLongText" xml:space="preserve">
     <value>The company is based on the international machine learning laboratory of ITMO University and is developing in the field of implementing machine learning technologies, computer vision, natural language processing and data analysis to solve various business problems. In recent years, many projects have been implemented for the largest Russian and foreign companies, including Norilsk Nickel, Megafon, Evraz, Sinara-Transport Machines, Gazprom Neft. This allowed us to accumulate vast experience and expertise, create a product line and become a leading company in the field of artificial intelligence technology implementation.</value>
   </data>
@@ -316,6 +334,15 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="GPUText" xml:space="preserve">
     <value>Calculations that require graphics and tensor processors.</value>
   </data>
+  <data name="Header1" xml:space="preserve">
+    <value>Industrial safety &amp; violation control</value>
+  </data>
+  <data name="Header2" xml:space="preserve">
+    <value>Analysis of human behavior &amp; events</value>
+  </data>
+  <data name="Header3" xml:space="preserve">
+    <value>Quality control &amp; production automation</value>
+  </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
   </data>
@@ -351,6 +378,18 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   </data>
   <data name="IRSText" xml:space="preserve">
     <value>The system allows you, like chattpt, to find information in a local document database, segment and summarize texts</value>
+  </data>
+  <data name="IS" xml:space="preserve">
+    <value>Industrial safety and violation control</value>
+  </data>
+  <data name="IS1" xml:space="preserve">
+    <value>Monitoring restricted areas, boundary violations, and foreign object detection</value>
+  </data>
+  <data name="IS2" xml:space="preserve">
+    <value>PPE monitoring (helmets, masks, protective clothing, safety ropes, goggles, gloves, etc.)</value>
+  </data>
+  <data name="IS3" xml:space="preserve">
+    <value>Fire and smoke detection</value>
   </data>
   <data name="Lawenforcement" xml:space="preserve">
     <value>Law enforcement</value>
@@ -442,6 +481,18 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   <data name="Partners" xml:space="preserve">
     <value>Our partners</value>
   </data>
+  <data name="PC" xml:space="preserve">
+    <value>Personnel control and labor efficiency analysis</value>
+  </data>
+  <data name="PC1" xml:space="preserve">
+    <value>Analysis of the time spent by the object in the zone, violations of zone boundaries, absence from the workplace</value>
+  </data>
+  <data name="PC2" xml:space="preserve">
+    <value>Evaluation of staff actions, task performance monitoring, employee employment monitoring</value>
+  </data>
+  <data name="PC3" xml:space="preserve">
+    <value>Control of compliance with production processes</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
@@ -450,6 +501,9 @@ Monitoring agricultural fields from satellite images and unmanned aerial vehicle
   </data>
   <data name="Products" xml:space="preserve">
     <value>Products</value>
+  </data>
+  <data name="ProductsSubTitile" xml:space="preserve">
+    <value>Explore Our Products</value>
   </data>
   <data name="ProductsSubtitle" xml:space="preserve">
     <value>Typical solutions and products developed by the company</value>
@@ -522,6 +576,9 @@ glasses, gloves, device), fire and smoke</value>
   <data name="ServicesTitle" xml:space="preserve">
     <value>A wide range of services for data analysis, development of intelligent systems based on machine learning and computer vision</value>
   </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>Technologies that see, hear and understand</value>
+  </data>
   <data name="SmartCity" xml:space="preserve">
     <value>Smart city</value>
   </data>
@@ -542,6 +599,15 @@ glasses, gloves, device), fire and smoke</value>
   </data>
   <data name="SPText" xml:space="preserve">
     <value>For any questions and suggestions, feel free to contact us</value>
+  </data>
+  <data name="SubHeader1" xml:space="preserve">
+    <value>Industrial safety and labor protection, PPE (personal protective equipment) recognition and violation control, emergency detection and equipment operation monitoring</value>
+  </data>
+  <data name="SubHeader2" xml:space="preserve">
+    <value>Monitoring employee engagement, task performance assessment, staff action analysis, theft and theft detection</value>
+  </data>
+  <data name="SubHeader3" xml:space="preserve">
+    <value>Detection of defects and waste, counting and classification of objects on the conveyor, control of assembly accuracy, automation of the production line</value>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Subject</value>

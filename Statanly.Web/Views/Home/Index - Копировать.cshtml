@@ -1,0 +1,1547 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
+        .ToList();
+    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
+    var link = "/home/download?lang=" + lang;
+    var client0 = "assets/img/clients" + lang + "/client-0.png";
+    var client1 = "assets/img/clients" + lang + "/client-1.png";
+    var client2 = "assets/img/clients" + lang + "/client-2.png";
+    var client3 = "assets/img/clients" + lang + "/client-3.png";
+    var client4 = "assets/img/clients" + lang + "/client-4.png";
+    var client5 = "assets/img/clients" + lang + "/client-5.png";
+    var client6 = "assets/img/clients" + lang + "/client-6.png";
+    var client7 = "assets/img/clients" + lang + "/client-7.png";
+    var client8 = "assets/img/clients" + lang + "/client-8.png";
+    var client9 = "assets/img/clients" + lang + "/client-9.png";
+    var client10 = "assets/img/clients" + lang + "/client-10.png";
+    var client11 = "assets/img/clients" + lang + "/client-11.png";
+    var client12 = "assets/img/clients" + lang + "/client-12.png";
+    var client13 = "assets/img/clients" + lang + "/client-13.png";
+    var client14 = "assets/img/clients" + lang + "/client-14.png";
+    var client15 = "assets/img/clients" + lang + "/client-15.jpg";
+    var client16 = "assets/img/clients" + lang + "/client-16.png";
+    var client17 = "assets/img/clients" + lang + "/client-17.png";
+    var client18 = "assets/img/clients" + lang + "/client-18.png";
+    var client19 = "assets/img/clients" + lang + "/client-19.png";
+    var client20 = "assets/img/clients" + lang + "/client-20.png";
+    var client21 = "assets/img/clients" + lang + "/client-21.png";
+    var client22 = "assets/img/clients" + lang + "/client-22.png";
+    var client23 = "assets/img/clients" + lang + "/client-23.png";
+    var client24 = "assets/img/clients" + lang + "/client-24.png";
+    var client25 = "assets/img/clients" + lang + "/client-25.png";
+    var client26 = "assets/img/clients" + lang + "/client-26.jpg";
+    var client27 = "assets/img/clients" + lang + "/client-27.png";
+    var client28 = "assets/img/clients" + lang + "/client-28.png";
+    var client29 = "assets/img/clients" + lang + "/client-29.png";
+    var client30 = "assets/img/clients" + lang + "/client-30.jpg";
+    var client31 = "assets/img/clients" + lang + "/client-31.jpg";
+    var client32 = "assets/img/clients" + lang + "/client-32.jpg";
+}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
+        @*<h1 class="logo"><a href="index.html">Statanly</a></h1>*@
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/">@Localizer["Main"]</a></li>
+                <li class="dropdown">
+                    <a href="/home/solution"><span>@Localizer["Solutions"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/solution">@Localizer["Projects"]</a></li>
+                        <li><a href="/home/services">@Localizer["Services"]</a></li>
+                        <li><a href="/home/products">@Localizer["Products"]</a></li>
+                        <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
+                        <li><a href="/technology/uav">@Localizer["UAV"]</a></li>
+                        <li><a href="/technology/deepfakes">@Localizer["Deepfakes"]</a></li>
+                        <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
+                        <li><a href="/home/singleboard">Одноплатники</a></li>
+                        <li><a href="/home/conveyers">Автоматизация конвейеров</a></li>
+                        <li><a href="/home/manufacturing">Автоматизация производства</a></li>
+                        <li><a href="/service/monitoring">Интеллектуальный мониторинг</a></li>
+                        <li><a href="/home/mobile">Портативный ПАК</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/industry"><span>@Localizer["Industries"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/industry/retail">Ретейл</a></li>
+                        <li><a href="/industry/logistics">Логистика</a></li>
+                        <li><a href="/industry/prom">Промышленность</a></li>
+                        <li><a href="/industry/development">Девелопмент</a></li>
+                        <li><a href="/industry/horeca">HoReCa </a></li>
+                        <li><a href="/industry/food">Пищевая промышленность</a></li>
+                        <li><a href="/industry/agro">Сельское хозяйство</a></li>
+                        <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
+                        <li><a href="/industry/transport">Транспорт</a></li>
+                        <li><a href="/industry/media">Медиа, реклама</a></li>
+                        <li><a href="/industry/insurance">Страхование</a></li>
+                        <li><a href="/industry/printing">Типографии</a></li>
+                        <li><a href="/home/smartcity">Умный город</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/home/company"><span>@Localizer["Company"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/news">@Localizer["News"]</a></li>
+                        <li><a href="/home/company">@Localizer["History"]</a></li>
+                        <li><a href="/home/team">@Localizer["Team"]</a></li>
+                        <li><a href="/home/mission">@Localizer["Mission"]</a></li>
+                        <li><a href="/home/press">@Localizer["Press"]</a></li>
+                        <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
+                        <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/home/research"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/research">R&D</a></li>
+                        <li><a href="https://science.itmo.ru/" target="_blank">@Localizer["Science"]</a></li>
+                        <li><a href="/info/reestr">Open source</a></li>
+                        <li><a href="/info/cvflow">@Localizer["Documentation"]</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto " href="/home/contact">@Localizer["Contacts"]</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
+                        <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="3500" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["ML"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["MLSubTitile"]</p>
+                <a href="/home/ml" class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["More"]</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["CV"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["CVSubTitle"]</p>
+                <a href="/home/cv" class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["More"]</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["DA"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["DASubTitle"]</p>
+                <a href="/home/da" class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["More"]</a>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">@Localizer["NLP"]</h2>
+                <p class="animate__animated animate__fadeInUp">@Localizer["NLPSubTitle"]</p>
+                <a href="/home/nlp" class="btn-get-started animate__animated animate__fadeInUp scrollto">@Localizer["More"]</a>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Icon Boxes Section ======= -->
+    <section id="icon-boxes" class="icon-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h4 class="title"><a href="/home/ml">@Localizer["Forecasting"]</a></h4>
+                        <p class="description">@Localizer["ForecastingText"]</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-database-check"></i></div>
+                        <h4 class="title"><a href="/home/da">@Localizer["RS"]</a></h4>
+                        <p class="description">@Localizer["RSText"]</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-cctv"></i></div>
+                        <h4 class="title"><a href="/home/cv">@Localizer["CVVA"]</a></h4>
+                        <p class="description">@Localizer["CVVAText"]</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxl-messenger"></i></div>
+                        <h4 class="title"><a href="/home/nlp">@Localizer["NLP"]</a></h4>
+                        <p class="description">@Localizer["NLPText"]</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Icon Boxes Section -->
+    <!-- ======= About Us Section ======= -->
+    <!-- ======= Cta Section ======= -->
+    <section id="ai" class="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Видеоаналитика для бизнеса</h3>
+                    <p>Обеспечьте безопасность и держите бизнес под контролем</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/services">@Localizer["More"]</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="services-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/restaurants"><img src="/assets/img/Services/restoran.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/restaurants">Рестораны</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Предотвращение краж, контроль за соблюдением стандартов гигиены, подсчет уникальных посетителей, ожидание заказа, пустая посуда
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/shops"><img src="/assets/img/Services/supermarket.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/shops">Магазины</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Контроль за процессами внутри торговых помещений, мониторинг и анализ поведения посетителей, подсчет покупателей в очереди
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/housing"><img src="/assets/img/Services/housing.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/housing">ЖКХ</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Мониторинг безопасности (дым, возгорания), загрязненности территории, контроль движения ТС, распознавание несчастных случаев
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/railwaystation"><img src="/assets/img/Services/railwaystation.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/railwaystation">Аэропорты и вокзалы</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Подсчет людей, детекция посторонних предметов, распознавание дыма, возгораний, выявление драк, конфликтов, скопления людей
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/railwaystation"><img src="/assets/img/Services/Shoppingmalls.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/shoppingmalls">ТРЦ & ТРК</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Подсчет людей, детекция посторонних предметов, распознавание дыма, возгораний, выявление драк, конфликтов, скопления людей
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/institutions"><img src="/assets/img/Services/institutions.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/institutions">Учебные заведения</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Мониторинг безопасности, анализ нарушений, детекция посторонних лиц, распознавание дыма, возгораний
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/sports"><img src="/assets/img/Services/sport.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/sports">Спорт-комплексы</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Анализ нарушений, техники безопасности, детекция несчастных случаев и травм, распознавание дыма, возгораний
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/transport"><img src="/assets/img/Services/transport.jpeg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/transport">Транспорт</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Подсчет пассажиров, детекция посторонних предметов, распознавание дыма, возгораний, выявление драк, конфликтов, давки, безопасность на железной дороге
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/gasstation"><img src="/assets/img/Services/gasstation.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/gasstation">АЗС</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Мониторинг работы АЗС, контроль безопасности, подсчет объектов (людей, ТС), автоматизация обслуживания
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/parking"><img src="/assets/img/Services/parkovka.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/parking">Парковки</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Комфорт для посетителей парковки, обеспечение порядка, безопасность транспортных средств и владельцев, предотвращение краж и вандализма
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/banks"><img src="/assets/img/Services/banks.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/banks">Банки</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Мониторинг безопасности, анализ посетителей в зале обслуживания и на кассах, подсчет людей в очереди, предотвращение мошенничества
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/pvz"><img src="/assets/img/Services/pvz.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/pvz">ПВЗ</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Контроль качества обслуживания клиентов, безопасность посылок и персонала, анализ процессов приемки и выдачи товаров, повышение уровня сервиса
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/warehouses"><img src="/assets/img/Services/sklad.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/warehouses">Склады</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Безопасность товаров и сотрудников, оптимизация логистики, предотвращение краж, обеспечение защиты от несанкционированного доступа
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/business"><img src="/assets/img/Services/biznes.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/business">Бизнес-центры</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Комфортные и безопасные условия для работы и встреч. Контроль доступов к помещениям, предотвращение несанкционированного доступа к конфиденциальной информации
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/beauty"><img src="/assets/img/Services/salon.jpg" alt="" class="img-fluid"></a>
+                                </div>
+                                <h2 class="entry-title">
+                                    <a href="/service/beauty">Салоны красоты</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Контроль за процессами обслуживания и безопасностью процедур, предотвращение краж и пожаров, повышение качества обслуживания и удовлетворенности клиентов
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/industry"><img src="/assets/img/Services/proizvodstvo.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/industry">Производство</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Мониторинг безопасности, контроль доступа к помещениям, снижение риска краж, повышение производительности работы сотрудников
+                                    </p>
+                                </div>
+
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="entry">
+                                <div class="entry-img">
+                                    <a href="/service/hospitals"><img src="/assets/img/Services/medical.jpg" alt="" class="img-fluid"></a>
+                                </div>
+
+                                <h2 class="entry-title">
+                                    <a href="/service/hospitals">Мед. учреждения</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p style="height: 180px">
+                                        Мониторинг безопасности, контроль доступа к помещениям, контроль ношения средств индивидуальной защиты
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["About"]</h2>
+            </div>
+            <div class="row content">
+                <p>
+                    @Localizer["AboutText"]
+                </p>
+                <div class="col-lg-5">
+                    <p>
+                        @Localizer["SomeTasks"]
+                    </p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T1"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T2"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T3"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T4"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T5"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T6"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T7"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T8"]</li>
+                        <li><i class="ri-check-double-line"></i> @Localizer["T9"]</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 pt-4 pt-lg-0">
+                    <p>
+                        @Localizer["AboutLongText"]
+                    </p>
+                    <a href="/home/company" class="btn-learn-more">@Localizer["More"]</a>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Us Section -->
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="row skills-content">
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">@Localizer["CV"] <i class="val">50+ @Localizer["Ofprojects"]</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">@Localizer["Forecasting"] <i class="val">35+ @Localizer["Ofprojects"]</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">@Localizer["NLP"]<i class="val">40+ @Localizer["Ofprojects"]</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">@Localizer["RS"] <i class="val">25+ @Localizer["Ofprojects"]</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">@Localizer["DA"]<i class="val">35+ @Localizer["Ofprojects"]</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill">@Localizer["OtherTask"]<i class="val">20+ @Localizer["Ofprojects"]</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Skills Section -->
+    <!-- ======= Numbers Section ======= -->
+    <section id="numbers" class="numbers">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="box">
+                        <h4>15 <span>@Localizer["LeadDevelopers"]</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="box">
+                        <h4>3 <span>@Localizer["MLPrize"]</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="box">
+                        <h4>400 <span>@Localizer["MLProjects"]</span></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Numbers Section -->
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["Clients"]</h2>
+            </div>
+            <div class="clients-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><img src=@client0 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client1 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client2 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client3 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client4 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client5 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client6 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client7 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client8 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client9 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client10 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client11 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client12 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client13 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client14 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client15 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client16 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client18 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client19 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client20 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client21 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client22 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client23 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client24 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client25 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client26 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client27 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client28 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client29 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client30 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client31 class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src=@client32 class="img-fluid" alt=""></div>
+                </div>
+                <div class="swiper-pagination">
+
+                </div>
+                <div class="accordion-list section-title">
+                    <a data-bs-toggle="collapse" data-bs-target="#Ref" class="collapsed">Отзывы<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div style="margin-top: 15px" id="Ref" class="collapse" data-bs-parent=".accordion-list">
+                        <div class="row">
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/home/Reference/1" target="_blank"><img src="/assets/img/pdf.png" class="img-fluid" alt="">Отзыв 1</a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/home/Reference/2" target="_blank"><img src="/assets/img/pdf.png" class="img-fluid" alt="">Отзыв 2</a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/home/Reference/3" target="_blank"><img src="/assets/img/pdf.png" class="img-fluid" alt="">Отзыв 3</a>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Clients Section -->
+    <!-- ======= NLP Section ======= -->
+    <section id="services" class="nlptext section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["Services1"]</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="~/assets/img/Services/TS.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4><a href="/home/service/5">@Localizer["TS"]</a></h4>
+                            <span></span>
+                            <p>@Localizer["TSText"]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="~/assets/img/Services/Dev.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4><a href="/home/service/2">@Localizer["AIDevelopment"]</a></h4>
+                            <span></span>
+                            <p>@Localizer["AIDevelopmentText"]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="~/assets/img/Services/Science.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4><a href="/home/service/3">@Localizer["R&D"]</a></h4>
+                            <span></span>
+                            <p>@Localizer["R&DText"]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start">
+                        <div class="pic"><img src="~/assets/img/Services/tpu.jpeg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4><a href="/home/service/6">@Localizer["TPUTitle"]</a></h4>
+                            <span></span>
+                            <p>@Localizer["TPUText"]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End NLP Section -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Автоматизация конвейерных процессов</h3>
+                    <p>Контроль и оптимизация конвейерных процессов и производственной линии, снижение зависимости от человека и ручного труда</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/conveyers">@Localizer["More"]</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= Product Section ======= -->
+    <section id="products" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["Ourproducts"]</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-eye"></i>
+                        <h4><a href="/home/product/7">Промышленная безопасность</a></h4>
+                        <ul>
+                            <li>Контроль запретных зон, нарушения границ, обнаружение посторонних объектов</li>
+                            <li>Контроль СИЗ (каски, маски, cпецодежда, страховочный трос, очки, перчатки, и т.д.)</li>
+                            <li>Детекция возгораний и задымленности</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-bar-chart-line"></i>
+                        <h4><a href="/home/product/9">Повышение производительности</a></h4>
+                        <ul>
+                            <li>Анализ времени нахождения объекта в зоне, нарушения границ зон, отсутствие на рабочем месте</li>
+                            <li>Оценка действий персонала, контроль выполнения задач, контроль занятости сотрудников</li>
+                            <li>Контроль соблюдения производственных процессов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-gear"></i>
+                        <h4><a href="/home/conveyers">Автоматизация производственной линии</a></h4>
+                        <ul>
+                            <li>Подсчет и классификация объектов</li>
+                            <li>Выявление аномалий и инородных тел на конвейере</li>
+                            <li>Определение геометрических характеристик, цвета, распределения по размерам и фракциям (анализ гранулометрического состава)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="bi bi-search"></i>
+                        <h4><a href="/home/product/2">Контроль качества</a></h4>
+                        <ul>
+                            <li>Автоматическое выявление дефектов</li>
+                            <li>Мониторинг соответствия продукции установленным стандартам</li>
+                            <li>Контроль и обеспечение правильности сборки</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="entry-content">
+                <div class="read-more">
+                    <a href="/home/products">Все продукты</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Products Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Сервисы на базе больших языковых моделей и речевая аналитика</h3>
+                    <p>Автоматизируйте работу с документами, обработку текстовой информации и речевых обращений</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="/home/nlp">@Localizer["More"]</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= SmartCity Section ======= -->
+    <section id="smart" class="smart">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["SmartCity"]</h2>
+                <p>
+                    @Localizer["SmartCityDisc"]
+                    </br>
+                    <a target="_blank" href="http://grada.city/">@Localizer["More"]</a>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity/1"><img src="assets/img/Smart city/1.png" alt=""></a>
+                        <h4> <a tabindex="-1" href="/home/smartcity/1">@Localizer["RoadMaintenance"]</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Износ дорожной разметки
+                            </li>
+                            <li>
+                                Выбоины
+                            </li>
+                            <li>
+                                Образование луж
+                            </li>
+                            <li>
+                                Накопление снега
+                            </li>
+                            <li>
+                                Неработающее освещение
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity/2"><img src="assets/img/Smart city/2.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity/2">@Localizer["PublicSafety"]</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Езда вдвоем на самокате
+                            </li>
+                            <li>
+                                Проезд по пешеходному переходу
+                            </li>
+                            <li>
+                                Граффити/вандализм
+                            </li>
+                            <li>
+                                Драки/ссоры
+                            </li>
+                            <li>
+                                Мониторинг толпы
+                            </li>
+                            <li>
+                                Автомобильные аварии
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity/3"><img src="assets/img/Smart city/3.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity/3">@Localizer["Lawenforcement"]</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Розыск автомобилей
+                            </li>
+                            <li>
+                                Поиск интересующего человека
+                            </li>
+                            <li>
+                                Поиск по силуэту
+                            </li>
+                            <li>
+                                Отслеживание объектов на основе карты
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity/4"><img src="assets/img/Smart city/4.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity/4">@Localizer["TrafficManagement"]</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Расчет параметров дорожного движения
+                            </li>
+                            <li>
+                                Прогнозирование трафика
+                            </li>
+                            <li>
+                                Оптимизация работы светофоров
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity/5"><img src="assets/img/Smart city/5.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity/5">@Localizer["WasteManagement"]</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Соблюдение правил вывоза мусора
+                            </li>
+                            <li>
+                                Навалы мусора
+                            </li>
+                            <li>
+                                Мониторинг состояние мусорных баков
+                            </li>
+                            <li>
+                                Мониторинг поведения в сфере утилизации отходов
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <a tabindex="-1" href="/home/smartcity/6"><img src="assets/img/Smart city/6.png" alt=""></a>
+                        <h4><a tabindex="-1" href="/home/smartcity/6">@Localizer["PublicTransport"]</a></h4>
+                        <span></span>
+                        <ul style=" display: inline-block; text-align: left;">
+                            <li>
+                                Учет уникальных пассажиров
+                            </li>
+                            <li>
+                                Распознавание лиц
+                            </li>
+                            <li>
+                                Обнаружение заброшенных предметов
+                            </li>
+                            <li>
+                                Учет остановок
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End SmartCity Section -->
+    <!-- ======= solutions Section ======= -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["Ourprojects"]</h2>
+                @*<p>@Localizer["Ourprojectsex"]</p>*@
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul id="solutions-flters">
+                        <li data-filter="*" class="filter-active">Все</li>
+                        <li data-filter=".filter-app">@Localizer["CV"]</li>
+                        <li data-filter=".filter-card">@Localizer["Forecasting"]</li>
+                        <li data-filter=".filter-web">@Localizer["NLP"]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row solutions-container">
+                <div class="col-lg-4 col-md-6 solutions-item filter-app wow fadeInUp">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-1.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-1.jpg" data-gallery="solutionsGallery" class="link-preview solutions-lightbox" title="The system for detecting the characteristics of processes and objects allows you to determine various parameters, such as type, shape, size, quantity, speed, geometric characteristics. The system finds applications in a huge number of applied tasks."><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/1" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/1">Распознавание образов</a></h4>
+                            <p>Распознавание параметров и характеристик объектов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-2.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-2.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Text analysis, large language models LLM(), selection of keywords, tags, sentiments, texts. Construction of predictive and recommender systems based on the analysis of textual information"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/2" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/2">Анализ документов</a></h4>
+                            <p>Поиск и структурированное извлечение информации</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-3.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/Case3/1.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Number plate recognition system (car, train car, other objects in production or in an urban environment), free-form numbers, various fonts, markings, QR and barcodes, inscriptions in conditions of various noise levels and various alphabets"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/3" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/3">Распознавание текста</a></h4>
+                            <p>Распознавание надписей, рукописного текста, номеров, qr-кодов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-card wow fadeInUp">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-4.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-4.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Predictive MTBF Systems"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/4" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/4">Прогнозирование поломок</a></h4>
+                            <p>Прогнозирование поломок, отказ и выхода из строя оборудования</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-5.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-5.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Website hierarchical classification system by categories"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/5" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/5">Классификация документов</a></h4>
+                            <p>Классификация по тематике, стилю, анализ тональности</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-6.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-6.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Systems for recognition of defects and other formations on the material (metal, wood, plastic, film on liquid)."><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/6" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/6">Выявление дефектов</a></h4>
+                            <p>Распознавание дефектов и брака, контроль качества продукции</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-card wow fadeInUp">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-7.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-7.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Predictive churn system"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/7" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/7">Прогнозирование оттока</a></h4>
+                            <p>Прогнозирование оттока и удержание клиентов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-8.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-8.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Forecasting the conversion rate"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/8" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/8">Прогнозирование конверсии</a></h4>
+                            <p>Прогнозирование конверсии продаж</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 solutions-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="solutions-wrap">
+                        <figure>
+                            <img src="assets/img/solutions/solutions-9.jpg" class="img-fluid" alt="">
+                            <a tabindex="-1" href="assets/img/solutions/solutions-9.jpg" class="link-preview solutions-lightbox" data-gallery="solutionsGallery" title="Content generation by text description"><i class="bx bx-plus"></i></a>
+                            <a tabindex="-1" href="/home/case/9" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                        </figure>
+
+                        <div class="solutions-info">
+                            <h4><a tabindex="-1" href="/home/case/9">Генерация контента</a></h4>
+                            <p>Генерация доменных имен и логотипов</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End solutions Section -->
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch position-relative video-box" style='background-image: url("assets/img/MyCollages.jpg");'>
+                    @*<a href="https://www.youtube.com/watch?v=LvaUV_sAJYE" target="_blank" class="glightbox play-btn mb-4"></a>*@
+                </div>
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+                    <div class="content">
+                        <h3>@Localizer["Application"] <strong> @Localizer["Areas"]</strong></h3>
+                        <p>
+                            @Localizer["ApplicationSubTitle"]
+                        </p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <ul>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1" class="collapsed"><span>1</span>@Localizer["Retail"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["RetailText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/retail">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>2</span>@Localizer["Logistics"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["LogisticsText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/logistics">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>3</span>@Localizer["Industry"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["IndustryText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/prom">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>4</span>@Localizer["Development"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["DevelopmentText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/development">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed"><span>5</span>@Localizer["Hotel"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["HotelText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/horeca">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-6" class="collapsed"><span>6</span>@Localizer["Agriculture"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["AgricultureText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/agro">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-7" class="collapsed"><span>7</span>Пищевая промышленность <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-7" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        Внедрение технологий компьютерного зрения в пищевой промышленности позволяет контролировать качество продукции, вести учет и подсчет,
+                                        а также выявлять брак. Системы распознавания маркировки, надписей, QR-кодов, сравнение с образцом ускоряют и автоматизируют различные
+                                        процессы на предприятии. Контроль эффективности на рабочем месте, контроль безопасности и выявления нарушений позволяет существенно сократить расходы
+
+                                    </p>
+                                    <p>
+                                        <a href="/industry/food">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-8" class="collapsed"><span>8</span>@Localizer["Transport"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-8" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["TransportText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/transport">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-9" class="collapsed"><span>9</span>@Localizer["Media"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-9" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["MediaText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/media">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-10" class="collapsed"><span>10</span>@Localizer["Insurance"]<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-10" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["InsuranceText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/insurance">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-11" class="collapsed"><span>11</span>@Localizer["Medicine"]<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-11" class="collapse" data-bs-parent=".accordion-list">
+                                    <p>
+                                        @Localizer["MedicineText"]
+                                    </p>
+                                    <p>
+                                        <a href="/industry/medicine">@Localizer["More"]</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Why Us Section -->
+    <!-- ======= Technology Section ======= -->
+    <section id="tech" class="tech">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Технологии</h2>
+                <p>Самый современный стек технологий</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="assets/img/testimonials/Pytorch.png" alt="">
+                        <img src="assets/img/testimonials/Ultralytics2.png" alt="">
+                        <img src="assets/img/testimonials/HF.png" alt="">
+                        <img src="assets/img/testimonials/OpenCV.png" alt="">
+
+                        <h4>CV</h4>
+                        <span>Компьютерное зрение</span>
+                        <p>
+                            Python, PyTorch,
+                            MMDetection, MMSegmentation,
+                            Ultralytics (YOLOv8),
+                            Transformers (Hugging Face),
+                            OpenCV
+                            SAIL (TPU - Sophon Artificial Intelligent Library)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="assets/img/testimonials/bloom.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/GPT.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/OpenAI.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/TensorFlow_logo.svg.png" class="testimonial-img" alt="">
+
+                        <h4>NLP</h4>
+                        <span>
+                            Обработка естественных языков
+                        </span>
+                        <p>
+                            Bloom,
+                            transformers,
+                            tokenizers,
+                            datasets, nltk, spacy, pythia
+                            GPT, GPT-Neo, GPT-J,
+                            BERT, LLAMA, Reformer,
+                            Alignment-а (RLHF, ect)
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <img src="assets/img/testimonials/sklearn.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/catboost.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/XGBoost.png" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/LightGBM.png" class="testimonial-img" alt="">
+                        <h4>ML/DL</h4>
+                        <span>
+                            Прогнозные и рекомендательные системы
+                        </span>
+                        <p>
+                            Scikit-learn,
+                            Keras,
+                            ARIMA,
+                            1D convolutional NN,
+                            LSTM,
+                            Attention-based,
+                            CatBoost/ Light GBM/ XGBoos
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Technology Section -->
+    <!-- ======= Dev process Section ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["DP"]</h2>
+            </div>
+            <div class="row">
+                <div class="faq-list col-md-8">
+                    <ul>
+                        <li>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">@Localizer["DP1"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText1"]
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">@Localizer["DP2"] <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText2"]
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">@Localizer["DP3"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText3"]
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">@Localizer["DP4"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText4"]
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">@Localizer["DP5"]  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText5"]
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">@Localizer["DP6"]   <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    @Localizer["DPText6"]
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4"><img style="max-height: 80%" src="assets/img/table vertical(2).png" class="img-fluid" alt=""></div>
+            </div>
+        </div>
+    </section><!-- End Dev process Section -->
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="section-title">
+                <h2>@Localizer["Partners"]</h2>
+            </div>
+            <div class="clients-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><a href="https://www.dssl.ru/" target="_blank"><img src="~/assets/img/partners/TRASSIR.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://itmo.ru" target="_blank"><img src="~/assets/img/partners/itmo.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://russoft.org/participant/statanly-technologies/" target="_blank"><img src="~/assets/img/partners/russoft.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://sk.ru/" target="_blank"><img src="~/assets/img/partners/skolkovo.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://alrii.ru/" target="_blank"><img src="~/assets/img/partners/alrii.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://jet.su/" target="_blank"><img src="~/assets/img/partners/jet.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://i.moscow/" target="_blank"><img src="~/assets/img/partners/imoscow.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://technopark.itmo.ru/" target="_blank"><img src="~/assets/img/partners/Technopark.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://ctlab.ifmo.ru/" target="_blank"><img src="~/assets/img/partners/ilct.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.reksoft.ru/" target="_blank"><img src="~/assets/img/partners/reksoft.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://somin.ai/" target="_blank"><img src="~/assets/img/partners/bbridge.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://rt.ru/" target="_blank"><img src="~/assets/img/partners/rostelecom.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://churn.statanly.com/" target="_blank"><img src="~/assets/img/partners/cusflow.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://deflamel.com/" target="_blank"><img src="~/assets/img/partners/deflamel.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="http://icv.systems/" target="_blank"><img src="~/assets/img/partners/icv.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://ori.team/" target="_blank"><img src="~/assets/img/partners/ori.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://cv.statanly.com/" target="_blank"><img src="~/assets/img/partners/visionlab.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://ingria-park.ru/" target="_blank"><img src="~/assets/img/partners/techspb.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://ftim.ru/" target="_blank"><img src="~/assets/img/partners/ftim.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://generation-startup.ru/" target="_blank"><img src="~/assets/img/partners/generations.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://lpmtech.ru/" target="_blank"><img src="~/assets/img/partners/lenpoligraf.png" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://vera-tec.ru/" target="_blank"><img src="~/assets/img/partners/veratech.jpg" class="img-fluid" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://tapp-group.ru/" target="_blank"><img src="~/assets/img/partners/tappgroup.jpg" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section><!-- End Clients Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>@Localizer["Contacts"]</h2>
+                <h4>@Localizer["ContactsText"]</h4>
+            </div>
+
+            <div class="row mt-1 d-flex justify-content-end">
+                <div class="col-lg-5">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>@Localizer["Address"]:</h4>
+                            <p>@Localizer["AddressText"]</p>
+                        </div>
+                        <div class="email">
+                            <a href="mailto:hello@statanly.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                            <h4>@Localizer["Email"]:</h4>
+                            <p><a href="mailto:hello@statanly.com" target="_blank">hello@statanly.com</a></p>
+                        </div>
+                        <div class="phone">
+                            <a href="tel:88007707178" target="_blank"><i class="bi bi-phone"></i></a>
+                            <h4>@Localizer["Phone"]:</h4>
+                            <p><a href="tel:88007707178" target="_blank">8(800) 770-71-78</a></p>
+                        </div>
+                        <div class="telegram">
+                            <a href="https://t.me/statanly" target="_blank"><i class="bi bi-telegram"></i></a>
+                            <h4>Telegram:</h4>
+                            <p><a href="https://t.me/statanly" target="_blank">@@statanly</a></p>
+                        </div>
+                        <div class="whatsapp">
+                            <a href="https://wa.me/79218752396" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <h4>Whatsapp:</h4>
+                            <p><a href="https://wa.me/79218752396" target="_blank">https://wa.me/79218752396</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <form action="/message/send" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder=@Localizer["Name"] required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" placeholder=@Localizer["Email"] required>
+                            </div>
+                        </div>
+                        @*<div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder=@Localizer["Subject"] required>
+                            </div>*@
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="text" rows="5" placeholder=@Localizer["Message"] required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">@Localizer["Sending"]</div>
+                            <div class="error-message">@Localizer["Error"]</div>
+                            <div class="sent-message">@Localizer["SendMessage"]</div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="check" id="subject" placeholder="2 + 5 =" required>
+                        </div>
+                        <div class="text-center"><button type="submit">@Localizer["Send"]</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->

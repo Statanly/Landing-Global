@@ -9264,11 +9264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing\\Statanly.Web\\Statanly.Web.csproj",
+      "projectUniqueName": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing — Global\\Statanly.Web\\Statanly.Web.csproj",
       "projectName": "Statanly.Web",
-      "projectPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing\\Statanly.Web\\Statanly.Web.csproj",
+      "projectPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing — Global\\Statanly.Web\\Statanly.Web.csproj",
       "packagesPath": "C:\\Users\\serge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing\\Statanly.Web\\obj\\",
+      "outputPath": "C:\\Users\\serge\\OneDrive\\Рабочий стол\\Statanly landing\\Landing — Global\\Statanly.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

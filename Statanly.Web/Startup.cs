@@ -47,10 +47,10 @@ namespace Statanly.Web
                      var supportedCultures = new List<CultureInfo>
                      {
                             new CultureInfo("en"),
-                            new CultureInfo("ru"),
+                            new CultureInfo("es"),
                      };
 
-                     options.DefaultRequestCulture = new RequestCulture(culture: "ru", uiCulture: "ru");
+                     options.DefaultRequestCulture = new RequestCulture(culture: "es", uiCulture: "es");
                      options.SupportedCultures = supportedCultures;
                      options.SupportedUICultures = supportedCultures;
                  });

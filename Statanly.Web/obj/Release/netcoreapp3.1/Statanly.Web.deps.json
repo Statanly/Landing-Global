@@ -313,6 +313,9 @@
           },
           "ru/Statanly.Web.resources.dll": {
             "locale": "ru"
+          },
+          "es/Statanly.Web.resources.dll": {
+            "locale": "es"
           }
         },
         "compile": {
