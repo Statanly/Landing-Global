@@ -1,163 +1,852 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
-@{
-    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
+﻿<style>
+    .industrial-hero-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 48%;
+        gap: 34px;
+        align-items: stretch;
+        margin: 0 0 42px;
+        overflow: hidden;
+        background: #fff;
+    }
+    .industrial-hero-section {
+        padding-top: 10px;
+        align-items: start;
+    }
+
+    .industrial-hero-content {
+        padding-top: 6px;
+    }
+
+    .industrial-hero-visual {
+        margin-top: -18px;
+    }
+    .industrial-hero-visual {
+        margin-top: -28px;
+    }
+    .industrial-hero-content {
+        position: relative;
+        z-index: 3;
+        padding-right: 30px;
+    }
+
+    .industrial-hero-visual {
+        position: relative;
+        min-height: 920px;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+    }
+
+        .industrial-hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            background: linear-gradient( to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 10%, rgba(255,255,255,0.72) 18%, rgba(255,255,255,0.42) 28%, rgba(255,255,255,0.14) 38%, rgba(255,255,255,0) 50% ), linear-gradient( to bottom, rgba(255,255,255,0) 82%, rgba(255,255,255,0.22) 92%, rgba(255,255,255,0.72) 100% );
+        }
+
+        .industrial-hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            filter: saturate(1.02) contrast(1.01);
+        }
+        @@media (max-width: 1100px) {
+
+    .industrial-hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .industrial-hero-visual {
+        min-height: 620px;
+    }
+
+    .industrial-hero-content {
+        padding-right: 0;
+    }
 }
-<main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-            <ol>
-                <li><a href="/home/services">Все сервисы</a></li>
-                <li><a href="/service/restaurants">Рестораны</a></li>
-                <li><a href="/service/shops">Магазины</a></li>
-                <li><a href="/service/housing">ЖКХ</a></li>
-                <li><a href="/service/railwaystation">Аэропорты и вокзалы</a></li>
-                <li><a href="/service/shoppingmalls">ТРЦ & ТРК</a></li>
-                <li><a href="/service/institutions">Учебные заведения</a></li>
-                <li><a href="/service/sports">Спорт-комплексы</a></li>
-                <li><a href="/service/transport">Транспорт</a></li>
-                <li><a href="/service/gasstation">АЗС</a></li>
-                <li><a href="/service/parking ">Парковки</a></li>
-                <li><a href="/service/banks">Банки</a></li>
-                <li><a href="/service/pvz">ПВЗ</a></li>
-                <li><a href="/service/warehouses">Склады</a></li>
-                <li><a href="/service/business ">Бизнес-центры</a></li>
-                <li><a href="/service/beauty ">Салоны красоты</a></li>
-                <li>Производство</li>
-                <li><a href="/service/hospitals">Медицинские учреждения</a></li>
-            </ol>
-            <h2>Производство, промышленность</h2>
-        </div>
-    </section><!-- End Breadcrumbs -->
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-        <div class="container">
+.industrial-kicker,
+.industrial-section-kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(21,152,255,.08);
+    color: #1598ff;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin: 0 0 12px;
+}
 
-            <div class="row" data-aos="zoom-in">
-                <div class="col-lg-9 text-center text-lg-start">
-                    <h3>Видеоаналитика на производстве</h3>
-                    <p>Умное видеонаблюдение для промышленных и производственных организаций</p>
-                </div>
-                <div class="col-lg-3 cta-btn-container text-center">
-                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
-                </div>
+.industrial-hero-title {
+    color: #0b1f33;
+    font-size: 56px;
+    line-height: 1.03;
+    font-weight: 900;
+    letter-spacing: -.045em;
+    margin: 0 0 18px;
+    max-width: 780px;
+}
+
+.industrial-hero-subtitle {
+    color: #4e5d78;
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 760px;
+    margin: 0 0 26px;
+}
+
+.industrial-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 760px;
+    margin: 0 0 28px;
+}
+
+.industrial-meta-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 92px;
+    padding: 22px 24px;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(16,54,92,.045);
+}
+
+.industrial-meta-card i {
+    font-size: 28px;
+    color: #ef233c;
+    flex-shrink: 0;
+}
+
+.industrial-meta-card span {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 850;
+    color: #0b1f33;
+}
+
+.industrial-intro-text {
+    max-width: 820px;
+    margin: 0;
+}
+
+.industrial-intro-text p {
+    color: #4e5d78;
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+.industrial-hero-visual {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 560px;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.industrial-hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    display: block;
+
+    -webkit-mask-image:
+        linear-gradient(to left,
+            rgba(0,0,0,1) 42%,
+            rgba(0,0,0,.88) 56%,
+            rgba(0,0,0,.58) 70%,
+            rgba(0,0,0,.24) 86%,
+            rgba(0,0,0,0) 100%
+        ),
+        linear-gradient(to bottom,
+            rgba(0,0,0,1) 82%,
+            rgba(0,0,0,.55) 94%,
+            rgba(0,0,0,0) 100%
+        );
+
+    mask-image:
+        linear-gradient(to left,
+            rgba(0,0,0,1) 42%,
+            rgba(0,0,0,.88) 56%,
+            rgba(0,0,0,.58) 70%,
+            rgba(0,0,0,.24) 86%,
+            rgba(0,0,0,0) 100%
+        ),
+        linear-gradient(to bottom,
+            rgba(0,0,0,1) 82%,
+            rgba(0,0,0,.55) 94%,
+            rgba(0,0,0,0) 100%
+        );
+}
+
+.industrial-insight-box {
+    margin: 26px 0 36px;
+    padding: 26px 30px;
+    background: #ffffff;
+    border: 1px solid #eef2f7;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(16,54,92,.05), 0 2px 10px rgba(16,54,92,.03);
+    display: flex;
+    gap: 24px;
+}
+
+.industrial-insight-line {
+    width: 4px;
+    border-radius: 10px;
+    background: linear-gradient(180deg,#1598ff 0%,#ef233c 100%);
+    flex-shrink: 0;
+}
+
+.industrial-insight-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.industrial-insight-content i {
+    font-size: 30px;
+    color: #1598ff;
+    flex-shrink: 0;
+}
+
+.industrial-insight-content p {
+    margin: 0;
+    color: #26384f;
+    font-size: 24px;
+    line-height: 1.55;
+    font-weight: 700;
+}
+
+.industrial-modules-section,
+.industrial-platform-section {
+    margin: 42px 0;
+}
+
+.industrial-section-title {
+    color: #0b1f33;
+    font-size: 42px;
+    line-height: 1.12;
+    font-weight: 900;
+    letter-spacing: -.03em;
+    margin: 0 0 16px;
+}
+
+.industrial-section-lead {
+    color: #4e5d78;
+    font-size: 18px;
+    line-height: 1.75;
+    max-width: 920px;
+    margin-bottom: 28px;
+}
+
+.industrial-modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.industrial-module-card,
+.industrial-platform-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e7edf5;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(16,54,92,.045), 0 2px 10px rgba(16,54,92,.025);
+}
+
+.industrial-module-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #ef233c;
+}
+
+.industrial-module-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.industrial-module-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(239,35,60,.07);
+    color: #ef233c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.industrial-module-icon i {
+    font-size: 28px;
+}
+
+.industrial-module-card h3,
+.industrial-platform-card h3 {
+    color: #0b1f33;
+    font-size: 24px;
+    line-height: 1.22;
+    font-weight: 850;
+    margin: 3px 0 14px;
+}
+
+.industrial-module-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.industrial-module-card li {
+    position: relative;
+    padding-left: 28px;
+    color: #4e5d78;
+    font-size: 15.5px;
+    line-height: 1.65;
+    margin-bottom: 11px;
+}
+
+.industrial-module-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ef233c;
+    font-weight: 900;
+}
+
+.industrial-platform-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px 1fr;
+    gap: 28px;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.industrial-platform-column {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.industrial-platform-card i {
+    color: #ef233c;
+    font-size: 34px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.industrial-platform-card p {
+    color: #4e5d78;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.industrial-platform-core {
+    display: flex;
+    justify-content: center;
+}
+
+.industrial-platform-ring {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 2px solid rgba(21,152,255,.35);
+    background: radial-gradient(circle at center, rgba(21,152,255,.12), rgba(21,152,255,.04), transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.industrial-platform-ring i {
+    font-size: 42px;
+    color: #1598ff;
+    margin-bottom: 14px;
+}
+
+.industrial-platform-ring h3 {
+    color: #0b1f33;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.industrial-platform-ring p {
+    color: #4e5d78;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.industrial-visual-section {
+    margin: 36px 0;
+}
+
+.industrial-visual-section img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+    box-shadow: 0 16px 42px rgba(16,54,92,.08), 0 4px 12px rgba(16,54,92,.04);
+}
+
+.industrial-impact-box {
+    margin: 36px 0;
+    padding: 34px;
+    background: #071b3a;
+    border-radius: 22px;
+    color: #ffffff;
+}
+
+.industrial-impact-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 28px;
+}
+
+.industrial-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.industrial-impact-grid div {
+    text-align: center;
+}
+
+.industrial-impact-grid i {
+    color: #1598ff;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.industrial-impact-grid strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.industrial-impact-grid span {
+    color: rgba(255,255,255,.72);
+    line-height: 1.5;
+}
+
+@@media (max-width: 1200px) {
+    .industrial-hero-section,
+    .industrial-platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .industrial-hero-content {
+        padding-right: 0;
+    }
+
+    .industrial-hero-visual {
+        height: 420px;
+    }
+
+    .industrial-modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .industrial-platform-ring {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@@media (max-width: 768px) {
+    .industrial-hero-title {
+        font-size: 38px;
+    }
+
+    .industrial-meta-grid,
+    .industrial-modules-grid,
+    .industrial-impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .industrial-insight-content p {
+        font-size: 18px;
+    }
+}
+</style>
+<body class="blog-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="/" class="logo d-flex align-items-center me-auto">
+                <img src="~/Logo3.png" alt="">
+                @*   <h1 class="sitename">Statanly</h1>*@
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav.platform">Platform</a></li>
+                    <li><a href="/home/services" class="active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#services" data-i18n="nav.products">Products</a></li>
+                    <li><a href="#contact" data-i18n="nav.contacts">Contacts</a></li>
+                    @*<li class="dropdown">
+                            <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                                <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                            </ul>
+                        </li>*@
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <div class="language-flags dropdown">
+                <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="fi fi-gb lang-flag"></span>
+                    <span class="lang-code">EN</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                    <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+                </ul>
+            </div>
+            <a class="btn-getstarted" href="#contact" data-i18n="common.getStarted">Get Started</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page-title light-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Smart AI Solutions Industry</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/service/hospitality">HoReCa</a></li>
+                        <li><a href="/service/retail">Retail</a></li>
+                        <li class="current">Industry</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section><!-- End Cta Section -->
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+
         <div class="container">
-            <div class="section-title">
-                <h2>Типовые сервисы</h2>
-            </div>
+            <section id="blog-details" class="blog-details section">
+                <div class="container">
+                    <article class="article">
+                        <section class="industrial-hero-section">
+                            <div class="industrial-hero-content">
+                                <div class="industrial-kicker">Industrial AI Platform</div>
 
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <i class="bi bi-1-circle"></i>
-                        <h4><a href="/home/product/13">Контроль работы сотрудников</a></h4>
-                        <p>Анализ эффективности работы сотрудников предприятия, наличие специалистов в заданной зоне</p>
-                    </div>
+                                <h1 class="industrial-hero-title">
+                                    AI Platform for Industrial Safety & Operational Control
+                                </h1>
+
+                                <p class="industrial-hero-subtitle">
+                                    Unified AI infrastructure for industrial safety, labor protection, workforce analytics, equipment monitoring and operational risk control.
+                                </p>
+
+                                <div class="industrial-meta-grid">
+                                    <div class="industrial-meta-card">
+                                        <i class="bi bi-shield-check"></i>
+                                        <span>Industrial Safety</span>
+                                    </div>
+
+                                    <div class="industrial-meta-card">
+                                        <i class="bi bi-people"></i>
+                                        <span>Workforce Analytics</span>
+                                    </div>
+
+                                    <div class="industrial-meta-card">
+                                        <i class="bi bi-gear"></i>
+                                        <span>Process Control</span>
+                                    </div>
+
+                                    <div class="industrial-meta-card">
+                                        <i class="bi bi-truck"></i>
+                                        <span>Logistics & Yard Control</span>
+                                    </div>
+
+                                    <div class="industrial-meta-card">
+                                        <i class="bi bi-cpu"></i>
+                                        <span>Equipment Monitoring</span>
+                                    </div>
+
+                                    <div class="industrial-meta-card">
+                                        <i class="bi bi-diagram-3"></i>
+                                        <span>Scenario Engine</span>
+                                    </div>
+                                </div>
+
+                                <div class="industrial-intro-text">
+                                    <p>
+                                        The AI-powered industrial platform transforms existing CCTV cameras and operational infrastructure into a unified digital control system for safety, personnel, equipment and production processes.
+                                    </p>
+
+                                    <p>
+                                        The platform detects PPE violations, unsafe zones, smoke, fire, falls, phone usage, equipment downtime, process deviations and operational bottlenecks in real time.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="industrial-hero-visual">
+                                <img src="~/assets/img/Industry/industrial-hero.png" alt="Industrial AI safety analytics">
+                            </div>
+                        </section>
+
+                        <div class="industrial-insight-box">
+                            <div class="industrial-insight-line"></div>
+                            <div class="industrial-insight-content">
+                                <i class="bi bi-stars"></i>
+                                <p>
+                                    AI turns existing cameras into a proactive industrial safety and operational control system: violations are detected automatically, incidents are fixed before consequences, and managers receive objective KPI-driven visibility across all sites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <section class="industrial-modules-section">
+                            <div class="industrial-section-kicker">Core AI Modules</div>
+
+                            <h2 class="industrial-section-title">
+                                AI Modules for Industrial Safety and Operations
+                            </h2>
+
+                            <p class="industrial-section-lead">
+                                One platform combines ready-to-use AI scenarios for safety, workforce efficiency, technological process control, equipment monitoring and operational analytics.
+                            </p>
+
+                            <div class="industrial-modules-grid">
+
+                                <div class="industrial-module-card">
+                                    <div class="industrial-module-head">
+                                        <div class="industrial-module-icon"><i class="bi bi-shield-check"></i></div>
+                                        <h3>Industrial Safety & EHS</h3>
+                                    </div>
+                                    <ul>
+                                        <li>PPE detection: helmet, glasses, gloves, vest, mask</li>
+                                        <li>Unsafe zone entry and restricted area control</li>
+                                        <li>Fall and incident detection</li>
+                                        <li>Smoke, fire, sparks and flooding detection</li>
+                                        <li>Phone usage and smoking violations</li>
+                                        <li>Work-at-height and handrail control</li>
+                                    </ul>
+                                </div>
+
+                                <div class="industrial-module-card">
+                                    <div class="industrial-module-head">
+                                        <div class="industrial-module-icon"><i class="bi bi-people"></i></div>
+                                        <h3>Workforce Efficiency Analytics</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Presence and absence monitoring</li>
+                                        <li>Idle time and inactivity detection</li>
+                                        <li>Personnel count by zone and shift</li>
+                                        <li>Route and patrol control</li>
+                                        <li>Workload and activity heatmaps</li>
+                                        <li>Contractor presence and work control</li>
+                                    </ul>
+                                </div>
+
+                                <div class="industrial-module-card">
+                                    <div class="industrial-module-head">
+                                        <div class="industrial-module-icon"><i class="bi bi-diagram-3"></i></div>
+                                        <h3>Scenario Engine</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Low-code creation of AI control scenarios</li>
+                                        <li>Combination of multiple AI models and rules</li>
+                                        <li>Event logic for complex operational cases</li>
+                                        <li>Automatic alerts and escalation workflows</li>
+                                        <li>Scenario library for typical industrial tasks</li>
+                                        <li>Fast adaptation to new site requirements</li>
+                                    </ul>
+                                </div>
+
+                                <div class="industrial-module-card">
+                                    <div class="industrial-module-head">
+                                        <div class="industrial-module-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                                        <h3>Process Control</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Monitoring of technological operations</li>
+                                        <li>Control of loading, unloading and assembly steps</li>
+                                        <li>Detection of deviations from procedures</li>
+                                        <li>Warehouse and conveyor process control</li>
+                                        <li>Vehicle and machinery movement control</li>
+                                        <li>Operational bottleneck detection</li>
+                                    </ul>
+                                </div>
+
+                                <div class="industrial-module-card">
+                                    <div class="industrial-module-head">
+                                        <div class="industrial-module-icon"><i class="bi bi-cpu"></i></div>
+                                        <h3>Equipment Monitoring</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Equipment status and operating mode monitoring</li>
+                                        <li>Downtime and stoppage detection</li>
+                                        <li>Overheating, leaks and abnormal behavior</li>
+                                        <li>Production line and assembly control</li>
+                                        <li>Quality defects and missing components</li>
+                                        <li>OEE and utilization analytics</li>
+                                    </ul>
+                                </div>
+
+                                <div class="industrial-module-card">
+                                    <div class="industrial-module-head">
+                                        <div class="industrial-module-icon"><i class="bi bi-plug"></i></div>
+                                        <h3>Integrations & Deployment</h3>
+                                    </div>
+                                    <ul>
+                                        <li>Integration with VMS, NVR, CCTV and ONVIF/RTSP</li>
+                                        <li>ERP, MES, SCADA, BI and IIoT integrations</li>
+                                        <li>Email, SMS and Telegram notifications</li>
+                                        <li>LDAP and Active Directory support</li>
+                                        <li>On-Premise, Edge, Cloud and Hybrid deployment</li>
+                                        <li>API-based integration with enterprise systems</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="industrial-platform-section">
+                            <div class="industrial-section-kicker">Unified AI Platform</div>
+
+                            <h2 class="industrial-section-title">
+                                AI Platform for Industrial Enterprises
+                            </h2>
+
+                            <p class="industrial-section-lead">
+                                The platform connects cameras, sensors and enterprise systems into a single operational layer for real-time detection, scenario management, analytics, reporting and continuous model development.
+                            </p>
+
+                            <div class="industrial-platform-grid">
+
+                                <div class="industrial-platform-column">
+                                    <div class="industrial-platform-card">
+                                        <i class="bi bi-camera-video"></i>
+                                        <h3>Existing Cameras</h3>
+                                        <p>Connect CCTV, RTSP, ONVIF and VMS streams without replacing existing infrastructure.</p>
+                                    </div>
+
+                                    <div class="industrial-platform-card">
+                                        <i class="bi bi-diagram-3"></i>
+                                        <h3>Scenario Engine</h3>
+                                        <p>Create complex safety and operational scenarios from ready-made AI modules and business rules.</p>
+                                    </div>
+                                </div>
+
+                                <div class="industrial-platform-core">
+                                    <div class="industrial-platform-ring">
+                                        <div>
+                                            <i class="bi bi-cpu"></i>
+                                            <h3>AI Platform</h3>
+                                            <p>Scenario Engine<br>AI Models<br>Analytics</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="industrial-platform-column">
+                                    <div class="industrial-platform-card">
+                                        <i class="bi bi-bar-chart-line"></i>
+                                        <h3>BI & Reports</h3>
+                                        <p>Dashboards, incidents, reports, event archive and operational KPIs across all sites.</p>
+                                    </div>
+
+                                    <div class="industrial-platform-card">
+                                        <i class="bi bi-cloud-check"></i>
+                                        <h3>On-Prem / Edge / Cloud</h3>
+                                        <p>Deploy inside the client perimeter, at the edge, in the cloud or in a hybrid architecture.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="industrial-visual-section">
+                            <img src="~/assets/img/Industry/industrial-wide.png" alt="Industrial AI event detection scenarios">
+                        </section>
+
+                        <div class="industrial-impact-box">
+                            <div class="industrial-impact-title">Business Impact</div>
+
+                            <div class="industrial-impact-grid">
+                                <div>
+                                    <i class="bi bi-shield-check"></i>
+                                    <strong>Risk Reduction</strong>
+                                    <span>Fewer incidents and violations</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-clock-history"></i>
+                                    <strong>Less Downtime</strong>
+                                    <span>Early detection of failures and delays</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-people"></i>
+                                    <strong>Workforce Visibility</strong>
+                                    <span>Objective activity and productivity metrics</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-bar-chart"></i>
+                                    <strong>Operational KPIs</strong>
+                                    <span>Data-driven control across all sites</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meta-bottom">
+                            <i class="bi bi-folder"></i>
+                            <ul class="cats">
+                                <li><a href="services.html">Industry</a></li>
+                            </ul>
+                            <i class="bi bi-tags"></i>
+                            <ul class="tags">
+                                <li><a href="#">Computer Vision</a></li>
+                                <li><a href="#">Speech Analytics</a></li>
+                                <li><a href="#">Enterprise AI</a></li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-2-circle"></i>
-                        <h4><a href="/home/product/13">Подсчет объектов</a></h4>
-                        <p>Подсчет и классификация объектов на конвейере</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-3-circle"></i>
-                        <h4><a href="/home/product/3">Распознавание лиц</a></h4>
-                        <p>Выявление посторонних и подозрительных лиц, поиск по лицам</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-4-circle"></i>
-                        <h4><a href="/home/product/7">Анализ нарушений</a></h4>
-                        <p>Предотвращение порчи имущества и воровства и краж, контроль средств индивидуальной защиты</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-5-circle"></i>
-                        <h4><a href="/service/industry/5">Безопасное производство</a></h4>
-                        <p>Распознавание дыма, возгораний и других ЧП</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-6-circle"></i>
-                        <h4><a href="/service/unique">Уникальные события</a></h4>
-                        <p>Система позволяет добавлять и дообучаться на любые уникальные события</p>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section><!-- End Services Section -->
-    <section id="smart" class="smart">
-        <div class="container">
-            <div class="section-title">
-                <h2>Варианты поставки ПО</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-                    <div class="member" style="margin: 0 auto;">
-                        <a tabindex="-1" href=""><img src="/assets/img/Services/cloud.png" alt=""></a>
-                        <h4> <a tabindex="-1" href="">Cloud</a></h4>
-                        <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+    </main>
 
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-                    <div class="member" style="margin: 0 auto;">
-                        <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.png" alt=""></a>
-                        <h4> <a tabindex="-1" href="">On-Premise</a></h4>
-                        <p>Развертывание ПО на внутренних ресурсах компании</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Возможности</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-messenger"></i>
-                        <h4>Нотификации</h4>
-                        <p>
-                            Система информирует о выявленных событиях различными способами: <strong>SMS</strong>, <strong>Email</strong>, <strong>Telegram</strong>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-camera-video"></i>
-                        <h4>Любые типы камер</h4>
-                        <p>
-                            Система может использовать <strong>уже установленное оборудование</strong>. Или выбраем наиболее подходящие варианты
-                        </p>
-
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <i class="bi bi-window-stack"></i>
-                        <h4>Удобный интерфейc</h4>
-                        <p>
-                            Система хранит все события, имеет простой, понятный интерфейс и <strong>возможность расширения</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main><!-- End #main -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    @*<div id="preloader"></div>*@
+    @*<script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/js/main.js"></script>*@
+</body>

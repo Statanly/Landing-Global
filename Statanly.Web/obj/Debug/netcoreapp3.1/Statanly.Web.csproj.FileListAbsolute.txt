@@ -2770,3 +2770,5 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Index.es.resources
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\es\Statanly.Web.resources.dll
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Statanly.Web.Resources.Views.Home.Privacy.es.resources
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Hospitality.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Service\Retail.cshtml.g.cs

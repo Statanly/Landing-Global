@@ -1,180 +1,155 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
-@{
-    Layout = "/Views/Shared/_SolutionsLayout.cshtml";
-}
-<main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-            <ol>
-                <li><a href="/home/services">Все сервисы</a></li>
-                <li><a href="/service/restaurants">Рестораны</a></li>
-                <li><a href="/service/shops">Магазины</a></li>
-                <li><a href="/service/housing">ЖКХ</a></li>
-                <li><a href="/service/railwaystation">Аэропорты и вокзалы</a></li>
-                <li><a href="/service/shoppingmalls">ТРЦ & ТРК</a></li>
-                <li><a href="/service/institutions">Учебные заведения</a></li>
-                <li><a href="/service/sports">Спорт-комплексы</a></li>
-                <li><a href="/service/transport">Транспорт</a></li>
-                <li><a href="/service/gasstation">АЗС</a></li>
-                <li><a href="/service/parking ">Парковки</a></li>
-                <li><a href="/service/banks">Банки</a></li>
-                <li><a href="/service/pvz">ПВЗ</a></li>
-                <li><a href="/service/warehouses">Склады</a></li>
-                <li><a href="/service/Business ">Бизнес-центры</a></li>
-                <li><a href="/service/beauty ">Салоны красоты</a></li>
-                <li><a href="/service/industry">Производство</a></li>
-                <li><a href="/service/hospitals">Медицинские учреждения</a></li>
-            </ol>
-            <h2>Анализ работы сотрудников</h2>
+﻿
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="~/Logo3.png" alt="">
+            @*   <h1 class="sitename">Statanly</h1>*@
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/home/services" data-i18n="nav.services">Services</a></li>
+                <li><a href="#services" data-i18n="nav.products">Products</a></li>
+                <li><a href="#contact" data-i18n="nav.contacts">Contacts</a></li>
+                @*<li class="dropdown">
+                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                            <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="language-flags dropdown">
+            <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
         </div>
-    </section><!-- End Breadcrumbs -->
+        <a class="btn-getstarted" href="#contact" data-i18n="common.getStarted">Get Started</a>
 
-    <section id="cta" class="cta">
-        <div class="container">
+    </div>
+</header>
 
-            <div class="row" data-aos="zoom-in">
-                <div class="col-lg-9 text-center text-lg-start">
-                    <h3>Контроль работы сотрудников банка</h3>
-                    <p>Анализ эффективности работы сотрудников, наличие специалистов в операционном зале, на кассах</p>
-                </div>
-                <div class="col-lg-3 cta-btn-container text-center">
-                    <a class="cta-btn align-middle" href="/home/contact">Оставить заявку</a>
-                </div>
-            </div>
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Blog Details</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Blog Details</li>
+                </ol>
+            </nav>
         </div>
-    </section><!-- End Cta Section -->
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4">
-                    <div class="portfolio-details-slider">
-                        <div class="align-items-center">
-                            <div class="swiper-slide">
-                                <img src="~/assets/img/Services/Banks/1/1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div><!-- End Page Title -->
 
-                <div class="col-lg-8">
+    <div class="container">
 
-                    <div class="portfolio-description">
-                        <h2>Система компьютерного зрения анализа эффективности</h2>
-                        <p>
-                            Включает в себя IP-камеры для сбора и анализа видеоданных, анализа нахождения человека в заданной зоне.
-                        </p>
-                        <p>
-                            Технология позволяет использовать простые и недорогие видеокамеры и обеспечивать ежедневный анализ обслуживания без участия человека.
-                        </p>
-                        <p>
-                            Система отслеживает нахождение сотрудника в заданной зоне и вычисляет общее время нахождение в ней.
-                            Система использует технологию ReID, что позволяет отслеживать объект в случае, если он пропадает из поля зрения одной камеры и попадает в поле зрение другой.
-                            Технологий ReID включает распознавание человека по особенностям походки, силуэту, а также таким характеристикам, как цвет одежды, волос и т.д.
-                        </p>
+
+        <!-- Blog Details Section -->
+        <section id="blog-details" class="blog-details section">
+            <div class="container">
+
+                <article class="article">
+
+                    <div class="post-img">
+                        <img src="~/assets/img/hero-carousel/hero-carousel-2.png" alt="" class="img-fluid">
                     </div>
-                </div>
-            </div>
-            <div class="row gy-4">
-                <div class="col-lg-8">
-                    <div class="portfolio-description">
-                        <h2>Анализ стандартных действий</h2>
+
+                    <h2 class="title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h2>
+
+                    <div class="meta-top">
+                        <ul>
+                            <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                            <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
+                        </ul>
+                    </div><!-- End meta top -->
+
+                    <div class="content">
                         <p>
-                            Камеры непрерывно отслеживают движения и перемещения человека, формируя хронометраж поведения сотрудника на кассе.
-                        </p>
-                        <p>
-                            Это позволяет, например отслеживать <strong>отсутствие сотрудника на кассе</strong> и скопление больших очередей, что ведет к недовольству посетителей банка.
-                        </p>
-                        <p>
-                            Анализ <strong>качества работы сотрудников</strong> путем анализа поведения по различным метрикам эффективности в течение рабочего дня
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="portfolio-details-slider">
-                        <div class="align-items-center">
-                            <div class="swiper-slide">
-                                <img src="~/assets/img/Services/Banks/1/2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Portfolio Details Section -->
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Особенности системы</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <i class="bi bi-1-circle"></i>
-                        <h4>Мгновенные нотификации</h4>
-                        <p>Нотификации через SMS, Email или любой другой удобный способ</p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-2-circle"></i>
-                        <h4>Гибкая настройка алгоритмов</h4>
-                        <p>
-                            Возможность дообучения системы, добавления новых объектов и событий без привлечения разработчиков
+                            Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                            Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
                         </p>
 
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-3-circle"></i>
-                        <h4>Снижение расходов на эксплуатацию</h4>
                         <p>
-                            Нет необходимости в контроле системы со стороны диспетчера
+                            Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
                         </p>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-4-circle"></i>
-                        <h4>Круглосуточная техническая поддержка</h4>
+
+                        <blockquote>
+                            <p>
+                                Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
+                            </p>
+                        </blockquote>
+
                         <p>
-                            Проблемы наших клиентов - наши проблемы! Обеспечим полный стек техподдержки
+                            Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
+                            Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum exercitationem harum qui qui blanditiis neque.
+                            Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto voluptatem magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Services Section -->
-    <section id="smart" class="smart">
-        <div class="container">
-            <div class="section-title">
-                <h2>Варианты поставки ПО</h2>
-                <p>
 
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-                    <div class="member" style="margin: 0 auto;">
-                        <a tabindex="-1" href=""><img src="/assets/img/Services/cloud.png" alt=""></a>
-                        <h4> <a tabindex="-1" href="">Cloud</a></h4>
-                        <p>Развертывание ПО в нашем облаке, удаленный доступ</p>
+                        <h3>Et quae iure vel ut odit alias.</h3>
+                        <p>
+                            Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum nesciunt aliquid qui.
+                            Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint consequatur quidem ea.
+                            Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                        </p>
+                        <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
 
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
-                    <div class="member" style="margin: 0 auto;">
-                        <a tabindex="-1" href=""><img src="/assets/img/Services/OnPermise.png" alt=""></a>
-                        <h4> <a tabindex="-1" href="">On-Premise</a></h4>
-                        <p>Развертывание ПО на внутренних ресурсах компании</p>
+                        <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+                        <p>
+                            Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore. Autem facilis hic dolorum dolores vel.
+                            Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam vitae.
+                        </p>
+                        <p>
+                            Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
+                        </p>
 
-                    </div>
-                </div>
+                    </div><!-- End post content -->
+
+                    <div class="meta-bottom">
+                        <i class="bi bi-folder"></i>
+                        <ul class="cats">
+                            <li><a href="#">Business</a></li>
+                        </ul>
+
+                        <i class="bi bi-tags"></i>
+                        <ul class="tags">
+                            <li><a href="#">Creative</a></li>
+                            <li><a href="#">Tips</a></li>
+                            <li><a href="#">Marketing</a></li>
+                        </ul>
+                    </div><!-- End meta bottom -->
+
+                </article>
+
             </div>
-        </div>
-    </section>
-</main><!-- End #main -->
+        </section><!-- /Blog Details Section -->
+
+
+
+
+    </div>
+
+</main>
+
+
+
+
+

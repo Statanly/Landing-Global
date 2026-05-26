@@ -422,5 +422,13 @@ namespace Statanly.Web.Controllers
         {
             return View();
         }
+        public IActionResult Hospitality()
+        {
+            return View();
+        }
+        public IActionResult Retail()
+        {
+            return View();
+        }
     }
 }

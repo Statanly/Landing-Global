@@ -50,6 +50,62 @@
 
     <!-- Main CSS File -->
     <link href="~/assets/css/main.css" rel="stylesheet">
+    <style>
+        .language-flags {
+            margin-left: 14px;
+            margin-right: 14px;
+            position: relative;
+        }
+
+            .language-flags .lang-current {
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+                border: 1px solid #e2e8f0;
+                background: #ffffff;
+                color: #344054;
+                border-radius: 999px;
+                padding: 8px 13px;
+                font-weight: 600;
+                line-height: 1;
+                box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+            }
+
+            .language-flags .flag-icon {
+                font-size: 18px;
+                line-height: 1;
+            }
+
+            .language-flags .dropdown-menu {
+                border: 1px solid #e7edf5;
+                border-radius: 14px;
+                padding: 8px;
+                box-shadow: 0 12px 35px rgba(15, 23, 42, .14);
+                min-width: 185px;
+            }
+
+            .language-flags .dropdown-item {
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                border-radius: 10px;
+                padding: 9px 11px;
+                font-weight: 500;
+            }
+
+                .language-flags .dropdown-item.active,
+                .language-flags .dropdown-item:active {
+                    background: #eaf2ff;
+                    color: #0d6efd;
+                }
+
+        @@media (max-width: 1199px) {
+            .language-flags {
+                margin: 12px 0;
+                padding-left: 20px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -62,7 +118,7 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">Statanly Technologies</span>
+                        <span class="sitename">Statanly Tech Global</span>
                     </a>
                     <div class="footer-contact pt-3">
                         <p data-i18n="footer.address.line1">Praça do Comércio, 1100-148,</p>
