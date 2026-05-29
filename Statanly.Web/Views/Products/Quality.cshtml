@@ -1,0 +1,960 @@
+@{ ViewData["Title"] = "Quality Control"; }
+
+<header class="header d-flex align-items-center sticky-top" id="header">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a class="logo d-flex align-items-center me-auto" href="/">
+            <img alt="" src="~/Logo3.png" />
+        </a>
+
+        <nav class="navmenu" id="navmenu">
+            <ul>
+                <li><a data-i18n="nav.home" href="/">Home</a></li>
+                <li><a data-i18n="nav.platform" href="#about">Platform</a></li>
+                <li><a data-i18n="nav.services" href="/service">Services</a></li>
+                <li><a class="active" data-i18n="nav.products" href="/products">Products</a></li>
+                <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="language-flags dropdown">
+            <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item lang-option" data-lang="en" type="button"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="es" type="button"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="pt" type="button"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="it" type="button"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="fr" type="button"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="de" type="button"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="ru" type="button"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+
+        <a class="btn-getstarted" data-i18n="common.getStarted" href="#contact">Get Started</a>
+    </div>
+</header>
+
+<style>
+    /* =========================================================
+       QUALITY CONTROL PRODUCT PAGE
+       Strict product template: article frame, white background,
+       navy typography, blue accents, red product icons.
+    ========================================================= */
+
+    .quality-product-page {
+        background: #ffffff;
+        color: #172b4d;
+    }
+
+        .quality-product-page * {
+            box-sizing: border-box;
+        }
+
+    /* ===== HERO ===== */
+
+    .quality-hero-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 47%;
+        gap: 34px;
+        align-items: stretch;
+        margin: 0 0 32px;
+        padding: 0;
+        overflow: hidden;
+        background: #ffffff;
+    }
+
+    .quality-hero-content {
+        position: relative;
+        z-index: 3;
+        padding-right: 42px;
+        padding-top: 8px;
+    }
+
+    .quality-kicker,
+    .quality-section-kicker {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(21, 152, 255, .08);
+        color: #1598ff;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        margin: 0 0 12px;
+    }
+
+    .quality-hero-title {
+        color: #0b1f33;
+        font-size: 56px;
+        line-height: 1.03;
+        font-weight: 900;
+        letter-spacing: -.045em;
+        margin: 0 0 18px;
+        max-width: 860px;
+    }
+
+    .quality-hero-subtitle {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.65;
+        max-width: 800px;
+        margin: 0 0 26px;
+    }
+
+    .quality-hero-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 28px;
+        display: grid;
+        gap: 13px;
+        max-width: 780px;
+    }
+
+        .quality-hero-bullets li {
+            position: relative;
+            padding-left: 32px;
+            color: #334155;
+            font-size: 17px;
+            line-height: 1.55;
+            font-weight: 650;
+        }
+
+            .quality-hero-bullets li::before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: #ef233c;
+                font-weight: 900;
+            }
+
+    .quality-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 880px;
+        margin: 0 0 26px;
+    }
+
+    .quality-meta-card {
+        min-height: 112px;
+        padding: 18px 16px;
+        background: #ffffff;
+        border: 1px solid #e8edf5;
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(16, 54, 92, .045);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .quality-meta-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 34px rgba(16, 54, 92, .07);
+        }
+
+        .quality-meta-card i {
+            display: block;
+            color: #ef233c;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .quality-meta-card strong {
+            display: block;
+            color: #0b1f33;
+            font-size: 23px;
+            line-height: 1.1;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .quality-meta-card span {
+            display: block;
+            color: #4e5d78;
+            font-size: 13px;
+            line-height: 1.45;
+            font-weight: 650;
+        }
+
+    .quality-hero-visual {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: clamp(620px, 70vw, 860px);
+        pointer-events: none;
+        overflow: hidden;
+        margin-top: -14px;
+    }
+
+        .quality-hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            background: linear-gradient( to right, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 10%, rgba(255,255,255,.76) 20%, rgba(255,255,255,.48) 32%, rgba(255,255,255,.16) 44%, rgba(255,255,255,0) 58% ), linear-gradient( to bottom, rgba(255,255,255,0) 83%, rgba(255,255,255,.28) 92%, rgba(255,255,255,.82) 100% );
+        }
+
+        .quality-hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            filter: saturate(1.02) contrast(1.02);
+        }
+
+    /* ===== STRIP ===== */
+
+    .quality-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        margin: 22px 0 40px;
+        border: 1px solid #eef2f7;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(16,54,92,.045), 0 2px 10px rgba(16,54,92,.025);
+    }
+
+    .quality-strip-item {
+        padding: 24px 22px;
+        border-right: 1px solid #eef2f7;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+        .quality-strip-item:last-child {
+            border-right: 0;
+        }
+
+        .quality-strip-item i {
+            font-size: 30px;
+            color: #ef233c;
+            flex-shrink: 0;
+        }
+
+        .quality-strip-item strong {
+            display: block;
+            color: #0b1f33;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 850;
+            margin-bottom: 6px;
+        }
+
+        .quality-strip-item span {
+            display: block;
+            color: #4e5d78;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+    /* ===== COMMON SECTIONS ===== */
+
+    .quality-section {
+        margin: 44px 0;
+    }
+
+    .quality-section-title {
+        color: #0b1f33;
+        font-size: 42px;
+        line-height: 1.12;
+        font-weight: 900;
+        letter-spacing: -.03em;
+        margin: 0 0 16px;
+    }
+
+    .quality-section-lead {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 980px;
+        margin-bottom: 28px;
+    }
+
+    /* ===== CAPABILITIES ===== */
+
+    .quality-capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+    }
+
+    .quality-capability-card {
+        min-height: 172px;
+        padding: 22px 20px;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.035);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .quality-capability-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(16,54,92,.08);
+        }
+
+        .quality-capability-card i {
+            display: block;
+            color: #ef233c;
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+
+        .quality-capability-card h3 {
+            color: #0b1f33;
+            font-size: 17px;
+            line-height: 1.25;
+            font-weight: 850;
+            margin: 0 0 9px;
+        }
+
+        .quality-capability-card p {
+            color: #4e5d78;
+            font-size: 13.5px;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+    /* ===== ARCHITECTURE + DASHBOARD ===== */
+
+    .quality-two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 32px;
+        align-items: start;
+    }
+
+    .quality-image-card {
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 16px 42px rgba(16,54,92,.08), 0 4px 12px rgba(16,54,92,.04);
+    }
+
+        .quality-image-card.dark {
+            background: #071b3a;
+            border-color: #142d50;
+            box-shadow: 0 18px 46px rgba(7,27,58,.20);
+        }
+
+        .quality-image-card img {
+            width: 100%;
+            display: block;
+        }
+
+    .quality-panel-title {
+        color: #0b1f33;
+        font-size: 28px;
+        line-height: 1.18;
+        font-weight: 900;
+        margin: 0 0 14px;
+    }
+
+    .quality-panel-lead {
+        color: #4e5d78;
+        font-size: 16.5px;
+        line-height: 1.7;
+        margin: 0 0 18px;
+    }
+
+    /* ===== USE CASES ===== */
+
+    .quality-usecase-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+    }
+
+    .quality-usecase-card {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 18px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.04);
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .quality-usecase-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(16,54,92,.08);
+        }
+
+        .quality-usecase-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background: #ef233c;
+        }
+
+        .quality-usecase-card i {
+            color: #ef233c;
+            font-size: 30px;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .quality-usecase-card h3 {
+            color: #0b1f33;
+            font-size: 17px;
+            line-height: 1.25;
+            font-weight: 850;
+            margin: 0 0 10px;
+        }
+
+        .quality-usecase-card p {
+            color: #4e5d78;
+            font-size: 13.5px;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+    /* ===== PLATFORM ===== */
+
+    .quality-platform-grid {
+        display: grid;
+        grid-template-columns: 1fr 340px 1fr;
+        gap: 28px;
+        align-items: center;
+        margin-top: 32px;
+    }
+
+    .quality-platform-column {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .quality-platform-card {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.045), 0 2px 10px rgba(16,54,92,.025);
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .quality-platform-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 50px rgba(16,54,92,.08), 0 8px 18px rgba(16,54,92,.04);
+        }
+
+        .quality-platform-card i {
+            color: #ef233c;
+            font-size: 34px;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .quality-platform-card h3 {
+            color: #0b1f33;
+            font-size: 23px;
+            line-height: 1.22;
+            font-weight: 850;
+            margin: 0 0 12px;
+        }
+
+        .quality-platform-card p,
+        .quality-platform-card li {
+            color: #4e5d78;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .quality-platform-card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+    .quality-platform-core {
+        display: flex;
+        justify-content: center;
+    }
+
+    .quality-platform-ring {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        border: 2px solid rgba(21,152,255,.35);
+        background: radial-gradient(circle at center, rgba(21,152,255,.12), rgba(21,152,255,.04), transparent 70%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+        .quality-platform-ring i {
+            font-size: 42px;
+            color: #1598ff;
+            margin-bottom: 14px;
+        }
+
+        .quality-platform-ring h3 {
+            color: #0b1f33;
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .quality-platform-ring p {
+            color: #4e5d78;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+    /* ===== IMPACT ===== */
+
+    .quality-impact-box {
+        margin: 40px 0 0;
+        padding: 28px 30px;
+        background: #ffffff;
+        border: 1px solid #eef2f7;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.05), 0 2px 10px rgba(16,54,92,.03);
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .quality-impact-line {
+        width: 4px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #1598ff 0%, #ef233c 100%);
+        flex-shrink: 0;
+    }
+
+    .quality-impact-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+        .quality-impact-content i {
+            font-size: 30px;
+            color: #1598ff;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .quality-impact-content p {
+            margin: 0;
+            color: #26384f;
+            font-size: 24px;
+            line-height: 1.55;
+            font-weight: 700;
+        }
+
+    .quality-product-page .meta-bottom {
+        margin-top: 38px;
+        padding-top: 22px;
+        border-top: 1px solid #eef2f7;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @@media (max-width: 1200px) {
+        .quality-hero-section,
+        .quality-two-column-grid,
+        .quality-platform-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .quality-hero-content {
+            padding-right: 0;
+        }
+
+        .quality-hero-visual {
+            height: 520px;
+            margin-top: 18px;
+        }
+
+        .quality-capabilities-grid,
+        .quality-usecase-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .quality-meta-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .quality-strip {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .quality-strip-item:nth-child(2) {
+            border-right: 0;
+        }
+
+        .quality-strip-item:nth-child(1),
+        .quality-strip-item:nth-child(2) {
+            border-bottom: 1px solid #eef2f7;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .quality-hero-title {
+            font-size: 38px;
+        }
+
+        .quality-section-title {
+            font-size: 34px;
+        }
+
+        .quality-meta-grid,
+        .quality-strip,
+        .quality-capabilities-grid,
+        .quality-usecase-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .quality-strip-item {
+            border-right: 0 !important;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+            .quality-strip-item:last-child {
+                border-bottom: 0;
+            }
+
+        .quality-hero-visual {
+            height: 420px;
+        }
+
+        .quality-impact-content p {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<main class="main">
+    <div class="page-title light-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Quality Control</h1>
+
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/home/products">Products</a></li>
+                    <li class="current">Quality Control</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="blog-details section" id="blog-details">
+            <div class="container">
+                <article class="article">
+                    <div class="quality-product-page">
+
+                        <section class="quality-hero-section">
+                            <div class="quality-hero-content">
+                                <div class="quality-kicker">Product</div>
+
+                                <h1 class="quality-hero-title">
+                                    Quality Control
+                                </h1>
+
+                                <p class="quality-hero-subtitle">
+                                    AI-powered visual inspection for automatic defect detection, product compliance monitoring and assembly correctness control across industrial production lines.
+                                </p>
+
+                                <ul class="quality-hero-bullets">
+                                    <li>Automatic detection of defects, scratches, cracks, dents and surface anomalies</li>
+                                    <li>Monitoring of product compliance with established standards and customer requirements</li>
+                                    <li>Control of assembly correctness, component presence and production completeness</li>
+                                </ul>
+
+                                <div class="quality-meta-grid">
+                                    <div class="quality-meta-card">
+                                        <i class="bi bi-bounding-box"></i>
+                                        <strong>Defects</strong>
+                                        <span>Surface, geometry and visual anomaly detection</span>
+                                    </div>
+
+                                    <div class="quality-meta-card">
+                                        <i class="bi bi-shield-check"></i>
+                                        <strong>Standards</strong>
+                                        <span>Compliance with production and customer requirements</span>
+                                    </div>
+
+                                    <div class="quality-meta-card">
+                                        <i class="bi bi-rulers"></i>
+                                        <strong>Metrics</strong>
+                                        <span>Measurement and dimensional inspection</span>
+                                    </div>
+
+                                    <div class="quality-meta-card">
+                                        <i class="bi bi-bar-chart-line"></i>
+                                        <strong>BI</strong>
+                                        <span>Defect trends, causes and quality analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quality-hero-visual">
+                                <img src="~/assets/img/products/Quality/quality-control-hero.png" alt="Quality control AI product">
+                            </div>
+                        </section>
+
+                        <div class="quality-strip">
+                            <div class="quality-strip-item">
+                                <i class="bi bi-camera-video"></i>
+                                <div>
+                                    <strong>Cameras & Lighting</strong>
+                                    <span>Industrial cameras, controlled lighting, sensors and inspection stations.</span>
+                                </div>
+                            </div>
+
+                            <div class="quality-strip-item">
+                                <i class="bi bi-cpu"></i>
+                                <div>
+                                    <strong>AI Inspection</strong>
+                                    <span>Detection, segmentation, classification and measurement of defects.</span>
+                                </div>
+                            </div>
+
+                            <div class="quality-strip-item">
+                                <i class="bi bi-diagram-3"></i>
+                                <div>
+                                    <strong>Rules & Logic</strong>
+                                    <span>Acceptance criteria, defect thresholds, product standards and event logic.</span>
+                                </div>
+                            </div>
+
+                            <div class="quality-strip-item">
+                                <i class="bi bi-plug"></i>
+                                <div>
+                                    <strong>Industrial Integration</strong>
+                                    <span>MES / ERP, PLC / SCADA, databases, BI tools and production reports.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="quality-section">
+                            <div class="quality-section-kicker">Key capabilities</div>
+
+                            <h2 class="quality-section-title">
+                                AI Modules for Automatic Quality Inspection
+                            </h2>
+
+                            <p class="quality-section-lead">
+                                The product automates visual inspection, reduces manual quality control workload, prevents defective products from leaving the production line and provides objective defect analytics.
+                            </p>
+
+                            <div class="quality-capabilities-grid">
+                                <div class="quality-capability-card">
+                                    <i class="bi bi-fullscreen"></i>
+                                    <h3>Defect Detection</h3>
+                                    <p>Detect scratches, cracks, dents, stains, deformation and surface or structural defects.</p>
+                                </div>
+
+                                <div class="quality-capability-card">
+                                    <i class="bi bi-shield-check"></i>
+                                    <h3>Standards Compliance</h3>
+                                    <p>Control product compliance with internal standards, specifications and customer requirements.</p>
+                                </div>
+
+                                <div class="quality-capability-card">
+                                    <i class="bi bi-puzzle"></i>
+                                    <h3>Assembly Verification</h3>
+                                    <p>Verify component presence, position, orientation and correctness of assembly operations.</p>
+                                </div>
+
+                                <div class="quality-capability-card">
+                                    <i class="bi bi-rulers"></i>
+                                    <h3>Measurements</h3>
+                                    <p>Measure dimensions, geometry, length, diameter, gaps and other critical parameters.</p>
+                                </div>
+
+                                <div class="quality-capability-card">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <h3>Quality Analytics</h3>
+                                    <p>Analyze trends, defect patterns, rejection causes and process quality over time.</p>
+                                </div>
+
+                                <div class="quality-capability-card">
+                                    <i class="bi bi-bell"></i>
+                                    <h3>Alerts & Reports</h3>
+                                    <p>Real-time alerts, traceability, event archive and detailed reports for fast response.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="quality-section">
+                            <div class="quality-two-column-grid">
+                                <div>
+                                    <div class="quality-section-kicker">Architecture</div>
+                                    <h2 class="quality-panel-title">Platform Architecture</h2>
+                                    <p class="quality-panel-lead">
+                                        The system connects cameras, lighting, sensors, encoders, image acquisition modules, AI models, quality rules and integrations into one industrial inspection platform.
+                                    </p>
+
+                                    <div class="quality-image-card">
+                                        <img src="~/assets/img/products/Quality/quality-control-architecture.png" alt="Quality control platform architecture">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="quality-section-kicker">Analytics</div>
+                                    <h2 class="quality-panel-title">Quality Analytics Dashboard</h2>
+                                    <p class="quality-panel-lead">
+                                        Monitor inspected products, good products, defective products, defect rate, defect trends, defect types and recent alerts in one dashboard.
+                                    </p>
+
+                                    <div class="quality-image-card dark">
+                                        <img src="~/assets/img/products/Quality/quality-control-dashboard.png" alt="Quality control analytics dashboard">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="quality-section">
+                            <div class="quality-section-kicker">Use cases</div>
+
+                            <h2 class="quality-section-title">
+                                Use Cases Across Manufacturing
+                            </h2>
+
+                            <p class="quality-section-lead">
+                                Quality Control can be adapted for different production environments where visual inspection, measurement, completeness verification and product traceability are required.
+                            </p>
+
+                            <div class="quality-usecase-grid">
+                                <div class="quality-usecase-card">
+                                    <i class="bi bi-phone"></i>
+                                    <h3>Consumer Electronics</h3>
+                                    <p>Inspect buttons, soldering, assembly, screens, housings and external device defects.</p>
+                                </div>
+
+                                <div class="quality-usecase-card">
+                                    <i class="bi bi-car-front"></i>
+                                    <h3>Automotive</h3>
+                                    <p>Detect body defects, weld quality issues, paint imperfections and component mismatch.</p>
+                                </div>
+
+                                <div class="quality-usecase-card">
+                                    <i class="bi bi-capsule"></i>
+                                    <h3>Pharmaceutical</h3>
+                                    <p>Ensure label presence, package integrity, vial inspection and visual packaging quality.</p>
+                                </div>
+
+                                <div class="quality-usecase-card">
+                                    <i class="bi bi-cup-straw"></i>
+                                    <h3>Food & Beverage</h3>
+                                    <p>Check fill levels, caps, labels, contamination signs and package quality in real time.</p>
+                                </div>
+
+                                <div class="quality-usecase-card">
+                                    <i class="bi bi-gear-wide-connected"></i>
+                                    <h3>Metals & Manufacturing</h3>
+                                    <p>Inspect castings, forgings, machined parts, surfaces and assembly completeness.</p>
+                                </div>
+
+                                <div class="quality-usecase-card">
+                                    <i class="bi bi-box-seam"></i>
+                                    <h3>Packaging</h3>
+                                    <p>Verify print quality, barcode presence, seals, package geometry and product integrity.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="quality-section">
+                            <div class="quality-section-kicker">Platform foundation</div>
+
+                            <h2 class="quality-section-title">
+                                Product Built on STATANLY AI Platform
+                            </h2>
+
+                            <p class="quality-section-lead">
+                                The product combines computer vision models, inspection rules, event logic, BI dashboards, traceability, integration with production systems and model retraining workflows.
+                            </p>
+
+                            <div class="quality-platform-grid">
+                                <div class="quality-platform-column">
+                                    <div class="quality-platform-card">
+                                        <i class="bi bi-camera"></i>
+                                        <h3>Image Acquisition</h3>
+                                        <p>Connect cameras, lighting, sensors, encoders and inspection stations for stable image capture.</p>
+                                    </div>
+
+                                    <div class="quality-platform-card">
+                                        <i class="bi bi-cpu"></i>
+                                        <h3>AI Models & Inference</h3>
+                                        <p>Detect defects, classify defect types, segment regions and measure critical parameters.</p>
+                                    </div>
+                                </div>
+
+                                <div class="quality-platform-core">
+                                    <div class="quality-platform-ring">
+                                        <div>
+                                            <i class="bi bi-cpu"></i>
+                                            <h3>AI PLATFORM</h3>
+                                            <p>Inspection<br>Quality Rules<br>Traceability</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quality-platform-column">
+                                    <div class="quality-platform-card">
+                                        <i class="bi bi-diagram-3"></i>
+                                        <h3>Quality Rules & Logic</h3>
+                                        <p>Configure acceptance criteria, defect classes, thresholds, reporting logic and alerts.</p>
+                                    </div>
+
+                                    <div class="quality-platform-card">
+                                        <i class="bi bi-plug"></i>
+                                        <h3>Industrial Integrations</h3>
+                                        <p>Integrate with PLC / SCADA, MES / ERP, databases, BI tools, storage and API.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="quality-impact-box">
+                            <div class="quality-impact-line"></div>
+                            <div class="quality-impact-content">
+                                <i class="bi bi-shield-check"></i>
+                                <p>
+                                    Business impact: fewer defects, lower manual inspection workload, better traceability, faster response to quality issues and more stable production standards across all lines.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="meta-bottom">
+                            <i class="bi bi-folder"></i>
+                            <ul class="cats">
+                                <li><a href="/home/products">Products</a></li>
+                            </ul>
+
+                            <i class="bi bi-tags"></i>
+                            <ul class="tags">
+                                <li><a href="#">Quality Control</a></li>
+                                <li><a href="#">Computer Vision</a></li>
+                                <li><a href="#">Industrial AI</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</main>

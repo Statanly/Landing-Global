@@ -1,74 +1,18 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
-
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
-
-@{ // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
-    var link = "/home/download?lang=" + lang;
-    var client0 = "assets/img/clients" + lang + "/client-0.png";
-    var client1 = "assets/img/clients" + lang + "/client-1.png";
-    var client2 = "assets/img/clients" + lang + "/client-2.png";
-    var client3 = "assets/img/clients" + lang + "/client-3.png";
-    var client4 = "assets/img/clients" + lang + "/client-4.png";
-    var client5 = "assets/img/clients" + lang + "/client-5.png";
-    var client6 = "assets/img/clients" + lang + "/client-6.png";
-    var client7 = "assets/img/clients" + lang + "/client-7.png";
-    var client8 = "assets/img/clients" + lang + "/client-8.png";
-    var client9 = "assets/img/clients" + lang + "/client-9.png";
-    var client10 = "assets/img/clients" + lang + "/client-10.png";
-    var client11 = "assets/img/clients" + lang + "/client-11.png";
-    var client12 = "assets/img/clients" + lang + "/client-12.png";
-    var client13 = "assets/img/clients" + lang + "/client-13.png";
-    var client14 = "assets/img/clients" + lang + "/client-14.png";
-    var client15 = "assets/img/clients" + lang + "/client-15.jpg";
-    var client16 = "assets/img/clients" + lang + "/client-16.png";
-    var client17 = "assets/img/clients" + lang + "/client-17.png";
-    var client18 = "assets/img/clients" + lang + "/client-18.png";
-    var client19 = "assets/img/clients" + lang + "/client-19.png";
-    var client20 = "assets/img/clients" + lang + "/client-20.png";
-    var client21 = "assets/img/clients" + lang + "/client-21.png";
-    var client22 = "assets/img/clients" + lang + "/client-22.png";
-    var client23 = "assets/img/clients" + lang + "/client-23.png";
-    var client24 = "assets/img/clients" + lang + "/client-24.png";
-    var client25 = "assets/img/clients" + lang + "/client-25.png";
-    var client26 = "assets/img/clients" + lang + "/client-26.jpg";
-    var client27 = "assets/img/clients" + lang + "/client-27.png";
-    var client28 = "assets/img/clients" + lang + "/client-28.png";
-    var client29 = "assets/img/clients" + lang + "/client-29.png";
-    var client30 = "assets/img/clients" + lang + "/client-30.jpg";
-    var client31 = "assets/img/clients" + lang + "/client-31.jpg";
-    var client32 = "assets/img/clients" + lang + "/client-32.jpg"; 
-    }
-
-
-
-
-
-
+﻿
 <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
         <a href="/" class="logo d-flex align-items-center me-auto">
-            <img src="~/Logo3.png" alt="">
-            @*   <h1 class="sitename">Statanly</h1>*@
+            <img src="~/Logo3.png" alt="">         
         </a>
 
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
-                <li><a href="#about" data-i18n="nav.platform">Platform</a></li>
-                <li><a href="/home/services" data-i18n="nav.services">Services</a></li>
-                <li><a href="#services" data-i18n="nav.products">Products</a></li>
-                <li><a href="#contact" data-i18n="nav.contacts">Contacts</a></li>
+                <li><a href="/#about" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/services" data-i18n="nav.services">Services</a></li>
+                <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                <li><a href="/#contact" data-i18n="nav.contacts">Contacts</a></li>
                 @*<li class="dropdown">
                         <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -275,7 +219,7 @@
 
     </section><!-- /Clients Section -->
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="products" class="services section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2 data-i18n="products.kicker">Products</h2>
@@ -289,7 +233,7 @@
                     <div class="service-item d-flex position-relative h-100">
                         <i class="bi bi-briefcase icon flex-shrink-0"></i>
                         <div>
-                            <h4 class="title"><a href="/" class="stretched-link" data-i18n="products.safety.title">Industrial safety and violation control</a></h4>
+                            <h4 class="title"><a href="/products/safety" class="stretched-link" data-i18n="products.safety.title">Industrial safety and violation control</a></h4>
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.safety.li1">Industrial safety and labor protection control</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.safety.li2">PPE recognition and violation detection</span></li>
@@ -303,7 +247,7 @@
                     <div class="service-item d-flex position-relative h-100">
                         <i class="bi bi-card-checklist icon flex-shrink-0"></i>
                         <div>
-                            <h4 class="title"><a href="#" class="stretched-link" data-i18n="products.people.title">Human behavior and event analysis</a></h4>
+                            <h4 class="title"><a href="/products/effectiveness" class="stretched-link" data-i18n="products.people.title">Human behavior and event analysis</a></h4>
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.people.li1">Employee engagement monitoring</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.people.li2">Task performance and staff action analysis</span></li>
@@ -317,7 +261,7 @@
                     <div class="service-item d-flex position-relative h-100">
                         <i class="bi bi-bar-chart icon flex-shrink-0"></i>
                         <div>
-                            <h4 class="title"><a href="#" class="stretched-link"><span data-i18n="products.automation.title">Automation of the production line</span></a></h4>
+                            <h4 class="title"><a href="/products/automation" class="stretched-link"><span data-i18n="products.automation.title">Automation of the production line</span></a></h4>
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.automation.li1">Counting and classifying objects</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.automation.li2">Detection of anomalies and foreign bodies on the conveyor</span></li>
@@ -331,7 +275,7 @@
                     <div class="service-item d-flex position-relative h-100">
                         <i class="bi bi-binoculars icon flex-shrink-0"></i>
                         <div>
-                            <h4 class="title"><a href="#" class="stretched-link"><span data-i18n="products.quality.title">Quality control</span></a></h4>
+                            <h4 class="title"><a href="/products/quality" class="stretched-link"><span data-i18n="products.quality.title">Quality control</span></a></h4>
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li1">Automatic detection of defects</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li2">Monitoring of product compliance with established standards</span></li>
@@ -347,7 +291,7 @@
 
     </section><!-- /Services Section -->
     <!-- Blog Posts Section -->
-    <section id="blog-posts" class="blog-posts section">
+    <section id="services" class="blog-posts section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2 data-i18n="services.kicker">Services</h2>
@@ -437,7 +381,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/" data-i18n="services.warehouse.title">Warehouses and pickup points</a>
+                            <a href="/service/warehouses" data-i18n="services.warehouse.title">Warehouses and pickup points</a>
                         </h2>
 
                         <div class="content">
@@ -446,7 +390,7 @@
                             </p>
 
                             <div class="read-more">
-                                <a href="/"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/service/warehouses"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -462,7 +406,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/" data-i18n="services.beauty.title">Beauty salons</a>
+                            <a href="/service/beauty" data-i18n="services.beauty.title">Beauty salons</a>
                         </h2>
 
                         <div class="content">
@@ -470,7 +414,7 @@
                                 <span data-i18n="services.beauty.text">Monitoring service processes and safety procedures, preventing theft and fires, improving service quality</span>
                             </p>
                             <div class="read-more">
-                                <a href="/"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/service/beauty"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -487,7 +431,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/" data-i18n="services.malls.title">Shopping malls and business centers</a>
+                            <a href="/service/malls" data-i18n="services.malls.title">Shopping malls and business centers</a>
                         </h2>
 
                         <div class="content">
@@ -495,7 +439,7 @@
                                 <span data-i18n="services.malls.text">People counting, foreign object detection, smoke and fire detection, fight, conflict and crowd detection</span>
                             </p>
                             <div class="read-more">
-                                <a href="/"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/service/malls"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 

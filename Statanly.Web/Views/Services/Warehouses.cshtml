@@ -1,0 +1,870 @@
+@{ ViewData["Title"] = "Warehouses and Pickup Points"; }
+
+<style>
+    /* =========================================================
+       WAREHOUSES & PICKUP POINTS PAGE
+       Built to sit inside the same blog-details/article template
+       as HoReCa, Retail and Industry pages.
+       Palette: navy + brand blue + brand red.
+    ========================================================= */
+
+    .warehouse-page {
+        background: #ffffff;
+        color: #172b4d;
+    }
+
+    /* ===== HERO ===== */
+
+    .warehouse-hero-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 46%;
+        gap: 34px;
+        align-items: stretch;
+        margin: 0 0 32px;
+        padding: 0;
+        overflow: hidden;
+        background: #ffffff;
+    }
+
+    .warehouse-hero-content {
+        position: relative;
+        z-index: 3;
+        padding-right: 42px;
+        padding-top: 8px;
+    }
+
+    .warehouse-kicker,
+    .warehouse-section-kicker {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(21, 152, 255, .08);
+        color: #1598ff;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        margin: 0 0 12px;
+    }
+
+    .warehouse-hero-title {
+        color: #0b1f33;
+        font-size: 56px;
+        line-height: 1.03;
+        font-weight: 900;
+        letter-spacing: -.045em;
+        margin: 0 0 18px;
+        max-width: 820px;
+    }
+
+    .warehouse-hero-subtitle {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.65;
+        max-width: 780px;
+        margin: 0 0 26px;
+    }
+
+    .warehouse-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 780px;
+        margin: 0 0 28px;
+    }
+
+    .warehouse-meta-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 92px;
+        padding: 22px 24px;
+        background: #ffffff;
+        border: 1px solid #e8edf5;
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(16, 54, 92, .045);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .warehouse-meta-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 34px rgba(16, 54, 92, .07);
+    }
+
+    .warehouse-meta-card i {
+        font-size: 28px;
+        color: #ef233c;
+        flex-shrink: 0;
+    }
+
+    .warehouse-meta-card span {
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 850;
+        color: #0b1f33;
+    }
+
+    .warehouse-intro-text {
+        max-width: 840px;
+        margin: 0;
+    }
+
+    .warehouse-intro-text p {
+        color: #4e5d78;
+        font-size: 17px;
+        line-height: 1.85;
+        margin-bottom: 16px;
+    }
+
+    .warehouse-intro-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    .warehouse-hero-visual {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: clamp(620px, 72vw, 820px);
+        pointer-events: none;
+        overflow: hidden;
+        margin-top: -14px;
+    }
+
+    .warehouse-hero-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        background:
+            linear-gradient(
+                to right,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.90) 10%,
+                rgba(255,255,255,.74) 20%,
+                rgba(255,255,255,.46) 32%,
+                rgba(255,255,255,.16) 44%,
+                rgba(255,255,255,0) 58%
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(255,255,255,0) 82%,
+                rgba(255,255,255,.28) 92%,
+                rgba(255,255,255,.82) 100%
+            );
+    }
+
+    .warehouse-hero-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center right;
+        display: block;
+        filter: saturate(1.02) contrast(1.01);
+    }
+
+    /* ===== INSIGHT ===== */
+
+    .warehouse-insight-box {
+        margin: 26px 0 40px;
+        padding: 26px 30px;
+        background: #ffffff;
+        border: 1px solid #eef2f7;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.05), 0 2px 10px rgba(16,54,92,.03);
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .warehouse-insight-line {
+        width: 4px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #1598ff 0%, #ef233c 100%);
+        flex-shrink: 0;
+    }
+
+    .warehouse-insight-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .warehouse-insight-content i {
+        font-size: 30px;
+        color: #1598ff;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .warehouse-insight-content p {
+        margin: 0;
+        color: #26384f;
+        font-size: 24px;
+        line-height: 1.55;
+        font-weight: 700;
+    }
+
+    /* ===== COMMON SECTIONS ===== */
+
+    .warehouse-modules-section,
+    .warehouse-platform-section {
+        margin: 44px 0;
+    }
+
+    .warehouse-section-title {
+        color: #0b1f33;
+        font-size: 42px;
+        line-height: 1.12;
+        font-weight: 900;
+        letter-spacing: -.03em;
+        margin: 0 0 16px;
+    }
+
+    .warehouse-section-lead {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 960px;
+        margin-bottom: 28px;
+    }
+
+    /* ===== MODULE CARDS ===== */
+
+    .warehouse-modules-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .warehouse-module-card,
+    .warehouse-platform-card {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.045), 0 2px 10px rgba(16,54,92,.025);
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .warehouse-module-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background: #ef233c;
+    }
+
+    .warehouse-module-card:hover,
+    .warehouse-platform-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 50px rgba(16,54,92,.08), 0 8px 18px rgba(16,54,92,.04);
+    }
+
+    .warehouse-module-head {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 22px;
+    }
+
+    .warehouse-module-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: rgba(239,35,60,.07);
+        color: #ef233c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .warehouse-module-icon i {
+        font-size: 28px;
+    }
+
+    .warehouse-module-card h3,
+    .warehouse-platform-card h3 {
+        color: #0b1f33;
+        font-size: 24px;
+        line-height: 1.22;
+        font-weight: 850;
+        margin: 3px 0 14px;
+    }
+
+    .warehouse-module-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .warehouse-module-card li {
+        position: relative;
+        padding-left: 28px;
+        color: #4e5d78;
+        font-size: 15.5px;
+        line-height: 1.65;
+        margin-bottom: 11px;
+    }
+
+    .warehouse-module-card li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #ef233c;
+        font-weight: 900;
+    }
+
+    /* ===== PLATFORM SECTION ===== */
+
+    .warehouse-platform-grid {
+        display: grid;
+        grid-template-columns: 1fr 360px 1fr;
+        gap: 28px;
+        align-items: center;
+        margin-top: 32px;
+    }
+
+    .warehouse-platform-column {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .warehouse-platform-card i {
+        color: #ef233c;
+        font-size: 34px;
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    .warehouse-platform-card p {
+        color: #4e5d78;
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    .warehouse-platform-core {
+        display: flex;
+        justify-content: center;
+    }
+
+    .warehouse-platform-ring {
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        border: 2px solid rgba(21,152,255,.35);
+        background: radial-gradient(circle at center, rgba(21,152,255,.12), rgba(21,152,255,.04), transparent 70%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .warehouse-platform-ring i {
+        font-size: 42px;
+        color: #1598ff;
+        margin-bottom: 14px;
+    }
+
+    .warehouse-platform-ring h3 {
+        color: #0b1f33;
+        font-size: 34px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    .warehouse-platform-ring p {
+        color: #4e5d78;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    /* ===== WIDE VISUAL ===== */
+
+    .warehouse-visual-section {
+        margin: 38px 0 34px;
+    }
+
+    .warehouse-visual-section img {
+        width: 100%;
+        display: block;
+        border-radius: 22px;
+        box-shadow: 0 16px 42px rgba(16,54,92,.08), 0 4px 12px rgba(16,54,92,.04);
+    }
+
+    /* ===== IMPACT ===== */
+
+    .warehouse-impact-box {
+        margin: 36px 0;
+        padding: 34px;
+        background: #071b3a;
+        border-radius: 22px;
+        color: #ffffff;
+    }
+
+    .warehouse-impact-title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.25;
+        font-weight: 900;
+        margin-bottom: 28px;
+    }
+
+    .warehouse-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+
+    .warehouse-impact-grid div {
+        text-align: center;
+        padding: 0 12px;
+    }
+
+    .warehouse-impact-grid i {
+        color: #1598ff;
+        font-size: 34px;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .warehouse-impact-grid strong {
+        display: block;
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    .warehouse-impact-grid span {
+        display: block;
+        color: rgba(255,255,255,.72);
+        line-height: 1.5;
+    }
+
+    /* ===== META BOTTOM ===== */
+
+    .warehouse-page .meta-bottom {
+        margin-top: 38px;
+        padding-top: 22px;
+        border-top: 1px solid #eef2f7;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @@media (max-width: 1200px) {
+        .warehouse-hero-section,
+        .warehouse-platform-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .warehouse-hero-content {
+            padding-right: 0;
+        }
+
+        .warehouse-hero-visual {
+            height: 520px;
+            margin-top: 18px;
+        }
+
+        .warehouse-modules-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .warehouse-platform-ring {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .warehouse-hero-title {
+            font-size: 38px;
+        }
+
+        .warehouse-section-title {
+            font-size: 34px;
+        }
+
+        .warehouse-meta-grid,
+        .warehouse-modules-grid,
+        .warehouse-impact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .warehouse-meta-card span {
+            font-size: 20px;
+        }
+
+        .warehouse-insight-content p {
+            font-size: 18px;
+        }
+
+        .warehouse-hero-visual {
+            height: 420px;
+        }
+    }
+</style>
+
+
+<body class="blog-details-page">
+    <header class="header d-flex align-items-center sticky-top" id="header">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a class="logo d-flex align-items-center me-auto" href="/">
+                <img alt="" src="~/Logo3.png" />
+                @*   <h1 class="sitename">Statanly</h1>*@
+            </a>
+            <nav class="navmenu" id="navmenu">
+                <ul>
+                    <li><a data-i18n="nav.home" href="/">Home</a></li>
+                    <li><a data-i18n="nav.platform" href="#about">Platform</a></li>
+                    <li><a class="active" data-i18n="nav.services" href="/services">Services</a></li>
+                    <li><a data-i18n="nav.products" href="/products">Products</a></li>
+                    <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+                    @*<li class="dropdown">
+        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
+        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
+        </ul>
+        </li>*@
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <div class="language-flags dropdown">
+                <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
+                    <span class="fi fi-gb lang-flag"></span>
+                    <span class="lang-code">EN</span>
+                </button>
+                <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item lang-option" data-lang="en" type="button"><span class="fi fi-gb"></span> English</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="es" type="button"><span class="fi fi-es"></span> Español</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="pt" type="button"><span class="fi fi-pt"></span> Português</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="it" type="button"><span class="fi fi-it"></span> Italiano</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="fr" type="button"><span class="fi fi-fr"></span> Français</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="de" type="button"><span class="fi fi-de"></span> Deutsch</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="ru" type="button"><span class="fi fi-ru"></span> Русский</button></li>
+                </ul>
+            </div>
+            <a class="btn-getstarted" data-i18n="common.getStarted" href="#contact">Get Started</a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="page-title light-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Smart AI Solutions for Warehouses and Pickup Points</h1>
+
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/service/hospitality">HoReCa</a></li>
+                        <li><a href="/service/retail">Retail</a></li>
+                        <li><a href="/service/industry">Industry</a></li>
+                        <li class="current">Warehouses</li>
+                        <li><a href="/service/beauty">Beauty Salons</a></li>
+                        <li><a href="/service/malls">Shopping Malls</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="blog-details section" id="blog-details">
+                <div class="container">
+                    <article class="article">
+                        <div class="warehouse-page">
+
+                            <section class="warehouse-hero-section">
+                                <div class="warehouse-hero-content">
+                                    <div class="warehouse-kicker">Warehouses & Pickup Points AI Platform</div>
+
+                                    <h1 class="warehouse-hero-title">
+                                        AI Platform for Warehouses and Pickup Points
+                                    </h1>
+
+                                    <p class="warehouse-hero-subtitle">
+                                        Customer service quality control, package and personnel safety, goods acceptance and delivery analytics in one AI-powered operational platform.
+                                    </p>
+
+                                    <div class="warehouse-meta-grid">
+                                        <div class="warehouse-meta-card">
+                                            <i class="bi bi-people"></i>
+                                            <span>Customer Service Quality</span>
+                                        </div>
+
+                                        <div class="warehouse-meta-card">
+                                            <i class="bi bi-box-seam"></i>
+                                            <span>Package Safety</span>
+                                        </div>
+
+                                        <div class="warehouse-meta-card">
+                                            <i class="bi bi-shield-check"></i>
+                                            <span>Personnel Safety</span>
+                                        </div>
+
+                                        <div class="warehouse-meta-card">
+                                            <i class="bi bi-clipboard-check"></i>
+                                            <span>Goods Acceptance</span>
+                                        </div>
+
+                                        <div class="warehouse-meta-card">
+                                            <i class="bi bi-truck"></i>
+                                            <span>Delivery Analytics</span>
+                                        </div>
+
+                                        <div class="warehouse-meta-card">
+                                            <i class="bi bi-diagram-3"></i>
+                                            <span>Scenario Engine</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="warehouse-intro-text">
+                                        <p>
+                                            The AI-powered warehouse and pickup point platform transforms existing cameras into a real-time control system for queues, package handover, goods acceptance, personnel actions and operational risks.
+                                        </p>
+
+                                        <p>
+                                            The platform detects service delays, damaged parcels, wrong placement, restricted area access, staff distractions, delivery bottlenecks and process deviations before they affect customers or operational performance.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="warehouse-hero-visual">
+                                    <img src="~/assets/img/warehouses/warehouse-pickup-hero.png" alt="AI analytics for warehouses and pickup points">
+                                </div>
+                            </section>
+
+                            <div class="warehouse-insight-box">
+                                <div class="warehouse-insight-line"></div>
+
+                                <div class="warehouse-insight-content">
+                                    <i class="bi bi-stars"></i>
+
+                                    <p>
+                                        AI turns parcel offices, warehouses and pickup points into measurable operational environments: every queue, package handover, damaged item, staff action and safety event becomes objective data for service improvement.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <section class="warehouse-modules-section">
+                                <div class="warehouse-section-kicker">Core AI Modules</div>
+
+                                <h2 class="warehouse-section-title">
+                                    AI Modules for Service, Parcels and Warehouse Operations
+                                </h2>
+
+                                <p class="warehouse-section-lead">
+                                    The platform includes ready-to-use AI modules for customer service control, parcel safety, goods acceptance, staff productivity, logistics operations and operational security.
+                                </p>
+
+                                <div class="warehouse-modules-grid">
+
+                                    <div class="warehouse-module-card">
+                                        <div class="warehouse-module-head">
+                                            <div class="warehouse-module-icon"><i class="bi bi-people"></i></div>
+                                            <h3>Customer Service Quality</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Queue length and waiting time monitoring</li>
+                                            <li>Pickup counter workload and service speed</li>
+                                            <li>Customer flow and occupancy analytics</li>
+                                            <li>Service SLA and response time control</li>
+                                            <li>Peak load detection by time and location</li>
+                                            <li>Customer experience and bottleneck analytics</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="warehouse-module-card">
+                                        <div class="warehouse-module-head">
+                                            <div class="warehouse-module-icon"><i class="bi bi-box-seam"></i></div>
+                                            <h3>Package Safety & Damage Control</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Damaged parcel detection</li>
+                                            <li>Package handover verification</li>
+                                            <li>Parcel scan and order status control</li>
+                                            <li>Lost or misplaced package detection</li>
+                                            <li>Suspicious package handling events</li>
+                                            <li>Returns and claim process monitoring</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="warehouse-module-card">
+                                        <div class="warehouse-module-head">
+                                            <div class="warehouse-module-icon"><i class="bi bi-clipboard-check"></i></div>
+                                            <h3>Goods Acceptance Analytics</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Goods acceptance process control</li>
+                                            <li>Counting packages and parcels by zone</li>
+                                            <li>Wrong placement and shelf mismatch detection</li>
+                                            <li>Unloading and sorting verification</li>
+                                            <li>Documented event archive for disputes</li>
+                                            <li>Acceptance speed and accuracy analytics</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="warehouse-module-card">
+                                        <div class="warehouse-module-head">
+                                            <div class="warehouse-module-icon"><i class="bi bi-person-badge"></i></div>
+                                            <h3>Personnel Safety & Productivity</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Staff presence and activity monitoring</li>
+                                            <li>Phone usage and distraction detection</li>
+                                            <li>Idle time and workload analytics</li>
+                                            <li>Uniform and PPE compliance control</li>
+                                            <li>Fall and incident detection</li>
+                                            <li>Restricted area and unsafe behavior control</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="warehouse-module-card">
+                                        <div class="warehouse-module-head">
+                                            <div class="warehouse-module-icon"><i class="bi bi-truck"></i></div>
+                                            <h3>Pickup & Delivery Operations</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Delivery delay and vehicle loading control</li>
+                                            <li>Dispatch bay occupancy analytics</li>
+                                            <li>Courier and driver waiting time monitoring</li>
+                                            <li>Package readiness and handover status</li>
+                                            <li>Loading and unloading process verification</li>
+                                            <li>Pickup point workload and throughput analytics</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="warehouse-module-card">
+                                        <div class="warehouse-module-head">
+                                            <div class="warehouse-module-icon"><i class="bi bi-diagram-3"></i></div>
+                                            <h3>Scenario Engine & Integrations</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Low-code creation of operational AI scenarios</li>
+                                            <li>Event logic for queues, packages and safety cases</li>
+                                            <li>Alerts, notifications and escalation workflows</li>
+                                            <li>Integration with WMS, OMS, ERP and CRM systems</li>
+                                            <li>API, CCTV, VMS, RTSP and ONVIF compatibility</li>
+                                            <li>On-Premise, Cloud and Hybrid deployment</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <section class="warehouse-platform-section">
+                                <div class="warehouse-section-kicker">Unified AI Platform</div>
+
+                                <h2 class="warehouse-section-title">
+                                    AI Platform for Warehouse Networks and Pickup Points
+                                </h2>
+
+                                <p class="warehouse-section-lead">
+                                    The platform connects existing cameras, operational systems and scenario logic into one digital layer for monitoring service quality, package movement, staff performance and logistics processes.
+                                </p>
+
+                                <div class="warehouse-platform-grid">
+
+                                    <div class="warehouse-platform-column">
+                                        <div class="warehouse-platform-card">
+                                            <i class="bi bi-camera-video"></i>
+                                            <h3>Existing Cameras</h3>
+                                            <p>Connect CCTV, VMS, RTSP and ONVIF streams without replacing existing video infrastructure.</p>
+                                        </div>
+
+                                        <div class="warehouse-platform-card">
+                                            <i class="bi bi-diagram-3"></i>
+                                            <h3>Scenario Engine</h3>
+                                            <p>Create complex operational scenarios from ready-made AI modules, event rules and business logic.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="warehouse-platform-core">
+                                        <div class="warehouse-platform-ring">
+                                            <div>
+                                                <i class="bi bi-cpu"></i>
+                                                <h3>AI Platform</h3>
+                                                <p>Scenario Engine<br>AI Models<br>Operational Analytics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="warehouse-platform-column">
+                                        <div class="warehouse-platform-card">
+                                            <i class="bi bi-bar-chart-line"></i>
+                                            <h3>BI & Reports</h3>
+                                            <p>Dashboards, queue analytics, parcel events, staff metrics, SLA reports and incident archive.</p>
+                                        </div>
+
+                                        <div class="warehouse-platform-card">
+                                            <i class="bi bi-cloud-check"></i>
+                                            <h3>Cloud / On-Premise / Hybrid</h3>
+                                            <p>Deploy locally inside client infrastructure, in the cloud or as a hybrid multi-site architecture.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <section class="warehouse-visual-section">
+                                <img src="~/assets/img/warehouses/warehouse-analytics-wide.png" alt="Warehouse and pickup point AI event detection scenarios">
+                            </section>
+
+                            <div class="warehouse-impact-box">
+                                <div class="warehouse-impact-title">Business Impact</div>
+
+                                <div class="warehouse-impact-grid">
+                                    <div>
+                                        <i class="bi bi-clock-history"></i>
+                                        <strong>Shorter Waiting Time</strong>
+                                        <span>Queue and pickup process optimization</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-box-seam"></i>
+                                        <strong>Fewer Parcel Issues</strong>
+                                        <span>Damage, loss and wrong placement detection</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-people"></i>
+                                        <strong>Better Staff Visibility</strong>
+                                        <span>Objective productivity and workload metrics</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-bar-chart"></i>
+                                        <strong>Operational Transparency</strong>
+                                        <span>Unified analytics across all pickup points and warehouses</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="meta-bottom">
+                                <i class="bi bi-folder"></i>
+                                <ul class="cats">
+                                    <li><a href="/service/warehouses">Warehouses</a></li>
+                                </ul>
+
+                                <i class="bi bi-tags"></i>
+                                <ul class="tags">
+                                    <li><a href="#">Computer Vision</a></li>
+                                    <li><a href="#">Operational Analytics</a></li>
+                                    <li><a href="#">Enterprise AI</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+</body>

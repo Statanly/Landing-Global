@@ -1,0 +1,904 @@
+@{ ViewData["Title"] = "Beauty Salons"; }
+
+
+<style>
+    /* =========================================================
+       BEAUTY SALONS PAGE
+       Article-template page. Palette: navy + brand blue + brand red.
+    ========================================================= */
+
+    .beauty-page {
+        background: #ffffff;
+        color: #172b4d;
+    }
+
+    /* ===== HERO ===== */
+
+    .beauty-hero-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 46%;
+        gap: 34px;
+        align-items: stretch;
+        margin: 0 0 32px;
+        padding: 0;
+        overflow: hidden;
+        background: #ffffff;
+    }
+
+    .beauty-hero-content {
+        position: relative;
+        z-index: 3;
+        padding-right: 42px;
+        padding-top: 8px;
+    }
+
+    .beauty-kicker,
+    .beauty-section-kicker {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(21, 152, 255, .08);
+        color: #1598ff;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        margin: 0 0 12px;
+    }
+
+    .beauty-hero-title {
+        color: #0b1f33;
+        font-size: 56px;
+        line-height: 1.03;
+        font-weight: 900;
+        letter-spacing: -.045em;
+        margin: 0 0 18px;
+        max-width: 820px;
+    }
+
+    .beauty-hero-subtitle {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.65;
+        max-width: 780px;
+        margin: 0 0 26px;
+    }
+
+    .beauty-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 780px;
+        margin: 0 0 28px;
+    }
+
+    .beauty-meta-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 92px;
+        padding: 22px 24px;
+        background: #ffffff;
+        border: 1px solid #e8edf5;
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(16, 54, 92, .045);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .beauty-meta-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 34px rgba(16, 54, 92, .07);
+    }
+
+    .beauty-meta-card i {
+        font-size: 28px;
+        color: #ef233c;
+        flex-shrink: 0;
+    }
+
+    .beauty-meta-card span {
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 850;
+        color: #0b1f33;
+    }
+
+    .beauty-intro-text {
+        max-width: 840px;
+        margin: 0;
+    }
+
+    .beauty-intro-text p {
+        color: #4e5d78;
+        font-size: 17px;
+        line-height: 1.85;
+        margin-bottom: 16px;
+    }
+
+    .beauty-intro-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    .beauty-hero-visual {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: clamp(560px, 66vw, 760px);
+        pointer-events: none;
+        overflow: hidden;
+        margin-top: -14px;
+    }
+
+    .beauty-hero-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        background:
+            linear-gradient(
+                to right,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.90) 10%,
+                rgba(255,255,255,.74) 20%,
+                rgba(255,255,255,.46) 32%,
+                rgba(255,255,255,.16) 44%,
+                rgba(255,255,255,0) 58%
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(255,255,255,0) 82%,
+                rgba(255,255,255,.26) 92%,
+                rgba(255,255,255,.78) 100%
+            );
+    }
+
+    .beauty-hero-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center right;
+        display: block;
+        filter: saturate(1.02) contrast(1.01);
+    }
+
+    /* ===== INSIGHT ===== */
+
+    .beauty-insight-box {
+        margin: 26px 0 40px;
+        padding: 26px 30px;
+        background: #ffffff;
+        border: 1px solid #eef2f7;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.05), 0 2px 10px rgba(16,54,92,.03);
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .beauty-insight-line {
+        width: 4px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #1598ff 0%, #ef233c 100%);
+        flex-shrink: 0;
+    }
+
+    .beauty-insight-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .beauty-insight-content i {
+        font-size: 30px;
+        color: #1598ff;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .beauty-insight-content p {
+        margin: 0;
+        color: #26384f;
+        font-size: 24px;
+        line-height: 1.55;
+        font-weight: 700;
+    }
+
+    /* ===== COMMON SECTIONS ===== */
+
+    .beauty-modules-section,
+    .beauty-analytics-section,
+    .beauty-platform-section {
+        margin: 44px 0;
+    }
+
+    .beauty-section-title {
+        color: #0b1f33;
+        font-size: 42px;
+        line-height: 1.12;
+        font-weight: 900;
+        letter-spacing: -.03em;
+        margin: 0 0 16px;
+    }
+
+    .beauty-section-lead {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 960px;
+        margin-bottom: 28px;
+    }
+
+    /* ===== CAPABILITIES ===== */
+
+    .beauty-capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid #e7edf5;
+        border-radius: 22px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(16,54,92,.04);
+    }
+
+    .beauty-capability-card {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 18px;
+        min-height: 154px;
+        padding: 28px;
+        border-right: 1px solid #e7edf5;
+        border-bottom: 1px solid #e7edf5;
+    }
+
+    .beauty-capability-card:nth-child(3n) {
+        border-right: 0;
+    }
+
+    .beauty-capability-card:nth-last-child(-n + 3) {
+        border-bottom: 0;
+    }
+
+    .beauty-capability-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 16px;
+        background: rgba(239,35,60,.07);
+        color: #ef233c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .beauty-capability-icon i {
+        font-size: 28px;
+    }
+
+    .beauty-capability-card h3 {
+        color: #0b1f33;
+        font-size: 20px;
+        line-height: 1.25;
+        font-weight: 850;
+        margin: 0 0 8px;
+    }
+
+    .beauty-capability-card p {
+        color: #4e5d78;
+        font-size: 15.5px;
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    /* ===== ANALYTICS ===== */
+
+    .beauty-analytics-grid {
+        display: grid;
+        grid-template-columns: 330px minmax(0, 1fr);
+        gap: 32px;
+        align-items: center;
+    }
+
+    .beauty-analytics-text h2 {
+        color: #0b1f33;
+        font-size: 34px;
+        line-height: 1.18;
+        font-weight: 900;
+        margin: 0 0 16px;
+    }
+
+    .beauty-analytics-text p {
+        color: #4e5d78;
+        font-size: 17px;
+        line-height: 1.75;
+        margin: 0 0 20px;
+    }
+
+    .beauty-check-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .beauty-check-list li {
+        position: relative;
+        color: #4e5d78;
+        font-size: 16px;
+        line-height: 1.65;
+        padding-left: 30px;
+        margin-bottom: 12px;
+    }
+
+    .beauty-check-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #ef233c;
+        font-weight: 900;
+    }
+
+    .beauty-dashboard-card {
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 16px 42px rgba(16,54,92,.08), 0 4px 12px rgba(16,54,92,.04);
+    }
+
+    .beauty-dashboard-card img {
+        width: 100%;
+        display: block;
+    }
+
+    /* ===== PLATFORM ===== */
+
+    .beauty-platform-grid {
+        display: grid;
+        grid-template-columns: 1fr 340px 1fr;
+        gap: 28px;
+        align-items: center;
+        margin-top: 32px;
+    }
+
+    .beauty-platform-column {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .beauty-platform-card {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.045), 0 2px 10px rgba(16,54,92,.025);
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .beauty-platform-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 50px rgba(16,54,92,.08), 0 8px 18px rgba(16,54,92,.04);
+    }
+
+    .beauty-platform-card i {
+        color: #ef233c;
+        font-size: 34px;
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    .beauty-platform-card h3 {
+        color: #0b1f33;
+        font-size: 23px;
+        line-height: 1.22;
+        font-weight: 850;
+        margin: 0 0 12px;
+    }
+
+    .beauty-platform-card p {
+        color: #4e5d78;
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    .beauty-platform-core {
+        display: flex;
+        justify-content: center;
+    }
+
+    .beauty-platform-ring {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        border: 2px solid rgba(21,152,255,.35);
+        background: radial-gradient(circle at center, rgba(21,152,255,.12), rgba(21,152,255,.04), transparent 70%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .beauty-platform-ring i {
+        font-size: 42px;
+        color: #1598ff;
+        margin-bottom: 14px;
+    }
+
+    .beauty-platform-ring h3 {
+        color: #0b1f33;
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    .beauty-platform-ring p {
+        color: #4e5d78;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    /* ===== IMPACT ===== */
+
+    .beauty-impact-box {
+        margin: 36px 0;
+        padding: 34px;
+        background: #071b3a;
+        border-radius: 22px;
+        color: #ffffff;
+    }
+
+    .beauty-impact-title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.25;
+        font-weight: 900;
+        margin-bottom: 28px;
+    }
+
+    .beauty-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+
+    .beauty-impact-grid div {
+        text-align: center;
+        padding: 0 12px;
+    }
+
+    .beauty-impact-grid i {
+        color: #1598ff;
+        font-size: 34px;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .beauty-impact-grid strong {
+        display: block;
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    .beauty-impact-grid span {
+        display: block;
+        color: rgba(255,255,255,.72);
+        line-height: 1.5;
+    }
+
+    /* ===== META BOTTOM ===== */
+
+    .beauty-page .meta-bottom {
+        margin-top: 38px;
+        padding-top: 22px;
+        border-top: 1px solid #eef2f7;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @@media (max-width: 1200px) {
+        .beauty-hero-section,
+        .beauty-analytics-grid,
+        .beauty-platform-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .beauty-hero-content {
+            padding-right: 0;
+        }
+
+        .beauty-hero-visual {
+            height: 520px;
+            margin-top: 18px;
+        }
+
+        .beauty-platform-ring {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @@media (max-width: 992px) {
+        .beauty-capabilities-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .beauty-capability-card:nth-child(3n) {
+            border-right: 1px solid #e7edf5;
+        }
+
+        .beauty-capability-card:nth-child(2n) {
+            border-right: 0;
+        }
+
+        .beauty-capability-card:nth-last-child(-n + 3) {
+            border-bottom: 1px solid #e7edf5;
+        }
+
+        .beauty-capability-card:nth-last-child(-n + 2) {
+            border-bottom: 0;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .beauty-hero-title {
+            font-size: 38px;
+        }
+
+        .beauty-section-title {
+            font-size: 34px;
+        }
+
+        .beauty-meta-grid,
+        .beauty-capabilities-grid,
+        .beauty-impact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .beauty-meta-card span {
+            font-size: 20px;
+        }
+
+        .beauty-insight-content p {
+            font-size: 18px;
+        }
+
+        .beauty-hero-visual {
+            height: 420px;
+        }
+
+        .beauty-capability-card {
+            border-right: 0 !important;
+            border-bottom: 1px solid #e7edf5 !important;
+        }
+
+        .beauty-capability-card:last-child {
+            border-bottom: 0 !important;
+        }
+    }
+</style>
+<body class="blog-details-page">
+    <header class="header d-flex align-items-center sticky-top" id="header">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a class="logo d-flex align-items-center me-auto" href="/">
+                <img alt="" src="~/Logo3.png" />
+            </a>
+
+            <nav class="navmenu" id="navmenu">
+                <ul>
+                    <li><a data-i18n="nav.home" href="/">Home</a></li>
+                    <li><a data-i18n="nav.platform" href="#about">Platform</a></li>
+                    <li><a class="active" data-i18n="nav.services" href="/services">Services</a></li>
+                    <li><a data-i18n="nav.products" href="/products">Products</a></li>
+                    <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <div class="language-flags dropdown">
+                <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
+                    <span class="fi fi-gb lang-flag"></span>
+                    <span class="lang-code">EN</span>
+                </button>
+                <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item lang-option" data-lang="en" type="button"><span class="fi fi-gb"></span> English</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="es" type="button"><span class="fi fi-es"></span> Español</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="pt" type="button"><span class="fi fi-pt"></span> Português</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="it" type="button"><span class="fi fi-it"></span> Italiano</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="fr" type="button"><span class="fi fi-fr"></span> Français</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="de" type="button"><span class="fi fi-de"></span> Deutsch</button></li>
+                    <li><button class="dropdown-item lang-option" data-lang="ru" type="button"><span class="fi fi-ru"></span> Русский</button></li>
+                </ul>
+            </div>
+
+            <a class="btn-getstarted" data-i18n="common.getStarted" href="#contact">Get Started</a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="page-title light-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Smart AI Solutions for Beauty Salons</h1>
+
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/service/hospitality">HoReCa</a></li>
+                        <li><a href="/service/retail">Retail</a></li>
+                        <li><a href="/service/industry">Industry</a></li>
+                        <li><a href="/service/warehouses">Warehouses</a></li>
+                        <li class="current">Beauty Salons</li>
+                        <li><a href="/service/malls">Shopping Malls</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="blog-details section" id="blog-details">
+                <div class="container">
+                    <article class="article">
+                        <div class="beauty-page">
+
+                            <section class="beauty-hero-section">
+                                <div class="beauty-hero-content">
+                                    <div class="beauty-kicker">Beauty Salons AI Platform</div>
+
+                                    <h1 class="beauty-hero-title">
+                                        AI Platform for Beauty Salons
+                                    </h1>
+
+                                    <p class="beauty-hero-subtitle">
+                                        Monitoring service processes and safety procedures, preventing theft and fires, and improving service quality with AI-powered analytics.
+                                    </p>
+
+                                    <div class="beauty-meta-grid">
+                                        <div class="beauty-meta-card">
+                                            <i class="bi bi-clipboard-check"></i>
+                                            <span>Service Process Monitoring</span>
+                                        </div>
+
+                                        <div class="beauty-meta-card">
+                                            <i class="bi bi-shield-check"></i>
+                                            <span>Safety Procedures</span>
+                                        </div>
+
+                                        <div class="beauty-meta-card">
+                                            <i class="bi bi-lock"></i>
+                                            <span>Theft Prevention</span>
+                                        </div>
+
+                                        <div class="beauty-meta-card">
+                                            <i class="bi bi-fire"></i>
+                                            <span>Fire Risk Detection</span>
+                                        </div>
+
+                                        <div class="beauty-meta-card">
+                                            <i class="bi bi-people"></i>
+                                            <span>Staff Management</span>
+                                        </div>
+
+                                        <div class="beauty-meta-card">
+                                            <i class="bi bi-star"></i>
+                                            <span>Service Quality</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-intro-text">
+                                        <p>
+                                            The AI-powered beauty salon platform transforms existing cameras into a real-time operational control system for service stages, staff activity, hygiene standards, client experience and safety events.
+                                        </p>
+
+                                        <p>
+                                            The platform detects service delays, unattended reception zones, suspicious activity, fire and smoke risks, hygiene procedure violations, staff workload issues and customer service bottlenecks.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="beauty-hero-visual">
+                                    <img src="~/assets/img/beauty/beauty-salon-hero.png" alt="AI analytics for beauty salons">
+                                </div>
+                            </section>
+
+                            <div class="beauty-insight-box">
+                                <div class="beauty-insight-line"></div>
+
+                                <div class="beauty-insight-content">
+                                    <i class="bi bi-stars"></i>
+
+                                    <p>
+                                        AI turns beauty salons into measurable service environments: every service stage, staff action, safety event and customer experience indicator becomes objective data for quality improvement.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <section class="beauty-modules-section">
+                                <div class="beauty-section-kicker">AI Capabilities</div>
+
+                                <h2 class="beauty-section-title">
+                                    AI Capabilities for Beauty Salons
+                                </h2>
+
+                                <p class="beauty-section-lead">
+                                    The platform combines service quality control, safety monitoring, theft prevention, fire risk detection, staff analytics and customer experience improvement in one operational layer.
+                                </p>
+
+                                <div class="beauty-capabilities-grid">
+                                    <div class="beauty-capability-card">
+                                        <div class="beauty-capability-icon"><i class="bi bi-camera"></i></div>
+                                        <div>
+                                            <h3>Service Process Monitoring</h3>
+                                            <p>Track service stages, waiting time, staff actions and smoothness of customer flow in real time.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-capability-card">
+                                        <div class="beauty-capability-icon"><i class="bi bi-shield-check"></i></div>
+                                        <div>
+                                            <h3>Safety & Compliance</h3>
+                                            <p>Monitor safety procedures, hygiene standards and workplace compliance across salon zones.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-capability-card">
+                                        <div class="beauty-capability-icon"><i class="bi bi-lock"></i></div>
+                                        <div>
+                                            <h3>Theft Prevention</h3>
+                                            <p>Detect suspicious behavior, unauthorized access, inventory risks and unusual staff or visitor activity.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-capability-card">
+                                        <div class="beauty-capability-icon"><i class="bi bi-fire"></i></div>
+                                        <div>
+                                            <h3>Fire & Smoke Detection</h3>
+                                            <p>Detect early smoke, fire risks and unsafe equipment usage with instant alerts for managers.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-capability-card">
+                                        <div class="beauty-capability-icon"><i class="bi bi-people"></i></div>
+                                        <div>
+                                            <h3>Staff Management</h3>
+                                            <p>Monitor staff attendance, productivity, workload distribution, idle time and service discipline.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-capability-card">
+                                        <div class="beauty-capability-icon"><i class="bi bi-bar-chart-line"></i></div>
+                                        <div>
+                                            <h3>Service Quality Improvement</h3>
+                                            <p>Use customer flow, service time and process analytics to increase quality and loyalty.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="beauty-analytics-section">
+                                <div class="beauty-analytics-grid">
+                                    <div class="beauty-analytics-text">
+                                        <h2>Smart Analytics & Insights</h2>
+
+                                        <p>
+                                            The platform turns video and operational data into actionable insights that help salon owners improve service quality, reduce risks and manage teams objectively.
+                                        </p>
+
+                                        <ul class="beauty-check-list">
+                                            <li>Customer flow and peak hours analysis</li>
+                                            <li>Service time and efficiency tracking</li>
+                                            <li>Staff performance analytics</li>
+                                            <li>Incident and alert history</li>
+                                            <li>Reports and dashboards</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="beauty-dashboard-card">
+                                        <img src="~/assets/img/beauty/beauty-salon-dashboard.png" alt="Beauty salon AI analytics dashboard">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="beauty-platform-section">
+                                <div class="beauty-section-kicker">Unified AI Platform</div>
+
+                                <h2 class="beauty-section-title">
+                                    AI Platform for Salon Networks and Service Teams
+                                </h2>
+
+                                <p class="beauty-section-lead">
+                                    The platform connects cameras, service scenarios and analytics into a single digital layer for monitoring service quality, safety events, staff performance and customer experience.
+                                </p>
+
+                                <div class="beauty-platform-grid">
+                                    <div class="beauty-platform-column">
+                                        <div class="beauty-platform-card">
+                                            <i class="bi bi-camera-video"></i>
+                                            <h3>Existing Cameras</h3>
+                                            <p>Connect CCTV and existing video streams without replacing the current surveillance infrastructure.</p>
+                                        </div>
+
+                                        <div class="beauty-platform-card">
+                                            <i class="bi bi-diagram-3"></i>
+                                            <h3>Scenario Engine</h3>
+                                            <p>Create operational scenarios for service processes, safety procedures, alerts and escalation logic.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-platform-core">
+                                        <div class="beauty-platform-ring">
+                                            <div>
+                                                <i class="bi bi-cpu"></i>
+                                                <h3>AI Platform</h3>
+                                                <p>Scenario Engine<br>AI Models<br>Service Analytics</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="beauty-platform-column">
+                                        <div class="beauty-platform-card">
+                                            <i class="bi bi-bar-chart-line"></i>
+                                            <h3>BI & Reports</h3>
+                                            <p>Dashboards, service metrics, incident history, staff analytics and customer flow reports.</p>
+                                        </div>
+
+                                        <div class="beauty-platform-card">
+                                            <i class="bi bi-cloud-check"></i>
+                                            <h3>Cloud / On-Premise / Hybrid</h3>
+                                            <p>Deploy locally, in the cloud or as a hybrid solution for multi-location salon networks.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div class="beauty-impact-box">
+                                <div class="beauty-impact-title">Business Impact</div>
+
+                                <div class="beauty-impact-grid">
+                                    <div>
+                                        <i class="bi bi-star"></i>
+                                        <strong>Higher Service Quality</strong>
+                                        <span>Objective process control and faster response to issues</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-shield-check"></i>
+                                        <strong>Safer Environment</strong>
+                                        <span>Monitoring of safety, hygiene and risk procedures</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-lock"></i>
+                                        <strong>Theft Prevention</strong>
+                                        <span>Suspicious behavior and inventory risk detection</span>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-people"></i>
+                                        <strong>Better Staff Performance</strong>
+                                        <span>Workload, service time and productivity analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="meta-bottom">
+                                <i class="bi bi-folder"></i>
+                                <ul class="cats">
+                                    <li><a href="/service/beauty">Beauty Salons</a></li>
+                                </ul>
+
+                                <i class="bi bi-tags"></i>
+                                <ul class="tags">
+                                    <li><a href="#">Computer Vision</a></li>
+                                    <li><a href="#">Safety AI</a></li>
+                                    <li><a href="#">Service Analytics</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>

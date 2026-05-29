@@ -1,0 +1,303 @@
+﻿
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="~/Logo3.png" alt="">         
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="/#about" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/services" data-i18n="nav.services">Services</a></li>
+                <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                <li><a href="/#contact" data-i18n="nav.contacts">Contacts</a></li>
+                @*<li class="dropdown">
+                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                            <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="language-flags dropdown">
+            <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+        <a class="btn-getstarted" href="#contact" data-i18n="common.getStarted">Get Started</a>
+
+    </div>
+</header>
+
+<main class="main">
+    <!-- Blog Posts Section -->
+    <section id="services" class="blog-posts section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2 data-i18n="services.kicker">Services</h2>
+            <p data-i18n="services.title">Explore Our Services<br></p>
+        </div><!-- End Section Title -->
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <article>
+
+                        <div class="post-img">
+                            <img src="~/assets/img/Services/restoran.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="title">
+                            <a href="/services/hospitality" data-i18n="services.horeca.title">Horeca</a>
+                        </h2>
+
+                        <div class="content">
+                            <p>
+                                <span data-i18n="services.horeca.text">Theft prevention, hygiene standards monitoring, counting unique visitors, order waiting time and empty dish detection</span>
+                            </p>
+
+                            <div class="read-more">
+                                <a href="/services/hospitality"><span data-i18n="common.readMore">Read More</span></a>
+                            </div>
+                        </div>
+
+                    </article>
+                </div><!-- End post list item -->
+
+                <div class="col-lg-4">
+
+                    <article>
+
+                        <div class="post-img">
+                            <img src="~/assets/img/Services/supermarket.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="title">
+                            <a href="/services/retail" data-i18n="services.retail.title">Retail</a>
+                        </h2>
+
+                        <div class="content">
+                            <p>
+                                <span data-i18n="services.retail.text">Control of processes inside retail premises, visitor behavior analytics and queue counting</span>
+                            </p>
+                            <div class="read-more">
+                                <a href="/services/retail"><span data-i18n="common.readMore">Read More</span></a>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div><!-- End post list item -->
+
+                <div class="col-lg-4">
+
+                    <article>
+
+                        <div class="post-img">
+                            <img src="~/assets/img/Services/proizvodstvo.jpg" alt="" class="img-fluid">
+                        </div>
+                        <h2 class="title">
+                            <a href="/services/industry" data-i18n="services.industry.title">Industry and manufacturing</a>
+                        </h2>
+                        <div class="content">
+                            <p>
+                                <span data-i18n="services.industry.text">Security monitoring, access control, theft risk reduction and employee productivity improvement</span>
+                            </p>
+                            <div class="read-more">
+                                <a href="/services/industry"><span data-i18n="common.readMore">Read More</span></a>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div><!-- End post list item -->
+
+            </div><!-- End blog posts list -->
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <article>
+
+                        <div class="post-img">
+                            <img src="~/assets/img/Services/pvz.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="title">
+                            <a href="/services/warehouses" data-i18n="services.warehouse.title">Warehouses and pickup points</a>
+                        </h2>
+
+                        <div class="content">
+                            <p>
+                                <span data-i18n="services.warehouse.text">Customer service quality control, package and personnel safety, goods acceptance and delivery analytics</span>
+                            </p>
+
+                            <div class="read-more">
+                                <a href="/services/warehouses"><span data-i18n="common.readMore">Read More</span></a>
+                            </div>
+                        </div>
+
+                    </article>
+                </div><!-- End post list item -->
+
+                <div class="col-lg-4">
+
+                    <article>
+
+                        <div class="post-img">
+                            <img src="~/assets/img/Services/salon.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="title">
+                            <a href="/services/beauty" data-i18n="services.beauty.title">Beauty salons</a>
+                        </h2>
+
+                        <div class="content">
+                            <p>
+                                <span data-i18n="services.beauty.text">Monitoring service processes and safety procedures, preventing theft and fires, improving service quality</span>
+                            </p>
+                            <div class="read-more">
+                                <a href="/services/beauty"><span data-i18n="common.readMore">Read More</span></a>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div><!-- End post list item -->
+
+                <div class="col-lg-4">
+
+                    <article>
+
+                        <div class="post-img">
+                            <img src="~/assets/img/Services/Shoppingmalls.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="title">
+                            <a href="/services/malls" data-i18n="services.malls.title">Shopping malls and business centers</a>
+                        </h2>
+
+                        <div class="content">
+                            <p>
+                                <span data-i18n="services.malls.text">People counting, foreign object detection, smoke and fire detection, fight, conflict and crowd detection</span>
+                            </p>
+                            <div class="read-more">
+                                <a href="/services/malls"><span data-i18n="common.readMore">Read More</span></a>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div><!-- End post list item -->
+
+            </div><!-- End blog posts list -->
+        </div>
+
+    </section><!-- /Blog Posts Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                <iframe style="border:0; width: 100%; height: 270px;"
+                        src="https://www.google.com/maps?q=Praça+do+Comércio,+1100-148+Lisboa,+Portugal&output=embed"
+                        frameborder="0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>            </div><!-- End Google Maps -->
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.address">Address</h3>
+                            <p>
+                                Praça do Comércio, 1100-148 Lisbon, Portugal
+                            </p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-telegram"></i>
+                        <div>
+                            <h3>Telegram:</h3>
+                            <p><a href="https://t.me/statanly" target="_blank">@@statanly</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex">
+                        <i class="bi bi-whatsapp"></i>
+                        <div>
+                            <h3>Whatsapp:</h3>
+                            <p><a href="https://wa.me/79218752396" target="_blank">https://wa.me/79218752396</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.email">Email Us</h3>
+                            <p>hello@statanly.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+                <div class="col-lg-8">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" data-i18n-placeholder="form.email" placeholder="Your Email" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="subject" data-i18n-placeholder="form.subject" placeholder="Subject" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="loading" data-i18n="form.loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message" data-i18n="form.sent">Your message has been sent. Thank you!</div>
+
+                                <button type="submit" data-i18n="form.send">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div><!-- End Contact Form -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Contact Section -->
+</main>
+
+
+
+
+
+<script src="~/assets/js/i18n.js"></script>

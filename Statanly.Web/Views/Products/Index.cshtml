@@ -1,0 +1,215 @@
+﻿
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="~/Logo3.png" alt="">         
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="/#about" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/services" data-i18n="nav.services">Services</a></li>
+                <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                <li><a href="/#contact" data-i18n="nav.contacts">Contacts</a></li>
+                @*<li class="dropdown">
+                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                            <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="language-flags dropdown">
+            <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+        <a class="btn-getstarted" href="#contact" data-i18n="common.getStarted">Get Started</a>
+
+    </div>
+</header>
+
+<main class="main">
+
+    <section id="products" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2 data-i18n="products.kicker">Products</h2>
+            <p data-i18n="products.title">Explore Our Products<br></p>
+        </div><!-- End Section Title -->
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-briefcase icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="/products/safety" class="stretched-link" data-i18n="products.safety.title">Industrial safety and violation control</a></h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.safety.li1">Industrial safety and labor protection control</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.safety.li2">PPE recognition and violation detection</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.safety.li3">Emergency detection and equipment monitoring</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="/products/effectiveness" class="stretched-link" data-i18n="products.people.title">Human behavior and event analysis</a></h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.people.li1">Employee engagement monitoring</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.people.li2">Task performance and staff action analysis</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.people.li3">Theft and suspicious event detection</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="/products/automation" class="stretched-link"><span data-i18n="products.automation.title">Automation of the production line</span></a></h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.automation.li1">Counting and classifying objects</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.automation.li2">Detection of anomalies and foreign bodies on the conveyor</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.automation.li3">Determination of geometric characteristics, color, size and fraction distribution</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-binoculars icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link"><span data-i18n="products.quality.title">Quality control</span></a></h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li1">Automatic detection of defects</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li2">Monitoring of product compliance with established standards</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li3">Monitoring and ensuring assembly correctness</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                <iframe style="border:0; width: 100%; height: 270px;"
+                        src="https://www.google.com/maps?q=Praça+do+Comércio,+1100-148+Lisboa,+Portugal&output=embed"
+                        frameborder="0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>            </div><!-- End Google Maps -->
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.address">Address</h3>
+                            <p>
+                                Praça do Comércio, 1100-148 Lisbon, Portugal
+                            </p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-telegram"></i>
+                        <div>
+                            <h3>Telegram:</h3>
+                            <p><a href="https://t.me/statanly" target="_blank">@@statanly</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex">
+                        <i class="bi bi-whatsapp"></i>
+                        <div>
+                            <h3>Whatsapp:</h3>
+                            <p><a href="https://wa.me/79218752396" target="_blank">https://wa.me/79218752396</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.email">Email Us</h3>
+                            <p>hello@statanly.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+                <div class="col-lg-8">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" data-i18n-placeholder="form.email" placeholder="Your Email" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="subject" data-i18n-placeholder="form.subject" placeholder="Subject" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="loading" data-i18n="form.loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message" data-i18n="form.sent">Your message has been sent. Thank you!</div>
+
+                                <button type="submit" data-i18n="form.send">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div><!-- End Contact Form -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Contact Section -->
+</main>
+
+
+
+
+
+<script src="~/assets/js/i18n.js"></script>
