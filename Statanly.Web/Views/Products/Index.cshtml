@@ -8,18 +8,18 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
-                <li><a href="/#about" data-i18n="nav.platform">Platform</a></li>
-                <li><a href="/services" data-i18n="nav.services">Services</a></li>
-                <li><a href="/products" data-i18n="nav.products">Products</a></li>
-                <li><a href="/#contact" data-i18n="nav.contacts">Contacts</a></li>
+                <li><a data-i18n="nav.home" href="/">Home</a></li>
+                <li><a data-i18n="nav.platform" href="/home/platform">Platform</a></li>
+                <li><a data-i18n="nav.services" href="/services">Services</a></li>
+                <li><a class="active" data-i18n="nav.products" href="/products">Products</a></li>
+                <li><a data-i18n="nav.contacts" href="/home/contacts">Contacts</a></li>
                 @*<li class="dropdown">
-                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
-                            <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                        </ul>
-                    </li>*@
+            <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+                <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+            </ul>
+        </li>*@
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -101,7 +101,7 @@
                     <div class="service-item d-flex position-relative h-100">
                         <i class="bi bi-binoculars icon flex-shrink-0"></i>
                         <div>
-                            <h4 class="title"><a href="#" class="stretched-link"><span data-i18n="products.quality.title">Quality control</span></a></h4>
+                            <h4 class="title"><a href="/products/quality" class="stretched-link"><span data-i18n="products.quality.title">Quality control</span></a></h4>
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li1">Automatic detection of defects</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span data-i18n="products.quality.li2">Monitoring of product compliance with established standards</span></li>

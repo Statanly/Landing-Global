@@ -1,202 +1,143 @@
-﻿@using Microsoft.AspNetCore.Builder
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Options
+﻿
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="~/Logo3.png" alt="">
+        </a>
 
-@{
-    // получаем сервис IRequestCultureFeature
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    // получаем список поддерживаемых культур
-    var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name.ToUpper() })
-        .ToList();
-    var lang = requestCulture.RequestCulture.UICulture.Name.ToUpper();
-}
-
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img class="logo" style="height: 43px; width: 160px" src="~/assets/img/logo.png"></a>
-        @*<h1 class="logo"><a href="index.html">Anyar</a></h1>*@
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-    <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="/">@Localizer["Main"]</a></li>
-            <li class="dropdown">
-                <a href="/home/solution"><span>@Localizer["Solutions"]</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                    <li><a href="/home/solution">@Localizer["Projects"]</a></li>
-                    <li><a href="/home/services">@Localizer["Services"]</a></li>
-                    <li><a href="/home/products">@Localizer["Products"]</a></li>
-                    <li><a href="/home/smartcity">@Localizer["SmartCity"]</a></li>
-                    <li><a href="/technology/uav">БПЛА</a></li>
-                    <li><a href="/technology/deepfakes">Дипфейки</a></li>
-                    <li><a href="/home/service/6">@Localizer["TPU"]</a></li>
-                    <li><a href="/home/singleboard">Одноплатники</a></li>
-                    <li><a href="/home/conveyers">Автоматизация конвейеров</a></li>
-                    <li><a href="/home/manufacturing">Автоматизация производства</a></li>
-                    <li><a href="/service/monitoring">Интеллектуальный мониторинг</a></li>
-                    <li><a href="/home/mobile">Портативный ПАК</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="/industry"><span>@Localizer["Industries"]</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                    <li><a href="/industry/retail">Ретейл</a></li>
-                    <li><a href="/industry/logistics">Логистика</a></li>
-                    <li><a href="/industry/prom">Промышленность</a></li>
-                    <li><a href="/industry/development">Девелопмент</a></li>
-                    <li><a href="/industry/horeca">HoReCa </a></li>
-                    <li><a href="/industry/food">Пищевая промышленность</a></li>
-                    <li><a href="/industry/agro">Сельское хозяйство</a></li>
-                    <li><a href="/industry/medicine">Медицина и здравоохранение</a></li>
-                    <li><a href="/industry/transport">Транспорт</a></li>
-                    <li><a href="/industry/media">Медиа, реклама</a></li>
-                    <li><a href="/industry/insurance">Страхование</a></li>
-                    <li><a href="/industry/printing">Типографии</a></li>
-                    <li><a href="/home/smartcity">Умный город</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="/home/company"><span>@Localizer["Company"]</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                    <li><a href="/home/news">@Localizer["News"]</a></li>
-                    <li><a href="/home/company">@Localizer["History"]</a></li>
-                    <li><a href="/home/team">@Localizer["Team"]</a></li>
-                    <li><a href="/home/mission">@Localizer["Mission"]</a></li>
-                    <li><a href="/home/press">@Localizer["Press"]</a></li>
-                    <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
-                    <li><a href="/home/contact">@Localizer["Contacts"]</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="/home/research"><span>@Localizer["Research"]</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                    <li><a href="/home/research">R&D</a></li>
-                    <li><a href="https://science.itmo.ru/" target="_blank">@Localizer["Science"]</a></li>
-                    <li><a href="/info/reestr">Open source</a></li>
-                    <li><a href="/info/cvflow">@Localizer["Documentation"]</a></li>
-                </ul>
-            </li>
-            <li><a class="nav-link scrollto active"  href="/home/contact">@Localizer["Contacts"]</a></li>
-            <li class="dropdown">
-                <a href="#"><span>@lang</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                    <li><a href="/home/setLanguage?culture=ru&returnUrl=@Context.Request.Path">Ru</a></li>
-                    <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
-                </ul>
-            </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/services" data-i18n="nav.services">Services</a></li>
+                <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                <li><a href="/home/contacts" class="active" data-i18n="nav.contacts">Contacts</a></li>
+                @*<li class="dropdown">
+                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                            <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="language-flags dropdown">
+            <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+        <a class="btn-getstarted" href="/home/contacts" data-i18n="common.getStarted">Get Started</a>
 
     </div>
-</header><!-- End Header -->
+</header>
 
-<main id="main">
+<main class="main">
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-            <ol>
-                <li><a href="/home/news">@Localizer["News"]</a></li>
-                <li><a href="/home/company">@Localizer["History"]</a></li>
-                <li><a href="/home/team">@Localizer["Team"]</a></li>
-                <li><a href="/home/mission">@Localizer["Mission"]</a></li>
-                <li><a href="/home/press">@Localizer["Press"]</a></li>
-                <li><a href="/home/cooperation">@Localizer["Cooperation"]</a></li>
-                <li>@Localizer["Contacts"]</li>
-            </ol>
-            <h2>@Localizer["Contacts"]</h2>
-        </div>
-    </section><!-- End Breadcrumbs -->
-    <section id="contact" class="contact">
-        <div class="container">
+            <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                <iframe style="border:0; width: 100%; height: 270px;"
+                        src="https://www.google.com/maps?q=Praça+do+Comércio,+1100-148+Lisboa,+Portugal&output=embed"
+                        frameborder="0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div><!-- End Google Maps -->
 
-            <div class="section-title">
-                <h2>@Localizer["Questions"]</h2>
-                <h4>@Localizer["WriteToUs"]</h4>
-            </div>
+            <div class="row gy-4">
 
-            <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
-                <div class="col-lg-5">
-                    <div class="info">
-                        <div class="address">
-                            <i class="bi bi-geo-alt"></i>
-                            <h4>@Localizer["Address"]:</h4>
-                            <p>@Localizer["AddressText"]</p>
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.address">Address</h3>
+                            <p>
+                                Praça do Comércio, 1100-148 Lisbon, Portugal
+                            </p>
                         </div>
-                        <div class="email">
-                            <a href="mailto:hello@statanly.com" target="_blank"><i class="bi bi-envelope"></i></a>
-                            <h4>@Localizer["Email"]:</h4>
-                            <p><a href="mailto:hello@statanly.com" target="_blank">hello@statanly.com</a></p>
-                        </div>
-                        <div class="phone">
-                            <a href="tel:88007707178" target="_blank"><i class="bi bi-phone"></i></a>
-                            <h4>@Localizer["Phone"]:</h4>
-                            <p><a href="tel:88007707178" target="_blank">8(800)770-71-78</a></p>
-                            <p><a href="tel:+79218752396" target="_blank">+7(921)8752396</a></p>
-                        </div>
-                        <div class="telegram">
-                            <a href="https://t.me/statanly" target="_blank"><i class="bi bi-telegram"></i></a>
-                            <h4>Telegram:</h4>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-telegram"></i>
+                        <div>
+                            <h3>Telegram:</h3>
                             <p><a href="https://t.me/statanly" target="_blank">@@statanly</a></p>
                         </div>
-                        <div class="whatsapp">
-                            <a href="https://wa.me/79218752396" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                            <h4>Whatsapp:</h4>
+                    </div>
+                    <div class="info-item d-flex">
+                        <i class="bi bi-whatsapp"></i>
+                        <div>
+                            <h3>Whatsapp:</h3>
                             <p><a href="https://wa.me/79218752396" target="_blank">https://wa.me/79218752396</a></p>
                         </div>
-                        <div class="whatsapp">
-                            <a href="https://www.rusprofile.ru/#id=1237800072982" target="_blank" title="Проверенная компания">
-                                <img src="https://www.rusprofile.ru/examples/approved_white_bg.svg" width="166" height="92">
-                            </a>
-                        </div>
-            
-
-
                     </div>
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.email">Email Us</h3>
+                            <p>hello@statanly.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
                 </div>
 
-                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
-                    <form action="/message/send" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder=@Localizer["Name"] required>
+                <div class="col-lg-8">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
                             </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder=@Localizer["Email"] required>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" data-i18n-placeholder="form.email" placeholder="Your Email" required="">
                             </div>
-                        </div>
-                        @*<div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder=@Localizer["Subject"] required>
-                        </div>*@
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="text" rows="5" placeholder=@Localizer["Message"] required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">@Localizer["Sending"]</div>
-                            <div class="error-message">@Localizer["Error"]</div>
-                            <div class="sent-message">@Localizer["SendMessage"]</div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="check" id="subject" placeholder="2 + 5 =" required>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit">@Localizer["Send"]</button>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="subject" data-i18n-placeholder="form.subject" placeholder="Subject" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="loading" data-i18n="form.loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message" data-i18n="form.sent">Your message has been sent. Thank you!</div>
+
+                                <button type="submit" data-i18n="form.send">Send Message</button>
+                            </div>
+
                         </div>
                     </form>
-                </div>
+                </div><!-- End Contact Form -->
 
             </div>
 
         </div>
-    </section><!-- End Contact Section -->
 
-</main><!-- End #main -->
+    </section><!-- /Contact Section -->
+</main>
+
+
+
+
+
+<script src="~/assets/js/i18n.js"></script>

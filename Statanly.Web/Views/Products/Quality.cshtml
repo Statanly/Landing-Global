@@ -9,10 +9,10 @@
         <nav class="navmenu" id="navmenu">
             <ul>
                 <li><a data-i18n="nav.home" href="/">Home</a></li>
-                <li><a data-i18n="nav.platform" href="#about">Platform</a></li>
-                <li><a data-i18n="nav.services" href="/service">Services</a></li>
+                <li><a data-i18n="nav.platform" href="/home/platform">Platform</a></li>
+                <li><a data-i18n="nav.services" href="/services">Services</a></li>
                 <li><a class="active" data-i18n="nav.products" href="/products">Products</a></li>
-                <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+                <li><a data-i18n="nav.contacts" href="/home/contacts">Contacts</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -33,7 +33,7 @@
             </ul>
         </div>
 
-        <a class="btn-getstarted" data-i18n="common.getStarted" href="#contact">Get Started</a>
+        <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contacts">Get Started</a>
     </div>
 </header>
 
@@ -646,13 +646,13 @@
 <main class="main">
     <div class="page-title light-background">
         <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">Quality Control</h1>
+            <h1 class="mb-2 mb-lg-0" data-i18n="quality.title">Quality Control</h1>
 
             <nav class="breadcrumbs">
                 <ol>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/home/products">Products</a></li>
-                    <li class="current">Quality Control</li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                    <li class="current" data-i18n="quality.title">Quality Control</li>
                 </ol>
             </nav>
         </div>
@@ -666,45 +666,45 @@
 
                         <section class="quality-hero-section">
                             <div class="quality-hero-content">
-                                <div class="quality-kicker">Product</div>
+                                <div class="quality-kicker" data-i18n="common.product">Product</div>
 
-                                <h1 class="quality-hero-title">
+                                <h1 class="quality-hero-title" data-i18n="quality.title">
                                     Quality Control
                                 </h1>
 
-                                <p class="quality-hero-subtitle">
+                                <p class="quality-hero-subtitle" data-i18n="quality.hero.subtitle">
                                     AI-powered visual inspection for automatic defect detection, product compliance monitoring and assembly correctness control across industrial production lines.
                                 </p>
 
                                 <ul class="quality-hero-bullets">
-                                    <li>Automatic detection of defects, scratches, cracks, dents and surface anomalies</li>
-                                    <li>Monitoring of product compliance with established standards and customer requirements</li>
-                                    <li>Control of assembly correctness, component presence and production completeness</li>
+                                    <li data-i18n="quality.hero.b1">Automatic detection of defects, scratches, cracks, dents and surface anomalies</li>
+                                    <li data-i18n="quality.hero.b2">Monitoring of product compliance with established standards and customer requirements</li>
+                                    <li data-i18n="quality.hero.b3">Control of assembly correctness, component presence and production completeness</li>
                                 </ul>
 
                                 <div class="quality-meta-grid">
                                     <div class="quality-meta-card">
                                         <i class="bi bi-bounding-box"></i>
-                                        <strong>Defects</strong>
-                                        <span>Surface, geometry and visual anomaly detection</span>
+                                        <strong data-i18n="quality.meta.defects.title">Defects</strong>
+                                        <span data-i18n="quality.meta.defects.text">Surface, geometry and visual anomaly detection</span>
                                     </div>
 
                                     <div class="quality-meta-card">
                                         <i class="bi bi-shield-check"></i>
-                                        <strong>Standards</strong>
-                                        <span>Compliance with production and customer requirements</span>
+                                        <strong data-i18n="quality.meta.standards.title">Standards</strong>
+                                        <span data-i18n="quality.meta.standards.text">Compliance with production and customer requirements</span>
                                     </div>
 
                                     <div class="quality-meta-card">
                                         <i class="bi bi-rulers"></i>
-                                        <strong>Metrics</strong>
-                                        <span>Measurement and dimensional inspection</span>
+                                        <strong data-i18n="quality.meta.metrics.title">Metrics</strong>
+                                        <span data-i18n="quality.meta.metrics.text">Measurement and dimensional inspection</span>
                                     </div>
 
                                     <div class="quality-meta-card">
                                         <i class="bi bi-bar-chart-line"></i>
-                                        <strong>BI</strong>
-                                        <span>Defect trends, causes and quality analytics</span>
+                                        <strong data-i18n="quality.meta.bi.title">BI</strong>
+                                        <span data-i18n="quality.meta.bi.text">Defect trends, causes and quality analytics</span>
                                     </div>
                                 </div>
                             </div>
@@ -718,82 +718,82 @@
                             <div class="quality-strip-item">
                                 <i class="bi bi-camera-video"></i>
                                 <div>
-                                    <strong>Cameras & Lighting</strong>
-                                    <span>Industrial cameras, controlled lighting, sensors and inspection stations.</span>
+                                    <strong data-i18n="quality.strip.cameras.title">Cameras & Lighting</strong>
+                                    <span data-i18n="quality.strip.cameras.text">Industrial cameras, controlled lighting, sensors and inspection stations.</span>
                                 </div>
                             </div>
 
                             <div class="quality-strip-item">
                                 <i class="bi bi-cpu"></i>
                                 <div>
-                                    <strong>AI Inspection</strong>
-                                    <span>Detection, segmentation, classification and measurement of defects.</span>
+                                    <strong data-i18n="quality.strip.inspection.title">AI Inspection</strong>
+                                    <span data-i18n="quality.strip.inspection.text">Detection, segmentation, classification and measurement of defects.</span>
                                 </div>
                             </div>
 
                             <div class="quality-strip-item">
                                 <i class="bi bi-diagram-3"></i>
                                 <div>
-                                    <strong>Rules & Logic</strong>
-                                    <span>Acceptance criteria, defect thresholds, product standards and event logic.</span>
+                                    <strong data-i18n="quality.strip.rules.title">Rules & Logic</strong>
+                                    <span data-i18n="quality.strip.rules.text">Acceptance criteria, defect thresholds, product standards and event logic.</span>
                                 </div>
                             </div>
 
                             <div class="quality-strip-item">
                                 <i class="bi bi-plug"></i>
                                 <div>
-                                    <strong>Industrial Integration</strong>
-                                    <span>MES / ERP, PLC / SCADA, databases, BI tools and production reports.</span>
+                                    <strong data-i18n="quality.strip.integration.title">Industrial Integration</strong>
+                                    <span data-i18n="quality.strip.integration.text">MES / ERP, PLC / SCADA, databases, BI tools and production reports.</span>
                                 </div>
                             </div>
                         </div>
 
                         <section class="quality-section">
-                            <div class="quality-section-kicker">Key capabilities</div>
+                            <div class="quality-section-kicker" data-i18n="quality.cap.kicker">Key capabilities</div>
 
-                            <h2 class="quality-section-title">
+                            <h2 class="quality-section-title" data-i18n="quality.cap.title">
                                 AI Modules for Automatic Quality Inspection
                             </h2>
 
-                            <p class="quality-section-lead">
+                            <p class="quality-section-lead" data-i18n="quality.cap.lead">
                                 The product automates visual inspection, reduces manual quality control workload, prevents defective products from leaving the production line and provides objective defect analytics.
                             </p>
 
                             <div class="quality-capabilities-grid">
                                 <div class="quality-capability-card">
                                     <i class="bi bi-fullscreen"></i>
-                                    <h3>Defect Detection</h3>
-                                    <p>Detect scratches, cracks, dents, stains, deformation and surface or structural defects.</p>
+                                    <h3 data-i18n="quality.cap.defect.title">Defect Detection</h3>
+                                    <p data-i18n="quality.cap.defect.text">Detect scratches, cracks, dents, stains, deformation and surface or structural defects.</p>
                                 </div>
 
                                 <div class="quality-capability-card">
                                     <i class="bi bi-shield-check"></i>
-                                    <h3>Standards Compliance</h3>
-                                    <p>Control product compliance with internal standards, specifications and customer requirements.</p>
+                                    <h3 data-i18n="quality.cap.standards.title">Standards Compliance</h3>
+                                    <p data-i18n="quality.cap.standards.text">Control product compliance with internal standards, specifications and customer requirements.</p>
                                 </div>
 
                                 <div class="quality-capability-card">
                                     <i class="bi bi-puzzle"></i>
-                                    <h3>Assembly Verification</h3>
-                                    <p>Verify component presence, position, orientation and correctness of assembly operations.</p>
+                                    <h3 data-i18n="quality.cap.assembly.title">Assembly Verification</h3>
+                                    <p data-i18n="quality.cap.assembly.text">Verify component presence, position, orientation and correctness of assembly operations.</p>
                                 </div>
 
                                 <div class="quality-capability-card">
                                     <i class="bi bi-rulers"></i>
-                                    <h3>Measurements</h3>
-                                    <p>Measure dimensions, geometry, length, diameter, gaps and other critical parameters.</p>
+                                    <h3 data-i18n="quality.cap.measurements.title">Measurements</h3>
+                                    <p data-i18n="quality.cap.measurements.text">Measure dimensions, geometry, length, diameter, gaps and other critical parameters.</p>
                                 </div>
 
                                 <div class="quality-capability-card">
                                     <i class="bi bi-graph-up-arrow"></i>
-                                    <h3>Quality Analytics</h3>
-                                    <p>Analyze trends, defect patterns, rejection causes and process quality over time.</p>
+                                    <h3 data-i18n="quality.cap.analytics.title">Quality Analytics</h3>
+                                    <p data-i18n="quality.cap.analytics.text">Analyze trends, defect patterns, rejection causes and process quality over time.</p>
                                 </div>
 
                                 <div class="quality-capability-card">
                                     <i class="bi bi-bell"></i>
-                                    <h3>Alerts & Reports</h3>
-                                    <p>Real-time alerts, traceability, event archive and detailed reports for fast response.</p>
+                                    <h3 data-i18n="quality.cap.alerts.title">Alerts & Reports</h3>
+                                    <p data-i18n="quality.cap.alerts.text">Real-time alerts, traceability, event archive and detailed reports for fast response.</p>
                                 </div>
                             </div>
                         </section>
@@ -801,9 +801,9 @@
                         <section class="quality-section">
                             <div class="quality-two-column-grid">
                                 <div>
-                                    <div class="quality-section-kicker">Architecture</div>
-                                    <h2 class="quality-panel-title">Platform Architecture</h2>
-                                    <p class="quality-panel-lead">
+                                    <div class="quality-section-kicker" data-i18n="quality.arch.kicker">Architecture</div>
+                                    <h2 class="quality-panel-title" data-i18n="quality.arch.title">Platform Architecture</h2>
+                                    <p class="quality-panel-lead" data-i18n="quality.arch.text">
                                         The system connects cameras, lighting, sensors, encoders, image acquisition modules, AI models, quality rules and integrations into one industrial inspection platform.
                                     </p>
 
@@ -813,9 +813,9 @@
                                 </div>
 
                                 <div>
-                                    <div class="quality-section-kicker">Analytics</div>
-                                    <h2 class="quality-panel-title">Quality Analytics Dashboard</h2>
-                                    <p class="quality-panel-lead">
+                                    <div class="quality-section-kicker" data-i18n="quality.dashboard.kicker">Analytics</div>
+                                    <h2 class="quality-panel-title" data-i18n="quality.dashboard.title">Quality Analytics Dashboard</h2>
+                                    <p class="quality-panel-lead" data-i18n="quality.dashboard.text">
                                         Monitor inspected products, good products, defective products, defect rate, defect trends, defect types and recent alerts in one dashboard.
                                     </p>
 
@@ -827,63 +827,63 @@
                         </section>
 
                         <section class="quality-section">
-                            <div class="quality-section-kicker">Use cases</div>
+                            <div class="quality-section-kicker" data-i18n="quality.use.kicker">Use cases</div>
 
-                            <h2 class="quality-section-title">
+                            <h2 class="quality-section-title" data-i18n="quality.use.title">
                                 Use Cases Across Manufacturing
                             </h2>
 
-                            <p class="quality-section-lead">
+                            <p class="quality-section-lead" data-i18n="quality.use.lead">
                                 Quality Control can be adapted for different production environments where visual inspection, measurement, completeness verification and product traceability are required.
                             </p>
 
                             <div class="quality-usecase-grid">
                                 <div class="quality-usecase-card">
                                     <i class="bi bi-phone"></i>
-                                    <h3>Consumer Electronics</h3>
-                                    <p>Inspect buttons, soldering, assembly, screens, housings and external device defects.</p>
+                                    <h3 data-i18n="quality.use.electronics.title">Consumer Electronics</h3>
+                                    <p data-i18n="quality.use.electronics.text">Inspect buttons, soldering, assembly, screens, housings and external device defects.</p>
                                 </div>
 
                                 <div class="quality-usecase-card">
                                     <i class="bi bi-car-front"></i>
-                                    <h3>Automotive</h3>
-                                    <p>Detect body defects, weld quality issues, paint imperfections and component mismatch.</p>
+                                    <h3 data-i18n="quality.use.auto.title">Automotive</h3>
+                                    <p data-i18n="quality.use.auto.text">Detect body defects, weld quality issues, paint imperfections and component mismatch.</p>
                                 </div>
 
                                 <div class="quality-usecase-card">
                                     <i class="bi bi-capsule"></i>
-                                    <h3>Pharmaceutical</h3>
-                                    <p>Ensure label presence, package integrity, vial inspection and visual packaging quality.</p>
+                                    <h3 data-i18n="quality.use.pharma.title">Pharmaceutical</h3>
+                                    <p data-i18n="quality.use.pharma.text">Ensure label presence, package integrity, vial inspection and visual packaging quality.</p>
                                 </div>
 
                                 <div class="quality-usecase-card">
                                     <i class="bi bi-cup-straw"></i>
-                                    <h3>Food & Beverage</h3>
-                                    <p>Check fill levels, caps, labels, contamination signs and package quality in real time.</p>
+                                    <h3 data-i18n="quality.use.food.title">Food & Beverage</h3>
+                                    <p data-i18n="quality.use.food.text">Check fill levels, caps, labels, contamination signs and package quality in real time.</p>
                                 </div>
 
                                 <div class="quality-usecase-card">
                                     <i class="bi bi-gear-wide-connected"></i>
-                                    <h3>Metals & Manufacturing</h3>
-                                    <p>Inspect castings, forgings, machined parts, surfaces and assembly completeness.</p>
+                                    <h3 data-i18n="quality.use.metals.title">Metals & Manufacturing</h3>
+                                    <p data-i18n="quality.use.metals.text">Inspect castings, forgings, machined parts, surfaces and assembly completeness.</p>
                                 </div>
 
                                 <div class="quality-usecase-card">
                                     <i class="bi bi-box-seam"></i>
-                                    <h3>Packaging</h3>
-                                    <p>Verify print quality, barcode presence, seals, package geometry and product integrity.</p>
+                                    <h3 data-i18n="quality.use.packaging.title">Packaging</h3>
+                                    <p data-i18n="quality.use.packaging.text">Verify print quality, barcode presence, seals, package geometry and product integrity.</p>
                                 </div>
                             </div>
                         </section>
 
                         <section class="quality-section">
-                            <div class="quality-section-kicker">Platform foundation</div>
+                            <div class="quality-section-kicker" data-i18n="quality.platform.kicker">Platform foundation</div>
 
-                            <h2 class="quality-section-title">
+                            <h2 class="quality-section-title" data-i18n="quality.platform.title">
                                 Product Built on STATANLY AI Platform
                             </h2>
 
-                            <p class="quality-section-lead">
+                            <p class="quality-section-lead" data-i18n="quality.platform.lead">
                                 The product combines computer vision models, inspection rules, event logic, BI dashboards, traceability, integration with production systems and model retraining workflows.
                             </p>
 
@@ -891,14 +891,14 @@
                                 <div class="quality-platform-column">
                                     <div class="quality-platform-card">
                                         <i class="bi bi-camera"></i>
-                                        <h3>Image Acquisition</h3>
-                                        <p>Connect cameras, lighting, sensors, encoders and inspection stations for stable image capture.</p>
+                                        <h3 data-i18n="quality.platform.acquire.title">Image Acquisition</h3>
+                                        <p data-i18n="quality.platform.acquire.text">Connect cameras, lighting, sensors, encoders and inspection stations for stable image capture.</p>
                                     </div>
 
                                     <div class="quality-platform-card">
                                         <i class="bi bi-cpu"></i>
-                                        <h3>AI Models & Inference</h3>
-                                        <p>Detect defects, classify defect types, segment regions and measure critical parameters.</p>
+                                        <h3 data-i18n="quality.platform.models.title">AI Models & Inference</h3>
+                                        <p data-i18n="quality.platform.models.text">Detect defects, classify defect types, segment regions and measure critical parameters.</p>
                                     </div>
                                 </div>
 
@@ -906,8 +906,8 @@
                                     <div class="quality-platform-ring">
                                         <div>
                                             <i class="bi bi-cpu"></i>
-                                            <h3>AI PLATFORM</h3>
-                                            <p>Inspection<br>Quality Rules<br>Traceability</p>
+                                            <h3 data-i18n="quality.platform.core.title">AI PLATFORM</h3>
+                                            <p data-i18n="quality.platform.core.text">Inspection<br>Quality Rules<br>Traceability</p>
                                         </div>
                                     </div>
                                 </div>
@@ -915,14 +915,14 @@
                                 <div class="quality-platform-column">
                                     <div class="quality-platform-card">
                                         <i class="bi bi-diagram-3"></i>
-                                        <h3>Quality Rules & Logic</h3>
-                                        <p>Configure acceptance criteria, defect classes, thresholds, reporting logic and alerts.</p>
+                                        <h3 data-i18n="quality.platform.rules.title">Quality Rules & Logic</h3>
+                                        <p data-i18n="quality.platform.rules.text">Configure acceptance criteria, defect classes, thresholds, reporting logic and alerts.</p>
                                     </div>
 
                                     <div class="quality-platform-card">
                                         <i class="bi bi-plug"></i>
-                                        <h3>Industrial Integrations</h3>
-                                        <p>Integrate with PLC / SCADA, MES / ERP, databases, BI tools, storage and API.</p>
+                                        <h3 data-i18n="quality.platform.integrations.title">Industrial Integrations</h3>
+                                        <p data-i18n="quality.platform.integrations.text">Integrate with PLC / SCADA, MES / ERP, databases, BI tools, storage and API.</p>
                                     </div>
                                 </div>
                             </div>
@@ -932,7 +932,7 @@
                             <div class="quality-impact-line"></div>
                             <div class="quality-impact-content">
                                 <i class="bi bi-shield-check"></i>
-                                <p>
+                                <p data-i18n="quality.impact.text">
                                     Business impact: fewer defects, lower manual inspection workload, better traceability, faster response to quality issues and more stable production standards across all lines.
                                 </p>
                             </div>
@@ -941,14 +941,14 @@
                         <div class="meta-bottom">
                             <i class="bi bi-folder"></i>
                             <ul class="cats">
-                                <li><a href="/home/products">Products</a></li>
+                                <li><a href="/products">Products</a></li>
                             </ul>
 
                             <i class="bi bi-tags"></i>
                             <ul class="tags">
-                                <li><a href="#">Quality Control</a></li>
-                                <li><a href="#">Computer Vision</a></li>
-                                <li><a href="#">Industrial AI</a></li>
+                                <li><a href="#" data-i18n="quality.tags.quality">Quality Control</a></li>
+                                <li><a href="#" data-i18n="quality.tags.cv">Computer Vision</a></li>
+                                <li><a href="#" data-i18n="quality.tags.ai">Industrial AI</a></li>
                             </ul>
                         </div>
 

@@ -1,15 +1,43 @@
 ﻿
+<style>
+    .about-platform-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 24px 28px;
+        border: 1px solid #e7edf5;
+        border-left: 4px solid #ef233c;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(16, 54, 92, 0.05);
+    }
+
+        .about-platform-note i {
+            font-size: 24px;
+            line-height: 1;
+            color: #ef233c;
+            flex: 0 0 auto;
+            margin-top: 2px;
+        }
+
+        .about-platform-note strong {
+            font-size: 18px;
+            line-height: 1.55;
+            font-weight: 700;
+            color: #0b1f33;
+        }
+</style>
 <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
         <a href="/" class="logo d-flex align-items-center me-auto">
-            <img src="~/Logo3.png" alt="">         
+            <img src="~/Logo3.png" alt="">
         </a>
 
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
-                <li><a href="/#about" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
                 <li><a href="/services" data-i18n="nav.services">Services</a></li>
                 <li><a href="/products" data-i18n="nav.products">Products</a></li>
                 <li><a href="/#contact" data-i18n="nav.contacts">Contacts</a></li>
@@ -150,23 +178,28 @@
                         </li>
 
                     </ul>
-
+                    <div class="about-platform-note mt-4">
+                        <i class="bi bi-stars"></i>
+                        <strong data-i18n="about.platform.note">
+                            Users do not need AI expertise: STATANLY turns a natural-language request into data preparation, model creation, scenario logic and deployment.
+                        </strong>
+                    </div>
                 </div>
 
                 <div class="col-lg-6">
                     <p>
                         <span data-i18n="about.platform.p1">
-                            The company’s core product is a universal AI Event Analytics Platform based on Computer Vision, Speech Analytics, Large Language Models (LLM), VLM and Generative AI, designed to build an ecosystem of intelligent models and scenarios for any industry.
+                            The company’s core product is a multimodal AI Event Analytics Platform based on Computer Vision, Speech Analytics, Large Language Models (LLM), VLM and Generative AI, designed to build an ecosystem of intelligent models and scenarios for the needs of any industry.
                         </span>
                         <br><br>
 
                         <span data-i18n="about.platform.p2">
-                            The platform combines video streams, audio data, events and business processes into a unified AI system for management, monitoring and analytics. Its architecture makes it possible to use ready-made AI modules and create custom scenarios, models and event analytics rules without complex development or deep machine learning expertise.
+                            The main idea of the platform is to simplify the creation of new AI scenarios: a user describes a task in natural language, and the system helps turn it into a working scenario for monitoring, detection or event analysis. This may include safety violations, deviations in production processes, personnel actions, product defects, queues, equipment downtime or other non-standard events.
                         </span>
                         <br><br>
 
                         <span data-i18n="about.platform.p3">
-                            With low-code tools, VLM and Generative AI, even non-technical users can create new monitoring, automation and analytics scenarios using natural language, adapting the platform to a specific enterprise, facility or production process.
+                            The platform combines video streams, audio data, events and business processes into a unified AI environment. It allows enterprises to use ready-made modules, configure event analytics rules, connect new data sources, fine-tune models and adapt scenarios to a specific facility, enterprise or production process.
                         </span>
                         <br><br>
 
@@ -174,11 +207,9 @@
                             The platform powers AI solutions for industrial safety, violation control, workforce efficiency analytics, production analytics, quality control, retail, HoReCa, transport infrastructure and operational process automation.
                         </span>
                     </p>
-                    <a href="/home/about" class="read-more"><span data-i18n="common.more">More</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="/home/platform" class="read-more"><span data-i18n="common.more">More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
-
             </div>
-
         </div>
 
     </section><!-- /About Section -->
@@ -307,7 +338,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/service/hospitality" data-i18n="services.horeca.title">Horeca</a>
+                            <a href="/services/hospitality" data-i18n="services.horeca.title">Horeca</a>
                         </h2>
 
                         <div class="content">
@@ -316,7 +347,7 @@
                             </p>
 
                             <div class="read-more">
-                                <a href="/service/hospitality"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/services/hospitality"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -332,7 +363,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/service/retail" data-i18n="services.retail.title">Retail</a>
+                            <a href="/services/retail" data-i18n="services.retail.title">Retail</a>
                         </h2>
 
                         <div class="content">
@@ -340,7 +371,7 @@
                                 <span data-i18n="services.retail.text">Control of processes inside retail premises, visitor behavior analytics and queue counting</span>
                             </p>
                             <div class="read-more">
-                                <a href="/service/retail"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/services/retail"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -356,14 +387,14 @@
                             <img src="~/assets/img/Services/proizvodstvo.jpg" alt="" class="img-fluid">
                         </div>
                         <h2 class="title">
-                            <a href="/service/industry" data-i18n="services.industry.title">Industry and manufacturing</a>
+                            <a href="/services/industry" data-i18n="services.industry.title">Industry and manufacturing</a>
                         </h2>
                         <div class="content">
                             <p>
                                 <span data-i18n="services.industry.text">Security monitoring, access control, theft risk reduction and employee productivity improvement</span>
                             </p>
                             <div class="read-more">
-                                <a href="/service/industry"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/services/industry"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -381,7 +412,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/service/warehouses" data-i18n="services.warehouse.title">Warehouses and pickup points</a>
+                            <a href="/services/warehouses" data-i18n="services.warehouse.title">Warehouses and pickup points</a>
                         </h2>
 
                         <div class="content">
@@ -390,7 +421,7 @@
                             </p>
 
                             <div class="read-more">
-                                <a href="/service/warehouses"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/services/warehouses"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -406,7 +437,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/service/beauty" data-i18n="services.beauty.title">Beauty salons</a>
+                            <a href="/services/beauty" data-i18n="services.beauty.title">Beauty salons</a>
                         </h2>
 
                         <div class="content">
@@ -414,7 +445,7 @@
                                 <span data-i18n="services.beauty.text">Monitoring service processes and safety procedures, preventing theft and fires, improving service quality</span>
                             </p>
                             <div class="read-more">
-                                <a href="/service/beauty"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/services/beauty"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -431,7 +462,7 @@
                         </div>
 
                         <h2 class="title">
-                            <a href="/service/malls" data-i18n="services.malls.title">Shopping malls and business centers</a>
+                            <a href="/services/malls" data-i18n="services.malls.title">Shopping malls and business centers</a>
                         </h2>
 
                         <div class="content">
@@ -439,7 +470,7 @@
                                 <span data-i18n="services.malls.text">People counting, foreign object detection, smoke and fire detection, fight, conflict and crowd detection</span>
                             </p>
                             <div class="read-more">
-                                <a href="/service/malls"><span data-i18n="common.readMore">Read More</span></a>
+                                <a href="/services/malls"><span data-i18n="common.readMore">Read More</span></a>
                             </div>
                         </div>
 
@@ -463,7 +494,8 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
-                </iframe>            </div><!-- End Google Maps -->
+                </iframe>
+            </div><!-- End Google Maps -->
 
             <div class="row gy-4">
 

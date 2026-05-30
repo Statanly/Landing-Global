@@ -1,0 +1,1047 @@
+﻿@{ ViewData["Title"] = "STATANLY Multimodal Event Analytics Platform"; }
+
+<header class="header d-flex align-items-center sticky-top" id="header">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a class="logo d-flex align-items-center me-auto" href="/">
+            <img alt="" src="~/Logo3.png" />
+        </a>
+
+        <nav class="navmenu" id="navmenu">
+            <ul>
+                <li><a data-i18n="nav.home" href="/">Home</a></li>
+                <li><a class="active" data-i18n="nav.platform" href="/home/platform">Platform</a></li>
+                <li><a data-i18n="nav.services" href="/home/services">Services</a></li>
+                <li><a data-i18n="nav.products" href="/home/products">Products</a></li>
+                <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="language-flags dropdown">
+            <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item lang-option" data-lang="en" type="button"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="es" type="button"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="pt" type="button"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="it" type="button"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="fr" type="button"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="de" type="button"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" data-lang="ru" type="button"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+
+        <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contacts">Get Started</a>
+    </div>
+</header>
+
+<style>
+    /* =========================================================
+       STATANLY PLATFORM PAGE
+       Central platform page. Strict site/article template:
+       white article card, navy typography, blue accents, red icons.
+    ========================================================= */
+
+    .platform-page {
+        background: #ffffff;
+        color: #172b4d;
+    }
+
+        .platform-page * {
+            box-sizing: border-box;
+        }
+
+    /* ===== HERO ===== */
+
+    .platform-hero-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 47%;
+        gap: 34px;
+        align-items: stretch;
+        margin: 0 0 32px;
+        padding: 0;
+        overflow: hidden;
+        background: #ffffff;
+    }
+
+    .platform-hero-content {
+        position: relative;
+        z-index: 3;
+        padding-right: 42px;
+        padding-top: 8px;
+    }
+
+    .platform-kicker,
+    .platform-section-kicker {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(21, 152, 255, .08);
+        color: #1598ff;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        margin: 0 0 12px;
+    }
+
+    .platform-hero-title {
+        color: #0b1f33;
+        font-size: 56px;
+        line-height: 1.03;
+        font-weight: 900;
+        letter-spacing: -.045em;
+        margin: 0 0 18px;
+        max-width: 900px;
+    }
+
+    .platform-hero-subtitle {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.65;
+        max-width: 820px;
+        margin: 0 0 26px;
+    }
+
+    .platform-hero-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 28px;
+        display: grid;
+        gap: 13px;
+        max-width: 820px;
+    }
+
+        .platform-hero-bullets li {
+            position: relative;
+            padding-left: 32px;
+            color: #334155;
+            font-size: 17px;
+            line-height: 1.55;
+            font-weight: 650;
+        }
+
+            .platform-hero-bullets li::before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: #ef233c;
+                font-weight: 900;
+            }
+
+    .platform-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 900px;
+        margin: 0 0 26px;
+    }
+
+    .platform-meta-card {
+        min-height: 112px;
+        padding: 18px 16px;
+        background: #ffffff;
+        border: 1px solid #e8edf5;
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(16, 54, 92, .045);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .platform-meta-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 34px rgba(16, 54, 92, .07);
+        }
+
+        .platform-meta-card i {
+            display: block;
+            color: #ef233c;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .platform-meta-card strong {
+            display: block;
+            color: #0b1f33;
+            font-size: 21px;
+            line-height: 1.15;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .platform-meta-card span {
+            display: block;
+            color: #4e5d78;
+            font-size: 13px;
+            line-height: 1.45;
+            font-weight: 650;
+        }
+
+    .platform-hero-visual {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: clamp(620px, 70vw, 860px);
+        pointer-events: none;
+        overflow: hidden;
+        margin-top: -14px;
+    }
+
+        .platform-hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            background: linear-gradient( 90deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.58) 14%, rgba(255,255,255,0.28) 28%, rgba(255,255,255,0.00) 45% );
+        }
+
+        /*.platform-hero-visual img {*/
+        /*width: calc(100% + 30px);*/
+        /*max-width: none;*/
+        /*margin-left: -50px;*/
+        /*height: calc(100% - 30px);*/
+        /*object-fit: cover;
+            object-position: center;
+            display: block;
+            filter: saturate(1.02) contrast(1.02);
+        }*/
+        .platform-hero-visual img {
+            width: 100%;
+            height: calc(100% - 7px);
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            filter: saturate(1.02) contrast(1.02);
+        }
+
+    /* ===== STRIP ===== */
+
+    .platform-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        margin: 22px 0 40px;
+        border: 1px solid #eef2f7;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(16,54,92,.045), 0 2px 10px rgba(16,54,92,.025);
+    }
+
+    .platform-strip-item {
+        padding: 24px 22px;
+        border-right: 1px solid #eef2f7;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+        .platform-strip-item:last-child {
+            border-right: 0;
+        }
+
+        .platform-strip-item i {
+            font-size: 30px;
+            color: #ef233c;
+            flex-shrink: 0;
+        }
+
+        .platform-strip-item strong {
+            display: block;
+            color: #0b1f33;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 850;
+            margin-bottom: 6px;
+        }
+
+        .platform-strip-item span {
+            display: block;
+            color: #4e5d78;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+    /* ===== COMMON SECTIONS ===== */
+
+    .platform-section {
+        margin: 44px 0;
+    }
+
+    .platform-section-title {
+        color: #0b1f33;
+        font-size: 42px;
+        line-height: 1.12;
+        font-weight: 900;
+        letter-spacing: -.03em;
+        margin: 0 0 16px;
+    }
+
+    .platform-section-lead {
+        color: #4e5d78;
+        font-size: 18px;
+        line-height: 1.75;
+        max-width: 980px;
+        margin-bottom: 28px;
+    }
+
+    /* ===== PIPELINE ===== */
+
+    .platform-pipeline-image,
+    .platform-architecture-image {
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 16px 42px rgba(16,54,92,.08), 0 4px 12px rgba(16,54,92,.04);
+    }
+
+        .platform-pipeline-image img,
+        .platform-architecture-image img {
+            width: 100%;
+            display: block;
+        }
+
+    .platform-pipeline-note {
+        margin-top: 24px;
+        padding: 28px 30px;
+        background: #ffffff;
+        border: 1px solid #eef2f7;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.05), 0 2px 10px rgba(16,54,92,.03);
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .platform-pipeline-line {
+        width: 4px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #1598ff 0%, #ef233c 100%);
+        flex-shrink: 0;
+    }
+
+    .platform-pipeline-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+        .platform-pipeline-content i {
+            font-size: 30px;
+            color: #1598ff;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .platform-pipeline-content p {
+            margin: 0;
+            color: #26384f;
+            font-size: 24px;
+            line-height: 1.55;
+            font-weight: 700;
+        }
+
+    /* ===== COMPONENTS ===== */
+
+    .platform-components-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .platform-component-card {
+        position: relative;
+        min-height: 230px;
+        padding: 28px;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.04);
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .platform-component-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(16,54,92,.08);
+        }
+
+        .platform-component-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background: #ef233c;
+        }
+
+        .platform-component-card i {
+            color: #ef233c;
+            font-size: 34px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .platform-component-card h3 {
+            color: #0b1f33;
+            font-size: 23px;
+            line-height: 1.22;
+            font-weight: 850;
+            margin: 0 0 13px;
+        }
+
+        .platform-component-card p {
+            color: #4e5d78;
+            font-size: 15.5px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+    /* ===== AI FACTORY ===== */
+
+    .platform-factory-grid {
+        display: grid;
+        grid-template-columns: 360px minmax(0, 1fr);
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .platform-factory-main {
+        background: #071b3a;
+        color: #ffffff;
+        border-radius: 22px;
+        padding: 32px;
+        box-shadow: 0 18px 46px rgba(7,27,58,.18);
+    }
+
+        .platform-factory-main i {
+            color: #1598ff;
+            font-size: 42px;
+            display: block;
+            margin-bottom: 18px;
+        }
+
+        .platform-factory-main h3 {
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 900;
+            margin: 0 0 14px;
+        }
+
+        .platform-factory-main p {
+            color: rgba(255,255,255,.78);
+            font-size: 17px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+    .platform-factory-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .platform-factory-step {
+        padding: 22px;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.04);
+    }
+
+        .platform-factory-step span {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #ffffff;
+            background: #ef233c;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .platform-factory-step h4 {
+            color: #0b1f33;
+            font-size: 19px;
+            line-height: 1.25;
+            font-weight: 850;
+            margin: 0 0 9px;
+        }
+
+        .platform-factory-step p {
+            color: #4e5d78;
+            font-size: 14.5px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+    /* ===== USE CASES ===== */
+
+    .platform-usecase-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+    }
+
+    .platform-usecase-card {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 18px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.04);
+        overflow: hidden;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+        .platform-usecase-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(16,54,92,.08);
+        }
+
+        .platform-usecase-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background: #ef233c;
+        }
+
+        .platform-usecase-card i {
+            color: #ef233c;
+            font-size: 30px;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .platform-usecase-card h3 {
+            color: #0b1f33;
+            font-size: 17px;
+            line-height: 1.25;
+            font-weight: 850;
+            margin: 0 0 10px;
+        }
+
+        .platform-usecase-card p {
+            color: #4e5d78;
+            font-size: 13.5px;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+    /* ===== DEPLOYMENT ===== */
+
+    .platform-deployment-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+    .platform-deployment-card {
+        background: #ffffff;
+        border: 1px solid #e7edf5;
+        border-radius: 20px;
+        padding: 26px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.04);
+    }
+
+        .platform-deployment-card i {
+            color: #ef233c;
+            font-size: 34px;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .platform-deployment-card h3 {
+            color: #0b1f33;
+            font-size: 23px;
+            font-weight: 850;
+            margin: 0 0 12px;
+        }
+
+        .platform-deployment-card p {
+            color: #4e5d78;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+    /* ===== IMPACT ===== */
+
+    .platform-impact-box {
+        margin: 40px 0 0;
+        padding: 28px 30px;
+        background: #ffffff;
+        border: 1px solid #eef2f7;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(16,54,92,.05), 0 2px 10px rgba(16,54,92,.03);
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .platform-impact-line {
+        width: 4px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #1598ff 0%, #ef233c 100%);
+        flex-shrink: 0;
+    }
+
+    .platform-impact-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+        .platform-impact-content i {
+            font-size: 30px;
+            color: #1598ff;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .platform-impact-content p {
+            margin: 0;
+            color: #26384f;
+            font-size: 24px;
+            line-height: 1.55;
+            font-weight: 700;
+        }
+
+    .platform-page .meta-bottom {
+        margin-top: 38px;
+        padding-top: 22px;
+        border-top: 1px solid #eef2f7;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @@media (max-width: 1200px) {
+        .platform-hero-section,
+        .platform-factory-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .platform-hero-content {
+            padding-right: 0;
+        }
+
+        .platform-hero-visual {
+            height: 520px;
+            margin-top: 18px;
+        }
+
+        .platform-meta-grid,
+        .platform-strip,
+        .platform-deployment-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .platform-components-grid,
+        .platform-factory-steps {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .platform-usecase-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .platform-strip-item:nth-child(2) {
+            border-right: 0;
+        }
+
+        .platform-strip-item:nth-child(1),
+        .platform-strip-item:nth-child(2) {
+            border-bottom: 1px solid #eef2f7;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .platform-hero-title {
+            font-size: 38px;
+        }
+
+        .platform-section-title {
+            font-size: 34px;
+        }
+
+        .platform-meta-grid,
+        .platform-strip,
+        .platform-components-grid,
+        .platform-factory-steps,
+        .platform-usecase-grid,
+        .platform-deployment-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .platform-strip-item {
+            border-right: 0 !important;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+            .platform-strip-item:last-child {
+                border-bottom: 0;
+            }
+
+        .platform-hero-visual {
+            height: 420px;
+        }
+
+        .platform-pipeline-content p,
+        .platform-impact-content p {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<main class="main">
+    <div class="page-title light-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0" data-i18n="platform.pageTitle">STATANLY Multimodal Event Analytics Platform</h1>
+
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li class="current" data-i18n="nav.platform">Platform</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="blog-details section" id="blog-details">
+            <div class="container">
+                <article class="article">
+                    <div class="platform-page">
+
+                        <section class="platform-hero-section">
+                            <div class="platform-hero-content">
+                                <div class="platform-kicker" data-i18n="platform.hero.kicker">AI Operating System</div>
+
+                                <h1 class="platform-hero-title" data-i18n="platform.hero.title">Multimodal Event Analytics Platform</h1>
+
+                                <p class="platform-hero-subtitle" data-i18n="platform.hero.subtitle">A unified enterprise AI platform for creating, training, deploying and managing event analytics scenarios across video, audio, sensors, VMS and enterprise systems.</p>
+
+                                <ul class="platform-hero-bullets">
+                                    <li data-i18n="platform.hero.bullet1">Turns isolated CV modules into a single intelligent event analytics layer</li>
+                                    <li data-i18n="platform.hero.bullet2">Combines Computer Vision, Speech Analytics, LLM, VLM, Generative AI and low-code scenario orchestration</li>
+                                    <li data-i18n="platform.hero.bullet3">Enables users to create new AI scenarios from natural-language task descriptions</li>
+                                </ul>
+
+                                <div class="platform-meta-grid">
+                                    <div class="platform-meta-card">
+                                        <i class="bi bi-camera-video"></i>
+                                        <strong data-i18n="platform.hero.card.videoAudio.title">Video + Audio</strong>
+                                        <span data-i18n="platform.hero.card.videoAudio.text">Multimodal analytics for events, violations and operations</span>
+                                    </div>
+
+                                    <div class="platform-meta-card">
+                                        <i class="bi bi-stars"></i>
+                                        <strong data-i18n="platform.hero.card.genaiVlm.title">GenAI + VLM</strong>
+                                        <span data-i18n="platform.hero.card.genaiVlm.text">Natural-language scenario creation and dataset preparation</span>
+                                    </div>
+
+                                    <div class="platform-meta-card">
+                                        <i class="bi bi-diagram-3"></i>
+                                        <strong data-i18n="platform.common.scenarioEngine">Scenario Engine</strong>
+                                        <span data-i18n="platform.hero.card.scenario.text">Low-code rules, workflows and operational automation</span>
+                                    </div>
+
+                                    <div class="platform-meta-card">
+                                        <i class="bi bi-cloud-check"></i>
+                                        <strong data-i18n="platform.hero.card.cloudOnPrem.title">Cloud / OnPrem</strong>
+                                        <span data-i18n="platform.hero.card.cloudOnPrem.text">Hybrid architecture for enterprise deployment</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="platform-hero-visual">
+                                <img src="~/assets/img/platform/platform-hero-core.png" alt="STATANLY multimodal event analytics platform core">
+                            </div>
+                        </section>
+
+                        <div class="platform-strip">
+                            <div class="platform-strip-item">
+                                <i class="bi bi-boxes"></i>
+                                <div>
+                                    <strong data-i18n="platform.strip.models.title">AI Models Library</strong>
+                                    <span data-i18n="platform.strip.models.text">Ready-made modules for safety, behavior, operations, quality and industry scenarios.</span>
+                                </div>
+                            </div>
+
+                            <div class="platform-strip-item">
+                                <i class="bi bi-magic"></i>
+                                <div>
+                                    <strong data-i18n="platform.common.aiFactory">AI Factory</strong>
+                                    <span data-i18n="platform.strip.factory.text">Data collection, annotation, synthetic datasets, model training and registry.</span>
+                                </div>
+                            </div>
+
+                            <div class="platform-strip-item">
+                                <i class="bi bi-kanban"></i>
+                                <div>
+                                    <strong data-i18n="platform.common.scenarioEngine">Scenario Engine</strong>
+                                    <span data-i18n="platform.strip.scenario.text">Create complex monitoring and automation logic from reusable AI modules.</span>
+                                </div>
+                            </div>
+
+                            <div class="platform-strip-item">
+                                <i class="bi bi-plug"></i>
+                                <div>
+                                    <strong data-i18n="platform.strip.integration.title">VMS / Enterprise Integration</strong>
+                                    <span data-i18n="platform.strip.integration.text">Connect cameras, VMS, SCADA, ERP, access control, BI and APIs.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="platform-section">
+                            <div class="platform-section-kicker" data-i18n="platform.pipeline.kicker">How it works</div>
+
+                            <h2 class="platform-section-title" data-i18n="platform.pipeline.title">From Natural Language Task to Deployed AI Scenario</h2>
+
+                            <p class="platform-section-lead" data-i18n="platform.pipeline.lead">The core idea of the platform is simple: the user describes the monitoring task in natural language — the platform automatically builds the AI pipeline, prepares data, creates the scenario and deploys analytics to cameras and infrastructure.</p>
+
+                            <div class="platform-pipeline-image">
+                                <img src="~/assets/img/platform/platform-ai-pipeline.png" alt="Natural language AI pipeline creation">
+                            </div>
+
+                            <div class="platform-pipeline-note">
+                                <div class="platform-pipeline-line"></div>
+
+                                <div class="platform-pipeline-content">
+                                    <i class="bi bi-stars"></i>
+                                    <p data-i18n="platform.pipeline.note">The user does not need AI expertise: STATANLY turns a business request like “detect workers without helmets” or “find smoke and fire” into data preparation, model creation, scenario logic and deployment.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="platform-section">
+                            <div class="platform-section-kicker" data-i18n="platform.components.kicker">Platform components</div>
+
+                            <h2 class="platform-section-title" data-i18n="platform.components.title">Core Components of the Platform</h2>
+
+                            <p class="platform-section-lead" data-i18n="platform.components.lead">STATANLY is not just a set of detectors. It is a full platform layer for creating and operating AI event analytics across enterprise infrastructure.</p>
+
+                            <div class="platform-components-grid">
+                                <div class="platform-component-card">
+                                    <i class="bi bi-eye"></i>
+                                    <h3 data-i18n="platform.components.multimodal.title">Multimodal Event Analytics</h3>
+                                    <p data-i18n="platform.components.multimodal.text">Video streams, audio, sensors and metadata are processed together to detect events, violations, operational risks and process deviations.</p>
+                                </div>
+
+                                <div class="platform-component-card">
+                                    <i class="bi bi-diagram-3"></i>
+                                    <h3 data-i18n="platform.common.scenarioEngine">Scenario Engine</h3>
+                                    <p data-i18n="platform.components.scenario.text">Low-code orchestration layer for zones, triggers, rules, schedules, escalation logic, notifications and multi-event scenarios.</p>
+                                </div>
+
+                                <div class="platform-component-card">
+                                    <i class="bi bi-magic"></i>
+                                    <h3 data-i18n="platform.common.aiFactory">AI Factory</h3>
+                                    <p data-i18n="platform.components.factory.text">Tools for collecting data, annotating datasets, generating synthetic examples, training models and managing model versions.</p>
+                                </div>
+
+                                <div class="platform-component-card">
+                                    <i class="bi bi-chat-square-text"></i>
+                                    <h3 data-i18n="platform.components.llmVlm.title">LLM / VLM Layer</h3>
+                                    <p data-i18n="platform.components.llmVlm.text">Natural-language task interface and visual-language understanding for converting business intent into AI scenarios and datasets.</p>
+                                </div>
+
+                                <div class="platform-component-card">
+                                    <i class="bi bi-cloud-check"></i>
+                                    <h3 data-i18n="platform.common.cloudHub">Cloud Hub</h3>
+                                    <p data-i18n="platform.components.cloudHub.text">Centralized management of models, licenses, scenarios, analytics, reporting, multi-site operations and deployment workflows.</p>
+                                </div>
+
+                                <div class="platform-component-card">
+                                    <i class="bi bi-server"></i>
+                                    <h3 data-i18n="platform.components.onPrem.title">On-Prem Runtime</h3>
+                                    <p data-i18n="platform.components.onPrem.text">Local AI processing inside the enterprise perimeter with support for GPUs, VMS integration, edge nodes and secure infrastructure.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="platform-section">
+                            <div class="platform-section-kicker" data-i18n="platform.architecture.kicker">Architecture</div>
+
+                            <h2 class="platform-section-title" data-i18n="platform.architecture.title">Unified Architecture for Inputs, AI Processing and Outputs</h2>
+
+                            <p class="platform-section-lead" data-i18n="platform.architecture.lead">The platform connects existing cameras, microphones, sensors, VMS and enterprise systems into one AI operating layer that generates events, alerts, reports, dashboards and integrations.</p>
+
+                            <div class="platform-architecture-image">
+                                <img src="~/assets/img/platform/platform-architecture.png" alt="STATANLY platform architecture inputs AI processing outputs">
+                            </div>
+                        </section>
+
+                        <section class="platform-section">
+                            <div class="platform-section-kicker" data-i18n="platform.common.aiFactory">AI Factory</div>
+
+                            <h2 class="platform-section-title" data-i18n="platform.factory.title">Continuous Creation and Improvement of AI Models</h2>
+
+                            <p class="platform-section-lead" data-i18n="platform.factory.lead">AI Factory is the internal loop that allows the platform to create new models, improve existing ones and adapt analytics to specific customer environments, objects and camera angles.</p>
+
+                            <div class="platform-factory-grid">
+                                <div class="platform-factory-main">
+                                    <i class="bi bi-magic"></i>
+                                    <h3 data-i18n="platform.common.aiFactory">AI Factory</h3>
+                                    <p data-i18n="platform.factory.main.text">The platform combines real data, synthetic generation, VLM-assisted labeling, model training and feedback loops into a repeatable process for building new AI scenarios faster.</p>
+                                </div>
+
+                                <div class="platform-factory-steps">
+                                    <div class="platform-factory-step">
+                                        <span>1</span>
+                                        <h4 data-i18n="platform.factory.step1.title">Data Collection</h4>
+                                        <p data-i18n="platform.factory.step1.text">Collect examples from cameras, archived events, customer data and controlled test environments.</p>
+                                    </div>
+
+                                    <div class="platform-factory-step">
+                                        <span>2</span>
+                                        <h4 data-i18n="platform.factory.step2.title">Synthetic Data</h4>
+                                        <p data-i18n="platform.factory.step2.text">Generate rare or hard-to-capture cases to improve robustness and reduce model launch time.</p>
+                                    </div>
+
+                                    <div class="platform-factory-step">
+                                        <span>3</span>
+                                        <h4 data-i18n="platform.factory.step3.title">VLM Labeling</h4>
+                                        <p data-i18n="platform.factory.step3.text">Use vision-language models for object understanding, pre-labeling and dataset validation.</p>
+                                    </div>
+
+                                    <div class="platform-factory-step">
+                                        <span>4</span>
+                                        <h4 data-i18n="platform.factory.step4.title">Training</h4>
+                                        <p data-i18n="platform.factory.step4.text">Train and fine-tune AI models for specific events, sites, industries and camera conditions.</p>
+                                    </div>
+
+                                    <div class="platform-factory-step">
+                                        <span>5</span>
+                                        <h4 data-i18n="platform.factory.step5.title">Model Registry</h4>
+                                        <p data-i18n="platform.factory.step5.text">Store model versions, metrics, scenarios and deployment configurations in one controlled system.</p>
+                                    </div>
+
+                                    <div class="platform-factory-step">
+                                        <span>6</span>
+                                        <h4 data-i18n="platform.factory.step6.title">Feedback Loop</h4>
+                                        <p data-i18n="platform.factory.step6.text">Use real incidents, false positives and operator validation to improve models continuously.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="platform-section">
+                            <div class="platform-section-kicker" data-i18n="platform.usecases.kicker">Example scenarios</div>
+
+                            <h2 class="platform-section-title" data-i18n="platform.usecases.title">Typical AI Scenarios Created on the Platform</h2>
+
+                            <p class="platform-section-lead" data-i18n="platform.usecases.lead">The same platform foundation can be used to create simple and complex event analytics scenarios across industrial safety, operations, logistics, retail, HoReCa and infrastructure.</p>
+
+                            <div class="platform-usecase-grid">
+                                <div class="platform-usecase-card">
+                                    <i class="bi bi-cone-striped"></i>
+                                    <h3 data-i18n="platform.usecases.ppe.title">PPE Detection</h3>
+                                    <p data-i18n="platform.usecases.ppe.text">Detect missing helmets, vests, masks, gloves, glasses and other required protective equipment.</p>
+                                </div>
+
+                                <div class="platform-usecase-card">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                    <h3 data-i18n="platform.usecases.violations.title">Violation Detection</h3>
+                                    <p data-i18n="platform.usecases.violations.text">Detect unsafe behavior, restricted area access, perimeter breaches and policy violations.</p>
+                                </div>
+
+                                <div class="platform-usecase-card">
+                                    <i class="bi bi-fire"></i>
+                                    <h3 data-i18n="platform.usecases.fire.title">Fire & Smoke Detection</h3>
+                                    <p data-i18n="platform.usecases.fire.text">Recognize smoke, fire and emergency events in production, warehouses and public spaces.</p>
+                                </div>
+
+                                <div class="platform-usecase-card">
+                                    <i class="bi bi-phone"></i>
+                                    <h3 data-i18n="platform.usecases.phone.title">Phone Usage</h3>
+                                    <p data-i18n="platform.usecases.phone.text">Control phone usage and distractions in prohibited industrial or operational zones.</p>
+                                </div>
+
+                                <div class="platform-usecase-card">
+                                    <i class="bi bi-people"></i>
+                                    <h3 data-i18n="platform.usecases.people.title">People Counting</h3>
+                                    <p data-i18n="platform.usecases.people.text">Analyze occupancy, customer flow, queues, crowd density and workload across locations.</p>
+                                </div>
+
+                                <div class="platform-usecase-card">
+                                    <i class="bi bi-gear-wide-connected"></i>
+                                    <h3 data-i18n="platform.usecases.process.title">Process Monitoring</h3>
+                                    <p data-i18n="platform.usecases.process.text">Monitor equipment, production processes, operational bottlenecks and abnormal events.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="platform-section">
+                            <div class="platform-section-kicker" data-i18n="platform.deployment.kicker">Deployment</div>
+
+                            <h2 class="platform-section-title" data-i18n="platform.deployment.title">Deployment for Enterprise Infrastructure</h2>
+
+                            <p class="platform-section-lead" data-i18n="platform.deployment.lead">STATANLY supports cloud, secure on-premise, edge and hybrid architectures, making it possible to deploy AI analytics across one site, a distributed network or thousands of camera streams.</p>
+
+                            <div class="platform-deployment-grid">
+                                <div class="platform-deployment-card">
+                                    <i class="bi bi-cloud"></i>
+                                    <h3 data-i18n="platform.common.cloudHub">Cloud Hub</h3>
+                                    <p data-i18n="platform.deployment.cloud.text">Centralized management of scenarios, models, analytics, licenses, events and multi-site reporting.</p>
+                                </div>
+
+                                <div class="platform-deployment-card">
+                                    <i class="bi bi-server"></i>
+                                    <h3 data-i18n="platform.deployment.onPrem.title">On-Prem</h3>
+                                    <p data-i18n="platform.deployment.onPrem.text">Local processing inside the customer infrastructure for data sovereignty and enterprise security requirements.</p>
+                                </div>
+
+                                <div class="platform-deployment-card">
+                                    <i class="bi bi-router"></i>
+                                    <h3 data-i18n="platform.deployment.edge.title">Edge Runtime</h3>
+                                    <p data-i18n="platform.deployment.edge.text">Low-latency AI inference near cameras or sites to reduce traffic and server requirements.</p>
+                                </div>
+
+                                <div class="platform-deployment-card">
+                                    <i class="bi bi-camera-video"></i>
+                                    <h3 data-i18n="platform.deployment.vms.title">VMS Integration</h3>
+                                    <p data-i18n="platform.deployment.vms.text">Connection to existing video systems, IP cameras, RTSP, ONVIF, event streams and metadata.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="platform-impact-box">
+                            <div class="platform-impact-line"></div>
+                            <div class="platform-impact-content">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <p data-i18n="platform.impact.text">Platform impact: faster creation of AI scenarios, unified event analytics instead of isolated detectors, continuous model improvement and scalable deployment across enterprise sites and camera networks.</p>
+                            </div>
+                        </div>
+
+                        <div class="meta-bottom">
+                            <i class="bi bi-folder"></i>
+                            <ul class="cats">
+                                <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
+                            </ul>
+
+                            <i class="bi bi-tags"></i>
+                            <ul class="tags">
+                                <li><a href="#" data-i18n="platform.tags.multimodal">Multimodal AI</a></li>
+                                <li><a href="#" data-i18n="platform.common.scenarioEngine">Scenario Engine</a></li>
+                                <li><a href="#" data-i18n="platform.common.aiFactory">AI Factory</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</main>

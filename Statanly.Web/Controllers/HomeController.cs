@@ -73,9 +73,8 @@ namespace Statanly.Web.Controllers
             ViewData["Title"] = "Statanly Technologies - наша миссия";
             return View();
         }
-        public IActionResult Brand()
+        public IActionResult Platform()
         {
-            ViewData["Title"] = "Statanly Technologies - бренд компании";
             return View();
         }
         public IActionResult Logo()

@@ -1374,18 +1374,18 @@
             </a>
             <nav class="navmenu" id="navmenu">
                 <ul>
-                    <li><a data-i18n="nav.home" href="/">Home</a></li>
-                    <li><a data-i18n="nav.platform" href="#about">Platform</a></li>
-                    <li><a class="active" data-i18n="nav.services" href="/services">Services</a></li>
-                    <li><a data-i18n="nav.products" href="/products">Products</a></li>
-                    <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
+                    <li><a href="/services" class="active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                    <li><a href="/home/contacts" data-i18n="nav.contacts">Contacts</a></li>
                     @*<li class="dropdown">
-        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
-        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
-        </ul>
-        </li>*@
+                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>/home/contacts
+                        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
+                        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                        </li>*@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -1404,7 +1404,7 @@
                     <li><button class="dropdown-item lang-option" data-lang="ru" type="button"><span class="fi fi-ru"></span> Русский</button></li>
                 </ul>
             </div>
-            <a class="btn-getstarted" data-i18n="common.getStarted" href="#contact">Get Started</a>
+            <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contacts">Get Started</a>
         </div>
     </header>
     <main class="main">
@@ -1413,12 +1413,9 @@
                 <h1 class="mb-2 mb-lg-0" data-i18n="horeca.smart.ai.solutions.for.cafes.restaurants.and.hospitality">Smart AI Solutions for Cafes, Restaurants and Hospitality Businesses</h1>
                 <nav class="breadcrumbs">
                     <ol>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/services" data-i18n="nav.services">Services</a></li>
                         <li class="current" data-i18n="service.horeca">HoReCa</li>
-                        <li><a data-i18n="service.retail" href="/service/retail">Retail</a></li>
-                        <li><a data-i18n="service.industry" href="/service/industry">Industry</a></li>
-                        <li><a data-i18n="service.warehouses" href="/service/warehouses">Warehouses</a></li>
-                        <li><a href="/service/beauty">Beauty Salons</a></li>
-                        <li><a href="/service/malls">Shopping Malls</a></li>
                     </ol>
                 </nav>
             </div>
@@ -1498,7 +1495,7 @@
                                 <div class="hospitality-ai-note">
                                     <i class="bi bi-camera-video"></i>
                                     <span>
-                                        AI turns existing cameras into a hospitality management system for
+                                        <span data-i18n="horeca.ai.turns.existing.cameras.into.management.system">AI turns existing cameras into a hospitality management system for</span>
                                         <strong data-i18n="horeca.service.kitchen.staff.and.guest.experience">service, kitchen, staff and guest experience.</strong>
                                     </span>
                                 </div>
@@ -1535,19 +1532,19 @@
                                     <div class="result-title" data-i18n="horeca.business.impact">Business impact</div>
                                     <div class="result-item">
                                         <i class="bi bi-currency-euro"></i>
-                                        <span>Loss reduction<br /><strong>5–15%</strong></span>
+                                        <span><span data-i18n="horeca.loss.reduction">Loss reduction</span><br /><strong>5–15%</strong></span>
                                     </div>
                                     <div class="result-item">
                                         <i class="bi bi-speedometer2"></i>
-                                        <span>Service speed growth<br /><strong>10–20%</strong></span>
+                                        <span><span data-i18n="horeca.service.speed.growth">Service speed growth</span><br /><strong>10–20%</strong></span>
                                     </div>
                                     <div class="result-item">
                                         <i class="bi bi-star"></i>
-                                        <span>Higher guest satisfaction<br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
+                                        <span><span data-i18n="horeca.higher.guest.satisfaction">Higher guest satisfaction</span><br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
                                     </div>
                                     <div class="result-item">
                                         <i class="bi bi-pie-chart"></i>
-                                        <span>Transparent processes<br /><strong data-i18n="horeca.and.business.control">and business control</strong></span>
+                                        <span><span data-i18n="horeca.transparent.processes">Transparent processes</span><br /><strong data-i18n="horeca.and.business.control">and business control</strong></span>
                                     </div>
                                 </div>
                             </section>
@@ -1618,23 +1615,23 @@
                                     </div>
                                     <div class="loss-metric">
                                         <i class="bi bi-graph-down-arrow"></i>
-                                        <span>Lost revenue<br /><strong>5–15%</strong></span>
+                                        <span><span data-i18n="horeca.lost.revenue">Lost revenue</span><br /><strong>5–15%</strong></span>
                                     </div>
                                     <div class="loss-metric">
                                         <i class="bi bi-arrow-repeat"></i>
-                                        <span>Lower table turnover<br /><strong>10–20%</strong></span>
+                                        <span><span data-i18n="horeca.lower.table.turnover">Lower table turnover</span><br /><strong>10–20%</strong></span>
                                     </div>
                                     <div class="loss-metric">
                                         <i class="bi bi-people"></i>
-                                        <span>Higher staff costs<br /><strong>15–25%</strong></span>
+                                        <span><span data-i18n="horeca.higher.staff.costs">Higher staff costs</span><br /><strong>15–25%</strong></span>
                                     </div>
                                     <div class="loss-metric">
                                         <i class="bi bi-star"></i>
-                                        <span>Lower guest satisfaction<br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
+                                        <span><span data-i18n="horeca.lower.guest.satisfaction">Lower guest satisfaction</span><br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
                                     </div>
                                     <div class="loss-metric">
                                         <i class="bi bi-bar-chart-line"></i>
-                                        <span>Reputation risks<br /><strong data-i18n="horeca.and.rating.decline">and rating decline</strong></span>
+                                        <span><span data-i18n="horeca.reputation.risks">Reputation risks</span><br /><strong data-i18n="horeca.and.rating.decline">and rating decline</strong></span>
                                     </div>
                                 </div>
                                 <div class="loss-bottom-note" data-i18n="horeca.without.objective.data.and.real.time.control.operational">
@@ -1819,8 +1816,8 @@
                                             <li data-i18n="horeca.waiter.response.and.waiting.time.control">Waiter response and waiting time control</li>
                                         </ul>
                                         <div class="module-badges">
-                                            <span><i class="bi bi-phone"></i> Phone 02:18</span>
-                                            <span><i class="bi bi-clock"></i> Wait time</span>
+                                            <span><i class="bi bi-phone"></i> <span data-i18n="horeca.phone.02.18">Phone 02:18</span></span>
+                                            <span><i class="bi bi-clock"></i> <span data-i18n="horeca.wait.time">Wait time</span></span>
                                         </div>
                                     </div>
                                     <div class="module-card cyan">
@@ -1838,8 +1835,8 @@
                                             <li data-i18n="horeca.smoke.fire.and.hazardous.event.detection">Smoke, fire and hazardous event detection</li>
                                         </ul>
                                         <div class="module-badges">
-                                            <span><i class="bi bi-check2-circle"></i> Order match 98%</span>
-                                            <span><i class="bi bi-thermometer-half"></i> 72°C</span>
+                                            <span><i class="bi bi-check2-circle"></i> <span data-i18n="horeca.order.match.98">Order match 98%</span></span>
+                                            <span><i class="bi bi-thermometer-half"></i> <span data-i18n="horeca.temperature.72">72°C</span></span>
                                         </div>
                                     </div>
                                     <div class="module-card purple">
@@ -1857,8 +1854,8 @@
                                             <li data-i18n="horeca.cleaning.quality.and.room.condition.control">Cleaning quality and room condition control</li>
                                         </ul>
                                         <div class="module-badges">
-                                            <span><i class="bi bi-pie-chart"></i> Occupancy 78%</span>
-                                            <span><i class="bi bi-hourglass-split"></i> Wait 15:42</span>
+                                            <span><i class="bi bi-pie-chart"></i> <span data-i18n="horeca.occupancy.78">Occupancy 78%</span></span>
+                                            <span><i class="bi bi-hourglass-split"></i> <span data-i18n="horeca.wait.15.42">Wait 15:42</span></span>
                                         </div>
                                     </div>
                                     <div class="module-card green">
@@ -1876,8 +1873,8 @@
                                             <li data-i18n="horeca.heatmaps.and.peak.hour.analytics">Heatmaps and peak-hour analytics</li>
                                         </ul>
                                         <div class="module-badges">
-                                            <span><i class="bi bi-person-check"></i> Visitors 125</span>
-                                            <span><i class="bi bi-activity"></i> Peak hours</span>
+                                            <span><i class="bi bi-person-check"></i> <span data-i18n="horeca.visitors.125">Visitors 125</span></span>
+                                            <span><i class="bi bi-activity"></i> <span data-i18n="horeca.peak.hours">Peak hours</span></span>
                                         </div>
                                     </div>
                                     <div class="module-card red">
@@ -1895,8 +1892,8 @@
                                             <li data-i18n="horeca.theft.and.unauthorized.access.control">Theft and unauthorized access control</li>
                                         </ul>
                                         <div class="module-badges">
-                                            <span><i class="bi bi-exclamation-triangle"></i> Fight 12:45</span>
-                                            <span><i class="bi bi-fire"></i> Fire detected</span>
+                                            <span><i class="bi bi-exclamation-triangle"></i> <span data-i18n="horeca.fight.12.45">Fight 12:45</span></span>
+                                            <span><i class="bi bi-fire"></i> <span data-i18n="horeca.fire.detected">Fire detected</span></span>
                                         </div>
                                     </div>
                                     <div class="module-card orange">
@@ -1914,8 +1911,8 @@
                                             <li data-i18n="horeca.cash.handling.and.suspicious.activity.detection">Cash handling and suspicious activity detection</li>
                                         </ul>
                                         <div class="module-badges">
-                                            <span><i class="bi bi-clock-history"></i> Assembly 03:12</span>
-                                            <span><i class="bi bi-bar-chart"></i> Orders/hour</span>
+                                            <span><i class="bi bi-clock-history"></i> <span data-i18n="horeca.assembly.03.12">Assembly 03:12</span></span>
+                                            <span><i class="bi bi-bar-chart"></i> <span data-i18n="horeca.orders.hour">Orders/hour</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1936,7 +1933,7 @@
                         <div class="meta-bottom">
                             <i class="bi bi-folder"></i>
                             <ul class="cats">
-                                <li><a data-i18n="service.horeca" href="services.html">HoReCa</a></li>
+                                <li><a data-i18n="service.horeca" href="/services/hospitality">HoReCa</a></li>
                             </ul>
                             <i class="bi bi-tags"></i>
                             <ul class="tags">

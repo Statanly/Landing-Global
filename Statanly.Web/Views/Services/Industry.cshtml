@@ -479,18 +479,18 @@
             </a>
             <nav class="navmenu" id="navmenu">
                 <ul>
-                    <li><a data-i18n="nav.home" href="/">Home</a></li>
-                    <li><a data-i18n="nav.platform" href="#about">Platform</a></li>
-                    <li><a class="active" data-i18n="nav.services" href="/services">Services</a></li>
-                    <li><a data-i18n="nav.products" href="/products">Products</a></li>
-                    <li><a data-i18n="nav.contacts" href="#contact">Contacts</a></li>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
+                    <li><a href="/services" class="active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                    <li><a href="/home/contacts" data-i18n="nav.contacts">Contacts</a></li>
                     @*<li class="dropdown">
-        <a href="about.html"><span data-i18n="industry.lang">@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
-        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
-        </ul>
-        </li>*@
+                        <a href="about.html"><span data-i18n="industry.lang">@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
+                        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                        </li>*@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -509,7 +509,7 @@
                     <li><button class="dropdown-item lang-option" data-lang="ru" type="button"><span class="fi fi-ru"></span> Русский</button></li>
                 </ul>
             </div>
-            <a class="btn-getstarted" data-i18n="common.getStarted" href="#contact">Get Started</a>
+            <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contacts">Get Started</a>
         </div>
     </header>
     <main class="main">
@@ -518,12 +518,9 @@
                 <h1 class="mb-2 mb-lg-0" data-i18n="industry.smart.ai.solutions.industry">Smart AI Solutions Industry</h1>
                 <nav class="breadcrumbs">
                     <ol>
-                        <li><a data-i18n="service.horeca" href="/service/hospitality">HoReCa</a></li>
-                        <li><a data-i18n="service.retail" href="/service/retail">Retail</a></li>
+                        <li><a data-i18n="nav.home" href="/">Home</a></li>
+                        <li><a data-i18n="nav.services" href="/services">Services</a></li>
                         <li class="current" data-i18n="service.industry">Industry</li>
-                        <li><a data-i18n="service.warehouses" href="/service/warehouses">Warehouses</a></li>
-                        <li><a href="/service/beauty">Beauty Salons</a></li>
-                        <li><a href="/service/malls">Shopping Malls</a></li>
                     </ol>
                 </nav>
             </div>
