@@ -1,0 +1,138 @@
+﻿
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="~/Logo3.png" alt="">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/services" data-i18n="nav.services">Services</a></li>
+                <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                <li><a href="/home/contacts" class="active" data-i18n="nav.contacts">Contacts</a></li>
+                @*<li class="dropdown">
+                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/home/setLanguage?culture=es&returnUrl=@Context.Request.Path">Es</a></li>
+                            <li><a href="/home/setLanguage?culture=en&returnUrl=@Context.Request.Path">En</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="language-flags dropdown">
+            <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+        <a class="btn-getstarted" href="/home/contacts" data-i18n="common.getStarted">Get Started</a>
+
+    </div>
+</header>
+
+<main class="main">
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                <h1>Unfortunately, there is no such page.</h1>
+                <a href="/">Home</a>
+            </div><!-- End Google Maps -->
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.address">Address</h3>
+                            <p>
+                                Praça do Comércio, 1100-148 Lisbon, Portugal
+                            </p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-telegram"></i>
+                        <div>
+                            <h3>Telegram:</h3>
+                            <p><a href="https://t.me/statanly" target="_blank">@@statanly</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex">
+                        <i class="bi bi-whatsapp"></i>
+                        <div>
+                            <h3>Whatsapp:</h3>
+                            <p><a href="https://wa.me/79218752396" target="_blank">https://wa.me/79218752396</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3 data-i18n="contact.email">Email Us</h3>
+                            <p>hello@statanly.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+                <div class="col-lg-8">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" data-i18n-placeholder="form.email" placeholder="Your Email" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="subject" data-i18n-placeholder="form.subject" placeholder="Subject" required="">
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="loading" data-i18n="form.loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message" data-i18n="form.sent">Your message has been sent. Thank you!</div>
+
+                                <button type="submit" data-i18n="form.send">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div><!-- End Contact Form -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Contact Section -->
+</main>
+
+
+
+
+
+<script src="~/assets/js/i18n.js"></script>

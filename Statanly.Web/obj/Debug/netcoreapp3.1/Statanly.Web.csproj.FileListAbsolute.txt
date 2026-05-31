@@ -2689,13 +2689,11 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Products\Quality.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Beauty.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Hospitality — копия.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Hospitality.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Index.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Industry — копия.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Industry.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Malls.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Retail — копия.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Retail.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Services\Warehouses.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Platform.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Error.cshtml.g.cs

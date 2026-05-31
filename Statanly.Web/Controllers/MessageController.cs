@@ -25,7 +25,7 @@ namespace Statanly.Web.Controllers
             {
                 //subscriber.Date = DateTime.Now;
                 //this.subscriberRepository.Add(subscriber);
-                return View();
+                return Ok("OK");
             }
             return View("Error");
         }
@@ -34,15 +34,15 @@ namespace Statanly.Web.Controllers
         {
             try
             {
-                if (message.Check == 7)
+                if (message.Check == 5)
                 {
-                    message.Subject = "Вопрос с сайта";
+                    message.Subject = "Statanly Europe question";
                     await this.messageService.SendAsync(message);
-                    ViewBag.Message = "Ваш вопрос успешно отправлен. Мы ответим Вам в ближайшее время.";
+                    ViewBag.Message = "Your question has been successfully submitted. We will respond to you as soon as possible.";
                     return Ok("OK");
                 }
                 else
-                    return Ok("2 + 5 = ?");
+                    return Ok("2 + 3 = ?");
             }
             catch (Exception ex)
             {

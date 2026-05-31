@@ -58,8 +58,8 @@
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                 <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
                 <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
                 <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
                 <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
                 <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
@@ -536,11 +536,11 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <form action="/message/send" method="post" class="php-email-form">
                         <div class="row gy-4">
 
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
+                                <input type="text" name="name" id="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
                             </div>
 
                             <div class="col-md-6 ">
@@ -548,11 +548,10 @@
                             </div>
 
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="subject" data-i18n-placeholder="form.subject" placeholder="Subject" required="">
+                                <textarea class="form-control" name="text" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
                             </div>
-
                             <div class="col-md-12">
-                                <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
+                                <input type="text" class="form-control" name="check" placeholder="2 + 3 =" required>
                             </div>
 
                             <div class="col-md-12 text-center">

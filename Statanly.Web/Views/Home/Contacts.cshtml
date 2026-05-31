@@ -47,9 +47,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
 
-            <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="mb-4">
                 <iframe style="border:0; width: 100%; height: 270px;"
                         src="https://www.google.com/maps?q=Praça+do+Comércio,+1100-148+Lisboa,+Portugal&output=embed"
                         frameborder="0"
@@ -62,7 +62,7 @@
             <div class="row gy-4">
 
                 <div class="col-lg-4">
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-item d-flex">
                         <i class="bi bi-geo-alt flex-shrink-0"></i>
                         <div>
                             <h3 data-i18n="contact.address">Address</h3>
@@ -98,23 +98,22 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <form action="/message/send" method="post" class="php-email-form">
                         <div class="row gy-4">
 
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
+                                <input type="text" name="name" id="name" class="form-control" data-i18n-placeholder="form.name" placeholder="Your Name" required="">
                             </div>
 
                             <div class="col-md-6 ">
                                 <input type="email" class="form-control" name="email" data-i18n-placeholder="form.email" placeholder="Your Email" required="">
-                            </div>
+                            </div>               
 
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="subject" data-i18n-placeholder="form.subject" placeholder="Subject" required="">
+                                <textarea class="form-control" name="text" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
                             </div>
-
                             <div class="col-md-12">
-                                <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="form.message" placeholder="Message" required=""></textarea>
+                                <input type="text" class="form-control" name="check" placeholder="2 + 3 =" required>
                             </div>
 
                             <div class="col-md-12 text-center">
@@ -126,7 +125,7 @@
                             </div>
 
                         </div>
-                    </form>
+                    </form>  
                 </div><!-- End Contact Form -->
 
             </div>
