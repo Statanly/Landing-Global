@@ -26,6 +26,135 @@
             font-weight: 700;
             color: #0b1f33;
         }
+
+        /*Video*/
+        .demo-video {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.demo-video-card {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 36px;
+    align-items: center;
+    padding: 34px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #071322 0%, #0b1f33 100%);
+    box-shadow: 0 20px 50px rgba(11, 31, 51, 0.16);
+    overflow: hidden;
+}
+
+.demo-video-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ef233c;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.demo-video-content h3 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.demo-video-content p {
+    margin: 0 0 24px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 680px;
+}
+
+.demo-video-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-radius: 999px;
+    padding: 13px 22px;
+    background: #ef233c;
+    color: #ffffff;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.demo-video-btn:hover {
+    transform: translateY(-1px);
+    background: #d91f36;
+}
+
+.demo-video-btn i {
+    font-size: 20px;
+}
+
+.demo-video-preview {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+}
+
+.demo-video-preview img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    opacity: 0.86;
+}
+
+.demo-video-play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: rgba(239, 35, 60, 0.94);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 12px 30px rgba(239, 35, 60, 0.35);
+}
+
+.demo-video-modal {
+    background: #071322;
+    border: 0;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.demo-video-modal .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.demo-video-modal .modal-body {
+    padding: 0;
+}
+
+@@media (max-width: 991px) {
+    .demo-video-card {
+        grid-template-columns: 1fr;
+        padding: 26px;
+    }
+
+    .demo-video-content h3 {
+        font-size: 28px;
+    }
+}
 </style>
 <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -213,6 +342,90 @@
         </div>
 
     </section><!-- /About Section -->
+    <!-- Demo Video Section -->
+    <section id="demo-video" class="demo-video section">
+        <div class="container" data-aos="fade-up">
+
+            <div class="demo-video-card">
+                <div class="demo-video-content">
+                    <span class="demo-video-kicker" data-i18n="demo.kicker">45-second platform demo</span>
+                    <h3 data-i18n="demo.title">From camera streams to AI events</h3>
+                    <p data-i18n="demo.text">
+                        See how STATANLY turns IP cameras and audio streams into real-time event analytics,
+                        alerts, dashboards and operational scenarios.
+                    </p>
+
+                    <button type="button"
+                            class="demo-video-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#platformDemoModal">
+                        <i class="bi bi-play-circle"></i>
+                        <span data-i18n="demo.watch">Watch demo</span>
+                    </button>
+                </div>
+
+                <button type="button"
+                        class="demo-video-preview"
+                        data-bs-toggle="modal"
+                        data-bs-target="#platformDemoModal"
+                        aria-label="Watch STATANLY platform demo">
+                    <img src="~/assets/img/platform-demo-poster.png" alt="STATANLY platform demo" loading="lazy">
+                    <span class="demo-video-play">
+                        <i class="bi bi-play-fill"></i>
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Demo Video Modal -->
+    <div class="modal fade" id="platformDemoModal" tabindex="-1" aria-labelledby="platformDemoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content demo-video-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="platformDemoModalLabel" data-i18n="demo.modalTitle">
+                        STATANLY Platform Demo
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video id="platformDemoVideo"
+                           class="w-100"
+                           controls
+                           playsinline
+                           preload="none"
+                           poster="/assets/img/platform-demo-poster.png">
+                        <source src="/assets/video/statanly-platform-demo.mp4" type="video/mp4">
+                        <span data-i18n="demo.videoUnsupported">Your browser does not support the video tag.</span>
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Video Modal -->
+    <div class="modal fade" id="platformDemoModal" tabindex="-1" aria-labelledby="platformDemoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content demo-video-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="platformDemoModalLabel">STATANLY Platform Demo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video id="platformDemoVideo"
+                           class="w-100"
+                           controls
+                           playsinline
+                           preload="none"
+                           poster="~/assets/img/platform-demo-poster.png">
+                        <source src="~/assets/video/statanly-platform-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Clients Section -->
     <section id="clients" class="clients section light-background">
 
@@ -574,7 +787,17 @@
 </main>
 
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const demoModal = document.getElementById('platformDemoModal');
+        const demoVideo = document.getElementById('platformDemoVideo');
 
-
-
+        if (demoModal && demoVideo) {
+            demoModal.addEventListener('hidden.bs.modal', function () {
+                demoVideo.pause();
+                demoVideo.currentTime = 0;
+            });
+        }
+    });
+</script>
 <script src="~/assets/js/i18n.js"></script>

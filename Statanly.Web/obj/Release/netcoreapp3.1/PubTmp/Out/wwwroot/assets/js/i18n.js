@@ -1,5 +1,11 @@
 const I18N = {
     "en": {
+        "demo.kicker": "45-second platform demo",
+        "demo.title": "From camera streams to AI events",
+        "demo.text": "See how STATANLY turns IP cameras and audio streams into real-time event analytics, alerts, dashboards and operational scenarios.",
+        "demo.watch": "Watch demo",
+        "demo.modalTitle": "STATANLY Platform Demo",
+        "demo.videoUnsupported": "Your browser does not support the video tag.",
         "privacy.pageTitle": "Privacy Policy",
         "privacy.kicker": "GDPR / EU Data Protection",
         "privacy.hero.title": "Privacy Policy",
@@ -1173,6 +1179,12 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Data-driven control across all sites"
     },
     "es": {
+        "demo.kicker": "Demo de la plataforma en 45 segundos",
+        "demo.title": "De cámaras a eventos de IA",
+        "demo.text": "Vea cómo STATANLY convierte cámaras IP y flujos de audio en analítica de eventos en tiempo real, alertas, paneles de control y escenarios operativos.",
+        "demo.watch": "Ver demo",
+        "demo.modalTitle": "Demo de la Plataforma STATANLY",
+        "demo.videoUnsupported": "Su navegador no admite la etiqueta de vídeo.",
         "privacy.pageTitle": "Política de privacidad",
         "privacy.kicker": "RGPD / Protección de datos de la UE",
         "privacy.hero.title": "Política de privacidad",
@@ -2345,6 +2357,12 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Control basado en datos en todos los sitios"
     },
     "pt": {
+        "demo.kicker": "Demonstração da plataforma em 45 segundos",
+        "demo.title": "De streams de câmaras para eventos de IA",
+        "demo.text": "Veja como a STATANLY transforma câmaras IP e streams de áudio em análise de eventos em tempo real, alertas, dashboards e cenários operacionais.",
+        "demo.watch": "Ver demonstração",
+        "demo.modalTitle": "Demonstração da Plataforma STATANLY",
+        "demo.videoUnsupported": "O seu navegador não suporta a tag de vídeo.",
         "privacy.pageTitle": "Política de privacidade",
         "privacy.kicker": "RGPD / Proteção de dados da UE",
         "privacy.hero.title": "Política de privacidade",
@@ -3517,6 +3535,12 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Controlo orientado por dados em todos os locais"
     },
     "it": {
+        "demo.kicker": "Demo della piattaforma in 45 secondi",
+        "demo.title": "Dai flussi video agli eventi AI",
+        "demo.text": "Scopri come STATANLY trasforma telecamere IP e flussi audio in analisi degli eventi in tempo reale, avvisi, dashboard e scenari operativi.",
+        "demo.watch": "Guarda la demo",
+        "demo.modalTitle": "Demo della Piattaforma STATANLY",
+        "demo.videoUnsupported": "Il tuo browser non supporta il tag video.",
         "privacy.pageTitle": "Informativa sulla privacy",
         "privacy.kicker": "GDPR / Protezione dei dati UE",
         "privacy.hero.title": "Informativa sulla privacy",
@@ -4689,6 +4713,12 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Controllo data-driven su tutti i siti"
     },
     "fr": {
+        "demo.kicker": "Démo de la plateforme en 45 secondes",
+        "demo.title": "Des flux caméra aux événements IA",
+        "demo.text": "Découvrez comment STATANLY transforme les caméras IP et les flux audio en analyse d’événements en temps réel, alertes, tableaux de bord et scénarios opérationnels.",
+        "demo.watch": "Voir la démo",
+        "demo.modalTitle": "Démo de la Plateforme STATANLY",
+        "demo.videoUnsupported": "Votre navigateur ne prend pas en charge la balise vidéo.",
         "privacy.pageTitle": "Politique de confidentialité",
         "privacy.kicker": "RGPD / Protection des données UE",
         "privacy.hero.title": "Politique de confidentialité",
@@ -5861,6 +5891,12 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Contrôle piloté par les données sur tous les sites"
     },
     "de": {
+        "demo.kicker": "45-Sekunden-Plattformdemo",
+        "demo.title": "Von Kamerastreams zu KI-Ereignissen",
+        "demo.text": "Sehen Sie, wie STATANLY IP-Kameras und Audiostreams in Echtzeit-Ereignisanalysen, Warnmeldungen, Dashboards und operative Szenarien verwandelt.",
+        "demo.watch": "Demo ansehen",
+        "demo.modalTitle": "STATANLY Plattformdemo",
+        "demo.videoUnsupported": "Ihr Browser unterstützt das Video-Tag nicht.",
         "privacy.pageTitle": "Datenschutzerklärung",
         "privacy.kicker": "DSGVO / EU-Datenschutz",
         "privacy.hero.title": "Datenschutzerklärung",
@@ -7033,6 +7069,12 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Datengesteuerte Kontrolle über alle Standorte"
     },
     "ru": {
+        "demo.kicker": "45-секундная демонстрация платформы",
+        "demo.title": "От видеопотоков к AI-событиям",
+        "demo.text": "Посмотрите, как STATANLY превращает IP-камеры и аудиопотоки в событийную аналитику в реальном времени, уведомления, дашборды и операционные сценарии.",
+        "demo.watch": "Смотреть демо",
+        "demo.modalTitle": "Демонстрация платформы STATANLY",
+        "demo.videoUnsupported": "Ваш браузер не поддерживает видео.",
         "privacy.pageTitle": "Политика конфиденциальности",
         "privacy.kicker": "GDPR / защита данных в ЕС",
         "privacy.hero.title": "Политика конфиденциальности",

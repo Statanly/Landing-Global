@@ -13,14 +13,14 @@ namespace Statanly.Web.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
              : base(options)
         {
-            if (!_migrated[0])
-                lock (_migrated)
-                    if (!_migrated[0])
-                    {
-                        Database.Migrate(); // apply all migrations
-                        _migrated[0] = true;
-                    }
-            Database.EnsureCreated();
+            //if (!_migrated[0])
+            //    lock (_migrated)
+            //        if (!_migrated[0])
+            //        {
+            //            Database.Migrate(); // apply all migrations
+            //            _migrated[0] = true;
+            //        }
+            //Database.EnsureCreated();
         }
         private static readonly bool[] _migrated = { false };
         //public ApplicationDbContext(
