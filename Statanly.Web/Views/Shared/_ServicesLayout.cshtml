@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="/" class="logo d-flex align-items-center me-auto">
+            <img src="~/Logo3.png" alt="STATANLY Tech Global">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
+                <li><a href="/services" class="active" data-i18n="nav.services">Services</a></li>
+                <li><a href="/products" data-i18n="nav.products">Products</a></li>
+                <li><a href="/home/contacts" data-i18n="nav.contacts">Contacts</a></li>
+
+                <!-- Mobile language selector -->
+                <li class="mobile-only mobile-lang-block">
+                    <div class="mobile-lang-title" data-i18n="common.language">Language</div>
+
+                    <div class="mobile-lang-grid">
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="en">
+                            <span class="fi fi-gb"></span> English
+                        </button>
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="pt">
+                            <span class="fi fi-pt"></span> Português
+                        </button>
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="es">
+                            <span class="fi fi-es"></span> Español
+                        </button>
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="it">
+                            <span class="fi fi-it"></span> Italiano
+                        </button>
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="fr">
+                            <span class="fi fi-fr"></span> Français
+                        </button>
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="de">
+                            <span class="fi fi-de"></span> Deutsch
+                        </button>
+                        <button class="mobile-lang-option lang-option" type="button" data-lang="ru">
+                            <span class="fi fi-ru"></span> Русский
+                        </button>
+                    </div>
+                </li>
+
+                <!-- Mobile CTA -->
+                <li class="mobile-only mobile-cta-block">
+                    <a class="mobile-getstarted" href="/#contact" data-i18n="common.getStarted">
+                        Get Started
+                    </a>
+                </li>
+            </ul>
+
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <!-- Desktop language selector -->
+        <div class="language-flags dropdown desktop-lang">
+            <button class="lang-current dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fi fi-gb lang-flag"></span>
+                <span class="lang-code">EN</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
+                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
+            </ul>
+        </div>
+
+        <!-- Desktop CTA -->
+        <a class="btn-getstarted desktop-cta" href="/#contact" data-i18n="common.getStarted">Get Started</a>
+
+    </div>
+</header>
+@RenderBody()

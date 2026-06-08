@@ -2509,3 +2509,173 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+/* ------------------------------------------------------------
+   Header mobile cleanup: logo + burger only
+------------------------------------------------------------ */
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-lang {
+    margin-left: 16px;
+}
+
+.desktop-cta {
+    margin-left: 14px;
+}
+
+@media (max-width: 1199px) {
+
+    .header {
+        padding: 10px 0;
+    }
+
+        .header .container-fluid,
+        .header .container-xl {
+            min-height: 54px;
+        }
+
+        .header .logo {
+            order: 1;
+            margin-right: auto;
+            z-index: 10000;
+        }
+
+            .header .logo img {
+                max-height: 44px;
+                width: auto;
+                max-width: 210px;
+            }
+
+    /* Hide desktop language selector and desktop CTA on mobile */
+    .desktop-lang,
+    .desktop-cta {
+        display: none !important;
+    }
+
+    .header .navmenu {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .mobile-nav-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        color: var(--nav-color);
+        font-size: 32px;
+        line-height: 1;
+        margin: 0;
+        padding: 6px;
+        z-index: 10000;
+        cursor: pointer;
+    }
+
+    /* Mobile menu panel: less empty space, cleaner card */
+    .mobile-nav-active .navmenu > ul {
+        display: block;
+        top: 76px;
+        left: 14px;
+        right: 14px;
+        bottom: auto;
+        max-height: calc(100vh - 96px);
+        padding: 18px 0 22px 0;
+        border-radius: 16px;
+        overflow-y: auto;
+        background: #ffffff;
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.22);
+    }
+
+    .mobile-nav-active .mobile-nav-toggle {
+        color: #ffffff;
+        position: absolute;
+        font-size: 34px;
+        top: 16px;
+        right: 16px;
+        margin-right: 0;
+        z-index: 9999;
+    }
+
+    .navmenu .mobile-only {
+        display: block;
+    }
+
+    .mobile-lang-block {
+        margin-top: 14px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(85, 98, 112, 0.14);
+    }
+
+    .mobile-lang-title {
+        margin: 0 0 12px 0;
+        padding: 0 20px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        font-weight: 700;
+        color: #556270;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .mobile-lang-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 0 20px;
+    }
+
+    .mobile-lang-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        border: 1px solid rgba(85, 98, 112, 0.16);
+        border-radius: 10px;
+        background: #ffffff;
+        color: #334155;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 12px;
+        text-align: left;
+        transition: 0.2s ease;
+    }
+
+        .mobile-lang-option:hover {
+            color: var(--accent-color);
+            border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+            background: color-mix(in srgb, var(--accent-color), transparent 96%);
+        }
+
+        .mobile-lang-option .fi {
+            font-size: 16px;
+            flex: 0 0 auto;
+        }
+
+    .mobile-cta-block {
+        padding: 22px 20px 4px 20px;
+    }
+
+    .navmenu .mobile-getstarted,
+    .navmenu .mobile-getstarted:focus {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 20px;
+        border-radius: 10px;
+        background: var(--accent-color);
+        color: #ffffff !important;
+        font-family: var(--nav-font);
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+        .navmenu .mobile-getstarted:hover {
+            background: color-mix(in srgb, var(--accent-color), transparent 15%);
+            color: #ffffff !important;
+        }
+}

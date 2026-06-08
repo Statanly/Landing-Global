@@ -1,41 +1,7 @@
+@{
+    Layout = "/Views/Shared/_ProductsLayout.cshtml";
+}
 @{ ViewData["Title"] = "Quality Control"; }
-
-<header class="header d-flex align-items-center sticky-top" id="header">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-        <a class="logo d-flex align-items-center me-auto" href="/">
-            <img alt="" src="~/Logo3.png" />
-        </a>
-
-        <nav class="navmenu" id="navmenu">
-            <ul>
-                <li><a data-i18n="nav.home" href="/">Home</a></li>
-                <li><a data-i18n="nav.platform" href="/home/platform">Platform</a></li>
-                <li><a data-i18n="nav.services" href="/services">Services</a></li>
-                <li><a class="active" data-i18n="nav.products" href="/products">Products</a></li>
-                <li><a data-i18n="nav.contacts" href="/home/contacts">Contacts</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-        <div class="language-flags dropdown">
-            <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
-                <span class="fi fi-gb lang-flag"></span>
-                <span class="lang-code">EN</span>
-            </button>
-            <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
-                <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
-                <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
-            </ul>
-        </div>
-
-        <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contacts">Get Started</a>
-    </div>
-</header>
 
 <style>
     /* =========================================================

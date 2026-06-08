@@ -1,5 +1,6 @@
 const I18N = {
     "en": {
+        "common.language": "Language",
         "demo.kicker": "45-second platform demo",
         "demo.title": "From camera streams to AI events",
         "demo.text": "See how STATANLY turns IP cameras and audio streams into real-time event analytics, alerts, dashboards and operational scenarios.",
@@ -1179,6 +1180,7 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Data-driven control across all sites"
     },
     "es": {
+        "common.language": "Idioma",
         "demo.kicker": "Demo de la plataforma en 45 segundos",
         "demo.title": "De cámaras a eventos de IA",
         "demo.text": "Vea cómo STATANLY convierte cámaras IP y flujos de audio en analítica de eventos en tiempo real, alertas, paneles de control y escenarios operativos.",
@@ -2357,6 +2359,7 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Control basado en datos en todos los sitios"
     },
     "pt": {
+        "common.language": "Idioma",
         "demo.kicker": "Demonstração da plataforma em 45 segundos",
         "demo.title": "De streams de câmaras para eventos de IA",
         "demo.text": "Veja como a STATANLY transforma câmaras IP e streams de áudio em análise de eventos em tempo real, alertas, dashboards e cenários operacionais.",
@@ -3535,6 +3538,7 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Controlo orientado por dados em todos os locais"
     },
     "it": {
+        "common.language": "Lingua",
         "demo.kicker": "Demo della piattaforma in 45 secondi",
         "demo.title": "Dai flussi video agli eventi AI",
         "demo.text": "Scopri come STATANLY trasforma telecamere IP e flussi audio in analisi degli eventi in tempo reale, avvisi, dashboard e scenari operativi.",
@@ -4713,6 +4717,7 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Controllo data-driven su tutti i siti"
     },
     "fr": {
+        "common.language": "Langue",
         "demo.kicker": "Démo de la plateforme en 45 secondes",
         "demo.title": "Des flux caméra aux événements IA",
         "demo.text": "Découvrez comment STATANLY transforme les caméras IP et les flux audio en analyse d’événements en temps réel, alertes, tableaux de bord et scénarios opérationnels.",
@@ -5891,6 +5896,7 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Contrôle piloté par les données sur tous les sites"
     },
     "de": {
+        "common.language": "Sprache",
         "demo.kicker": "45-Sekunden-Plattformdemo",
         "demo.title": "Von Kamerastreams zu KI-Ereignissen",
         "demo.text": "Sehen Sie, wie STATANLY IP-Kameras und Audiostreams in Echtzeit-Ereignisanalysen, Warnmeldungen, Dashboards und operative Szenarien verwandelt.",
@@ -7069,6 +7075,7 @@ const I18N = {
         "industry.data.driven.control.across.all.sites": "Datengesteuerte Kontrolle über alle Standorte"
     },
     "ru": {
+        "common.language": "Язык",
         "demo.kicker": "45-секундная демонстрация платформы",
         "demo.title": "От видеопотоков к AI-событиям",
         "demo.text": "Посмотрите, как STATANLY превращает IP-камеры и аудиопотоки в событийную аналитику в реальном времени, уведомления, дашборды и операционные сценарии.",

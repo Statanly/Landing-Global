@@ -887,8 +887,10 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\NY.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo1.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo2-Photoroom.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo2.png
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Logo3.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo3.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Logo31.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Logo32.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Logo4.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Logo5.png

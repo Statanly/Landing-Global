@@ -1,3 +1,6 @@
+@{
+    Layout = "/Views/Shared/_ServicesLayout.cshtml";
+}
 <style>
     .hospitality-modules-section {
         margin: 34px 0;
@@ -1365,587 +1368,544 @@
         }
     }
 </style>
-<body class="blog-details-page">
-    <header class="header d-flex align-items-center sticky-top" id="header">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-            <a class="logo d-flex align-items-center me-auto" href="/">
-                <img alt="" src="~/Logo3.png" />
-                @*   <h1 class="sitename">Statanly</h1>*@
-            </a>
-            <nav class="navmenu" id="navmenu">
-                <ul>
-                    <li><a href="/" data-i18n="nav.home">Home</a></li>
-                    <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
-                    <li><a href="/services" class="active" data-i18n="nav.services">Services</a></li>
-                    <li><a href="/products" data-i18n="nav.products">Products</a></li>
-                    <li><a href="/home/contacts" data-i18n="nav.contacts">Contacts</a></li>
-                    @*<li class="dropdown">
-                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>/home/contacts
-                        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
-                        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
-                        </ul>
-                        </li>*@
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-            <div class="language-flags dropdown">
-                <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
-                    <span class="fi fi-gb lang-flag"></span>
-                    <span class="lang-code">EN</span>
-                </button>
-                <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
-                </ul>
-            </div>
-            <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contacts">Get Started</a>
-        </div>
-    </header>
-    <main class="main">
-        <div class="page-title light-background">
-            <div class="container d-lg-flex justify-content-between align-items-center">
-                <h1 class="mb-2 mb-lg-0" data-i18n="horeca.smart.ai.solutions.for.cafes.restaurants.and.hospitality">Smart AI Solutions for Cafes, Restaurants and Hospitality Businesses</h1>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="/" data-i18n="nav.home">Home</a></li>
-                        <li><a href="/services" data-i18n="nav.services">Services</a></li>
-                        <li class="current" data-i18n="service.horeca">HoReCa</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-        <div class="container">
-            <section class="blog-details section" id="blog-details">
-                <div class="container">
-                    <article class="article">
-                        <section class="hospitality-hero-section">
-                            <div class="hospitality-hero-content">
-                                <div class="hospitality-kicker" data-i18n="horeca.hospitality.ai.platform">Hospitality AI Platform</div>
-                                <h1 class="hospitality-hero-title" data-i18n="horeca.ai.platform.for.hospitality.operations.management">
-                                    AI Platform for Hospitality Operations Management
-                                </h1>
-                                <p data-i18n="horeca.unified.ai.infrastructure.for.restaurant.operations.service.quality">
-                                    Unified AI infrastructure for restaurant operations, service quality, kitchen monitoring, workforce analytics and guest experience management.
 
-                                </p>
-                                <div class="hospitality-meta-grid">
-                                    <div class="hospitality-meta-card">
-                                        <i class="bi bi-cup-hot"></i>
-                                        <span data-i18n="horeca.guests.and.service">Guests &amp; Service</span>
-                                    </div>
-                                    <div class="hospitality-meta-card">
-                                        <i class="bi bi-people"></i>
-                                        <span data-i18n="horeca.staff.and.discipline">Staff &amp; Discipline</span>
-                                    </div>
-                                    <div class="hospitality-meta-card">
-                                        <i class="bi bi-egg-fried"></i>
-                                        <span data-i18n="horeca.kitchen.and.cooking.area">Kitchen &amp; Cooking Area</span>
-                                    </div>
-                                    <div class="hospitality-meta-card">
-                                        <i class="bi bi-stars"></i>
-                                        <span data-i18n="horeca.dining.hall.and.service">Dining Hall &amp; Service</span>
-                                    </div>
-                                    <div class="hospitality-meta-card">
-                                        <i class="bi bi-stars"></i>
-                                        <span data-i18n="horeca.safety.and.security">Safety &amp; Security</span>
-                                    </div>
-                                    <div class="hospitality-meta-card">
-                                        <i class="bi bi-stars"></i>
-                                        <span data-i18n="horeca.checkout.and.order.pickup">Checkout &amp; Order Pickup</span>
-                                    </div>
+<main class="main">
+    <div class="page-title light-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0" data-i18n="horeca.smart.ai.solutions.for.cafes.restaurants.and.hospitality">Smart AI Solutions for Cafes, Restaurants and Hospitality Businesses</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="/" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/services" data-i18n="nav.services">Services</a></li>
+                    <li class="current" data-i18n="service.horeca">HoReCa</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <section class="blog-details section" id="blog-details">
+            <div class="container">
+                <article class="article">
+                    <section class="hospitality-hero-section">
+                        <div class="hospitality-hero-content">
+                            <div class="hospitality-kicker" data-i18n="horeca.hospitality.ai.platform">Hospitality AI Platform</div>
+                            <h1 class="hospitality-hero-title" data-i18n="horeca.ai.platform.for.hospitality.operations.management">
+                                AI Platform for Hospitality Operations Management
+                            </h1>
+                            <p data-i18n="horeca.unified.ai.infrastructure.for.restaurant.operations.service.quality">
+                                Unified AI infrastructure for restaurant operations, service quality, kitchen monitoring, workforce analytics and guest experience management.
+
+                            </p>
+                            <div class="hospitality-meta-grid">
+                                <div class="hospitality-meta-card">
+                                    <i class="bi bi-cup-hot"></i>
+                                    <span data-i18n="horeca.guests.and.service">Guests &amp; Service</span>
                                 </div>
-                                <div class="hospitality-intro-text hospitality-hero-intro">
-                                    <p data-i18n="horeca.the.ai.powered.hospitality.operations.platform.transforms.existing">
-                                        The AI-powered hospitality operations platform transforms existing restaurant cameras and operational processes into a unified digital management system for service quality, kitchen operations, staff performance and guest experience.
-                                    </p>
-                                    <p data-i18n="horeca.the.platform.helps.businesses.identify.not.only.isolated">
-                                        The platform helps businesses identify not only isolated incidents, but also hidden operational losses such as long waiting times, overloaded service zones, compliance violations, kitchen inefficiencies, staff distractions and declining service quality.
-                                    </p>
+                                <div class="hospitality-meta-card">
+                                    <i class="bi bi-people"></i>
+                                    <span data-i18n="horeca.staff.and.discipline">Staff &amp; Discipline</span>
+                                </div>
+                                <div class="hospitality-meta-card">
+                                    <i class="bi bi-egg-fried"></i>
+                                    <span data-i18n="horeca.kitchen.and.cooking.area">Kitchen &amp; Cooking Area</span>
+                                </div>
+                                <div class="hospitality-meta-card">
+                                    <i class="bi bi-stars"></i>
+                                    <span data-i18n="horeca.dining.hall.and.service">Dining Hall &amp; Service</span>
+                                </div>
+                                <div class="hospitality-meta-card">
+                                    <i class="bi bi-stars"></i>
+                                    <span data-i18n="horeca.safety.and.security">Safety &amp; Security</span>
+                                </div>
+                                <div class="hospitality-meta-card">
+                                    <i class="bi bi-stars"></i>
+                                    <span data-i18n="horeca.checkout.and.order.pickup">Checkout &amp; Order Pickup</span>
                                 </div>
                             </div>
-                            <div class="hospitality-hero-visual">
-                                <img alt="AI-powered hospitality operations analytics platform" src="~/assets/img/hospitality/page-01.png" />
+                            <div class="hospitality-intro-text hospitality-hero-intro">
+                                <p data-i18n="horeca.the.ai.powered.hospitality.operations.platform.transforms.existing">
+                                    The AI-powered hospitality operations platform transforms existing restaurant cameras and operational processes into a unified digital management system for service quality, kitchen operations, staff performance and guest experience.
+                                </p>
+                                <p data-i18n="horeca.the.platform.helps.businesses.identify.not.only.isolated">
+                                    The platform helps businesses identify not only isolated incidents, but also hidden operational losses such as long waiting times, overloaded service zones, compliance violations, kitchen inefficiencies, staff distractions and declining service quality.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hospitality-hero-visual">
+                            <img alt="AI-powered hospitality operations analytics platform" src="~/assets/img/hospitality/page-01.png" />
+                        </div>
+                    </section>
+                    <div class="content">
+                        <div class="hospitality-insight-box">
+                            <div class="insight-line"></div>
+                            <div class="insight-content">
+                                <i class="bi bi-stars"></i>
+                                <p data-i18n="horeca.most.restaurant.operations.are.still.monitored.manually.the">
+                                    Most restaurant operations are still monitored manually. The AI platform transforms service, kitchen and staff management into a system driven by objective operational data, real-time events and performance analytics.
+                                </p>
+                            </div>
+                        </div>
+                        <section class="hospitality-problem-section">
+                            <div class="hospitality-kicker" data-i18n="horeca.prerequisites">Prerequisites</div>
+                            <h2 class="hospitality-title" data-i18n="horeca.most.restaurant.processes.are.still.controlled.manually">
+                                Most restaurant processes are still controlled manually
+                            </h2>
+                            <p class="hospitality-lead" data-i18n="horeca.many.processes.in.the.dining.hall.kitchen.and">
+                                Many processes in the dining hall, kitchen and checkout area are still monitored manually by managers,
+                                administrators and staff. This creates errors, subjective assessment and lack of a complete operational picture.
+                            </p>
+                            <div class="hospitality-ai-note">
+                                <i class="bi bi-camera-video"></i>
+                                <span>
+                                    <span data-i18n="horeca.ai.turns.existing.cameras.into.management.system">AI turns existing cameras into a hospitality management system for</span>
+                                    <strong data-i18n="horeca.service.kitchen.staff.and.guest.experience">service, kitchen, staff and guest experience.</strong>
+                                </span>
+                            </div>
+                            <div class="hospitality-cards-grid">
+                                <div class="hospitality-card red">
+                                    <div class="card-icon"><i class="bi bi-person"></i></div>
+                                    <h3 data-i18n="horeca.human.factor">Human factor</h3>
+                                    <ul>
+                                        <li data-i18n="horeca.service.quality.depends.on.shifts.and.employees">Service quality depends on shifts and employees</li>
+                                        <li data-i18n="horeca.errors.and.violations.are.not.always.noticed">Errors and violations are not always noticed</li>
+                                        <li data-i18n="horeca.standards.are.followed.inconsistently">Standards are followed inconsistently</li>
+                                    </ul>
+                                </div>
+                                <div class="hospitality-card orange">
+                                    <div class="card-icon"><i class="bi bi-search"></i></div>
+                                    <h3 data-i18n="horeca.hidden.losses">Hidden losses</h3>
+                                    <ul>
+                                        <li data-i18n="horeca.no.accurate.kpis.for.service.and.kitchen">No accurate KPIs for service and kitchen</li>
+                                        <li data-i18n="horeca.reasons.for.losses.remain.unclear">Reasons for losses remain unclear</li>
+                                        <li data-i18n="horeca.decisions.are.often.made.intuitively">Decisions are often made intuitively</li>
+                                    </ul>
+                                </div>
+                                <div class="hospitality-card green">
+                                    <div class="card-icon"><i class="bi bi-cpu"></i></div>
+                                    <h3 data-i18n="horeca.ai.control">AI control</h3>
+                                    <ul>
+                                        <li data-i18n="horeca.automatic.process.analysis.24.7">Automatic process analysis 24/7</li>
+                                        <li data-i18n="horeca.objective.metrics.for.every.location">Objective metrics for every location</li>
+                                        <li data-i18n="horeca.fast.detection.of.problem.zones">Fast detection of problem zones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hospitality-result-strip">
+                                <div class="result-title" data-i18n="horeca.business.impact">Business impact</div>
+                                <div class="result-item">
+                                    <i class="bi bi-currency-euro"></i>
+                                    <span><span data-i18n="horeca.loss.reduction">Loss reduction</span><br /><strong>5–15%</strong></span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="bi bi-speedometer2"></i>
+                                    <span><span data-i18n="horeca.service.speed.growth">Service speed growth</span><br /><strong>10–20%</strong></span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="bi bi-star"></i>
+                                    <span><span data-i18n="horeca.higher.guest.satisfaction">Higher guest satisfaction</span><br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
+                                </div>
+                                <div class="result-item">
+                                    <i class="bi bi-pie-chart"></i>
+                                    <span><span data-i18n="horeca.transparent.processes">Transparent processes</span><br /><strong data-i18n="horeca.and.business.control">and business control</strong></span>
+                                </div>
                             </div>
                         </section>
-                        <div class="content">
-                            <div class="hospitality-insight-box">
-                                <div class="insight-line"></div>
-                                <div class="insight-content">
-                                    <i class="bi bi-stars"></i>
-                                    <p data-i18n="horeca.most.restaurant.operations.are.still.monitored.manually.the">
-                                        Most restaurant operations are still monitored manually. The AI platform transforms service, kitchen and staff management into a system driven by objective operational data, real-time events and performance analytics.
-                                    </p>
-                                </div>
-                            </div>
-                            <section class="hospitality-problem-section">
-                                <div class="hospitality-kicker" data-i18n="horeca.prerequisites">Prerequisites</div>
-                                <h2 class="hospitality-title" data-i18n="horeca.most.restaurant.processes.are.still.controlled.manually">
-                                    Most restaurant processes are still controlled manually
-                                </h2>
-                                <p class="hospitality-lead" data-i18n="horeca.many.processes.in.the.dining.hall.kitchen.and">
-                                    Many processes in the dining hall, kitchen and checkout area are still monitored manually by managers,
-                                    administrators and staff. This creates errors, subjective assessment and lack of a complete operational picture.
-                                </p>
-                                <div class="hospitality-ai-note">
-                                    <i class="bi bi-camera-video"></i>
-                                    <span>
-                                        <span data-i18n="horeca.ai.turns.existing.cameras.into.management.system">AI turns existing cameras into a hospitality management system for</span>
-                                        <strong data-i18n="horeca.service.kitchen.staff.and.guest.experience">service, kitchen, staff and guest experience.</strong>
-                                    </span>
-                                </div>
-                                <div class="hospitality-cards-grid">
-                                    <div class="hospitality-card red">
-                                        <div class="card-icon"><i class="bi bi-person"></i></div>
-                                        <h3 data-i18n="horeca.human.factor">Human factor</h3>
-                                        <ul>
-                                            <li data-i18n="horeca.service.quality.depends.on.shifts.and.employees">Service quality depends on shifts and employees</li>
-                                            <li data-i18n="horeca.errors.and.violations.are.not.always.noticed">Errors and violations are not always noticed</li>
-                                            <li data-i18n="horeca.standards.are.followed.inconsistently">Standards are followed inconsistently</li>
-                                        </ul>
-                                    </div>
-                                    <div class="hospitality-card orange">
-                                        <div class="card-icon"><i class="bi bi-search"></i></div>
-                                        <h3 data-i18n="horeca.hidden.losses">Hidden losses</h3>
-                                        <ul>
-                                            <li data-i18n="horeca.no.accurate.kpis.for.service.and.kitchen">No accurate KPIs for service and kitchen</li>
-                                            <li data-i18n="horeca.reasons.for.losses.remain.unclear">Reasons for losses remain unclear</li>
-                                            <li data-i18n="horeca.decisions.are.often.made.intuitively">Decisions are often made intuitively</li>
-                                        </ul>
-                                    </div>
-                                    <div class="hospitality-card green">
-                                        <div class="card-icon"><i class="bi bi-cpu"></i></div>
-                                        <h3 data-i18n="horeca.ai.control">AI control</h3>
-                                        <ul>
-                                            <li data-i18n="horeca.automatic.process.analysis.24.7">Automatic process analysis 24/7</li>
-                                            <li data-i18n="horeca.objective.metrics.for.every.location">Objective metrics for every location</li>
-                                            <li data-i18n="horeca.fast.detection.of.problem.zones">Fast detection of problem zones</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="hospitality-result-strip">
-                                    <div class="result-title" data-i18n="horeca.business.impact">Business impact</div>
-                                    <div class="result-item">
-                                        <i class="bi bi-currency-euro"></i>
-                                        <span><span data-i18n="horeca.loss.reduction">Loss reduction</span><br /><strong>5–15%</strong></span>
-                                    </div>
-                                    <div class="result-item">
-                                        <i class="bi bi-speedometer2"></i>
-                                        <span><span data-i18n="horeca.service.speed.growth">Service speed growth</span><br /><strong>10–20%</strong></span>
-                                    </div>
-                                    <div class="result-item">
-                                        <i class="bi bi-star"></i>
-                                        <span><span data-i18n="horeca.higher.guest.satisfaction">Higher guest satisfaction</span><br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
-                                    </div>
-                                    <div class="result-item">
-                                        <i class="bi bi-pie-chart"></i>
-                                        <span><span data-i18n="horeca.transparent.processes">Transparent processes</span><br /><strong data-i18n="horeca.and.business.control">and business control</strong></span>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="hospitality-loss-section">
-                                <div class="hospitality-kicker" data-i18n="horeca.revenue.leakage">Revenue leakage</div>
-                                <h2 class="hospitality-title" data-i18n="horeca.where.restaurants.lose.revenue.and.service.quality">
-                                    Where restaurants lose revenue and service quality
-                                </h2>
-                                <p class="hospitality-lead" data-i18n="horeca.daily.losses.appear.because.of.inefficient.processes.staff">
-                                    Daily losses appear because of inefficient processes, staff mistakes and lack of objective operational control.
-                                    In the dining hall this means long waiting times, empty or dirty tables, queues and missed upsell opportunities.
-                                    In the kitchen and serving area it means delays, order assembly mistakes, returns and product losses.
-                                    For staff management it means idle time, distractions, inconsistent standards and uneven workload.
-                                </p>
-                                <div class="hospitality-loss-grid">
-                                    <div class="loss-card blue">
-                                        <div class="loss-card-head">
-                                            <i class="bi bi-people"></i>
-                                            <h3 data-i18n="horeca.dining.hall.and.service.2">Dining hall &amp; service</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.long.guest.waiting.times">Long guest waiting times</li>
-                                            <li data-i18n="horeca.empty.or.dirty.tables">Empty or dirty tables</li>
-                                            <li data-i18n="horeca.low.table.turnover">Low table turnover</li>
-                                            <li data-i18n="horeca.missed.upsell.opportunities">Missed upsell opportunities</li>
-                                        </ul>
-                                    </div>
-                                    <div class="loss-card green">
-                                        <div class="loss-card-head">
-                                            <i class="bi bi-person-check"></i>
-                                            <h3 data-i18n="horeca.staff.and.discipline.2">Staff &amp; discipline</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.idle.time.and.low.efficiency">Idle time and low efficiency</li>
-                                            <li data-i18n="horeca.distractions.and.phone.usage">Distractions and phone usage</li>
-                                            <li data-i18n="horeca.standards.violations">Standards violations</li>
-                                            <li data-i18n="horeca.uneven.workload.distribution">Uneven workload distribution</li>
-                                        </ul>
-                                    </div>
-                                    <div class="loss-card orange">
-                                        <div class="loss-card-head">
-                                            <i class="bi bi-egg-fried"></i>
-                                            <h3 data-i18n="horeca.kitchen.and.serving.area">Kitchen &amp; serving area</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.dish.serving.delays">Dish serving delays</li>
-                                            <li data-i18n="horeca.order.assembly.mistakes">Order assembly mistakes</li>
-                                            <li data-i18n="horeca.returns.and.rework">Returns and rework</li>
-                                            <li data-i18n="horeca.product.losses">Product losses</li>
-                                        </ul>
-                                    </div>
-                                    <div class="loss-card purple">
-                                        <div class="loss-card-head">
-                                            <i class="bi bi-person-heart"></i>
-                                            <h3 data-i18n="horeca.guests.and.experience">Guests &amp; experience</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.guests.leaving.without.ordering">Guests leaving without ordering</li>
-                                            <li data-i18n="horeca.low.engagement">Low engagement</li>
-                                            <li data-i18n="horeca.decrease.in.repeat.visits">Decrease in repeat visits</li>
-                                            <li data-i18n="horeca.negative.customer.experience">Negative customer experience</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="loss-metrics-strip">
-                                    <div class="loss-metrics-title" data-i18n-html="horeca.hidden.losses.every.day">
-                                        Hidden losses<br />every day
-                                    </div>
-                                    <div class="loss-metric">
-                                        <i class="bi bi-graph-down-arrow"></i>
-                                        <span><span data-i18n="horeca.lost.revenue">Lost revenue</span><br /><strong>5–15%</strong></span>
-                                    </div>
-                                    <div class="loss-metric">
-                                        <i class="bi bi-arrow-repeat"></i>
-                                        <span><span data-i18n="horeca.lower.table.turnover">Lower table turnover</span><br /><strong>10–20%</strong></span>
-                                    </div>
-                                    <div class="loss-metric">
+                        <section class="hospitality-loss-section">
+                            <div class="hospitality-kicker" data-i18n="horeca.revenue.leakage">Revenue leakage</div>
+                            <h2 class="hospitality-title" data-i18n="horeca.where.restaurants.lose.revenue.and.service.quality">
+                                Where restaurants lose revenue and service quality
+                            </h2>
+                            <p class="hospitality-lead" data-i18n="horeca.daily.losses.appear.because.of.inefficient.processes.staff">
+                                Daily losses appear because of inefficient processes, staff mistakes and lack of objective operational control.
+                                In the dining hall this means long waiting times, empty or dirty tables, queues and missed upsell opportunities.
+                                In the kitchen and serving area it means delays, order assembly mistakes, returns and product losses.
+                                For staff management it means idle time, distractions, inconsistent standards and uneven workload.
+                            </p>
+                            <div class="hospitality-loss-grid">
+                                <div class="loss-card blue">
+                                    <div class="loss-card-head">
                                         <i class="bi bi-people"></i>
-                                        <span><span data-i18n="horeca.higher.staff.costs">Higher staff costs</span><br /><strong>15–25%</strong></span>
+                                        <h3 data-i18n="horeca.dining.hall.and.service.2">Dining hall &amp; service</h3>
                                     </div>
-                                    <div class="loss-metric">
-                                        <i class="bi bi-star"></i>
-                                        <span><span data-i18n="horeca.lower.guest.satisfaction">Lower guest satisfaction</span><br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
-                                    </div>
-                                    <div class="loss-metric">
-                                        <i class="bi bi-bar-chart-line"></i>
-                                        <span><span data-i18n="horeca.reputation.risks">Reputation risks</span><br /><strong data-i18n="horeca.and.rating.decline">and rating decline</strong></span>
-                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.long.guest.waiting.times">Long guest waiting times</li>
+                                        <li data-i18n="horeca.empty.or.dirty.tables">Empty or dirty tables</li>
+                                        <li data-i18n="horeca.low.table.turnover">Low table turnover</li>
+                                        <li data-i18n="horeca.missed.upsell.opportunities">Missed upsell opportunities</li>
+                                    </ul>
                                 </div>
-                                <div class="loss-bottom-note" data-i18n="horeca.without.objective.data.and.real.time.control.operational">
-                                    Without objective data and real-time control, operational losses remain invisible — and the business loses profit every day.
+                                <div class="loss-card green">
+                                    <div class="loss-card-head">
+                                        <i class="bi bi-person-check"></i>
+                                        <h3 data-i18n="horeca.staff.and.discipline.2">Staff &amp; discipline</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.idle.time.and.low.efficiency">Idle time and low efficiency</li>
+                                        <li data-i18n="horeca.distractions.and.phone.usage">Distractions and phone usage</li>
+                                        <li data-i18n="horeca.standards.violations">Standards violations</li>
+                                        <li data-i18n="horeca.uneven.workload.distribution">Uneven workload distribution</li>
+                                    </ul>
                                 </div>
-                            </section>
-                            <section class="hospitality-platform-section">
-                                <div class="platform-header">
-                                    <div class="platform-intro">
-                                        <div class="hospitality-kicker" data-i18n="horeca.unified.ai.platform">
-                                            Unified AI platform
-                                        </div>
-                                        <h2 class="hospitality-title" data-i18n="horeca.ai.platform.for.hospitality.operations">
-                                            AI Platform for Hospitality Operations
-                                        </h2>
-                                        <p class="hospitality-lead" data-i18n="horeca.a.unified.intelligent.platform.that.transforms.existing.restaurant">
-                                            A unified intelligent platform that transforms existing restaurant cameras and operational infrastructure into a digital management system for service quality, kitchen operations, staff performance and guest experience.
-                                        </p>
+                                <div class="loss-card orange">
+                                    <div class="loss-card-head">
+                                        <i class="bi bi-egg-fried"></i>
+                                        <h3 data-i18n="horeca.kitchen.and.serving.area">Kitchen &amp; serving area</h3>
                                     </div>
+                                    <ul>
+                                        <li data-i18n="horeca.dish.serving.delays">Dish serving delays</li>
+                                        <li data-i18n="horeca.order.assembly.mistakes">Order assembly mistakes</li>
+                                        <li data-i18n="horeca.returns.and.rework">Returns and rework</li>
+                                        <li data-i18n="horeca.product.losses">Product losses</li>
+                                    </ul>
                                 </div>
-                                <div class="platform-grid">
-                                    <!-- LEFT -->
-                                    <div class="platform-side">
-                                        <div class="platform-card purple">
-                                            <div class="platform-card-icon">
-                                                <i class="bi bi-boxes"></i>
-                                            </div>
-                                            <div>
-                                                <h3 data-i18n="horeca.ai.modules.library">AI Modules Library</h3>
-                                                <p data-i18n="horeca.a.large.collection.of.computer.vision.modules.for">
-                                                    A large collection of Computer Vision modules for typical hospitality and restaurant operational tasks.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="platform-card blue">
-                                            <div class="platform-card-icon">
-                                                <i class="bi bi-diagram-3"></i>
-                                            </div>
-                                            <div>
-                                                <h3 data-i18n="horeca.no.code.scenario.builder">No-Code Scenario Builder</h3>
-                                                <p data-i18n="horeca.create.monitoring.workflows.alerts.and.operational.automation.scenarios">
-                                                    Create monitoring workflows, alerts and operational automation scenarios without writing code.
-                                                </p>
-                                            </div>
-                                        </div>
+                                <div class="loss-card purple">
+                                    <div class="loss-card-head">
+                                        <i class="bi bi-person-heart"></i>
+                                        <h3 data-i18n="horeca.guests.and.experience">Guests &amp; experience</h3>
                                     </div>
-                                    <!-- CENTER -->
-                                    <div class="platform-core">
-                                        <div class="platform-core-ring">
-                                            <div class="platform-core-inner">
-                                                <div class="core-badge">
-                                                    <i class="bi bi-cpu"></i>
-                                                </div>
-                                                <h3 data-i18n="horeca.ai.platform">AI PLATFORM</h3>
-                                                <p data-i18n="horeca.unified.operational.management.layer.for.hospitality.businesses">
-                                                    Unified operational management layer for hospitality businesses
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- RIGHT -->
-                                    <div class="platform-side">
-                                        <div class="platform-card green">
-                                            <div class="platform-card-icon">
-                                                <i class="bi bi-bar-chart"></i>
-                                            </div>
-                                            <div>
-                                                <h3 data-i18n="horeca.analytics.and.management">Analytics &amp; Management</h3>
-                                                <ul>
-                                                    <li data-i18n="horeca.interactive.dashboards">Interactive dashboards</li>
-                                                    <li data-i18n="horeca.business.intelligence.analytics">Business Intelligence analytics</li>
-                                                    <li data-i18n="horeca.real.time.alerts.and.incidents">Real-time alerts and incidents</li>
-                                                    <li data-i18n="horeca.reports.and.data.export">Reports and data export</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="platform-card cyan">
-                                            <div class="platform-card-icon">
-                                                <i class="bi bi-puzzle"></i>
-                                            </div>
-                                            <div>
-                                                <h3 data-i18n="horeca.enterprise.integrations">Enterprise Integrations</h3>
-                                                <ul>
-                                                    <li data-i18n="horeca.pos.systems">POS systems</li>
-                                                    <li data-i18n="horeca.erp.and.crm.platforms">ERP and CRM platforms</li>
-                                                    <li data-i18n="horeca.inventory.and.warehouse.systems">Inventory and warehouse systems</li>
-                                                    <li data-i18n="horeca.payment.and.operational.systems">Payment and operational systems</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.guests.leaving.without.ordering">Guests leaving without ordering</li>
+                                        <li data-i18n="horeca.low.engagement">Low engagement</li>
+                                        <li data-i18n="horeca.decrease.in.repeat.visits">Decrease in repeat visits</li>
+                                        <li data-i18n="horeca.negative.customer.experience">Negative customer experience</li>
+                                    </ul>
                                 </div>
-                                <!-- AI FACTORY -->
-                                <div class="platform-factory">
-                                    <div class="factory-title" data-i18n="horeca.ai.factory.creation.and.development.of.ai.models">
-                                        AI Factory — Creation and Development of AI Models &amp; Scenarios
-                                    </div>
-                                    <div class="factory-grid">
-                                        <div class="factory-item">
-                                            <i class="bi bi-database"></i>
-                                            <span data-i18n="horeca.data.collection.and.labeling">Data collection &amp; labeling</span>
-                                        </div>
-                                        <div class="factory-item">
-                                            <i class="bi bi-cpu"></i>
-                                            <span data-i18n="horeca.model.training.and.fine.tuning">Model training &amp; fine-tuning</span>
-                                        </div>
-                                        <div class="factory-item">
-                                            <i class="bi bi-diagram-3"></i>
-                                            <span data-i18n="horeca.no.code.scenario.builder.2">No-code scenario builder</span>
-                                        </div>
-                                        <div class="factory-item">
-                                            <i class="bi bi-shop"></i>
-                                            <span data-i18n="horeca.marketplace.of.ai.models">Marketplace of AI models</span>
-                                        </div>
-                                        <div class="factory-item">
-                                            <i class="bi bi-stars"></i>
-                                            <span data-i18n="horeca.generative.ai.and.vlm.technologies">Generative AI &amp; VLM technologies</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- DEPLOYMENT -->
-                                <div class="deployment-grid">
-                                    <div class="deployment-card">
-                                        <div class="deployment-icon">
-                                            <i class="bi bi-cloud"></i>
-                                        </div>
-                                        <div>
-                                            <h4 data-i18n="horeca.cloud">Cloud</h4>
-                                            <p data-i18n="horeca.saas.cloud.infrastructure">SaaS cloud infrastructure</p>
-                                        </div>
-                                    </div>
-                                    <div class="deployment-card">
-                                        <div class="deployment-icon">
-                                            <i class="bi bi-hdd-network"></i>
-                                        </div>
-                                        <div>
-                                            <h4 data-i18n="horeca.on.premise">On-Premise</h4>
-                                            <p data-i18n="horeca.local.deployment.inside.client.infrastructure">Local deployment inside client infrastructure</p>
-                                        </div>
-                                    </div>
-                                    <div class="deployment-card">
-                                        <div class="deployment-icon">
-                                            <i class="bi bi-diagram-2"></i>
-                                        </div>
-                                        <div>
-                                            <h4 data-i18n="horeca.hybrid">Hybrid</h4>
-                                            <p data-i18n="horeca.combined.cloud.and.on.premise.architecture">Combined cloud and on-premise architecture</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- BOTTOM -->
-                                <div class="platform-bottom-note">
-                                    <i class="bi bi-shield-check"></i>
-                                    <span data-i18n="horeca.from.traditional.video.surveillance.to.intelligent.ai.driven">
-                                        From traditional video surveillance to intelligent AI-driven hospitality management
-                                    </span>
-                                </div>
-                            </section>
-                            <section class="hospitality-modules-section">
-                                <div class="hospitality-kicker" data-i18n="horeca.core.ai.modules">Core AI Modules</div>
-                                <h2 class="hospitality-title" data-i18n="horeca.ready.to.use.ai.modules.for.hospitality.operations">
-                                    Ready-to-use AI modules for hospitality operations
-                                </h2>
-                                <p class="hospitality-lead" data-i18n="horeca.the.platform.includes.a.library.of.ai.modules">
-                                    The platform includes a library of AI modules for monitoring staff, kitchen operations, service areas,
-                                    guest behavior, safety incidents and checkout processes. Each module can work independently or become
-                                    part of a custom no-code operational scenario.
-                                </p>
-                                <div class="modules-grid">
-                                    <div class="module-card blue">
-                                        <div class="module-card-head">
-                                            <div class="module-icon"><i class="bi bi-people-fill"></i></div>
-                                            <h3 data-i18n="horeca.staff.and.discipline">Staff &amp; Discipline</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.guest.greeting.control">Guest greeting control</li>
-                                            <li data-i18n="horeca.staff.presence.and.absence.detection">Staff presence and absence detection</li>
-                                            <li data-i18n="horeca.phone.usage.and.distractions">Phone usage and distractions</li>
-                                            <li data-i18n="horeca.movement.routes.and.zone.monitoring">Movement routes and zone monitoring</li>
-                                            <li data-i18n="horeca.corporate.standards.compliance">Corporate standards compliance</li>
-                                            <li data-i18n="horeca.appearance.and.uniform.violations">Appearance and uniform violations</li>
-                                            <li data-i18n="horeca.waiter.response.and.waiting.time.control">Waiter response and waiting time control</li>
-                                        </ul>
-                                        <div class="module-badges">
-                                            <span><i class="bi bi-phone"></i> <span data-i18n="horeca.phone.02.18">Phone 02:18</span></span>
-                                            <span><i class="bi bi-clock"></i> <span data-i18n="horeca.wait.time">Wait time</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="module-card cyan">
-                                        <div class="module-card-head">
-                                            <div class="module-icon"><i class="bi bi-egg-fried"></i></div>
-                                            <h3 data-i18n="horeca.kitchen.and.cooking.area">Kitchen &amp; Cooking Area</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.dish.serving.speed.monitoring">Dish serving speed monitoring</li>
-                                            <li data-i18n="horeca.order.to.dish.matching.and.standard.control">Order-to-dish matching and standard control</li>
-                                            <li data-i18n="horeca.temperature.control.and.serving.readiness">Temperature control and serving readiness</li>
-                                            <li data-i18n="horeca.order.assembly.mistakes">Order assembly mistakes</li>
-                                            <li data-i18n="horeca.marking.and.preparation.workflow.control">Marking and preparation workflow control</li>
-                                            <li data-i18n="horeca.sanitary.rules.and.cleanliness.monitoring">Sanitary rules and cleanliness monitoring</li>
-                                            <li data-i18n="horeca.smoke.fire.and.hazardous.event.detection">Smoke, fire and hazardous event detection</li>
-                                        </ul>
-                                        <div class="module-badges">
-                                            <span><i class="bi bi-check2-circle"></i> <span data-i18n="horeca.order.match.98">Order match 98%</span></span>
-                                            <span><i class="bi bi-thermometer-half"></i> <span data-i18n="horeca.temperature.72">72°C</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="module-card purple">
-                                        <div class="module-card-head">
-                                            <div class="module-icon"><i class="bi bi-shop-window"></i></div>
-                                            <h3 data-i18n="horeca.dining.hall.and.service">Dining Hall &amp; Service</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.objects.in.wrong.places">Objects in wrong places</li>
-                                            <li data-i18n="horeca.missing.menu.or.dirty.table.detection">Missing menu or dirty table detection</li>
-                                            <li data-i18n="horeca.open.close.compliance.control">Open/close compliance control</li>
-                                            <li data-i18n="horeca.filled.bin.and.waste.monitoring">Filled bin and waste monitoring</li>
-                                            <li data-i18n="horeca.occupancy.and.idle.table.analytics">Occupancy and idle table analytics</li>
-                                            <li data-i18n="horeca.first.approach.time.and.order.waiting.time">First approach time and order waiting time</li>
-                                            <li data-i18n="horeca.cleaning.quality.and.room.condition.control">Cleaning quality and room condition control</li>
-                                        </ul>
-                                        <div class="module-badges">
-                                            <span><i class="bi bi-pie-chart"></i> <span data-i18n="horeca.occupancy.78">Occupancy 78%</span></span>
-                                            <span><i class="bi bi-hourglass-split"></i> <span data-i18n="horeca.wait.15.42">Wait 15:42</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="module-card green">
-                                        <div class="module-card-head">
-                                            <div class="module-icon"><i class="bi bi-person-heart"></i></div>
-                                            <h3 data-i18n="horeca.guests.and.experience.2">Guests &amp; Experience</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.unique.visitor.counting">Unique visitor counting</li>
-                                            <li data-i18n="horeca.repeat.visit.analytics">Repeat visit analytics</li>
-                                            <li data-i18n="horeca.average.stay.duration">Average stay duration</li>
-                                            <li data-i18n="horeca.seating.and.service.speed.analytics">Seating and service speed analytics</li>
-                                            <li data-i18n="horeca.hall.occupancy.by.time.periods">Hall occupancy by time periods</li>
-                                            <li data-i18n="horeca.entrance.queue.monitoring">Entrance queue monitoring</li>
-                                            <li data-i18n="horeca.heatmaps.and.peak.hour.analytics">Heatmaps and peak-hour analytics</li>
-                                        </ul>
-                                        <div class="module-badges">
-                                            <span><i class="bi bi-person-check"></i> <span data-i18n="horeca.visitors.125">Visitors 125</span></span>
-                                            <span><i class="bi bi-activity"></i> <span data-i18n="horeca.peak.hours">Peak hours</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="module-card red">
-                                        <div class="module-card-head">
-                                            <div class="module-icon"><i class="bi bi-shield-check"></i></div>
-                                            <h3 data-i18n="horeca.safety.and.security">Safety &amp; Security</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.fights.and.conflict.detection">Fights and conflict detection</li>
-                                            <li data-i18n="horeca.aggressive.behavior.monitoring">Aggressive behavior monitoring</li>
-                                            <li data-i18n="horeca.smoking.in.restricted.areas">Smoking in restricted areas</li>
-                                            <li data-i18n="horeca.fire.smoke.and.ignition.detection">Fire, smoke and ignition detection</li>
-                                            <li data-i18n="horeca.guest.and.staff.fall.detection">Guest and staff fall detection</li>
-                                            <li data-i18n="horeca.suspicious.object.detection">Suspicious object detection</li>
-                                            <li data-i18n="horeca.theft.and.unauthorized.access.control">Theft and unauthorized access control</li>
-                                        </ul>
-                                        <div class="module-badges">
-                                            <span><i class="bi bi-exclamation-triangle"></i> <span data-i18n="horeca.fight.12.45">Fight 12:45</span></span>
-                                            <span><i class="bi bi-fire"></i> <span data-i18n="horeca.fire.detected">Fire detected</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="module-card orange">
-                                        <div class="module-card-head">
-                                            <div class="module-icon"><i class="bi bi-receipt"></i></div>
-                                            <h3 data-i18n="horeca.checkout.and.order.pickup">Checkout &amp; Order Pickup</h3>
-                                        </div>
-                                        <ul>
-                                            <li data-i18n="horeca.order.assembly.speed.monitoring">Order assembly speed monitoring</li>
-                                            <li data-i18n="horeca.order.handover.speed.analytics">Order handover speed analytics</li>
-                                            <li data-i18n="horeca.checkout.queue.control">Checkout queue control</li>
-                                            <li data-i18n="horeca.customer.counting.at.checkout">Customer counting at checkout</li>
-                                            <li data-i18n="horeca.order.assembly.mistakes">Order assembly mistakes</li>
-                                            <li data-i18n="horeca.receipt.handover.control">Receipt handover control</li>
-                                            <li data-i18n="horeca.cash.handling.and.suspicious.activity.detection">Cash handling and suspicious activity detection</li>
-                                        </ul>
-                                        <div class="module-badges">
-                                            <span><i class="bi bi-clock-history"></i> <span data-i18n="horeca.assembly.03.12">Assembly 03:12</span></span>
-                                            <span><i class="bi bi-bar-chart"></i> <span data-i18n="horeca.orders.hour">Orders/hour</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <div class="post-img">
-                                <img alt="Типовые AI-сценарии в ресторане" class="img-fluid" src="~/assets/img/hospitality/page-02.png" />
                             </div>
-                            <div class="hospitality-insight-box">
-                                <div class="insight-line"></div>
-                                <div class="insight-content">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                    <p data-i18n="horeca.business.impact.reduction.of.hidden.operational.losses.faster">
-                                        Business impact: reduction of hidden operational losses, faster service speed, higher guest satisfaction, transparent operational processes and a unified AI-driven management layer for restaurant chains.
+                            <div class="loss-metrics-strip">
+                                <div class="loss-metrics-title" data-i18n-html="horeca.hidden.losses.every.day">
+                                    Hidden losses<br />every day
+                                </div>
+                                <div class="loss-metric">
+                                    <i class="bi bi-graph-down-arrow"></i>
+                                    <span><span data-i18n="horeca.lost.revenue">Lost revenue</span><br /><strong>5–15%</strong></span>
+                                </div>
+                                <div class="loss-metric">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <span><span data-i18n="horeca.lower.table.turnover">Lower table turnover</span><br /><strong>10–20%</strong></span>
+                                </div>
+                                <div class="loss-metric">
+                                    <i class="bi bi-people"></i>
+                                    <span><span data-i18n="horeca.higher.staff.costs">Higher staff costs</span><br /><strong>15–25%</strong></span>
+                                </div>
+                                <div class="loss-metric">
+                                    <i class="bi bi-star"></i>
+                                    <span><span data-i18n="horeca.lower.guest.satisfaction">Lower guest satisfaction</span><br /><strong data-i18n="horeca.and.repeat.visits">and repeat visits</strong></span>
+                                </div>
+                                <div class="loss-metric">
+                                    <i class="bi bi-bar-chart-line"></i>
+                                    <span><span data-i18n="horeca.reputation.risks">Reputation risks</span><br /><strong data-i18n="horeca.and.rating.decline">and rating decline</strong></span>
+                                </div>
+                            </div>
+                            <div class="loss-bottom-note" data-i18n="horeca.without.objective.data.and.real.time.control.operational">
+                                Without objective data and real-time control, operational losses remain invisible — and the business loses profit every day.
+                            </div>
+                        </section>
+                        <section class="hospitality-platform-section">
+                            <div class="platform-header">
+                                <div class="platform-intro">
+                                    <div class="hospitality-kicker" data-i18n="horeca.unified.ai.platform">
+                                        Unified AI platform
+                                    </div>
+                                    <h2 class="hospitality-title" data-i18n="horeca.ai.platform.for.hospitality.operations">
+                                        AI Platform for Hospitality Operations
+                                    </h2>
+                                    <p class="hospitality-lead" data-i18n="horeca.a.unified.intelligent.platform.that.transforms.existing.restaurant">
+                                        A unified intelligent platform that transforms existing restaurant cameras and operational infrastructure into a digital management system for service quality, kitchen operations, staff performance and guest experience.
                                     </p>
                                 </div>
                             </div>
+                            <div class="platform-grid">
+                                <!-- LEFT -->
+                                <div class="platform-side">
+                                    <div class="platform-card purple">
+                                        <div class="platform-card-icon">
+                                            <i class="bi bi-boxes"></i>
+                                        </div>
+                                        <div>
+                                            <h3 data-i18n="horeca.ai.modules.library">AI Modules Library</h3>
+                                            <p data-i18n="horeca.a.large.collection.of.computer.vision.modules.for">
+                                                A large collection of Computer Vision modules for typical hospitality and restaurant operational tasks.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="platform-card blue">
+                                        <div class="platform-card-icon">
+                                            <i class="bi bi-diagram-3"></i>
+                                        </div>
+                                        <div>
+                                            <h3 data-i18n="horeca.no.code.scenario.builder">No-Code Scenario Builder</h3>
+                                            <p data-i18n="horeca.create.monitoring.workflows.alerts.and.operational.automation.scenarios">
+                                                Create monitoring workflows, alerts and operational automation scenarios without writing code.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CENTER -->
+                                <div class="platform-core">
+                                    <div class="platform-core-ring">
+                                        <div class="platform-core-inner">
+                                            <div class="core-badge">
+                                                <i class="bi bi-cpu"></i>
+                                            </div>
+                                            <h3 data-i18n="horeca.ai.platform">AI PLATFORM</h3>
+                                            <p data-i18n="horeca.unified.operational.management.layer.for.hospitality.businesses">
+                                                Unified operational management layer for hospitality businesses
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- RIGHT -->
+                                <div class="platform-side">
+                                    <div class="platform-card green">
+                                        <div class="platform-card-icon">
+                                            <i class="bi bi-bar-chart"></i>
+                                        </div>
+                                        <div>
+                                            <h3 data-i18n="horeca.analytics.and.management">Analytics &amp; Management</h3>
+                                            <ul>
+                                                <li data-i18n="horeca.interactive.dashboards">Interactive dashboards</li>
+                                                <li data-i18n="horeca.business.intelligence.analytics">Business Intelligence analytics</li>
+                                                <li data-i18n="horeca.real.time.alerts.and.incidents">Real-time alerts and incidents</li>
+                                                <li data-i18n="horeca.reports.and.data.export">Reports and data export</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="platform-card cyan">
+                                        <div class="platform-card-icon">
+                                            <i class="bi bi-puzzle"></i>
+                                        </div>
+                                        <div>
+                                            <h3 data-i18n="horeca.enterprise.integrations">Enterprise Integrations</h3>
+                                            <ul>
+                                                <li data-i18n="horeca.pos.systems">POS systems</li>
+                                                <li data-i18n="horeca.erp.and.crm.platforms">ERP and CRM platforms</li>
+                                                <li data-i18n="horeca.inventory.and.warehouse.systems">Inventory and warehouse systems</li>
+                                                <li data-i18n="horeca.payment.and.operational.systems">Payment and operational systems</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- AI FACTORY -->
+                            <div class="platform-factory">
+                                <div class="factory-title" data-i18n="horeca.ai.factory.creation.and.development.of.ai.models">
+                                    AI Factory — Creation and Development of AI Models &amp; Scenarios
+                                </div>
+                                <div class="factory-grid">
+                                    <div class="factory-item">
+                                        <i class="bi bi-database"></i>
+                                        <span data-i18n="horeca.data.collection.and.labeling">Data collection &amp; labeling</span>
+                                    </div>
+                                    <div class="factory-item">
+                                        <i class="bi bi-cpu"></i>
+                                        <span data-i18n="horeca.model.training.and.fine.tuning">Model training &amp; fine-tuning</span>
+                                    </div>
+                                    <div class="factory-item">
+                                        <i class="bi bi-diagram-3"></i>
+                                        <span data-i18n="horeca.no.code.scenario.builder.2">No-code scenario builder</span>
+                                    </div>
+                                    <div class="factory-item">
+                                        <i class="bi bi-shop"></i>
+                                        <span data-i18n="horeca.marketplace.of.ai.models">Marketplace of AI models</span>
+                                    </div>
+                                    <div class="factory-item">
+                                        <i class="bi bi-stars"></i>
+                                        <span data-i18n="horeca.generative.ai.and.vlm.technologies">Generative AI &amp; VLM technologies</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- DEPLOYMENT -->
+                            <div class="deployment-grid">
+                                <div class="deployment-card">
+                                    <div class="deployment-icon">
+                                        <i class="bi bi-cloud"></i>
+                                    </div>
+                                    <div>
+                                        <h4 data-i18n="horeca.cloud">Cloud</h4>
+                                        <p data-i18n="horeca.saas.cloud.infrastructure">SaaS cloud infrastructure</p>
+                                    </div>
+                                </div>
+                                <div class="deployment-card">
+                                    <div class="deployment-icon">
+                                        <i class="bi bi-hdd-network"></i>
+                                    </div>
+                                    <div>
+                                        <h4 data-i18n="horeca.on.premise">On-Premise</h4>
+                                        <p data-i18n="horeca.local.deployment.inside.client.infrastructure">Local deployment inside client infrastructure</p>
+                                    </div>
+                                </div>
+                                <div class="deployment-card">
+                                    <div class="deployment-icon">
+                                        <i class="bi bi-diagram-2"></i>
+                                    </div>
+                                    <div>
+                                        <h4 data-i18n="horeca.hybrid">Hybrid</h4>
+                                        <p data-i18n="horeca.combined.cloud.and.on.premise.architecture">Combined cloud and on-premise architecture</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- BOTTOM -->
+                            <div class="platform-bottom-note">
+                                <i class="bi bi-shield-check"></i>
+                                <span data-i18n="horeca.from.traditional.video.surveillance.to.intelligent.ai.driven">
+                                    From traditional video surveillance to intelligent AI-driven hospitality management
+                                </span>
+                            </div>
+                        </section>
+                        <section class="hospitality-modules-section">
+                            <div class="hospitality-kicker" data-i18n="horeca.core.ai.modules">Core AI Modules</div>
+                            <h2 class="hospitality-title" data-i18n="horeca.ready.to.use.ai.modules.for.hospitality.operations">
+                                Ready-to-use AI modules for hospitality operations
+                            </h2>
+                            <p class="hospitality-lead" data-i18n="horeca.the.platform.includes.a.library.of.ai.modules">
+                                The platform includes a library of AI modules for monitoring staff, kitchen operations, service areas,
+                                guest behavior, safety incidents and checkout processes. Each module can work independently or become
+                                part of a custom no-code operational scenario.
+                            </p>
+                            <div class="modules-grid">
+                                <div class="module-card blue">
+                                    <div class="module-card-head">
+                                        <div class="module-icon"><i class="bi bi-people-fill"></i></div>
+                                        <h3 data-i18n="horeca.staff.and.discipline">Staff &amp; Discipline</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.guest.greeting.control">Guest greeting control</li>
+                                        <li data-i18n="horeca.staff.presence.and.absence.detection">Staff presence and absence detection</li>
+                                        <li data-i18n="horeca.phone.usage.and.distractions">Phone usage and distractions</li>
+                                        <li data-i18n="horeca.movement.routes.and.zone.monitoring">Movement routes and zone monitoring</li>
+                                        <li data-i18n="horeca.corporate.standards.compliance">Corporate standards compliance</li>
+                                        <li data-i18n="horeca.appearance.and.uniform.violations">Appearance and uniform violations</li>
+                                        <li data-i18n="horeca.waiter.response.and.waiting.time.control">Waiter response and waiting time control</li>
+                                    </ul>
+                                    <div class="module-badges">
+                                        <span><i class="bi bi-phone"></i> <span data-i18n="horeca.phone.02.18">Phone 02:18</span></span>
+                                        <span><i class="bi bi-clock"></i> <span data-i18n="horeca.wait.time">Wait time</span></span>
+                                    </div>
+                                </div>
+                                <div class="module-card cyan">
+                                    <div class="module-card-head">
+                                        <div class="module-icon"><i class="bi bi-egg-fried"></i></div>
+                                        <h3 data-i18n="horeca.kitchen.and.cooking.area">Kitchen &amp; Cooking Area</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.dish.serving.speed.monitoring">Dish serving speed monitoring</li>
+                                        <li data-i18n="horeca.order.to.dish.matching.and.standard.control">Order-to-dish matching and standard control</li>
+                                        <li data-i18n="horeca.temperature.control.and.serving.readiness">Temperature control and serving readiness</li>
+                                        <li data-i18n="horeca.order.assembly.mistakes">Order assembly mistakes</li>
+                                        <li data-i18n="horeca.marking.and.preparation.workflow.control">Marking and preparation workflow control</li>
+                                        <li data-i18n="horeca.sanitary.rules.and.cleanliness.monitoring">Sanitary rules and cleanliness monitoring</li>
+                                        <li data-i18n="horeca.smoke.fire.and.hazardous.event.detection">Smoke, fire and hazardous event detection</li>
+                                    </ul>
+                                    <div class="module-badges">
+                                        <span><i class="bi bi-check2-circle"></i> <span data-i18n="horeca.order.match.98">Order match 98%</span></span>
+                                        <span><i class="bi bi-thermometer-half"></i> <span data-i18n="horeca.temperature.72">72°C</span></span>
+                                    </div>
+                                </div>
+                                <div class="module-card purple">
+                                    <div class="module-card-head">
+                                        <div class="module-icon"><i class="bi bi-shop-window"></i></div>
+                                        <h3 data-i18n="horeca.dining.hall.and.service">Dining Hall &amp; Service</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.objects.in.wrong.places">Objects in wrong places</li>
+                                        <li data-i18n="horeca.missing.menu.or.dirty.table.detection">Missing menu or dirty table detection</li>
+                                        <li data-i18n="horeca.open.close.compliance.control">Open/close compliance control</li>
+                                        <li data-i18n="horeca.filled.bin.and.waste.monitoring">Filled bin and waste monitoring</li>
+                                        <li data-i18n="horeca.occupancy.and.idle.table.analytics">Occupancy and idle table analytics</li>
+                                        <li data-i18n="horeca.first.approach.time.and.order.waiting.time">First approach time and order waiting time</li>
+                                        <li data-i18n="horeca.cleaning.quality.and.room.condition.control">Cleaning quality and room condition control</li>
+                                    </ul>
+                                    <div class="module-badges">
+                                        <span><i class="bi bi-pie-chart"></i> <span data-i18n="horeca.occupancy.78">Occupancy 78%</span></span>
+                                        <span><i class="bi bi-hourglass-split"></i> <span data-i18n="horeca.wait.15.42">Wait 15:42</span></span>
+                                    </div>
+                                </div>
+                                <div class="module-card green">
+                                    <div class="module-card-head">
+                                        <div class="module-icon"><i class="bi bi-person-heart"></i></div>
+                                        <h3 data-i18n="horeca.guests.and.experience.2">Guests &amp; Experience</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.unique.visitor.counting">Unique visitor counting</li>
+                                        <li data-i18n="horeca.repeat.visit.analytics">Repeat visit analytics</li>
+                                        <li data-i18n="horeca.average.stay.duration">Average stay duration</li>
+                                        <li data-i18n="horeca.seating.and.service.speed.analytics">Seating and service speed analytics</li>
+                                        <li data-i18n="horeca.hall.occupancy.by.time.periods">Hall occupancy by time periods</li>
+                                        <li data-i18n="horeca.entrance.queue.monitoring">Entrance queue monitoring</li>
+                                        <li data-i18n="horeca.heatmaps.and.peak.hour.analytics">Heatmaps and peak-hour analytics</li>
+                                    </ul>
+                                    <div class="module-badges">
+                                        <span><i class="bi bi-person-check"></i> <span data-i18n="horeca.visitors.125">Visitors 125</span></span>
+                                        <span><i class="bi bi-activity"></i> <span data-i18n="horeca.peak.hours">Peak hours</span></span>
+                                    </div>
+                                </div>
+                                <div class="module-card red">
+                                    <div class="module-card-head">
+                                        <div class="module-icon"><i class="bi bi-shield-check"></i></div>
+                                        <h3 data-i18n="horeca.safety.and.security">Safety &amp; Security</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.fights.and.conflict.detection">Fights and conflict detection</li>
+                                        <li data-i18n="horeca.aggressive.behavior.monitoring">Aggressive behavior monitoring</li>
+                                        <li data-i18n="horeca.smoking.in.restricted.areas">Smoking in restricted areas</li>
+                                        <li data-i18n="horeca.fire.smoke.and.ignition.detection">Fire, smoke and ignition detection</li>
+                                        <li data-i18n="horeca.guest.and.staff.fall.detection">Guest and staff fall detection</li>
+                                        <li data-i18n="horeca.suspicious.object.detection">Suspicious object detection</li>
+                                        <li data-i18n="horeca.theft.and.unauthorized.access.control">Theft and unauthorized access control</li>
+                                    </ul>
+                                    <div class="module-badges">
+                                        <span><i class="bi bi-exclamation-triangle"></i> <span data-i18n="horeca.fight.12.45">Fight 12:45</span></span>
+                                        <span><i class="bi bi-fire"></i> <span data-i18n="horeca.fire.detected">Fire detected</span></span>
+                                    </div>
+                                </div>
+                                <div class="module-card orange">
+                                    <div class="module-card-head">
+                                        <div class="module-icon"><i class="bi bi-receipt"></i></div>
+                                        <h3 data-i18n="horeca.checkout.and.order.pickup">Checkout &amp; Order Pickup</h3>
+                                    </div>
+                                    <ul>
+                                        <li data-i18n="horeca.order.assembly.speed.monitoring">Order assembly speed monitoring</li>
+                                        <li data-i18n="horeca.order.handover.speed.analytics">Order handover speed analytics</li>
+                                        <li data-i18n="horeca.checkout.queue.control">Checkout queue control</li>
+                                        <li data-i18n="horeca.customer.counting.at.checkout">Customer counting at checkout</li>
+                                        <li data-i18n="horeca.order.assembly.mistakes">Order assembly mistakes</li>
+                                        <li data-i18n="horeca.receipt.handover.control">Receipt handover control</li>
+                                        <li data-i18n="horeca.cash.handling.and.suspicious.activity.detection">Cash handling and suspicious activity detection</li>
+                                    </ul>
+                                    <div class="module-badges">
+                                        <span><i class="bi bi-clock-history"></i> <span data-i18n="horeca.assembly.03.12">Assembly 03:12</span></span>
+                                        <span><i class="bi bi-bar-chart"></i> <span data-i18n="horeca.orders.hour">Orders/hour</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="post-img">
+                            <img alt="Типовые AI-сценарии в ресторане" class="img-fluid" src="~/assets/img/hospitality/page-02.png" />
                         </div>
-                        <div class="meta-bottom">
-                            <i class="bi bi-folder"></i>
-                            <ul class="cats">
-                                <li><a data-i18n="service.horeca" href="/services/hospitality">HoReCa</a></li>
-                            </ul>
-                            <i class="bi bi-tags"></i>
-                            <ul class="tags">
-                                <li><a data-i18n="tag.computerVision" href="#">Computer Vision</a></li>
-                                <li><a data-i18n="tag.speechAnalytics" href="#">Speech Analytics</a></li>
-                                <li><a data-i18n="tag.enterpriseAI" href="#">Enterprise AI</a></li>
-                            </ul>
+                        <div class="hospitality-insight-box">
+                            <div class="insight-line"></div>
+                            <div class="insight-content">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <p data-i18n="horeca.business.impact.reduction.of.hidden.operational.losses.faster">
+                                    Business impact: reduction of hidden operational losses, faster service speed, higher guest satisfaction, transparent operational processes and a unified AI-driven management layer for restaurant chains.
+                                </p>
+                            </div>
                         </div>
-                    </article>
-                </div>
-            </section>
-        </div>
-    </main>
-    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
-</body>
+                    </div>
+                    <div class="meta-bottom">
+                        <i class="bi bi-folder"></i>
+                        <ul class="cats">
+                            <li><a data-i18n="service.horeca" href="/services/hospitality">HoReCa</a></li>
+                        </ul>
+                        <i class="bi bi-tags"></i>
+                        <ul class="tags">
+                            <li><a data-i18n="tag.computerVision" href="#">Computer Vision</a></li>
+                            <li><a data-i18n="tag.speechAnalytics" href="#">Speech Analytics</a></li>
+                            <li><a data-i18n="tag.enterpriseAI" href="#">Enterprise AI</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</main>
