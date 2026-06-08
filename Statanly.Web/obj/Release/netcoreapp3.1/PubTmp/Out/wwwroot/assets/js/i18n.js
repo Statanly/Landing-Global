@@ -7948,7 +7948,7 @@ const I18N = {
         "horeca.prerequisites": "Предпосылки",
         "horeca.most.restaurant.processes.are.still.controlled.manually": "Большинство процессов ресторана по-прежнему контролируются вручную",
         "horeca.many.processes.in.the.dining.hall.kitchen.and": "Многие процессы в зале, на кухне и в кассовой зоне по-прежнему контролируются вручную управляющими, администраторами и персоналом. Это приводит к ошибкам, субъективной оценке и отсутствию полной операционной картины.",
-        "horeca.service.kitchen.staff.and.guest.experience": "сервис, кухню, персонал и гостевой опыт.",
+        "horeca.service.kitchen.staff.and.guest.experience": "кухни, персонала и гостевого опыта.",
         "horeca.human.factor": "Человеческий фактор",
         "horeca.service.quality.depends.on.shifts.and.employees": "Качество сервиса зависит от смен и сотрудников",
         "horeca.errors.and.violations.are.not.always.noticed": "Ошибки и нарушения не всегда замечаются",

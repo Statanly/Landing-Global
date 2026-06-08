@@ -1,5 +1,5 @@
 @{ ViewData["Title"] = "Warehouses and Pickup Points"; }
-
+@{ Layout = "/Views/Shared/_ServicesLayout.cshtml"; }
 <style>
     /* =========================================================
        WAREHOUSES & PICKUP POINTS PAGE
@@ -498,49 +498,6 @@
     }
 </style>
 
-
-<body class="blog-details-page">
-    <header class="header d-flex align-items-center sticky-top" id="header">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-            <a class="logo d-flex align-items-center me-auto" href="/">
-                <img alt="" src="~/Logo3.png" />
-                @*   <h1 class="sitename">Statanly</h1>*@
-            </a>
-            <nav class="navmenu" id="navmenu">
-                <ul>
-                    <li><a href="/" data-i18n="nav.home">Home</a></li>
-                    <li><a href="/home/platform" data-i18n="nav.platform">Platform</a></li>
-                    <li><a href="/services" class="active" data-i18n="nav.services">Services</a></li>
-                    <li><a href="/products" data-i18n="nav.products">Products</a></li>
-                    <li><a href="/home/contacts" data-i18n="nav.contacts">Contacts</a></li>
-                    @*<li class="dropdown">
-                        <a href="about.html"><span>@lang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                        <li><a href="/home/setLanguage?culture=es&amp;returnUrl=@Context.Request.Path">Es</a></li>
-                        <li><a href="/home/setLanguage?culture=en&amp;returnUrl=@Context.Request.Path">En</a></li>
-                        </ul>
-                        </li>*@
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-            <div class="language-flags dropdown">
-                <button aria-expanded="false" class="lang-current dropdown-toggle" data-bs-toggle="dropdown" id="languageDropdown" type="button">
-                    <span class="fi fi-gb lang-flag"></span>
-                    <span class="lang-code">EN</span>
-                </button>
-                <ul aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="en"><span class="fi fi-gb"></span> English</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="pt"><span class="fi fi-pt"></span> Português</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="es"><span class="fi fi-es"></span> Español</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="it"><span class="fi fi-it"></span> Italiano</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="fr"><span class="fi fi-fr"></span> Français</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="de"><span class="fi fi-de"></span> Deutsch</button></li>
-                    <li><button class="dropdown-item lang-option" type="button" data-lang="ru"><span class="fi fi-ru"></span> Русский</button></li>
-                </ul>
-            </div>
-            <a class="btn-getstarted" data-i18n="common.getStarted" href="/home/contactst">Get Started</a>
-        </div>
-    </header>
     <main class="main">
         <div class="page-title light-background">
             <div class="container d-lg-flex justify-content-between align-items-center">
@@ -556,10 +513,10 @@
             </div>
         </div>
 
-        <div class="container">
-            <section class="blog-details section" id="blog-details">
-                <div class="container">
-                    <article class="article">
+        <div class="container content-page-shell">
+            <section class="blog-details section content-page-section" id="blog-details">
+                <div class="container content-page-inner">
+                    <article class="article content-page-article">
                         <div class="warehouse-page">
 
                             <section class="warehouse-hero-section">
@@ -848,5 +805,3 @@
             </section>
         </div>
     </main>
-    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
-</body>

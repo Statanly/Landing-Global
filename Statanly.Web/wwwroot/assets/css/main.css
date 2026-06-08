@@ -2679,3 +2679,74 @@ section,
             color: #ffffff !important;
         }
 }
+
+/* --------------------------------------------------------------
+# Universal Content Page Wrapper
+# For platform/product/service detail pages based on blog-details article
+-------------------------------------------------------------- */
+
+.content-page-shell,
+.content-page-inner {
+    width: 100%;
+}
+
+/* Desktop: keep existing BootstrapMade article/card behavior */
+.content-page-article {
+    width: 100%;
+}
+
+/* Tablet/mobile: remove nested card effect and expand content */
+@media (max-width: 991px) {
+    .content-page-shell {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content-page-section {
+        padding: 36px 0 0;
+    }
+
+    .content-page-inner {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blog-details .content-page-article {
+        width: 100%;
+        margin: 0;
+        padding: 0 18px 36px;
+        background: var(--surface-color);
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+/* Small mobile: a little tighter, but still readable */
+@media (max-width: 575px) {
+    .content-page-section {
+        padding: 28px 0 0;
+    }
+
+    .blog-details .content-page-article {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 32px;
+    }
+}
+
+/* Optional: normalize first hero/card block inside these content pages */
+@media (max-width: 575px) {
+    .content-page-article [class*="-hero-section"] {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content-page-article [class*="-hero-content"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
