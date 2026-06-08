@@ -885,6 +885,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\forms\Readme.txt
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\googlec520acaaa46cb8a3.html
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\images\NY.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\inverted-image.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo1.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\logo2-Photoroom.png
