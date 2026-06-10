@@ -3230,8 +3230,6 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Shared\_SolutionsLayout.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Technology\DeepFakes.cshtml.g.cs
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Technology\UAV.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Statanly.Web.RazorTargetAssemblyInfo.cache
@@ -3258,3 +3256,6 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Home\Error.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ProductsLayout.cshtml.g.cs
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ServicesLayout.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Factory\DeepFakes.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Factory\Index.cshtml.g.cs
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\Razor\Views\Factory\UAV.cshtml.g.cs

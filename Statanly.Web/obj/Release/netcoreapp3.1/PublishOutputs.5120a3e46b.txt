@@ -772,7 +772,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\testimonials\testimonials-6.jpg
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Warehouses\warehouse-analytics-wide.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Warehouses\warehouse-pickup-hero.png
-C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\js\i18n — копия.js
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\js\i18n - Копировать.js
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\js\i18n.js
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\js\main.js
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\scss\Readme.txt
