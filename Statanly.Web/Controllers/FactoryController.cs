@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Statanly.Web.Controllers
 {
-    public class TechnologyController : Controller
+    public class FactoryController : Controller
     {
-        public IActionResult DeepFakes()
-        {
-            return View();
-        }
-        public IActionResult UAV()
+        public IActionResult Index()
         {
             return View();
         }
