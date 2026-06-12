@@ -22,7 +22,7 @@ namespace Statanly.Web.Controllers
         }
         public FileResult Download()
         {
-            return File("~/Content/Documentation.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+            return File("~/Content/Event Analytics Factory.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
         }
         public FileResult Installation()
         {
