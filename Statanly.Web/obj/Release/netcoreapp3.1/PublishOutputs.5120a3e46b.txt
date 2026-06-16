@@ -578,10 +578,12 @@ C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Glo
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero-carousel\hero-carousel-2.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero-carousel\hero-carousel-3.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero-carousel\hero-carousel-33.jpg
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero\event-analytics-hero-bg.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero\factory-horeca.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero\factory-industry.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero\factory-retail.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero\factory-smart-environments.png
+C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\hero\hero-block.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Hospitality\page-01.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Hospitality\page-02.png
 C:\Users\serge\OneDrive\Рабочий стол\Statanly landing\Landing — Global\Statanly.Web\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\img\Industry\industrial-hero.png
